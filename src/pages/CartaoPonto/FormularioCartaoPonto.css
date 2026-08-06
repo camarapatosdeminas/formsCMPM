@@ -1,0 +1,54 @@
+/* src/pages/FormularioCartaoPonto/FormularioCartaoPonto.css */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+.form-section {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="month"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.generate-pdf-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color 0.25s;
+}
+
+.generate-pdf-button:hover {
+  border-color: #0056b3;
+}

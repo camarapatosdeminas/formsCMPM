@@ -90,30 +90,23 @@ const styles = StyleSheet.create({
 });
 
 const RelatorioViagemPdf = ({ formData }: { formData: FormData }) => {
-  
-  // FUNÇÃO AUXILIAR: Converte "10,50" para 10.50 e garante que seja um número válido
-  const formatarParaNumero = (valor: string) => {
-    if (!valor) return 0;
-    // Substitui a vírgula pelo ponto e remove qualquer outro caractere que não seja número ou ponto
-    const valorLimpo = valor.toString().replace(",", ".");
-    const numero = parseFloat(valorLimpo);
-    return isNaN(numero) ? 0 : numero;
-  };
-
-  // CÁLCULOS ATUALIZADOS USANDO A FUNÇÃO AUXILIAR
   const totalUtilizado =
-    formatarParaNumero(formData.despesasRealizadas?.combustivel?.utilizado) +
-    formatarParaNumero(formData.despesasRealizadas?.transporteUrbano?.utilizado) +
-    formatarParaNumero(formData.despesasRealizadas?.passagem?.utilizado) +
-    formatarParaNumero(formData.despesasRealizadas?.pedagio?.utilizado) +
-    formatarParaNumero(formData.despesasRealizadas?.estacionamento?.utilizado);
+    parseFloat(formData.despesasRealizadas?.combustivel?.utilizado || "0") +
+    parseFloat(
+      formData.despesasRealizadas?.transporteUrbano?.utilizado || "0",
+    ) +
+    parseFloat(formData.despesasRealizadas?.passagem?.utilizado || "0") +
+    parseFloat(formData.despesasRealizadas?.pedagio?.utilizado || "0") +
+    parseFloat(formData.despesasRealizadas?.estacionamento?.utilizado || "0");
 
   const totalReembolsar =
-    formatarParaNumero(formData.despesasRealizadas?.combustivel?.reembolsar) +
-    formatarParaNumero(formData.despesasRealizadas?.transporteUrbano?.reembolsar) +
-    formatarParaNumero(formData.despesasRealizadas?.passagem?.reembolsar) +
-    formatarParaNumero(formData.despesasRealizadas?.pedagio?.reembolsar) +
-    formatarParaNumero(formData.despesasRealizadas?.estacionamento?.reembolsar);
+    parseFloat(formData.despesasRealizadas?.combustivel?.reembolsar || "0") +
+    parseFloat(
+      formData.despesasRealizadas?.transporteUrbano?.reembolsar || "0",
+    ) +
+    parseFloat(formData.despesasRealizadas?.passagem?.reembolsar || "0") +
+    parseFloat(formData.despesasRealizadas?.pedagio?.reembolsar || "0") +
+    parseFloat(formData.despesasRealizadas?.estacionamento?.reembolsar || "0");
 
   // Função para formatar a data
   const formatDate = (dateString: string) => {
