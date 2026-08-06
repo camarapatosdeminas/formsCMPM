@@ -208,7 +208,7 @@ const CartaoPontoPdfDocument: React.FC<PdfProps> = ({ data }) => {
               style={{
                 ...styles.headerCell,
                 ...styles.headerBorderRight,
-                flex: 3,
+                flex: 2.5,
               }}
             >
               <Text style={styles.headerLabel}>Nome:</Text>
@@ -216,7 +216,7 @@ const CartaoPontoPdfDocument: React.FC<PdfProps> = ({ data }) => {
                 {data.nome ? data.nome.toUpperCase() : ""}
               </Text>
             </View>
-            <View style={{ ...styles.headerCell, flex: 1 }}>
+            <View style={{ ...styles.headerCell, flex: 1.5 }}>
               <Text style={styles.headerLabel}>Matrícula:</Text>
               <Text style={styles.headerValue}>{data.matricula}</Text>
             </View>
@@ -226,7 +226,7 @@ const CartaoPontoPdfDocument: React.FC<PdfProps> = ({ data }) => {
               style={{
                 ...styles.headerCell,
                 ...styles.headerBorderRight,
-                flex: 3,
+                flex: 2.5,
               }}
             >
               <Text style={styles.headerLabel}>Setor:</Text>
@@ -234,7 +234,7 @@ const CartaoPontoPdfDocument: React.FC<PdfProps> = ({ data }) => {
                 {data.setor ? data.setor.toUpperCase() : ""}
               </Text>
             </View>
-            <View style={{ ...styles.headerCell, flex: 1 }}>
+            <View style={{ ...styles.headerCell, flex: 1.5 }}>
               <Text style={styles.headerLabel}>Horário:</Text>
               <Text style={styles.headerValue}>{data.horario}</Text>
             </View>
