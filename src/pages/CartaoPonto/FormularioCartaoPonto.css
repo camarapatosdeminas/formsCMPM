@@ -52,3 +52,67 @@ input[type="month"] {
 .generate-pdf-button:hover {
   border-color: #0056b3;
 }
+
+.special-days-help {
+  margin: 0 0 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+.special-days-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.special-days-field label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.special-days-field small {
+  min-height: 17px;
+  color: #666;
+}
+
+.selected-days-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  min-height: 28px;
+}
+
+.selected-day {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 7px;
+  border: 1px solid #b8cce4;
+  border-radius: 4px;
+  background-color: #eef5fc;
+  color: #173b61;
+  font-size: 13px;
+}
+
+.selected-day button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #8a1c1c;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.special-days-error {
+  margin: 12px 0 0;
+  color: #b42318;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

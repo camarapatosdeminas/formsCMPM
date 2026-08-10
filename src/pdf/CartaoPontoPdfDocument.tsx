@@ -11,6 +11,8 @@ interface FormData {
   mesReferencia: string;
   inicioFerias: string;
   fimFerias: string;
+  pontosFacultativos: string[];
+  feriados: string[];
 }
 
 interface PdfProps {
@@ -165,11 +167,12 @@ const CartaoPontoPdfDocument: React.FC<PdfProps> = ({ data }) => {
     // Formato DD/MM/YY
     const dataExibicao = `${diaFormatado}/${mesFormatado}/${anoFormatado}`;
 
+    const dataComparacao = `${anoStr}-${mesFormatado}-${diaFormatado}`;
+
     // Lógica para verificar se o dia atual está no período de Férias
     let isFerias = false;
     if (data.inicioFerias && data.fimFerias) {
       // Data no formato YYYY-MM-DD para comparação lexográfica segura
-      const dataComparacao = `${anoStr}-${mesFormatado}-${diaFormatado}`;
       if (
         dataComparacao >= data.inicioFerias &&
         dataComparacao <= data.fimFerias
@@ -179,7 +182,15 @@ const CartaoPontoPdfDocument: React.FC<PdfProps> = ({ data }) => {
     }
 
     let textoPreenchimento = "";
-    if (isFerias) {
+    if (data.feriados.includes(dataComparacao)) {
+      textoPreenchimento = "FERIADO";
+    } else if (
+      diaSemanaIndex !== 0 &&
+      diaSemanaIndex !== 6 &&
+      data.pontosFacultativos.includes(dataComparacao)
+    ) {
+      textoPreenchimento = "P. FACULT.";
+    } else if (isFerias) {
       textoPreenchimento = "FÉRIAS";
     } else if (diaSemanaIndex === 0) {
       textoPreenchimento = "DOMINGO";
