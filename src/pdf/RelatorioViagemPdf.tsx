@@ -127,8 +127,9 @@ const RelatorioViagemPdf = ({ formData }: { formData: FormData }) => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        <Text style={styles.title}>RELATÓRIO DE VIAGEM</Text>
-        <Text style={styles.subtitle}>PRESTAÇÃO DE CONTAS</Text>
+        <Text style={styles.title}>
+          RELATÓRIO DE VIAGEM - PRESTAÇÃO DE CONTAS
+        </Text>
 
         {/* CABEÇALHO MANTIDO INTACТО */}
         <View style={styles.section}>
@@ -407,6 +408,9 @@ const RelatorioViagemPdf = ({ formData }: { formData: FormData }) => {
               em conformidade com a regulamentação vigente.
             </Text>
             <Text>( ) Desaprovo a prestação de contas.</Text>
+            <Text style={styles.dateText}>
+              Patos de Minas, {formattedDate}.
+            </Text>
             <View style={styles.signatureLine} />
             <Text style={styles.signatureText}>
               Assinatura do Diretor-Geral
