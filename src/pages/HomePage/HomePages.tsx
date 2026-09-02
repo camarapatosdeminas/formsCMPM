@@ -17,6 +17,7 @@ import {
   FaBriefcaseMedical,
   FaWarehouse,
   FaCalendarCheck,
+  FaIdCard,
 } from "react-icons/fa";
 
 const HomePage = () => {
@@ -25,6 +26,12 @@ const HomePage = () => {
       {" "}
       <div className="card-container">
         {" "}
+        <FormCard
+          title="Recadastramento"
+          description="Preencha os anexos da Portaria nº 1.798/2023 e gere um único PDF."
+          linkTo="/recadastramento"
+          icon={<FaIdCard />}
+        />{" "}
         <FormCard
           title="Antecipação 13º Salário"
           description="Requerimento da antecipação da primeira parcela do 13º salário."
