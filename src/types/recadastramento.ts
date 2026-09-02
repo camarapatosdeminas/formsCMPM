@@ -77,7 +77,8 @@ export interface RecadastramentoData {
   atividadeRemuneradaDetalhes: string;
   bens: Bem[];
   dependentes: Dependente[];
-  situacaoVereador: "naoServidor" | "servidorCompativel" | "servidorIncompativel";
+  situacaoVereador:
+    "naoServidor" | "servidorCompativel" | "servidorIncompativel";
   opcaoRemuneracao: "opta" | "naoOpta";
   baseContribuicao: "subsidioVereador" | "remuneracaoCargoEfetivo";
 }

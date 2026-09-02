@@ -358,7 +358,9 @@ function Cabecalho({ titulo }: { titulo: string }) {
   return (
     <>
       <CabecalhoInstitucional />
-      <Text style={styles.documentTitle} minPresenceAhead={40}>{titulo}</Text>
+      <Text style={styles.documentTitle} minPresenceAhead={40}>
+        {titulo}
+      </Text>
     </>
   );
 }
@@ -945,8 +947,8 @@ function AnexoIII({ data }: { data: RecadastramentoData }) {
         Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>,
         portador(a) do RG nº{" "}
         <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF nº{" "}
-        <Text style={styles.legalLead}>{`${value(data.cpf)},`}</Text> residente e
-        domiciliado(a) à{" "}
+        <Text style={styles.legalLead}>{`${value(data.cpf)},`}</Text> residente
+        e domiciliado(a) à{" "}
         <Text
           style={styles.legalLead}
         >{`${value(data.logradouro)}, ${value(data.numero)}, ${value(data.bairro)}, ${value(data.cidade)}/${value(data.enderecoUf)}`}</Text>
@@ -994,8 +996,8 @@ function AnexoIV({ data }: { data: RecadastramentoData }) {
         Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>,
         portador(a) do RG nº{" "}
         <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF nº{" "}
-        <Text style={styles.legalLead}>{`${value(data.cpf)},`}</Text> residente e
-        domiciliado(a) à{" "}
+        <Text style={styles.legalLead}>{`${value(data.cpf)},`}</Text> residente
+        e domiciliado(a) à{" "}
         <Text
           style={styles.legalLead}
         >{`${value(data.logradouro)}, ${value(data.numero)}, ${value(data.bairro)}, ${value(data.cidade)}/${value(data.enderecoUf)}`}</Text>

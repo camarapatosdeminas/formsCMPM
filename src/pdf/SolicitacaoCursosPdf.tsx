@@ -68,51 +68,51 @@ const styles = StyleSheet.create({
     paddingRight: 2,
     minHeight: 6,
   },
-  
+
   // --- ÁREA DE AJUSTES ---
   parecerBox: {
     border: "1px solid #000",
-    height: 200, 
+    height: 200,
     marginTop: 5,
     padding: 5,
   },
   signatureBlock: {
     flexDirection: "row",
-    alignItems: "flex-end", 
+    alignItems: "flex-end",
     justifyContent: "space-between",
-    marginTop: 50, 
+    marginTop: 50,
     paddingHorizontal: 5,
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   signatureLeft: {
-    flexDirection: 'column',
-    justifyContent: 'flex-end',
+    flexDirection: "column",
+    justifyContent: "flex-end",
     gap: 15, // Espaçamento vertical entre Data e Deferido
     marginBottom: 2,
     fontSize: 12, // Fonte maior
-    fontFamily: "Helvetica" // Sem negrito
+    fontFamily: "Helvetica", // Sem negrito
   },
   signatureRight: {
     alignItems: "center",
-    flex: 1, 
-    marginLeft: 30 
+    flex: 1,
+    marginLeft: 30,
   },
-  signatureLine: { 
-    borderBottom: "1px solid #000", 
-    width: "100%" 
+  signatureLine: {
+    borderBottom: "1px solid #000",
+    width: "100%",
   },
-  signatureText: { 
-    fontSize: 9, 
-    marginTop: 5, 
-    textAlign: "center" 
+  signatureText: {
+    fontSize: 9,
+    marginTop: 5,
+    textAlign: "center",
   },
   // -----------------------
 
   outroLine: {
-    flex: 1, 
-    borderBottom: '1px solid #000',
+    flex: 1,
+    borderBottom: "1px solid #000",
     marginLeft: 3,
-    height: 10, 
+    height: 10,
   },
 });
 
@@ -125,7 +125,7 @@ const SolicitacaoCursosPdf = ({ formData }: { formData: FormData }) => {
       <Page size="A4" style={styles.page}>
         <Text style={styles.title}>
           FORMULÁRIO DE SOLICITAÇÃO DE APOIO A INICIATIVAS DE CAPACITAÇÃO CURSOS
-          DE CURTA E MÉDIA DURAÇÃO 
+          DE CURTA E MÉDIA DURAÇÃO
         </Text>
 
         <View style={styles.section}>
@@ -174,10 +174,12 @@ const SolicitacaoCursosPdf = ({ formData }: { formData: FormData }) => {
               </View>
             </View>
 
-            <View style={{ ...styles.row, alignItems: 'flex-end' }}>
+            <View style={{ ...styles.row, alignItems: "flex-end" }}>
               <View style={{ ...styles.col, flex: 2 }}>
                 <Text style={styles.fieldLabel}>Email:</Text>
-                <Text style={styles.fieldValueEmail}>{formData.emailServidor}</Text>
+                <Text style={styles.fieldValueEmail}>
+                  {formData.emailServidor}
+                </Text>
               </View>
             </View>
 
@@ -193,7 +195,7 @@ const SolicitacaoCursosPdf = ({ formData }: { formData: FormData }) => {
                   : "[ ] Função Gratificada"}{" "}
                 | Qual? {formData.qualFuncao}
               </Text>
-            )} 
+            )}
           </View>
         </View>
 
@@ -276,8 +278,16 @@ const SolicitacaoCursosPdf = ({ formData }: { formData: FormData }) => {
           <Text style={styles.sectionTitle}>
             III - APOIO FINANCEIRO SOLICITADO
           </Text>
-          <View style={{ ...styles.content, ...styles.row, alignItems: 'center' }}>
-            <View style={{ ...styles.col, flex: 1.2, justifyContent: 'space-between' }}>
+          <View
+            style={{ ...styles.content, ...styles.row, alignItems: "center" }}
+          >
+            <View
+              style={{
+                ...styles.col,
+                flex: 1.2,
+                justifyContent: "space-between",
+              }}
+            >
               <Text style={{ fontSize: 9, marginBottom: 12 }}>
                 Inscrição:{" "}
                 {formData.solicitaInscricao === "sim" ? "[X] Sim" : "[ ] Sim"}
@@ -286,16 +296,18 @@ const SolicitacaoCursosPdf = ({ formData }: { formData: FormData }) => {
               </Text>
               <Text style={{ fontSize: 9 }}>
                 Mensalidade:{" "}
-                {formData.solicitaMensalidade === "sim"
-                  ? "[X] Sim"
-                  : "[ ] Sim"}
+                {formData.solicitaMensalidade === "sim" ? "[X] Sim" : "[ ] Sim"}
                 {"  "}
-                {formData.solicitaMensalidade === "nao"
-                  ? "[X] Não"
-                  : "[ ] Não"}
+                {formData.solicitaMensalidade === "nao" ? "[X] Não" : "[ ] Não"}
               </Text>
             </View>
-            <View style={{ ...styles.col, flex: 1, justifyContent: 'space-between' }}>
+            <View
+              style={{
+                ...styles.col,
+                flex: 1,
+                justifyContent: "space-between",
+              }}
+            >
               <Text style={{ ...styles.fieldValue, marginBottom: 12 }}>
                 Valor: R$ {formData.valorInscricao}
               </Text>
@@ -329,21 +341,21 @@ const SolicitacaoCursosPdf = ({ formData }: { formData: FormData }) => {
       <Page size="A4" style={styles.page}>
         <Text style={styles.title}>
           FORMULÁRIO DE SOLICITAÇÃO DE APOIO A INICIATIVAS DE CAPACITAÇÃO CURSOS
-          DE CURTA E MÉDIA DURAÇÃO 
+          DE CURTA E MÉDIA DURAÇÃO
         </Text>
-        
+
         {/* Bloco Superior Imediato */}
         <View style={{ ...styles.section, marginTop: 20 }} wrap={false}>
           <Text style={styles.sectionTitle}>
             PARECER FUNDAMENTADO DO(A) SUPERIOR(A) IMEDIATO (A)
           </Text>
           <View style={styles.parecerBox} />
-          
+
           <View style={styles.signatureBlock}>
             <View style={styles.signatureLeft}>
-                <Text>DATA: ____/____/______</Text>
-                {/* Parênteses com espaço extra */}
-                <Text>(   ) DEFERIDO (   ) INDEFERIDO</Text>
+              <Text>DATA: ____/____/______</Text>
+              {/* Parênteses com espaço extra */}
+              <Text>( ) DEFERIDO ( ) INDEFERIDO</Text>
             </View>
             <View style={styles.signatureRight}>
               <View style={styles.signatureLine} />
@@ -358,12 +370,12 @@ const SolicitacaoCursosPdf = ({ formData }: { formData: FormData }) => {
             PARECER FUNDAMENTADO DO(A) DIRETOR(A) GERAL
           </Text>
           <View style={styles.parecerBox} />
-          
+
           <View style={styles.signatureBlock}>
-             <View style={styles.signatureLeft}>
-                <Text>DATA: ____/____/______</Text>
-                {/* Parênteses com espaço extra */}
-                <Text>(   ) DEFERIDO (   ) INDEFERIDO</Text>
+            <View style={styles.signatureLeft}>
+              <Text>DATA: ____/____/______</Text>
+              {/* Parênteses com espaço extra */}
+              <Text>( ) DEFERIDO ( ) INDEFERIDO</Text>
             </View>
             <View style={styles.signatureRight}>
               <View style={styles.signatureLine} />

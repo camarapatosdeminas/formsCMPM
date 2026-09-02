@@ -57,21 +57,21 @@
 
 /* Opcional: Adiciona um pequeno espaço entre o botão e o texto */
 .radio-group input[type="radio"] {
-  margin-right: 8px; 
+  margin-right: 8px;
 }
 
 /* Contêiner específico para o campo "Outros" */
 .outro-group {
-    display: flex;
-    flex-direction: column; /* Também em coluna */
-    align-items: flex-start;
-    gap: 8px; /* Espaço menor entre o rádio "Outros" e seu input */
-    width: 100%; /* Faz o grupo ocupar a largura disponível */
+  display: flex;
+  flex-direction: column; /* Também em coluna */
+  align-items: flex-start;
+  gap: 8px; /* Espaço menor entre o rádio "Outros" e seu input */
+  width: 100%; /* Faz o grupo ocupar a largura disponível */
 }
 
 .outro-group input[type="text"] {
-    width: 100%; /* Faz o campo de texto ocupar toda a largura */
-    max-width: 400px; /* Define uma largura máxima para não ficar muito grande */
+  width: 100%; /* Faz o campo de texto ocupar toda a largura */
+  max-width: 400px; /* Define uma largura máxima para não ficar muito grande */
 }
 
 .split-container {
@@ -91,149 +91,147 @@
 
 /* Textarea de largura total */
 .full-width-textarea {
-    width: calc(100% - 10px);
-    padding: 8px 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    
-    /* ===== LINHAS ADICIONADAS/MODIFICADAS ABAIXO ===== */
-    height: 85px;      /* Define a altura fixa de 80 pixels */
-    resize: none;      /* Remove a alça de redimensionamento */
-}
+  width: calc(100% - 10px);
+  padding: 8px 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 
+  /* ===== LINHAS ADICIONADAS/MODIFICADAS ABAIXO ===== */
+  height: 85px; /* Define a altura fixa de 80 pixels */
+  resize: none; /* Remove a alça de redimensionamento */
+}
 
 /* Container para a nova seção, para adicionar espaçamento se necessário */
 .conclusion-section {
-    margin-top: 30px; /* Espaço entre esta seção e a anterior */
-    border-top: 2px solid #ccc; /* Linha divisória */
-    padding-top: 20px;
+  margin-top: 30px; /* Espaço entre esta seção e a anterior */
+  border-top: 2px solid #ccc; /* Linha divisória */
+  padding-top: 20px;
 }
 
 /* Estilo base para cada linha do formulário */
 .form-row {
-    display: flex;
-    align-items: center; /* Alinha verticalmente os itens no centro */
-    margin-bottom: 15px; /* Espaço entre as linhas */
-    gap: 8px; /* Espaço entre os elementos (labels, inputs) */
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  margin-bottom: 15px; /* Espaço entre as linhas */
+  gap: 8px; /* Espaço entre os elementos (labels, inputs) */
 }
 
 .form-row label {
-    white-space: nowrap; /* Impede que o texto do label quebre em duas linhas */
-    font-size: 14px;
+  white-space: nowrap; /* Impede que o texto do label quebre em duas linhas */
+  font-size: 14px;
 }
 
 /* Estilos para os campos de input */
 .form-row input[type="text"] {
-    border: none;
-    border-bottom: 1px solid #333; /* Apenas a linha inferior, como na imagem */
-    
-    padding: 4px;
-    font-size: 14px;
-    cursor: default; /* Cursor padrão para campos não editáveis */
+  border: none;
+  border-bottom: 1px solid #333; /* Apenas a linha inferior, como na imagem */
+
+  padding: 4px;
+  font-size: 14px;
+  cursor: default; /* Cursor padrão para campos não editáveis */
 }
 
 /* Remove a borda azul ao clicar (foco) */
 .form-row input[type="text"]:focus {
-    outline: none;
+  outline: none;
 }
 
 /* Campo de texto longo que preenche o espaço restante */
 .input-long {
-    flex-grow: 1; /* Faz o campo crescer e ocupar o espaço disponível */
+  flex-grow: 1; /* Faz o campo crescer e ocupar o espaço disponível */
 }
 
 /* Campo para números curtos (ex: dias) */
 .input-short {
-    width: 80px;
-    text-align: center;
+  width: 80px;
+  text-align: center;
 }
 
 /* Campos para data (dia e mês) */
 .input-date {
-    width: 40px;
-    text-align: center;
+  width: 40px;
+  text-align: center;
 }
 
 /* Campo para ano */
 .input-date-year {
-    width: 60px;
-    text-align: center;
+  width: 60px;
+  text-align: center;
 }
 
 /* Separador de data (a barra "/") */
 .form-row span {
-    font-size: 16px;
-    margin: 0 -4px; /* Ajuste fino para aproximar a barra dos inputs */
+  font-size: 16px;
+  margin: 0 -4px; /* Ajuste fino para aproximar a barra dos inputs */
 }
 
 /* Estilo para os grupos de radio buttons */
 .radio-group-inline {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 /* Estilo para os radio buttons */
 .form-row input[type="radio"] {
-    cursor: default;
+  cursor: default;
 }
 
 /* Container principal da seção de assinatura */
 .signature-container {
-    display: flex; /* Cria o layout de duas colunas */
-    margin-top: 30px; /* Espaço acima desta seção */
-    
+  display: flex; /* Cria o layout de duas colunas */
+  margin-top: 30px; /* Espaço acima desta seção */
 }
 
 /* Estilo para a coluna da data (esquerda) */
 .date-column {
-    flex: 1; /* Faz a coluna ocupar 1 parte do espaço */
-    padding: 10px;
-    border-right: 1px solid #aaa; /* Linha vertical divisória */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra os campos de data para baixo */
+  flex: 1; /* Faz a coluna ocupar 1 parte do espaço */
+  padding: 10px;
+  border-right: 1px solid #aaa; /* Linha vertical divisória */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Empurra os campos de data para baixo */
 }
 
 /* Estilo para a coluna da assinatura (direita) */
 .signature-column {
-    flex: 2; /* Faz a coluna ocupar 2 partes, tornando-a maior */
-    padding: 10px;
-    min-height: 90px; /* Garante que haja espaço vertical para a assinatura */
+  flex: 2; /* Faz a coluna ocupar 2 partes, tornando-a maior */
+  padding: 10px;
+  min-height: 90px; /* Garante que haja espaço vertical para a assinatura */
 }
 
 .date-column label,
 .signature-column label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #555;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
 }
 
 /* Container para os campos de data */
 .date-input-group {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 10px; /* Espaço entre o texto e os campos de data */
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px; /* Espaço entre o texto e os campos de data */
 }
 
 /* Estilo das caixas de data */
 .date-box {
-    width: 35px;
-    height: 28px;
-    border: 1px solid #333;
-    text-align: center;
-    background-color: #f0f0f0;
-    cursor: default;
-    font-size: 14px;
+  width: 35px;
+  height: 28px;
+  border: 1px solid #333;
+  text-align: center;
+  background-color: #f0f0f0;
+  cursor: default;
+  font-size: 14px;
 }
 
 .date-box:focus {
-    outline: none;
+  outline: none;
 }
 
 .date-input-group span {
-    font-size: 16px;
+  font-size: 16px;
 }

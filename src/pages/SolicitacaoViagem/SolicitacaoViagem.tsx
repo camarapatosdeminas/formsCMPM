@@ -62,7 +62,7 @@ const SolicitacaoViagem = () => {
     useState<React.ReactElement | null>(null);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -71,7 +71,7 @@ const SolicitacaoViagem = () => {
 
   const handleParticipanteChange = (
     index: number,
-    e: React.ChangeEvent<HTMLInputElement>
+    e: React.ChangeEvent<HTMLInputElement>,
   ) => {
     const novosParticipantes = [...participantes];
     novosParticipantes[index].nome = e.target.value;
@@ -156,10 +156,9 @@ const SolicitacaoViagem = () => {
           value={formData.pix}
           onChange={handleInputChange}
           className="form-input-full"
-          style={{ marginTop: '1rem' }}
+          style={{ marginTop: "1rem" }}
         />
       </div>
-
       <div className="form-section">
         <h3>Participantes</h3>
         {participantes.map((p, index) => (
@@ -185,105 +184,119 @@ const SolicitacaoViagem = () => {
           + Adicionar Participante
         </button>
       </div>
-
       {/* O resto do seu formulário continua igual */}
       <div className="form-section">
-        <h3>2. Finalidade</h3>
-        <div className="radio-group">
-          <label>
-            <input
-              type="radio"
-              name="finalidade"
-              value="encontro"
-              checked={formData.finalidade === "encontro"}
-              onChange={handleInputChange as any}
-            />{" "}
-            Encontro/Seminário/Congresso
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="finalidade"
-              value="curso"
-              checked={formData.finalidade === "curso"}
-              onChange={handleInputChange as any}
-            />{" "}
-            Curso de aperfeiçoamento
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="finalidade"
-              value="outros"
-              checked={formData.finalidade === "outros"}
-              onChange={handleInputChange as any}
-            />{" "}
-            Outros
-          </label>
-        </div>
-        {formData.finalidade === "outros" && (
-          <input
-            type="text"
-            name="finalidadeOutros"
-            placeholder="Especifique a finalidade"
-            value={formData.finalidadeOutros}
-            onChange={handleInputChange}
-            className="form-input-full conditional-input"
-          />
-        )}
-      </div>
-
-      <div className="form-section">
-        <h3>3. Período</h3>
-        <input
-          type="text"
-          name="periodo"
-          placeholder="Ex: 01/01/2025 a 05/01/2025"
-          value={formData.periodo}
-          onChange={handleInputChange}
-          className="form-input-full"
-        />
-      </div>
-
-      <div className="form-section">
-        <h3>4. Destino</h3>
-        <div className="form-grid">
-          <input
-            type="text"
-            name="cidadeEstado"
-            placeholder="Cidade e Estado"
-            value={formData.cidadeEstado}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="local"
-            placeholder="Local (Hotel, Centro de Convenções, etc.)"
-            value={formData.local}
-            onChange={handleInputChange}
-          />
-        </div>
-        <input
-          type="text"
-          name="meioTransporte"
-          placeholder="Meio de transporte"
-          value={formData.meioTransporte}
-          onChange={handleInputChange}
-          className="form-input-full"
-          style={{ marginTop: "1rem" }}
-        />
-      </div>
-
-      <div className="form-section">
-        <h3>5. Justificativa</h3>
-        <textarea
-          name="justificativa"
-          value={formData.justificativa}
-          onChange={handleInputChange}
-          rows={5}
-        ></textarea>
-      </div>
-
+                <h3>2. Finalidade</h3>       {" "}
+        <div className="radio-group">
+                   {" "}
+          <label>
+                       {" "}
+            <input
+              type="radio"
+              name="finalidade"
+              value="encontro"
+              checked={formData.finalidade === "encontro"}
+              onChange={handleInputChange as any}
+            />{" "}
+                        Encontro/Seminário/Congresso          {" "}
+          </label>
+                   {" "}
+          <label>
+                       {" "}
+            <input
+              type="radio"
+              name="finalidade"
+              value="curso"
+              checked={formData.finalidade === "curso"}
+              onChange={handleInputChange as any}
+            />{" "}
+                        Curso de aperfeiçoamento          {" "}
+          </label>
+                   {" "}
+          <label>
+                       {" "}
+            <input
+              type="radio"
+              name="finalidade"
+              value="outros"
+              checked={formData.finalidade === "outros"}
+              onChange={handleInputChange as any}
+            />{" "}
+                        Outros          {" "}
+          </label>
+                 {" "}
+        </div>
+               {" "}
+        {formData.finalidade === "outros" && (
+          <input
+            type="text"
+            name="finalidadeOutros"
+            placeholder="Especifique a finalidade"
+            value={formData.finalidadeOutros}
+            onChange={handleInputChange}
+            className="form-input-full conditional-input"
+          />
+        )}
+             {" "}
+      </div>
+           {" "}
+      <div className="form-section">
+                <h3>3. Período</h3>       {" "}
+        <input
+          type="text"
+          name="periodo"
+          placeholder="Ex: 01/01/2025 a 05/01/2025"
+          value={formData.periodo}
+          onChange={handleInputChange}
+          className="form-input-full"
+        />
+             {" "}
+      </div>
+           {" "}
+      <div className="form-section">
+                <h3>4. Destino</h3>       {" "}
+        <div className="form-grid">
+                   {" "}
+          <input
+            type="text"
+            name="cidadeEstado"
+            placeholder="Cidade e Estado"
+            value={formData.cidadeEstado}
+            onChange={handleInputChange}
+          />
+                   {" "}
+          <input
+            type="text"
+            name="local"
+            placeholder="Local (Hotel, Centro de Convenções, etc.)"
+            value={formData.local}
+            onChange={handleInputChange}
+          />
+                 {" "}
+        </div>
+               {" "}
+        <input
+          type="text"
+          name="meioTransporte"
+          placeholder="Meio de transporte"
+          value={formData.meioTransporte}
+          onChange={handleInputChange}
+          className="form-input-full"
+          style={{ marginTop: "1rem" }}
+        />
+             {" "}
+      </div>
+           {" "}
+      <div className="form-section">
+                <h3>5. Justificativa</h3>       {" "}
+        <textarea
+          name="justificativa"
+          value={formData.justificativa}
+          onChange={handleInputChange}
+          rows={5}
+        ></textarea>
+             {" "}
+      </div>
       <button
         onClick={handleGerarPdfClick}
         className="generate-pdf-button"
@@ -297,7 +310,6 @@ const SolicitacaoViagem = () => {
       >
         Gerar PDF
       </button>
-
       {documentoPronto && (
         <div style={{ textAlign: "center", marginTop: "1rem" }}>
           <PDFDownloadLink

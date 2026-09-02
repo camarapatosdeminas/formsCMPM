@@ -50,7 +50,7 @@ const SolicitacaoEstagiario = () => {
     useState<React.ReactElement | null>(null);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -60,7 +60,7 @@ const SolicitacaoEstagiario = () => {
   // Handler corrigido para os botões de rádio
   const handleOpcaoCursoChange = (
     index: number,
-    e: React.ChangeEvent<HTMLInputElement>
+    e: React.ChangeEvent<HTMLInputElement>,
   ) => {
     const { value } = e.target;
     const novasOpcoes = [...formData.opcoesCurso];
@@ -75,7 +75,7 @@ const SolicitacaoEstagiario = () => {
   // Handler para os campos de texto das opções
   const handleOpcaoCursoTextChange = (
     index: number,
-    e: React.ChangeEvent<HTMLInputElement>
+    e: React.ChangeEvent<HTMLInputElement>,
   ) => {
     const { name, value } = e.target;
     const novasOpcoes = [...formData.opcoesCurso];

@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { PDFDownloadLink } from "@react-pdf/renderer";
-import RequisicaoAlmoxarifadoPdf from "../../pdf/RequisicaoAlmoxarifadoPdf"; 
-import "../FormularioFerias/FormularioFerias.css"; 
+import RequisicaoAlmoxarifadoPdf from "../../pdf/RequisicaoAlmoxarifadoPdf";
+import "../FormularioFerias/FormularioFerias.css";
 
 // Interface para um item da requisição
 interface ItemRequisicao {
@@ -21,13 +21,13 @@ interface FormData {
   requisitante: string;
   lotacao: string;
   justificativa: string;
-  
+
   // CAMPOS DE RECEBIMENTO REMOVIDOS
 }
 
 const RequisicaoManualAlmoxarifado = () => {
   const [formData, setFormData] = useState<FormData>({
-    dataEmissao: new Date().toLocaleDateString('pt-BR'), 
+    dataEmissao: new Date().toLocaleDateString("pt-BR"),
     requisicaoNum: "",
     requisitante: "",
     lotacao: "",
@@ -43,9 +43,8 @@ const RequisicaoManualAlmoxarifado = () => {
   const [documentoPronto, setDocumentoPronto] =
     useState<React.ReactElement | null>(null);
 
-
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -53,24 +52,39 @@ const RequisicaoManualAlmoxarifado = () => {
   };
 
   // Funções de Item (Adicionei placeholders, você deve usar o código completo delas)
-  const handleItemChange = (index: number, e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleItemChange = (
+    index: number,
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     const { name, value } = e.target;
     const novosItens = [...itens];
-    
+
     // Simplificado
-    if (name === 'descricao') { novosItens[index].descricao = value; } 
-    else if (name === 'quantidadeSolicitada') { novosItens[index].quantidadeSolicitada = value; } 
-    else if (name === 'quantidadeAtendida') { novosItens[index].quantidadeAtendida = value; }
+    if (name === "descricao") {
+      novosItens[index].descricao = value;
+    } else if (name === "quantidadeSolicitada") {
+      novosItens[index].quantidadeSolicitada = value;
+    } else if (name === "quantidadeAtendida") {
+      novosItens[index].quantidadeAtendida = value;
+    }
 
     setItens(novosItens);
     setDocumentoPronto(null);
   };
 
   const adicionarItem = () => {
-    setItens([...itens, { id: Date.now(), descricao: "", quantidadeSolicitada: "", quantidadeAtendida: "" }]);
+    setItens([
+      ...itens,
+      {
+        id: Date.now(),
+        descricao: "",
+        quantidadeSolicitada: "",
+        quantidadeAtendida: "",
+      },
+    ]);
     setDocumentoPronto(null);
   };
-  
+
   const removerItem = (index: number) => {
     if (itens.length <= 1) return;
     setItens(itens.filter((_, i) => i !== index));
@@ -78,24 +92,18 @@ const RequisicaoManualAlmoxarifado = () => {
   };
 
   const handleGerarPdfClick = () => {
-    const doc = (
-      <RequisicaoAlmoxarifadoPdf 
-          formData={formData} 
-          itens={itens} 
-      />
-    );
+    const doc = <RequisicaoAlmoxarifadoPdf formData={formData} itens={itens} />;
     setDocumentoPronto(doc);
   };
-
 
   return (
     <div className="form-container">
       <h2>Requisição Manual de Materiais - Almoxarifado</h2>
-      
+
       {/* Seção 1: Dados da Requisição (Permanece igual) */}
       <div className="form-section">
         <h3>Dados da Requisição</h3>
-        <div className="form-grid" style={{ gridTemplateColumns: '1fr 1fr' }}>
+        <div className="form-grid" style={{ gridTemplateColumns: "1fr 1fr" }}>
           <input
             type="text"
             name="requisicaoNum"
@@ -118,7 +126,7 @@ const RequisicaoManualAlmoxarifado = () => {
           value={formData.requisitante}
           onChange={handleInputChange}
           className="form-input-full"
-          style={{ marginTop: '1rem' }}
+          style={{ marginTop: "1rem" }}
         />
         <input
           type="text"
@@ -127,7 +135,7 @@ const RequisicaoManualAlmoxarifado = () => {
           value={formData.lotacao}
           onChange={handleInputChange}
           className="form-input-full"
-          style={{ marginTop: '1rem' }}
+          style={{ marginTop: "1rem" }}
         />
         <h4>JUSTIFICATIVA</h4>
         <textarea
@@ -141,43 +149,76 @@ const RequisicaoManualAlmoxarifado = () => {
       {/* Seção 2: Itens Solicitados (ADICIONEI O JSX) */}
       <div className="form-section">
         <h3>Itens Solicitados</h3>
-        <div className="table-header" style={{ display: 'grid', gridTemplateColumns: '1fr 100px 100px 50px', gap: '0.5rem', fontWeight: 'bold' }}>
-            <span>DESCRIÇÃO</span>
-            <span style={{textAlign: 'center'}}>QTDE. SOLICITADA</span>
-            <span style={{textAlign: 'center'}}>QTDE. ATENDIDA</span>
-            <span></span>
+        <div
+          className="table-header"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 100px 100px 50px",
+            gap: "0.5rem",
+            fontWeight: "bold",
+          }}
+        >
+          <span>DESCRIÇÃO</span>
+          <span style={{ textAlign: "center" }}>QTDE. SOLICITADA</span>
+          <span style={{ textAlign: "center" }}>QTDE. ATENDIDA</span>
+          <span></span>
         </div>
-        
+
         {itens.map((item, index) => (
-          <div key={item.id} className="item-row" style={{ display: 'grid', gridTemplateColumns: '1fr 100px 100px 50px', gap: '0.5rem', alignItems: 'center', marginBottom: '0.5rem' }}>
+          <div
+            key={item.id}
+            className="item-row"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 100px 100px 50px",
+              gap: "0.5rem",
+              alignItems: "center",
+              marginBottom: "0.5rem",
+            }}
+          >
             <input
               type="text"
               name="descricao"
               value={item.descricao}
-              onChange={(e) => handleItemChange(index, e as React.ChangeEvent<HTMLInputElement>)}
+              onChange={(e) =>
+                handleItemChange(
+                  index,
+                  e as React.ChangeEvent<HTMLInputElement>,
+                )
+              }
               placeholder="Descrição do material"
             />
             <input
               type="number"
               name="quantidadeSolicitada"
               value={item.quantidadeSolicitada}
-              onChange={(e) => handleItemChange(index, e as React.ChangeEvent<HTMLInputElement>)}
+              onChange={(e) =>
+                handleItemChange(
+                  index,
+                  e as React.ChangeEvent<HTMLInputElement>,
+                )
+              }
               placeholder="Solic."
-              style={{ textAlign: 'center' }}
+              style={{ textAlign: "center" }}
             />
             <input
               type="number"
               name="quantidadeAtendida"
               value={item.quantidadeAtendida}
-              onChange={(e) => handleItemChange(index, e as React.ChangeEvent<HTMLInputElement>)}
+              onChange={(e) =>
+                handleItemChange(
+                  index,
+                  e as React.ChangeEvent<HTMLInputElement>,
+                )
+              }
               placeholder="Atend."
-              style={{ textAlign: 'center' }}
+              style={{ textAlign: "center" }}
             />
             {itens.length > 1 && (
               <button
                 onClick={() => removerItem(index)}
                 className="remove-btn"
-                style={{ height: '38px', padding: '0 5px' }}
+                style={{ height: "38px", padding: "0 5px" }}
               >
                 X
               </button>
@@ -192,14 +233,23 @@ const RequisicaoManualAlmoxarifado = () => {
       {/* Seção 3: Recebimento/Entrega REMOVIDA DO JSX */}
       <div className="form-section">
         <h3>Dados Recebimento/Entrega</h3>
-        <p>Estes campos serão preenchidos manualmente após a impressão do PDF.</p>
-        
+        <p>
+          Estes campos serão preenchidos manualmente após a impressão do PDF.
+        </p>
+
         {/* Adicione um aviso visual para o usuário */}
-        <div style={{ padding: '10px', backgroundColor: '#35679C', color: '#fff', borderRadius: '4px', textAlign: 'center' }}>
+        <div
+          style={{
+            padding: "10px",
+            backgroundColor: "#35679C",
+            color: "#fff",
+            borderRadius: "4px",
+            textAlign: "center",
+          }}
+        >
           ESTA SEÇÃO NÃO REQUER PREENCHIMENTO DIGITAL.
         </div>
       </div>
-
 
       <button
         onClick={handleGerarPdfClick}
@@ -219,7 +269,7 @@ const RequisicaoManualAlmoxarifado = () => {
         <div style={{ textAlign: "center", marginTop: "1rem" }}>
           <PDFDownloadLink
             document={documentoPronto as any}
-            fileName={`requisicao_almoxarifado_${formData.requisicaoNum || 'sem_numero'}.pdf`}
+            fileName={`requisicao_almoxarifado_${formData.requisicaoNum || "sem_numero"}.pdf`}
             className="download-link"
           >
             {({ loading }) =>

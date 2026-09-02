@@ -267,7 +267,9 @@ const FormularioCartaoPonto = () => {
                 adicionarDiaEspecial("pontosFacultativos", e.target.value);
               }}
             />
-            <small>Disponível somente para dias de segunda a sexta-feira.</small>
+            <small>
+              Disponível somente para dias de segunda a sexta-feira.
+            </small>
             <div className="selected-days-list">
               {formData.pontosFacultativos.map((data) => (
                 <span className="selected-day" key={data}>

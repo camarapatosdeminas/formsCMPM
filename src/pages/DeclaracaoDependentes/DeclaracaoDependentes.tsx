@@ -47,7 +47,7 @@ const DeclaracaoDependentes = () => {
   // --- FUNÇÃO CORRIGIDA PARA ATUALIZAR OS DADOS DO DEPENDENTE ---
   const handleDependenteChange = (
     index: number,
-    e: React.ChangeEvent<HTMLInputElement>
+    e: React.ChangeEvent<HTMLInputElement>,
   ) => {
     const { name, value, type, checked } = e.target;
 

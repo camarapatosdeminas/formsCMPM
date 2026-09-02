@@ -25,14 +25,20 @@ const formularios = [
 const SiteHeader = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const formularioAtual = formularios.some(([path]) => path === location.pathname)
+  const formularioAtual = formularios.some(
+    ([path]) => path === location.pathname,
+  )
     ? location.pathname
     : "";
 
   return (
     <header className="site-header">
       <div className="site-header__shell">
-        <Link className="site-header__brand" to="/" aria-label="Ir para a página inicial">
+        <Link
+          className="site-header__brand"
+          to="/"
+          aria-label="Ir para a página inicial"
+        >
           <picture>
             <source media="(max-width: 440px)" srcSet="/images/brasao.png" />
             <img
@@ -43,7 +49,10 @@ const SiteHeader = () => {
           </picture>
         </Link>
 
-        <nav className="site-header__navigation" aria-label="Navegação principal">
+        <nav
+          className="site-header__navigation"
+          aria-label="Navegação principal"
+        >
           <Link
             className={`site-header__home${location.pathname === "/" ? " site-header__home--active" : ""}`}
             to="/"
@@ -66,7 +75,9 @@ const SiteHeader = () => {
             >
               <option value="">Selecione um formulário</option>
               {formularios.map(([path, label]) => (
-                <option key={path} value={path}>{label}</option>
+                <option key={path} value={path}>
+                  {label}
+                </option>
               ))}
             </select>
           </label>

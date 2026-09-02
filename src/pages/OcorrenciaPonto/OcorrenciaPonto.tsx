@@ -43,7 +43,7 @@ const OcorrenciaPonto = () => {
   // --- FUNÇÃO CORRIGIDA AQUI ---
   const handleOcorrenciaChange = (
     index: number,
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value, type } = e.target;
     const novasOcorrencias = [...ocorrencias];

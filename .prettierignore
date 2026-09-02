@@ -1,0 +1,10 @@
+# Dependências e arquivos gerados
+node_modules/
+dist/
+dist-ssr/
+coverage/
+.vercel/
+*.tsbuildinfo
+
+# Gerenciado pelo npm
+package-lock.json

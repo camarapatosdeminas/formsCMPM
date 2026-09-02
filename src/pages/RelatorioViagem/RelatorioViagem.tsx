@@ -66,7 +66,7 @@ const RelatorioViagem = () => {
     useState<React.ReactElement | null>(null);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -77,7 +77,7 @@ const RelatorioViagem = () => {
     tabela: "despesasAntecipadas" | "despesasRealizadas",
     despesa: string,
     campo: string,
-    value: string
+    value: string,
   ) => {
     setFormData((prev) => {
       const newFormData = { ...prev };
@@ -183,7 +183,7 @@ const RelatorioViagem = () => {
                 "despesasAntecipadas",
                 "passagem",
                 "antecipado",
-                e.target.value
+                e.target.value,
               )
             }
           />
@@ -195,7 +195,7 @@ const RelatorioViagem = () => {
                 "despesasAntecipadas",
                 "passagem",
                 "utilizado",
-                e.target.value
+                e.target.value,
               )
             }
           />
@@ -207,7 +207,7 @@ const RelatorioViagem = () => {
                 "despesasAntecipadas",
                 "passagem",
                 "reembolsar",
-                e.target.value
+                e.target.value,
               )
             }
           />
@@ -219,7 +219,7 @@ const RelatorioViagem = () => {
                 "despesasAntecipadas",
                 "passagem",
                 "devolver",
-                e.target.value
+                e.target.value,
               )
             }
           />
@@ -248,7 +248,7 @@ const RelatorioViagem = () => {
                     "despesasRealizadas",
                     "combustivel",
                     "quilometragem",
-                    e.target.value
+                    e.target.value,
                   )
                 }
               />
@@ -261,7 +261,7 @@ const RelatorioViagem = () => {
                   "despesasRealizadas",
                   key,
                   "utilizado",
-                  e.target.value
+                  e.target.value,
                 )
               }
             />
@@ -273,7 +273,7 @@ const RelatorioViagem = () => {
                   "despesasRealizadas",
                   key,
                   "reembolsar",
-                  e.target.value
+                  e.target.value,
                 )
               }
             />
