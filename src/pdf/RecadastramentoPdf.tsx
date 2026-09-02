@@ -16,68 +16,6 @@ Font.registerHyphenationCallback((word) => {
 
 const styles = StyleSheet.create({
   page: {
-    fontFamily: "Helvetica",
-    fontSize: 9.4,
-    lineHeight: 1.38,
-    paddingTop: 96,
-    paddingRight: 42,
-    paddingBottom: 48,
-    paddingLeft: 42,
-    color: "#172033",
-  },
-  header: {
-    position: "absolute",
-    top: 24,
-    left: 42,
-    right: 42,
-    borderBottomWidth: 1,
-    borderBottomColor: "#8aa2bd",
-    paddingBottom: 8,
-  },
-  institution: {
-    textAlign: "center",
-    fontFamily: "Helvetica-Bold",
-    fontSize: 14,
-    color: "#234e7c",
-    letterSpacing: 0.35,
-  },
-  institutionMeta: {
-    textAlign: "center",
-    fontSize: 7.5,
-    marginTop: 2,
-    color: "#536579",
-  },
-  annexTitle: {
-    textAlign: "center",
-    fontFamily: "Helvetica-Bold",
-    fontSize: 11.5,
-    marginTop: 6,
-    color: "#172033",
-  },
-  footerLeft: {
-    position: "absolute",
-    bottom: 20,
-    left: 42,
-    fontSize: 7,
-    color: "#607286",
-  },
-  footerRight: {
-    position: "absolute",
-    bottom: 20,
-    right: 42,
-    fontSize: 7,
-    color: "#607286",
-    textAlign: "right",
-  },
-  footerRule: {
-    position: "absolute",
-    bottom: 32,
-    left: 42,
-    right: 42,
-    borderTopWidth: 0.7,
-    borderTopColor: "#c5d0dc",
-  },
-  portariaPage: {
     fontFamily: "Times-Roman",
     fontSize: 9.4,
     lineHeight: 1.35,
@@ -86,6 +24,21 @@ const styles = StyleSheet.create({
     paddingBottom: 44,
     paddingLeft: 54,
     color: "#1f2937",
+  },
+  footerLeft: {
+    position: "absolute",
+    bottom: 20,
+    left: 54,
+    fontSize: 7,
+    color: "#6b7280",
+  },
+  footerRule: {
+    position: "absolute",
+    bottom: 32,
+    left: 54,
+    right: 54,
+    borderTopWidth: 0.6,
+    borderTopColor: "#9ca3af",
   },
   portariaHeader: {
     position: "absolute",
@@ -113,7 +66,7 @@ const styles = StyleSheet.create({
     lineHeight: 1.2,
     color: "#6b7280",
   },
-  portariaTitle: {
+  documentTitle: {
     textAlign: "center",
     fontFamily: "Times-Bold",
     fontSize: 10.8,
@@ -168,10 +121,12 @@ const styles = StyleSheet.create({
     fontSize: 10,
   },
   sectionTitle: {
-    fontFamily: "Helvetica-Bold",
-    fontSize: 9.5,
-    color: "#ffffff",
-    backgroundColor: "#35679c",
+    fontFamily: "Times-Bold",
+    fontSize: 9.4,
+    color: "#1f2937",
+    backgroundColor: "#f3f4f6",
+    borderBottomWidth: 0.6,
+    borderBottomColor: "#9ca3af",
     paddingVertical: 5,
     paddingHorizontal: 7,
     marginTop: 8,
@@ -180,42 +135,42 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderLeftWidth: 0.7,
     borderBottomWidth: 0.7,
-    borderColor: "#91a1b2",
+    borderColor: "#9ca3af",
   },
   field: {
     paddingVertical: 4,
     paddingHorizontal: 5,
     borderRightWidth: 0.7,
-    borderColor: "#91a1b2",
+    borderColor: "#9ca3af",
     minHeight: 31,
   },
   fieldLabel: {
-    fontFamily: "Helvetica-Bold",
-    fontSize: 6.8,
-    color: "#607286",
+    fontFamily: "Times-Bold",
+    fontSize: 7.2,
+    color: "#4b5563",
     marginBottom: 2,
     textTransform: "uppercase",
   },
   fieldValue: {
-    fontSize: 9,
-    color: "#111827",
+    fontSize: 9.4,
+    color: "#1f2937",
   },
   paragraph: {
     textAlign: "justify",
     marginBottom: 10,
-    lineHeight: 1.48,
+    textIndent: 55,
   },
   legalLead: {
-    fontFamily: "Helvetica-Bold",
+    fontFamily: "Times-Bold",
   },
   note: {
     marginTop: 9,
     padding: 8,
-    backgroundColor: "#eef4fa",
-    borderLeftWidth: 3,
-    borderLeftColor: "#35679c",
-    fontSize: 8,
-    lineHeight: 1.4,
+    backgroundColor: "#f3f4f6",
+    borderLeftWidth: 0.6,
+    borderLeftColor: "#9ca3af",
+    fontSize: 9.4,
+    lineHeight: 1.35,
   },
   signatureDate: {
     textAlign: "center",
@@ -224,18 +179,18 @@ const styles = StyleSheet.create({
   },
   signature: {
     alignSelf: "center",
-    width: "56%",
-    borderTopWidth: 0.8,
-    borderTopColor: "#172033",
-    paddingTop: 4,
+    width: "62%",
+    borderTopWidth: 0.7,
+    borderTopColor: "#374151",
+    paddingTop: 5,
     textAlign: "center",
-    fontSize: 8,
+    fontSize: 9.4,
   },
   signatureGrid: {
     flexDirection: "row",
     marginTop: 24,
     borderWidth: 0.7,
-    borderColor: "#91a1b2",
+    borderColor: "#9ca3af",
   },
   signatureCell: {
     width: "50%",
@@ -244,38 +199,38 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "center",
     borderRightWidth: 0.7,
-    borderRightColor: "#91a1b2",
+    borderRightColor: "#9ca3af",
   },
   signatureLine: {
     width: "82%",
     borderTopWidth: 0.7,
-    borderTopColor: "#172033",
+    borderTopColor: "#374151",
     paddingTop: 3,
     textAlign: "center",
-    fontSize: 7.5,
+    fontSize: 8.5,
   },
   assetIndex: {
-    fontFamily: "Helvetica-Bold",
-    fontSize: 8,
-    color: "#234e7c",
-    backgroundColor: "#eef4fa",
+    fontFamily: "Times-Bold",
+    fontSize: 9.4,
+    color: "#1f2937",
+    backgroundColor: "#f3f4f6",
     paddingVertical: 4,
     paddingHorizontal: 6,
     borderWidth: 0.7,
-    borderColor: "#91a1b2",
+    borderColor: "#9ca3af",
     marginTop: 4,
   },
   assetDescription: {
     padding: 7,
     borderLeftWidth: 0.7,
     borderRightWidth: 0.7,
-    borderColor: "#91a1b2",
-    lineHeight: 1.42,
+    borderBottomWidth: 0.7,
+    borderColor: "#9ca3af",
   },
   assetValue: {
     padding: 7,
     borderWidth: 0.7,
-    borderColor: "#91a1b2",
+    borderColor: "#9ca3af",
     marginBottom: 9,
   },
   longFieldBlock: {
@@ -284,37 +239,41 @@ const styles = StyleSheet.create({
     borderLeftWidth: 0.7,
     borderRightWidth: 0.7,
     borderBottomWidth: 0.7,
-    borderColor: "#91a1b2",
-    fontSize: 8.2,
-    lineHeight: 1.28,
+    borderColor: "#9ca3af",
+    fontSize: 9.4,
+    lineHeight: 1.35,
   },
   dependentsHeader: {
     flexDirection: "row",
-    backgroundColor: "#35679c",
-    color: "#ffffff",
-    fontFamily: "Helvetica-Bold",
-    fontSize: 7,
+    backgroundColor: "#f3f4f6",
+    color: "#1f2937",
+    fontFamily: "Times-Bold",
+    borderTopWidth: 0.7,
+    borderBottomWidth: 0.7,
+    borderLeftWidth: 0.7,
+    borderColor: "#9ca3af",
+    fontSize: 7.2,
     textAlign: "center",
   },
   dependentRow: {
     flexDirection: "row",
     borderLeftWidth: 0.7,
     borderBottomWidth: 0.7,
-    borderColor: "#91a1b2",
+    borderColor: "#9ca3af",
   },
   tableCell: {
     paddingVertical: 5,
     paddingHorizontal: 4,
     borderRightWidth: 0.7,
-    borderColor: "#91a1b2",
+    borderColor: "#9ca3af",
   },
   option: {
     marginBottom: 7,
     paddingVertical: 5,
     paddingHorizontal: 7,
-    backgroundColor: "#f5f7fa",
-    borderLeftWidth: 2,
-    borderLeftColor: "#91a1b2",
+    backgroundColor: "#f3f4f6",
+    borderLeftWidth: 0.6,
+    borderLeftColor: "#9ca3af",
   },
 });
 
@@ -395,15 +354,12 @@ const paginateAssets = (bens: RecadastramentoData["bens"]) => {
   return pages;
 };
 
-function Cabecalho({ titulo, fixed = false }: { titulo: string; fixed?: boolean }) {
+function Cabecalho({ titulo }: { titulo: string }) {
   return (
-    <View style={styles.header} fixed={fixed}>
-      <Text style={styles.institution}>CÂMARA MUNICIPAL DE PATOS DE MINAS</Text>
-      <Text style={styles.institutionMeta}>
-        Rua José de Santana, 470, Centro, Patos de Minas/MG - CEP 38.700-052
-      </Text>
-      <Text style={styles.annexTitle}>{titulo}</Text>
-    </View>
+    <>
+      <CabecalhoInstitucional />
+      <Text style={styles.documentTitle} minPresenceAhead={40}>{titulo}</Text>
+    </>
   );
 }
 
@@ -411,7 +367,9 @@ function Rodape() {
   return (
     <>
       <View style={styles.footerRule} fixed />
-      <Text style={styles.footerLeft} fixed>Portaria nº 1.798, de 5 de abril de 2023</Text>
+      <Text style={styles.footerLeft} fixed>
+        Portaria nº 1.798, de 5 de abril de 2023
+      </Text>
     </>
   );
 }
@@ -425,17 +383,21 @@ const dataAtualExtenso = () => {
   }).format(data);
 };
 
-function CabecalhoPortaria() {
+// A Portaria e todos os anexos compartilham este cabeçalho, inclusive continuações.
+function CabecalhoInstitucional() {
   return (
-    <View style={styles.portariaHeader}>
-      <Text style={styles.portariaInstitution}>CÂMARA MUNICIPAL DE PATOS DE MINAS</Text>
+    <View style={styles.portariaHeader} fixed>
+      <Text style={styles.portariaInstitution}>
+        CÂMARA MUNICIPAL DE PATOS DE MINAS
+      </Text>
       <View style={styles.portariaMetaBlock}>
         <Text style={styles.portariaInstitutionMeta}>
           Rua José de Santana, 470, Centro, Patos de Minas/MG - CEP: 38.700-052
         </Text>
         <Text style={styles.portariaInstitutionMeta}>Tel.: (34) 3821-8455</Text>
         <Text style={styles.portariaInstitutionMeta}>
-          E-mail: camarapatos@camarapatos.mg.gov.br - https://www.camarapatos.mg.gov.br
+          E-mail: camarapatos@camarapatos.mg.gov.br -
+          https://camarapatos.mg.gov.br
         </Text>
       </View>
     </View>
@@ -445,51 +407,84 @@ function CabecalhoPortaria() {
 function Portaria() {
   return (
     <>
-      <Page size="A4" style={styles.portariaPage} wrap>
-        <CabecalhoPortaria />
-        <Text style={styles.portariaTitle}>PORTARIA Nº 1798, DE 5 DE ABRIL DE 2023.</Text>
+      <Page size="A4" style={styles.page} wrap>
+        <CabecalhoInstitucional />
+        <Rodape />
+        <Text style={styles.documentTitle}>
+          PORTARIA Nº 1798, DE 5 DE ABRIL DE 2023.
+        </Text>
         <Text style={styles.portariaEmenta}>
-          Dispõe sobre os critérios para a realização de recadastramento dos servidores e vereadores da Câmara Municipal de Patos de Minas; e dá outras providências.
+          Dispõe sobre os critérios para a realização de recadastramento dos
+          servidores e vereadores da Câmara Municipal de Patos de Minas; e dá
+          outras providências.
         </Text>
 
         <Text style={styles.portariaParagraph}>
-          O Presidente da Câmara Municipal de Patos de Minas, no uso das atribuições que lhe confere o Regimento Interno da Câmara Municipal de Patos de Minas e considerando o disposto na alínea “e” do art. 17 da Resolução nº 262, de 16 de julho de 2010,
+          O Presidente da Câmara Municipal de Patos de Minas, no uso das
+          atribuições que lhe confere o Regimento Interno da Câmara Municipal de
+          Patos de Minas e considerando o disposto na alínea “e” do art. 17 da
+          Resolução nº 262, de 16 de julho de 2010,
         </Text>
         <Text style={styles.portariaConsiderando}>
-          CONSIDERANDO a necessidade de implementar procedimentos internos mais céleres e menos burocráticos,
+          CONSIDERANDO a necessidade de implementar procedimentos internos mais
+          céleres e menos burocráticos,
         </Text>
         <Text style={styles.portariaConsiderando}>
-          CONSIDERANDO o parecer favorável emitido pela Controladoria Interna no bojo do Memorando nº 07/2023, em resposta ao Requerimento Administrativo nº 32/2023,
+          CONSIDERANDO o parecer favorável emitido pela Controladoria Interna no
+          bojo do Memorando nº 07/2023, em resposta ao Requerimento
+          Administrativo nº 32/2023,
         </Text>
         <Text style={styles.portariaResolve}>RESOLVE:</Text>
 
         <Text style={styles.portariaArticle}>
-          Art. 1º Fica instituído o recadastramento dos servidores e vereadores da Câmara Municipal de Patos de Minas, obrigatório a cada 4 (quatro) anos.
+          Art. 1º Fica instituído o recadastramento dos servidores e vereadores
+          da Câmara Municipal de Patos de Minas, obrigatório a cada 4 (quatro)
+          anos.
         </Text>
         <Text style={styles.portariaArticle}>
-          Art. 2º Os servidores e vereadores que eventualmente não tiverem realizado o cadastramento no mês de janeiro, em razão de sua admissão, deverão protocolar, junto à Divisão de Recursos Humanos, até o último dia útil do mês de março, do primeiro ano de cada legislatura, formulário de recadastramento e declarações preenchidos, datados e assinados conforme os modelos constantes no anexo desta Portaria.
+          Art. 2º Os servidores e vereadores que eventualmente não tiverem
+          realizado o cadastramento no mês de janeiro, em razão de sua admissão,
+          deverão protocolar, junto à Divisão de Recursos Humanos, até o último
+          dia útil do mês de março, do primeiro ano de cada legislatura,
+          formulário de recadastramento e declarações preenchidos, datados e
+          assinados conforme os modelos constantes no anexo desta Portaria.
         </Text>
         <Text style={styles.portariaArticle}>
-          Art. 3º Os modelos a serem utilizados estarão disponíveis no “Portal de Acesso à Informação” disponível no sítio da Câmara Municipal de Patos de Minas, na internet.
+          Art. 3º Os modelos a serem utilizados estarão disponíveis no “Portal
+          de Acesso à Informação” disponível no sítio da Câmara Municipal de
+          Patos de Minas, na internet.
         </Text>
         <Text style={styles.portariaArticle}>
-          Art. 4º Dúvidas com relação ao preenchimento do formulário e das declarações poderão ser sanadas junto à Divisão de Recursos Humanos e Controladoria Interna.
+          Art. 4º Dúvidas com relação ao preenchimento do formulário e das
+          declarações poderão ser sanadas junto à Divisão de Recursos Humanos e
+          Controladoria Interna.
         </Text>
         <Text style={styles.portariaArticle}>
-          Art. 5º O servidor ou vereador que não observar o prazo previsto no art. 2º poderá ter seu pagamento bloqueado pela Divisão de Recursos Humanos, até a regularização da situação.
+          Art. 5º O servidor ou vereador que não observar o prazo previsto no
+          art. 2º poderá ter seu pagamento bloqueado pela Divisão de Recursos
+          Humanos, até a regularização da situação.
         </Text>
         <Text style={styles.portariaArticle}>
-          Art. 6º Caberá a cada servidor e vereador a manutenção de seus dados atualizados, devendo comunicar à Divisão de Recursos Humanos, imediatamente, alteração de dados posterior ao recadastramento, como endereço, telefone, e-mail, alteração de dependentes ou quaisquer outras informações relevantes à manutenção atualizada de seus cadastros funcionais, sob pena de responsabilização pessoal.
+          Art. 6º Caberá a cada servidor e vereador a manutenção de seus dados
+          atualizados, devendo comunicar à Divisão de Recursos Humanos,
+          imediatamente, alteração de dados posterior ao recadastramento, como
+          endereço, telefone, e-mail, alteração de dependentes ou quaisquer
+          outras informações relevantes à manutenção atualizada de seus
+          cadastros funcionais, sob pena de responsabilização pessoal.
         </Text>
         <Text style={styles.portariaArticle}>
-          Art. 7º Os servidores e vereadores que não tiverem sofrido alterações em seus dados cadastrais deverão apresentar declaração simplificada à Divisão de Recursos Humanos, até no
+          Art. 7º Os servidores e vereadores que não tiverem sofrido alterações
+          em seus dados cadastrais deverão apresentar declaração simplificada à
+          Divisão de Recursos Humanos, até no
         </Text>
       </Page>
 
-      <Page size="A4" style={styles.portariaPage} wrap>
-        <CabecalhoPortaria />
+      <Page size="A4" style={styles.page} wrap>
+        <CabecalhoInstitucional />
+        <Rodape />
         <Text style={styles.portariaContinuation}>
-          último dia útil do mês de março, do terceiro ano da legislatura, sob pena de sofrer as mesmas sanções do art. 5º.
+          último dia útil do mês de março, do terceiro ano da legislatura, sob
+          pena de sofrer as mesmas sanções do art. 5º.
         </Text>
         <Text style={styles.portariaArticle}>
           Art. 8º Fica revogada a Portaria nº 1.347, de 09 de fevereiro de 2017.
@@ -497,13 +492,19 @@ function Portaria() {
         <Text style={styles.portariaArticle}>
           Art. 9º Esta Portaria entra em vigor na data de sua publicação.
         </Text>
-        <Text style={styles.portariaArticle}>Art. 10. Publique-se e cumpra-se.</Text>
-        <Text style={[styles.portariaParagraph, { marginTop: 14, textIndent: 0 }]}>
+        <Text style={styles.portariaArticle}>
+          Art. 10. Publique-se e cumpra-se.
+        </Text>
+        <Text
+          style={[styles.portariaParagraph, { marginTop: 14, textIndent: 0 }]}
+        >
           Câmara Municipal de Patos de Minas, {dataAtualExtenso()}.
         </Text>
 
         <View style={styles.portariaSignature}>
-          <Text style={styles.portariaSigner}>João Batista Gonçalves (Cabo Batista)</Text>
+          <Text style={styles.portariaSigner}>
+            João Batista Gonçalves (Cabo Batista)
+          </Text>
           <Text>Presidente da Câmara Municipal</Text>
         </View>
       </Page>
@@ -546,25 +547,36 @@ function NotasEAssinaturasAnexoI({ data }: { data: RecadastramentoData }) {
     <>
       <View style={styles.note}>
         <Text>
-          Documentos a serem apresentados na Divisão de Recursos Humanos: Formulário de Recadastramento do funcionário; Declaração de não acúmulo de cargos; Declaração de bens; Declaração de Atualização de Cadastro; Relação de Dependentes.
+          Documentos a serem apresentados na Divisão de Recursos Humanos:
+          Formulário de Recadastramento do funcionário; Declaração de não
+          acúmulo de cargos; Declaração de bens; Declaração de Atualização de
+          Cadastro; Relação de Dependentes.
         </Text>
         <Text style={{ marginTop: 3 }}>
-          Observação: apresentar fotocópia do documento de identidade caso tenha mudado de nome em virtude de divórcio ou outros processos judiciais.
+          Observação: apresentar fotocópia do documento de identidade caso tenha
+          mudado de nome em virtude de divórcio ou outros processos judiciais.
         </Text>
       </View>
 
       <View wrap={false}>
         <View style={styles.signatureGrid}>
           <View style={styles.signatureCell}>
-            <Text style={styles.signatureLine}>Declarante - {value(data.nome)}</Text>
+            <Text style={styles.signatureLine}>
+              Declarante - {value(data.nome)}
+            </Text>
           </View>
           <View style={[styles.signatureCell, { borderRightWidth: 0 }]}>
-            <Text style={styles.signatureLine}>Data do cadastramento/recadastramento - {formatDate(data.dataDeclaracao)}</Text>
+            <Text style={styles.signatureLine}>
+              Data do cadastramento/recadastramento -{" "}
+              {formatDate(data.dataDeclaracao)}
+            </Text>
           </View>
         </View>
         <View style={[styles.signatureGrid, { marginTop: 0 }]}>
           <View style={styles.signatureCell}>
-            <Text style={styles.signatureLine}>Divisão de Recursos Humanos</Text>
+            <Text style={styles.signatureLine}>
+              Divisão de Recursos Humanos
+            </Text>
           </View>
           <View style={[styles.signatureCell, { borderRightWidth: 0 }]}>
             <Text style={styles.signatureLine}>Controladoria Interna</Text>
@@ -578,8 +590,9 @@ function NotasEAssinaturasAnexoI({ data }: { data: RecadastramentoData }) {
 function AnexoI({ data }: { data: RecadastramentoData }) {
   const vinculo = (nome: RecadastramentoData["vinculo"]) =>
     checkbox(data.vinculo === nome);
-  const atividadeLonga = data.exerceAtividadeRemunerada
-    && data.atividadeRemuneradaDetalhes.trim().length > 420;
+  const atividadeLonga =
+    data.exerceAtividadeRemunerada &&
+    data.atividadeRemuneradaDetalhes.trim().length > 420;
   const atividadeChunks = atividadeLonga
     ? chunkText(data.atividadeRemuneradaDetalhes, 700)
     : [];
@@ -590,134 +603,246 @@ function AnexoI({ data }: { data: RecadastramentoData }) {
         <Cabecalho titulo="ANEXO I - FORMULÁRIO DE RECADASTRAMENTO" />
         <Rodape />
 
-      <Text style={styles.sectionTitle}>DADOS PESSOAIS</Text>
-      <View style={styles.row}>
-        <Campo label="Matrícula" width="25%">{value(data.matricula)}</Campo>
-        <Campo label="Nome" width="75%">{value(data.nome)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Data de nascimento" width="25%">{formatDate(data.dataNascimento)}</Campo>
-        <Campo label="Naturalidade" width="45%">{value(data.naturalidade)}</Campo>
-        <Campo label="UF de nascimento" width="30%">{value(data.ufNascimento)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Nacionalidade" width="35%">{value(data.nacionalidade)}</Campo>
-        <Campo label="Estado civil" width="35%">{value(data.estadoCivil)}</Campo>
-        <Campo label="Sexo" width="30%">{value(data.sexo)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Possui deficiência" width="30%">{data.possuiDeficiencia ? "Sim" : "Não"}</Campo>
-        <Campo label="Tipo de deficiência" width="70%">{data.possuiDeficiencia ? value(data.tipoDeficiencia) : "Não se aplica"}</Campo>
-      </View>
+        <Text style={styles.sectionTitle}>DADOS PESSOAIS</Text>
+        <View style={styles.row}>
+          <Campo label="Matrícula" width="25%">
+            {value(data.matricula)}
+          </Campo>
+          <Campo label="Nome" width="75%">
+            {value(data.nome)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Data de nascimento" width="25%">
+            {formatDate(data.dataNascimento)}
+          </Campo>
+          <Campo label="Naturalidade" width="45%">
+            {value(data.naturalidade)}
+          </Campo>
+          <Campo label="UF de nascimento" width="30%">
+            {value(data.ufNascimento)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Nacionalidade" width="35%">
+            {value(data.nacionalidade)}
+          </Campo>
+          <Campo label="Estado civil" width="35%">
+            {value(data.estadoCivil)}
+          </Campo>
+          <Campo label="Sexo" width="30%">
+            {value(data.sexo)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Possui deficiência" width="30%">
+            {data.possuiDeficiencia ? "Sim" : "Não"}
+          </Campo>
+          <Campo label="Tipo de deficiência" width="70%">
+            {data.possuiDeficiencia
+              ? value(data.tipoDeficiencia)
+              : "Não se aplica"}
+          </Campo>
+        </View>
 
-      <Text style={styles.sectionTitle}>DOCUMENTOS</Text>
-      <View style={styles.row}>
-        <Campo label="CPF" width="25%">{value(data.cpf)}</Campo>
-        <Campo label="RG" width="22%">{value(data.rg)}</Campo>
-        <Campo label="Emissor" width="18%">{value(data.rgEmissor)}</Campo>
-        <Campo label="UF" width="12%">{value(data.rgUf)}</Campo>
-        <Campo label="Data" width="23%">{formatDate(data.rgData)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Título de eleitor nº" width="38%">{value(data.tituloEleitor)}</Campo>
-        <Campo label="Zona nº" width="22%">{value(data.zonaEleitoral)}</Campo>
-        <Campo label="Seção nº" width="22%">{value(data.secaoEleitoral)}</Campo>
-        <Campo label="UF" width="18%">{value(data.eleitorUf)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="PIS/PASEP" width="28%">{value(data.pisPasep)}</Campo>
-        <Campo label="CTPS" width="22%">{value(data.ctps)}</Campo>
-        <Campo label="Série" width="18%">{value(data.ctpsSerie)}</Campo>
-        <Campo label="UF" width="12%">{value(data.ctpsUf)}</Campo>
-        <Campo label="Emissão" width="20%">{formatDate(data.ctpsEmissao)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Conselho regional nº" width="30%">{value(data.conselhoNumero)}</Campo>
-        <Campo label="Órgão do conselho" width="26%">{value(data.conselhoOrgao)}</Campo>
-        <Campo label="Reservista" width="20%">{value(data.reservista)}</Campo>
-        <Campo label="Órgão reservista" width="24%">{value(data.orgaoReservista)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="CNH" width="65%">{value(data.cnh)}</Campo>
-        <Campo label="Categoria" width="35%">{value(data.cnhCategoria)}</Campo>
-      </View>
+        <Text style={styles.sectionTitle}>DOCUMENTOS</Text>
+        <View style={styles.row}>
+          <Campo label="CPF" width="25%">
+            {value(data.cpf)}
+          </Campo>
+          <Campo label="RG" width="22%">
+            {value(data.rg)}
+          </Campo>
+          <Campo label="Emissor" width="18%">
+            {value(data.rgEmissor)}
+          </Campo>
+          <Campo label="UF" width="12%">
+            {value(data.rgUf)}
+          </Campo>
+          <Campo label="Data" width="23%">
+            {formatDate(data.rgData)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Título de eleitor nº" width="38%">
+            {value(data.tituloEleitor)}
+          </Campo>
+          <Campo label="Zona nº" width="22%">
+            {value(data.zonaEleitoral)}
+          </Campo>
+          <Campo label="Seção nº" width="22%">
+            {value(data.secaoEleitoral)}
+          </Campo>
+          <Campo label="UF" width="18%">
+            {value(data.eleitorUf)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="PIS/PASEP" width="28%">
+            {value(data.pisPasep)}
+          </Campo>
+          <Campo label="CTPS" width="22%">
+            {value(data.ctps)}
+          </Campo>
+          <Campo label="Série" width="18%">
+            {value(data.ctpsSerie)}
+          </Campo>
+          <Campo label="UF" width="12%">
+            {value(data.ctpsUf)}
+          </Campo>
+          <Campo label="Emissão" width="20%">
+            {formatDate(data.ctpsEmissao)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Conselho regional nº" width="30%">
+            {value(data.conselhoNumero)}
+          </Campo>
+          <Campo label="Órgão do conselho" width="26%">
+            {value(data.conselhoOrgao)}
+          </Campo>
+          <Campo label="Reservista" width="20%">
+            {value(data.reservista)}
+          </Campo>
+          <Campo label="Órgão reservista" width="24%">
+            {value(data.orgaoReservista)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="CNH" width="65%">
+            {value(data.cnh)}
+          </Campo>
+          <Campo label="Categoria" width="35%">
+            {value(data.cnhCategoria)}
+          </Campo>
+        </View>
 
-      <Text style={styles.sectionTitle}>ENDEREÇO</Text>
-      <View style={styles.row}>
-        <Campo label="Logradouro" width="76%">{value(data.logradouro)}</Campo>
-        <Campo label="Número" width="24%">{value(data.numero)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Complemento" width="45%">{value(data.complemento)}</Campo>
-        <Campo label="Bairro" width="35%">{value(data.bairro)}</Campo>
-        <Campo label="CEP" width="20%">{value(data.cep)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Cidade" width="48%">{value(data.cidade)}</Campo>
-        <Campo label="UF" width="12%">{value(data.enderecoUf)}</Campo>
-        <Campo label="Telefone" width="20%">{value(data.telefone)}</Campo>
-        <Campo label="Celular" width="20%">{value(data.celular)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="E-mail" width="100%">{value(data.email)}</Campo>
-      </View>
-
+        <Text style={styles.sectionTitle}>ENDEREÇO</Text>
+        <View style={styles.row}>
+          <Campo label="Logradouro" width="76%">
+            {value(data.logradouro)}
+          </Campo>
+          <Campo label="Número" width="24%">
+            {value(data.numero)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Complemento" width="45%">
+            {value(data.complemento)}
+          </Campo>
+          <Campo label="Bairro" width="35%">
+            {value(data.bairro)}
+          </Campo>
+          <Campo label="CEP" width="20%">
+            {value(data.cep)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Cidade" width="48%">
+            {value(data.cidade)}
+          </Campo>
+          <Campo label="UF" width="12%">
+            {value(data.enderecoUf)}
+          </Campo>
+          <Campo label="Telefone" width="20%">
+            {value(data.telefone)}
+          </Campo>
+          <Campo label="Celular" width="20%">
+            {value(data.celular)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="E-mail" width="100%">
+            {value(data.email)}
+          </Campo>
+        </View>
       </Page>
 
       <Page size="A4" style={styles.page} wrap>
-      <Cabecalho titulo="ANEXO I - FORMULÁRIO DE RECADASTRAMENTO" />
-      <Rodape />
+        <Cabecalho titulo="ANEXO I - FORMULÁRIO DE RECADASTRAMENTO" />
+        <Rodape />
 
-      <Text style={[styles.sectionTitle, { marginTop: 0 }]}>DADOS FUNCIONAIS</Text>
-      <View style={styles.row}>
-        <Campo label="Admissão" width="22%">{formatDate(data.admissao)}</Campo>
-        <Campo label="Vínculo" width="78%">
-          {`${vinculo("efetivo")} Efetivo    ${vinculo("comissionado")} Comissionado    ${vinculo("cedido")} Cedido    ${vinculo("agentePolitico")} Agente político`}
-        </Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Órgão de cessão" width="100%">{value(data.orgaoCessao)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Cargo do concurso" width="45%">{value(data.cargoConcurso)}</Campo>
-        <Campo label="Cargo/Função que exerce" width="55%">{value(data.cargoFuncao)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Lotação atual" width="100%">{value(data.lotacao)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Grau de instrução" width="38%">{value(data.grauInstrucao)}</Campo>
-        <Campo label="Formação/Graduação" width="62%">{value(data.formacao)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Caixa Econômica Federal - Agência" width="35%">{value(data.agencia)}</Campo>
-        <Campo label="Operação" width="25%">{value(data.operacao)}</Campo>
-        <Campo label="Conta" width="40%">{value(data.conta)}</Campo>
-      </View>
-      <View style={styles.row}>
-        <Campo label="Exerce outra atividade remunerada?" width="100%">{data.exerceAtividadeRemunerada ? "Sim" : "Não"}</Campo>
-      </View>
-      {data.exerceAtividadeRemunerada && !atividadeLonga && (
-        <Text style={styles.longFieldBlock}>
-          <Text style={styles.fieldLabel}>ATIVIDADE(S) E HORÁRIOS{"\n"}</Text>
-          {value(data.atividadeRemuneradaDetalhes)}
+        <Text style={[styles.sectionTitle, { marginTop: 0 }]}>
+          DADOS FUNCIONAIS
         </Text>
-      )}
-      {atividadeLonga && (
-        <Text style={styles.longFieldBlock}>
-          <Text style={styles.fieldLabel}>ATIVIDADE(S) E HORÁRIOS{"\n"}</Text>
-          Conteúdo detalhado nas páginas seguintes deste anexo.
-        </Text>
-      )}
+        <View style={styles.row}>
+          <Campo label="Admissão" width="22%">
+            {formatDate(data.admissao)}
+          </Campo>
+          <Campo label="Vínculo" width="78%">
+            {`${vinculo("efetivo")} Efetivo    ${vinculo("comissionado")} Comissionado    ${vinculo("cedido")} Cedido    ${vinculo("agentePolitico")} Agente político`}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Órgão de cessão" width="100%">
+            {value(data.orgaoCessao)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Cargo do concurso" width="45%">
+            {value(data.cargoConcurso)}
+          </Campo>
+          <Campo label="Cargo/Função que exerce" width="55%">
+            {value(data.cargoFuncao)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Lotação atual" width="100%">
+            {value(data.lotacao)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Grau de instrução" width="38%">
+            {value(data.grauInstrucao)}
+          </Campo>
+          <Campo label="Formação/Graduação" width="62%">
+            {value(data.formacao)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Caixa Econômica Federal - Agência" width="35%">
+            {value(data.agencia)}
+          </Campo>
+          <Campo label="Operação" width="25%">
+            {value(data.operacao)}
+          </Campo>
+          <Campo label="Conta" width="40%">
+            {value(data.conta)}
+          </Campo>
+        </View>
+        <View style={styles.row}>
+          <Campo label="Exerce outra atividade remunerada?" width="100%">
+            {data.exerceAtividadeRemunerada ? "Sim" : "Não"}
+          </Campo>
+        </View>
+        {data.exerceAtividadeRemunerada && !atividadeLonga && (
+          <Text style={styles.longFieldBlock}>
+            <Text style={styles.fieldLabel}>ATIVIDADE(S) E HORÁRIOS{"\n"}</Text>
+            {value(data.atividadeRemuneradaDetalhes)}
+          </Text>
+        )}
+        {atividadeLonga && (
+          <Text style={styles.longFieldBlock}>
+            <Text style={styles.fieldLabel}>ATIVIDADE(S) E HORÁRIOS{"\n"}</Text>
+            Conteúdo detalhado nas páginas seguintes deste anexo.
+          </Text>
+        )}
 
-      {!atividadeLonga && <NotasEAssinaturasAnexoI data={data} />}
+        {!atividadeLonga && <NotasEAssinaturasAnexoI data={data} />}
       </Page>
 
       {atividadeChunks.map((chunk, index) => (
-        <Page key={`atividade-page-${index}`} size="A4" style={styles.page} wrap>
+        <Page
+          key={`atividade-page-${index}`}
+          size="A4"
+          style={styles.page}
+          wrap
+        >
           <Cabecalho titulo="ANEXO I - FORMULÁRIO DE RECADASTRAMENTO" />
           <Rodape />
-          <Text style={[styles.sectionTitle, { marginTop: 0 }]}>ATIVIDADE(S) REMUNERADA(S) E HORÁRIOS - CONTINUAÇÃO</Text>
+          <Text style={[styles.sectionTitle, { marginTop: 0 }]}>
+            ATIVIDADE(S) REMUNERADA(S) E HORÁRIOS - CONTINUAÇÃO
+          </Text>
           <Text style={styles.longFieldBlock}>{chunk}</Text>
         </Page>
       ))}
@@ -743,13 +868,27 @@ function AnexoII({ data }: { data: RecadastramentoData }) {
         const isLast = pageIndex === pages.length - 1;
 
         return (
-          <Page key={`assets-page-${pageIndex}`} size="A4" style={styles.page} wrap>
+          <Page
+            key={`assets-page-${pageIndex}`}
+            size="A4"
+            style={styles.page}
+            wrap
+          >
             <Cabecalho titulo="ANEXO II - DECLARAÇÃO DE BENS" />
             <Rodape />
 
             {isFirst && (
               <Text style={styles.paragraph}>
-                Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>, brasileiro(a), portador(a) do RG nº <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF nº <Text style={styles.legalLead}>{value(data.cpf)}</Text>, residente e domiciliado(a) à <Text style={styles.legalLead}>{`${value(data.logradouro)}, ${value(data.numero)}, ${value(data.bairro)}, ${value(data.cidade)}/${value(data.enderecoUf)}`}</Text>, DECLARO, para os devidos fins, que até a presente data o meu patrimônio é constituído pelos bens arrolados a seguir:
+                Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>,
+                brasileiro(a), portador(a) do RG nº{" "}
+                <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF
+                nº <Text style={styles.legalLead}>{`${value(data.cpf)},`}</Text>{" "}
+                residente e domiciliado(a) à{" "}
+                <Text
+                  style={styles.legalLead}
+                >{`${value(data.logradouro)}, ${value(data.numero)}, ${value(data.bairro)}, ${value(data.cidade)}/${value(data.enderecoUf)}`}</Text>
+                , DECLARO, para os devidos fins, que até a presente data o meu
+                patrimônio é constituído pelos bens arrolados a seguir:
               </Text>
             )}
 
@@ -762,7 +901,9 @@ function AnexoII({ data }: { data: RecadastramentoData }) {
                     {`${segment.assetIndex + 1}º BEM${isContinuation ? " - CONTINUAÇÃO" : ""}`}
                   </Text>
                   <Text style={styles.assetDescription}>
-                    <Text style={styles.fieldLabel}>DESCRIÇÃO DO BEM{"\n"}</Text>
+                    <Text style={styles.fieldLabel}>
+                      DESCRIÇÃO DO BEM{"\n"}
+                    </Text>
                     {segment.text}
                   </Text>
                   {isFinalPart && (
@@ -778,9 +919,13 @@ function AnexoII({ data }: { data: RecadastramentoData }) {
             {isLast && (
               <>
                 <Text style={[styles.paragraph, { marginTop: 8 }]}>
-                  Sendo o que havia a declarar e por ser a expressão da verdade, firmo a presente declaração.
+                  Sendo o que havia a declarar e por ser a expressão da verdade,
+                  firmo a presente declaração.
                 </Text>
-                <DataEAssinatura data={data.dataDeclaracao} pessoa={data.nome} />
+                <DataEAssinatura
+                  data={data.dataDeclaracao}
+                  pessoa={data.nome}
+                />
               </>
             )}
           </Page>
@@ -797,16 +942,36 @@ function AnexoIII({ data }: { data: RecadastramentoData }) {
       <Rodape />
 
       <Text style={styles.paragraph}>
-        Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>, portador(a) do RG nº <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF nº <Text style={styles.legalLead}>{value(data.cpf)}</Text>, residente e domiciliado(a) à <Text style={styles.legalLead}>{`${value(data.logradouro)}, ${value(data.numero)}, ${value(data.bairro)}, ${value(data.cidade)}/${value(data.enderecoUf)}`}</Text>, DECLARO QUE NÃO EXERÇO cargo, função ou emprego público junto à administração pública direta, autarquias, fundações, empresas públicas, sociedade de economia mista, suas subsidiárias e sociedades controladas direta ou indiretamente pelo poder público, de conformidade com os incisos XVI e XVII do art. 37 da Constituição Federal de 05/10/1988 e art. 41 da Lei Orgânica do Município de Patos de Minas.
+        Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>,
+        portador(a) do RG nº{" "}
+        <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF nº{" "}
+        <Text style={styles.legalLead}>{`${value(data.cpf)},`}</Text> residente e
+        domiciliado(a) à{" "}
+        <Text
+          style={styles.legalLead}
+        >{`${value(data.logradouro)}, ${value(data.numero)}, ${value(data.bairro)}, ${value(data.cidade)}/${value(data.enderecoUf)}`}</Text>
+        , DECLARO QUE NÃO EXERÇO cargo, função ou emprego público junto à
+        administração pública direta, autarquias, fundações, empresas públicas,
+        sociedade de economia mista, suas subsidiárias e sociedades controladas
+        direta ou indiretamente pelo poder público, de conformidade com os
+        incisos XVI e XVII do art. 37 da Constituição Federal de 05/10/1988 e
+        art. 41 da Lei Orgânica do Município de Patos de Minas.
       </Text>
       <Text style={styles.paragraph}>
-        DECLARO, outrossim, QUE NÃO PERCEBO proventos de aposentadoria decorrente do art. 40 ou dos arts. 42 e 142 da Constituição Federal, que sejam inacumuláveis com meu cargo.
+        DECLARO, outrossim, QUE NÃO PERCEBO proventos de aposentadoria
+        decorrente do art. 40 ou dos arts. 42 e 142 da Constituição Federal, que
+        sejam inacumuláveis com meu cargo.
       </Text>
       <Text style={styles.paragraph}>
-        DECLARO, mais, estar ciente de que devo comunicar à Câmara Municipal de Patos de Minas qualquer alteração que venha a ocorrer em minha vida funcional que não atenda às determinações legais vigentes relativamente à acumulação de cargos, sob pena de responder legalmente por isso.
+        DECLARO, mais, estar ciente de que devo comunicar à Câmara Municipal de
+        Patos de Minas qualquer alteração que venha a ocorrer em minha vida
+        funcional que não atenda às determinações legais vigentes relativamente
+        à acumulação de cargos, sob pena de responder legalmente por isso.
       </Text>
       <Text style={styles.paragraph}>
-        DECLARO, ainda, estar ciente de que prestar declaração falsa é crime previsto no art. 299 do Código Penal Brasileiro, sujeitando-me às penas, sem prejuízo de outras sanções cabíveis.
+        DECLARO, ainda, estar ciente de que prestar declaração falsa é crime
+        previsto no art. 299 do Código Penal Brasileiro, sujeitando-me às penas,
+        sem prejuízo de outras sanções cabíveis.
       </Text>
       <Text style={styles.paragraph}>
         DECLARO, por fim, que tomo ciência de toda a legislação suprarreferida.
@@ -826,26 +991,62 @@ function AnexoIV({ data }: { data: RecadastramentoData }) {
       <Rodape />
 
       <Text style={styles.paragraph}>
-        Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>, portador(a) do RG nº <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF nº <Text style={styles.legalLead}>{value(data.cpf)}</Text>, residente e domiciliado(a) à <Text style={styles.legalLead}>{`${value(data.logradouro)}, ${value(data.numero)}, ${value(data.bairro)}, ${value(data.cidade)}/${value(data.enderecoUf)}`}</Text>, DECLARO QUE não exerço cargo, função ou emprego público junto à administração pública direta, autarquias, fundações, empresas públicas, sociedade de economia mista, suas subsidiárias e sociedades controladas direta ou indiretamente pelo poder público, de conformidade com os incisos XVI e XVII do art. 37 da Constituição Federal de 05/10/1988 e art. 41 da Lei Orgânica do Município de Patos de Minas. DECLARO, outrossim, QUE NÃO PERCEBO proventos de aposentadoria decorrente do art. 40 ou dos arts. 42 e 142 da Constituição Federal, que sejam inacumuláveis com os de vereador.
+        Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>,
+        portador(a) do RG nº{" "}
+        <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF nº{" "}
+        <Text style={styles.legalLead}>{`${value(data.cpf)},`}</Text> residente e
+        domiciliado(a) à{" "}
+        <Text
+          style={styles.legalLead}
+        >{`${value(data.logradouro)}, ${value(data.numero)}, ${value(data.bairro)}, ${value(data.cidade)}/${value(data.enderecoUf)}`}</Text>
+        , DECLARO QUE não exerço cargo, função ou emprego público junto à
+        administração pública direta, autarquias, fundações, empresas públicas,
+        sociedade de economia mista, suas subsidiárias e sociedades controladas
+        direta ou indiretamente pelo poder público, de conformidade com os
+        incisos XVI e XVII do art. 37 da Constituição Federal de 05/10/1988 e
+        art. 41 da Lei Orgânica do Município de Patos de Minas. DECLARO,
+        outrossim, QUE NÃO PERCEBO proventos de aposentadoria decorrente do art.
+        40 ou dos arts. 42 e 142 da Constituição Federal, que sejam
+        inacumuláveis com os de vereador.
       </Text>
 
-      <Text style={styles.option}>{`${opt("naoServidor")} DECLARO que não sou servidor público em exercício de mandato eletivo.`}</Text>
-      <Text style={styles.option}>{`${opt("servidorCompativel")} DECLARO que sou servidor público em exercício de mandato eletivo de vereador, com compatibilidade de horários, em conformidade com o inciso III do art. 42 da Lei Orgânica do Município de Patos de Minas.`}</Text>
-      <Text style={styles.option}>{`${opt("servidorIncompativel")} DECLARO que sou servidor público em exercício de mandato eletivo de vereador e, em virtude da incompatibilidade de horários, em conformidade com o art. 49 da Lei Orgânica do Município de Patos de Minas, ${checkbox(data.opcaoRemuneracao === "opta")} opto ${checkbox(data.opcaoRemuneracao === "naoOpta")} não opto pela remuneração do cargo efetivo.`}</Text>
+      <Text
+        style={styles.option}
+      >{`${opt("naoServidor")} DECLARO que não sou servidor público em exercício de mandato eletivo.`}</Text>
+      <Text
+        style={styles.option}
+      >{`${opt("servidorCompativel")} DECLARO que sou servidor público em exercício de mandato eletivo de vereador, com compatibilidade de horários, em conformidade com o inciso III do art. 42 da Lei Orgânica do Município de Patos de Minas.`}</Text>
+      <Text
+        style={styles.option}
+      >{`${opt("servidorIncompativel")} DECLARO que sou servidor público em exercício de mandato eletivo de vereador e, em virtude da incompatibilidade de horários, em conformidade com o art. 49 da Lei Orgânica do Município de Patos de Minas, ${checkbox(data.opcaoRemuneracao === "opta")} opto ${checkbox(data.opcaoRemuneracao === "naoOpta")} não opto pela remuneração do cargo efetivo.`}</Text>
 
-      {data.situacaoVereador === "servidorIncompativel" && data.opcaoRemuneracao === "naoOpta" && (
-        <Text style={styles.option}>
-          SE NÃO OPTAR PELA REMUNERAÇÃO DO CARGO EFETIVO, DECLARO que as contribuições a serem revertidas ao Regime Próprio de Previdência deverão ser feitas tendo por base {checkbox(data.baseContribuicao === "subsidioVereador")} o subsídio de vereador {checkbox(data.baseContribuicao === "remuneracaoCargoEfetivo")} a remuneração do cargo efetivo.
-        </Text>
-      )}
+      {data.situacaoVereador === "servidorIncompativel" &&
+        data.opcaoRemuneracao === "naoOpta" && (
+          <Text style={styles.option}>
+            SE NÃO OPTAR PELA REMUNERAÇÃO DO CARGO EFETIVO, DECLARO que as
+            contribuições a serem revertidas ao Regime Próprio de Previdência
+            deverão ser feitas tendo por base{" "}
+            {checkbox(data.baseContribuicao === "subsidioVereador")} o subsídio
+            de vereador{" "}
+            {checkbox(data.baseContribuicao === "remuneracaoCargoEfetivo")} a
+            remuneração do cargo efetivo.
+          </Text>
+        )}
 
       <Text style={styles.paragraph}>
-        DECLARO, mais, estar ciente de que devo comunicar à Câmara Municipal de Patos de Minas qualquer alteração que venha a ocorrer em minha vida funcional que não atenda às determinações legais vigentes relativamente à acumulação de cargos, sob pena de responder legalmente por isso.
+        DECLARO, mais, estar ciente de que devo comunicar à Câmara Municipal de
+        Patos de Minas qualquer alteração que venha a ocorrer em minha vida
+        funcional que não atenda às determinações legais vigentes relativamente
+        à acumulação de cargos, sob pena de responder legalmente por isso.
       </Text>
       <Text style={styles.paragraph}>
-        DECLARO, ainda, estar ciente de que prestar declaração falsa é crime previsto no art. 299 do Código Penal Brasileiro, sujeitando-me às penas, sem prejuízo de outras sanções cabíveis.
+        DECLARO, ainda, estar ciente de que prestar declaração falsa é crime
+        previsto no art. 299 do Código Penal Brasileiro, sujeitando-me às penas,
+        sem prejuízo de outras sanções cabíveis.
       </Text>
-      <Text style={styles.paragraph}>DECLARO, por fim, que tomo ciência de toda a legislação supramencionada.</Text>
+      <Text style={styles.paragraph}>
+        DECLARO, por fim, que tomo ciência de toda a legislação supramencionada.
+      </Text>
       <DataEAssinatura data={data.dataDeclaracao} pessoa={data.nome} />
     </Page>
   );
@@ -857,10 +1058,21 @@ function AnexoV({ data }: { data: RecadastramentoData }) {
       <Cabecalho titulo="ANEXO V - DECLARAÇÃO DE ATUALIZAÇÃO DE CADASTRO" />
       <Rodape />
       <Text style={styles.paragraph}>
-        Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>, portador(a) do RG nº <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF nº <Text style={styles.legalLead}>{value(data.cpf)}</Text>, {data.tipoPessoa === "vereador" ? "vereador(a)" : "servidor(a)"} da Câmara Municipal de Patos de Minas, na qual ocupo o cargo de <Text style={styles.legalLead}>{value(data.cargoFuncao)}</Text>, DECLARO QUE informarei à Divisão de Recursos Humanos, a título de atualização do meu cadastro funcional, sempre que mudar de endereço, telefone, e-mail e dependentes, assim como qualquer outra informação relevante à manutenção da atualização contínua do meu cadastro funcional.
+        Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>,
+        portador(a) do RG nº{" "}
+        <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF nº{" "}
+        <Text style={styles.legalLead}>{`${value(data.cpf)},`}</Text>{" "}
+        {data.tipoPessoa === "vereador" ? "vereador(a)" : "servidor(a)"} da
+        Câmara Municipal de Patos de Minas, na qual ocupo o cargo de{" "}
+        <Text style={styles.legalLead}>{value(data.cargoFuncao)}</Text>, DECLARO
+        QUE informarei à Divisão de Recursos Humanos, a título de atualização do
+        meu cadastro funcional, sempre que mudar de endereço, telefone, e-mail e
+        dependentes, assim como qualquer outra informação relevante à manutenção
+        da atualização contínua do meu cadastro funcional.
       </Text>
       <Text style={styles.paragraph}>
-        Sendo o que havia a declarar e por ser a expressão da verdade, firmo a presente declaração.
+        Sendo o que havia a declarar e por ser a expressão da verdade, firmo a
+        presente declaração.
       </Text>
       <DataEAssinatura data={data.dataDeclaracao} pessoa={data.nome} />
     </Page>
@@ -869,14 +1081,26 @@ function AnexoV({ data }: { data: RecadastramentoData }) {
 
 const widths = ["34%", "18%", "21%", "9%", "9%", "9%"];
 
-function TableCell({ children, width }: { children: ReactNode; width: string }) {
-  return <View style={[styles.tableCell, { width }]}><Text>{children}</Text></View>;
+function TableCell({
+  children,
+  width,
+}: {
+  children: ReactNode;
+  width: string;
+}) {
+  return (
+    <View style={[styles.tableCell, { width }]}>
+      <Text>{children}</Text>
+    </View>
+  );
 }
 
 function AnexoVI({ data }: { data: RecadastramentoData }) {
   const dependentPages = data.dependentes.length
-    ? Array.from({ length: Math.ceil(data.dependentes.length / 8) }, (_, pageIndex) =>
-        data.dependentes.slice(pageIndex * 8, pageIndex * 8 + 8),
+    ? Array.from(
+        { length: Math.ceil(data.dependentes.length / 8) },
+        (_, pageIndex) =>
+          data.dependentes.slice(pageIndex * 8, pageIndex * 8 + 8),
       )
     : [[]];
 
@@ -887,25 +1111,44 @@ function AnexoVI({ data }: { data: RecadastramentoData }) {
         const isLast = pageIndex === dependentPages.length - 1;
 
         return (
-          <Page key={`dependents-page-${pageIndex}`} size="A4" style={styles.page} wrap>
+          <Page
+            key={`dependents-page-${pageIndex}`}
+            size="A4"
+            style={styles.page}
+            wrap
+          >
             <Cabecalho titulo="ANEXO VI - DECLARAÇÃO DE DEPENDENTES" />
             <Rodape />
 
             {isFirst && (
               <>
                 <View style={styles.row}>
-                  <Campo label="Servidor(a)/Vereador(a)" width="62%">{value(data.nome)}</Campo>
-                  <Campo label="Matrícula" width="38%">{value(data.matricula)}</Campo>
+                  <Campo label="Servidor(a)/Vereador(a)" width="62%">
+                    {value(data.nome)}
+                  </Campo>
+                  <Campo label="Matrícula" width="38%">
+                    {value(data.matricula)}
+                  </Campo>
                 </View>
                 <View style={styles.row}>
-                  <Campo label="Cargo" width="62%">{value(data.cargoFuncao)}</Campo>
-                  <Campo label="Telefone" width="38%">{value(data.celular || data.telefone)}</Campo>
+                  <Campo label="Cargo" width="62%">
+                    {value(data.cargoFuncao)}
+                  </Campo>
+                  <Campo label="Telefone" width="38%">
+                    {value(data.celular || data.telefone)}
+                  </Campo>
                 </View>
-                <Text style={[styles.sectionTitle, { marginTop: 16 }]}>DADOS DOS DEPENDENTES</Text>
+                <Text style={[styles.sectionTitle, { marginTop: 16 }]}>
+                  DADOS DOS DEPENDENTES
+                </Text>
               </>
             )}
 
-            {!isFirst && <Text style={[styles.sectionTitle, { marginTop: 0 }]}>DADOS DOS DEPENDENTES - CONTINUAÇÃO</Text>}
+            {!isFirst && (
+              <Text style={[styles.sectionTitle, { marginTop: 0 }]}>
+                DADOS DOS DEPENDENTES - CONTINUAÇÃO
+              </Text>
+            )}
 
             <View style={styles.dependentsHeader}>
               {[
@@ -916,7 +1159,9 @@ function AnexoVI({ data }: { data: RecadastramentoData }) {
                 ["AF", widths[4]],
                 ["AM", widths[5]],
               ].map(([label, width]) => (
-                <TableCell key={label} width={width}>{label}</TableCell>
+                <TableCell key={label} width={width}>
+                  {label}
+                </TableCell>
               ))}
             </View>
 
@@ -924,8 +1169,12 @@ function AnexoVI({ data }: { data: RecadastramentoData }) {
               dependents.map((dep) => (
                 <View key={dep.id} style={styles.dependentRow}>
                   <TableCell width={widths[0]}>{value(dep.nome)}</TableCell>
-                  <TableCell width={widths[1]}>{value(dep.parentesco)}</TableCell>
-                  <TableCell width={widths[2]}>{formatDate(dep.dataNascimento)}</TableCell>
+                  <TableCell width={widths[1]}>
+                    {value(dep.parentesco)}
+                  </TableCell>
+                  <TableCell width={widths[2]}>
+                    {formatDate(dep.dataNascimento)}
+                  </TableCell>
                   <TableCell width={widths[3]}>{dep.ir ? "X" : ""}</TableCell>
                   <TableCell width={widths[4]}>{dep.af ? "X" : ""}</TableCell>
                   <TableCell width={widths[5]}>{dep.am ? "X" : ""}</TableCell>
@@ -940,12 +1189,21 @@ function AnexoVI({ data }: { data: RecadastramentoData }) {
             {isLast && (
               <>
                 <View style={styles.note}>
-                  <Text>Marcação: IR - Imposto de Renda; AF - Abono Família; AM - Assistência Médica e Odontológica.</Text>
+                  <Text>
+                    Marcação: IR - Imposto de Renda; AF - Abono Família; AM -
+                    Assistência Médica e Odontológica.
+                  </Text>
                 </View>
                 <Text style={[styles.paragraph, { marginTop: 14 }]}>
-                  Declaro, sob as penas da lei, que as informações prestadas são verdadeiras e comprometo-me a atualizar junto à Divisão de Recursos Humanos qualquer alteração das informações aqui registradas.
+                  Declaro, sob as penas da lei, que as informações prestadas são
+                  verdadeiras e comprometo-me a atualizar junto à Divisão de
+                  Recursos Humanos qualquer alteração das informações aqui
+                  registradas.
                 </Text>
-                <DataEAssinatura data={data.dataDeclaracao} pessoa={data.nome} />
+                <DataEAssinatura
+                  data={data.dataDeclaracao}
+                  pessoa={data.nome}
+                />
               </>
             )}
           </Page>
@@ -961,10 +1219,19 @@ function AnexoVII({ data }: { data: RecadastramentoData }) {
       <Cabecalho titulo="ANEXO VII - DECLARAÇÃO SIMPLIFICADA - ATUALIZAÇÃO CADASTRAL" />
       <Rodape />
       <Text style={styles.paragraph}>
-        Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>, portador(a) do RG nº <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF nº <Text style={styles.legalLead}>{value(data.cpf)}</Text>, {data.tipoPessoa === "vereador" ? "vereador(a)" : "servidor(a)"} da Câmara Municipal de Patos de Minas, na qual ocupo o cargo de <Text style={styles.legalLead}>{value(data.cargoFuncao)}</Text>, DECLARO QUE, desde o último cadastramento/recadastramento, não ocorreram alterações em meus dados cadastrais.
+        Eu, <Text style={styles.legalLead}>{value(data.nome)}</Text>,
+        portador(a) do RG nº{" "}
+        <Text style={styles.legalLead}>{value(data.rg)}</Text> e do CPF nº{" "}
+        <Text style={styles.legalLead}>{`${value(data.cpf)},`}</Text>{" "}
+        {data.tipoPessoa === "vereador" ? "vereador(a)" : "servidor(a)"} da
+        Câmara Municipal de Patos de Minas, na qual ocupo o cargo de{" "}
+        <Text style={styles.legalLead}>{value(data.cargoFuncao)}</Text>, DECLARO
+        QUE, desde o último cadastramento/recadastramento, não ocorreram
+        alterações em meus dados cadastrais.
       </Text>
       <Text style={styles.paragraph}>
-        Sendo o que havia a declarar e por ser a expressão da verdade, firmo a presente declaração.
+        Sendo o que havia a declarar e por ser a expressão da verdade, firmo a
+        presente declaração.
       </Text>
       <DataEAssinatura data={data.dataDeclaracao} pessoa={data.nome} />
     </Page>
@@ -984,7 +1251,11 @@ const RecadastramentoPdf = ({ data }: { data: RecadastramentoData }) => (
       <>
         <AnexoI data={data} />
         <AnexoII data={data} />
-        {data.tipoPessoa === "servidor" ? <AnexoIII data={data} /> : <AnexoIV data={data} />}
+        {data.tipoPessoa === "servidor" ? (
+          <AnexoIII data={data} />
+        ) : (
+          <AnexoIV data={data} />
+        )}
         <AnexoV data={data} />
         <AnexoVI data={data} />
       </>
