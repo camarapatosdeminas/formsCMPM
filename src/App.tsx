@@ -16,22 +16,14 @@ import SolicitacaoDiaria from "./pages/SolicitacaoDiaria/SolicitacaoDiaria";
 import RelatorioInspecaoMedica from "./pages/GESAT-RelatorioInspecaoMedica/RelatorioInspecaoMedica";
 import RequisicaoManualAlmoxarifado from "./pages/RequisicaoManualAlmoxarifado/RequisicaoManualAlmoxarifado";
 import FormularioCartaoPonto from "./pages/CartaoPonto/FormularioCartaoPonto";
+import Recadastramento from "./pages/Recadastramento/Recadastramento";
+import SiteHeader from "./components/SiteHeader";
+import "./App.css";
 
 function App() {
   return (
     <div className="app-container">
-      {" "}
-      <header className="app-header">
-        {" "}
-        {/* SUBSTITUÍDO: Link foi removido e trocado por um DIV simples */}{" "}
-        <div
-          className="header-text" // Nova classe para estilização
-          // ⬅️ ADICIONADO: text-align: center para centralizar o texto H1
-          style={{ color: "#35679C", textAlign: "center" }}
-        >
-          <h1>Câmara Municipal de Patos de Minas</h1>{" "}
-        </div>{" "}
-      </header>
+      <SiteHeader />
       <main className="app-main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -75,6 +67,7 @@ function App() {
             element={<RelatorioInspecaoMedica />}
           />
           <Route path="/cartao-ponto" element={<FormularioCartaoPonto />} />
+          <Route path="/recadastramento" element={<Recadastramento />} />
         </Routes>
       </main>
     </div>
