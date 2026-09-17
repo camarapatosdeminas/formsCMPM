@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-09-02T20:03:21.148Z",
+  "referenceCommit": "a4d17a3f6b6cde5d410cdaac643d44865234b2b6",
+  "commands": [
+    ["npm run format", 0],
+    ["npm run format:check", 0],
+    ["npm run lint", 0],
+    ["npm test", 0],
+    ["npm run build", 0],
+    ["npm run test:e2e", 0],
+    ["npm run test:pdf", 0]
+  ],
+  "unitTests": 6,
+  "e2e": {
+    "startTime": "2026-09-02T18:29:53.107Z",
+    "duration": 147660.16400000002,
+    "expected": 29,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "pdf": {
+    "checked": 75,
+    "order": "ferias-recadastramento-ferias",
+    "differences": []
+  },
+  "productionEntry": [
+    {
+      "file": "index-flcBNgNA.js",
+      "bytes": 255660,
+      "sha256": "78b303f480d1c88216a89cb2c73f65e1f891991ba6dd23de45126a1b501d3da4"
+    }
+  ],
+  "preview": {
+    "url": "http://127.0.0.1:4173/",
+    "session": 28112
+  },
+  "limitations": [
+    "Sem leitor de tela e celular físico",
+    "Zoom por área CSS equivalente",
+    "Sem preview Vercel/cabeçalhos/CDN publicados",
+    "Sem métricas históricas Lighthouse ou percentis de usuários",
+    "CI configurada mas execução remota não observada"
+  ]
+}

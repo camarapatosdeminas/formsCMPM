@@ -1,9 +1,5 @@
+import type { FormData } from "../features/declaracaoFichaLimpa/declaracaoFichaLimpa.types";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
-
-interface FormData {
-  nome: string;
-  cpf: string;
-}
 
 const styles = StyleSheet.create({
   page: {

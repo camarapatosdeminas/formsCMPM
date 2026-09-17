@@ -1,19 +1,8 @@
+import type {
+  Ocorrencia,
+  ServidorInfo,
+} from "../features/ocorrenciaPonto/ocorrenciaPonto.types";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
-
-interface Ocorrencia {
-  id: number;
-  data: string;
-  horario: string;
-  referente: "dia" | "entrada" | "saida";
-  justificativa: string;
-}
-
-interface ServidorInfo {
-  servidor: string;
-  matricula: string;
-  cargo: string;
-  chefia: string;
-}
 
 interface PdfProps {
   servidorInfo: ServidorInfo;

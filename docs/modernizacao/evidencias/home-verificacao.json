@@ -1,0 +1,27 @@
+{
+  "observedAt": "2026-09-02T18:31:16.715Z",
+  "browser": "navegador integrado visível",
+  "url": "http://127.0.0.1:4173/",
+  "title": "FormsCMPM | Formulários do servidor",
+  "viewport": {
+    "width": 1082,
+    "height": 912
+  },
+  "cards": 17,
+  "imagesReady": true,
+  "search": "ferias retornou somente Requerimento de férias",
+  "navigation": "card abriu /formulario-ferias; retorno à home realizado",
+  "console": [],
+  "screenshot": "captura da superfície visível registrada na conversa; capturas completas da mesma build em home-desktop.png e home-mobile.png",
+  "server": {
+    "session": 28112,
+    "pid": 1388,
+    "address": "127.0.0.1:4173"
+  },
+  "leftOpen": true,
+  "reconfirmedAt": "2026-09-02T20:05:14.105Z",
+  "currentViewport": {
+    "height": 912,
+    "width": 892
+  }
+}

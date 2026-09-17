@@ -1,13 +1,6 @@
+import type { FormData } from "../features/adiantamento13/adiantamento13.types";
 // src/pdf/Adiantamento13Pdf.tsx
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
-
-interface FormData {
-  nome: string;
-  matricula: string;
-  cpf: string;
-  lotacao: string;
-  portaria: string;
-}
 
 const styles = StyleSheet.create({
   page: { fontFamily: "Helvetica", fontSize: 11, padding: 50, lineHeight: 1.5 },

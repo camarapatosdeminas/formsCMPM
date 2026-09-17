@@ -1,0 +1,64 @@
+                               CÂMARA MUNICIPAL DE PATOS DE MINAS
+                        PROTOCOLO DE ENTREGA DE MATERIAIS DE CONSUMO
+                                                          ANEXO I
+
+
+REQUISIÇÃO Nº: Teste requisicaoNum - DATA: 02/09/2026
+REQUISITANTE: Teste requisitante
+LOTAÇÃO: Teste lotacao
+
+
+
+JUSTIFICATIVA:
+Teste justificativa
+
+
+
+ ITEM                                 DESCRIÇÃO                                          QTDE.                  QTDE.
+                                                                                     SOLICITADA              ATENDIDA
+
+   1       Teste descricao                                                                  2                      2
+
+   2       Teste descricao                                                                  2                      2
+
+   3       Teste descricao                                                                  2                      2
+
+   4       Teste descricao                                                                  2                      2
+
+   5       Teste descricao                                                                  2                      2
+
+   6       Teste descricao                                                                  2                      2
+
+   7       Teste descricao                                                                  2                      2
+
+   8       Teste descricao                                                                  2                      2
+
+   9       Teste descricao                                                                  2                      2
+
+   10      Teste descricao                                                                  2                      2
+
+   11      Teste descricao                                                                  2                      2
+
+   12      Teste descricao                                                                  2                      2
+
+   13      Teste descricao                                                                  2                      2
+
+   14      Teste descricao                                                                  2                      2
+
+   15      Teste descricao                                                                  2                      2
+
+   16      Teste descricao                                                                  2                      2DADOS RECEBIMENTO/ENTREGA REQUISIÇÃO Nº: Teste requisicaoNum
+
+
+
+DATA RECEBIMENTO/ENTREGA:
+
+
+ENTREGUE POR:
+
+
+RECEBIDO POR:
+
+
+
+                            ASSINATURA                                           MATRÍCULA:

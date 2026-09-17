@@ -1,39 +1,9 @@
+import type { FormData } from "../features/relatorioViagem/relatorioViagem.types";
 // src/pdf/RelatorioViagemPdf.tsx
 
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 
 // Interfaces para a tipagem dos dados
-interface Despesa {
-  utilizado: string;
-  reembolsar: string;
-}
-interface DespesaCombustivel extends Despesa {
-  quilometragem: string;
-}
-interface DespesaAntecipada {
-  antecipado: string;
-  utilizado: string;
-  reembolsar: string;
-  devolver: string;
-}
-interface FormData {
-  nome: string;
-  matricula: string;
-  cargo: string;
-  destino: string;
-  dataSaida: string;
-  dataRetorno: string;
-  meioTransporte: string;
-  descricaoAtividades: string;
-  despesasAntecipadas: { passagem: DespesaAntecipada };
-  despesasRealizadas: {
-    combustivel: DespesaCombustivel;
-    transporteUrbano: Despesa;
-    passagem: Despesa;
-    pedagio: Despesa;
-    estacionamento: Despesa;
-  };
-}
 
 // Estilos EXATAMENTE como no código que você forneceu
 const styles = StyleSheet.create({

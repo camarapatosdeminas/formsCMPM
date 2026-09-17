@@ -2,13 +2,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
-import "./style.css"; // Usaremos o CSS padrão do Vite
+import "./styles/tokens.css";
+import "./styles/global.css";
 import { BrowserRouter } from "react-router-dom";
+import { initializeDocumentClock } from "./lib/pdf/applicationDate";
+
+initializeDocumentClock();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

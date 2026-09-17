@@ -1,18 +1,8 @@
+import type {
+  Dependente,
+  ServidorInfo,
+} from "../features/declaracaoDependentes/declaracaoDependentes.types";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
-
-interface Dependente {
-  id: number;
-  nome: string;
-  dataNascimento: string;
-  parentesco: string;
-  cpf: string;
-  isDependenteIR: boolean;
-}
-
-interface ServidorInfo {
-  nome: string;
-  matricula: string;
-}
 
 const styles = StyleSheet.create({
   page: { fontFamily: "Helvetica", fontSize: 8, padding: 50 },

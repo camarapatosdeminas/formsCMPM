@@ -1,27 +1,7 @@
+import type { FormData } from "../features/solicitacaoDiaria/solicitacaoDiaria.types";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 
 // Interface dos dados
-interface FormData {
-  nome: string;
-  matricula: string;
-  cargo: string;
-  banco: string;
-  tipoConta: "corrente" | "poupanca";
-  agencia: string;
-  conta: string;
-  pix: string;
-  cidade: string;
-  estado: string;
-  periodoViagem: string;
-  meioTransporte: "carro" | "onibus" | "aereo" | "outro";
-  placaCarro: string;
-  outroTransporte: string;
-  diariasInteiras: string;
-  diariasReduzidas: string;
-  solicitaAntecipacao: "sim" | "nao";
-  valorSolicitado: string;
-  objetivo: string;
-}
 
 const styles = StyleSheet.create({
   page: { fontFamily: "Helvetica", fontSize: 9, padding: 40 },
@@ -98,16 +78,23 @@ const SolicitacaoDiariaPdf = ({ formData }: { formData: FormData }) => {
 
         <Text style={styles.title}>Solicitação de Diária/Passagem</Text>
 
-        <Text style={{...styles.bold, textAlign: 'center', fontSize: 10, marginBottom: 10}}>
+        <Text
+          style={{
+            ...styles.bold,
+            textAlign: "center",
+            fontSize: 10,
+            marginBottom: 10,
+          }}
+        >
           EXCELENTÍSSIMO SENHOR PRESIDENTE DA CÂMARA MUNICIPAL DE PATOS DE MINAS
         </Text>
         <Text style={styles.introText}>
-          Em atendimento ao disposto na Resolução nº 323, de 14 de Março de 2025, requeiro a Vossa Excelência autorização para desempenho de
-          missão temporária, de caráter representativo ou cultural, a qual será custeada por diárias pagas pelo poder público.
+          Em atendimento ao disposto na Resolução nº 323, de 14 de Março de
+          2025, requeiro a Vossa Excelência autorização para desempenho de
+          missão temporária, de caráter representativo ou cultural, a qual será
+          custeada por diárias pagas pelo poder público.
         </Text>
-        <Text style={styles.introText}>
-          Para tanto, especifico o seguinte:
-        </Text>
+        <Text style={styles.introText}>Para tanto, especifico o seguinte:</Text>
 
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>SOLICITANTE</Text>
@@ -126,9 +113,9 @@ const SolicitacaoDiariaPdf = ({ formData }: { formData: FormData }) => {
                 <Text style={styles.fieldValue}>{formData.cargo}</Text>
               </View>
             </View>
-            
+
             {/* --- LAYOUT DOS CAMPOS BANCÁRIOS REFINADO --- */}
-            <View style={{ ...styles.row, alignItems: 'flex-end' }}>
+            <View style={{ ...styles.row, alignItems: "flex-end" }}>
               <View style={{ ...styles.col, flex: 2 }}>
                 <Text style={styles.fieldLabel}>Banco</Text>
                 <Text style={styles.fieldValue}>{formData.banco}</Text>
@@ -138,10 +125,14 @@ const SolicitacaoDiariaPdf = ({ formData }: { formData: FormData }) => {
                 <Text style={styles.fieldLabel}>Tipo de Conta</Text>
                 <View style={styles.checkboxContainer}>
                   <Text style={styles.checkboxText}>
-                    {formData.tipoConta === "corrente" ? "(X) Corrente" : "( ) Corrente"}
+                    {formData.tipoConta === "corrente"
+                      ? "(X) Corrente"
+                      : "( ) Corrente"}
                   </Text>
                   <Text style={styles.checkboxText}>
-                    {formData.tipoConta === "poupanca" ? "(X) Poupança" : "( ) Poupança"}
+                    {formData.tipoConta === "poupanca"
+                      ? "(X) Poupança"
+                      : "( ) Poupança"}
                   </Text>
                 </View>
               </View>
@@ -168,21 +159,32 @@ const SolicitacaoDiariaPdf = ({ formData }: { formData: FormData }) => {
           <View style={{ ...styles.section, flex: 2, marginRight: 5 }}>
             <Text style={styles.sectionTitle}>DESTINO</Text>
             <View style={{ ...styles.content, flexDirection: "row" }}>
-              <View style={styles.col}><Text style={styles.fieldLabel}>CIDADE</Text><Text style={styles.fieldValue}>{formData.cidade}</Text></View>
-              <View style={styles.col}><Text style={styles.fieldLabel}>ESTADO</Text><Text style={styles.fieldValue}>{formData.estado}</Text></View>
-              <View style={{ ...styles.col, ...styles.lastCol }}><Text style={styles.fieldLabel}>PERÍODO DA VIAGEM</Text><Text style={styles.fieldValue}>{formData.periodoViagem}</Text></View>
+              <View style={styles.col}>
+                <Text style={styles.fieldLabel}>CIDADE</Text>
+                <Text style={styles.fieldValue}>{formData.cidade}</Text>
+              </View>
+              <View style={styles.col}>
+                <Text style={styles.fieldLabel}>ESTADO</Text>
+                <Text style={styles.fieldValue}>{formData.estado}</Text>
+              </View>
+              <View style={{ ...styles.col, ...styles.lastCol }}>
+                <Text style={styles.fieldLabel}>PERÍODO DA VIAGEM</Text>
+                <Text style={styles.fieldValue}>{formData.periodoViagem}</Text>
+              </View>
             </View>
           </View>
           <View style={{ ...styles.section, flex: 1 }}>
             <Text style={styles.sectionTitle}>MEIO DE TRANSPORTE</Text>
             <View style={{ ...styles.content, fontSize: 8 }}>
               <Text>
-                {formData.meioTransporte === "carro" ? "[X]" : "[ ]"} Carro Placa: {formData.placaCarro}
+                {formData.meioTransporte === "carro" ? "[X]" : "[ ]"} Carro
+                Placa: {formData.placaCarro}
               </Text>
               <Text>
                 {formData.meioTransporte === "onibus" ? "[X]" : "[ ]"} Ônibus{" "}
                 {formData.meioTransporte === "aereo" ? "[X]" : "[ ]"} Aéreo{" "}
-                {formData.meioTransporte === "outro" ? "[X]" : "[ ]"} Outro: {formData.outroTransporte || ''}
+                {formData.meioTransporte === "outro" ? "[X]" : "[ ]"} Outro:{" "}
+                {formData.outroTransporte || ""}
               </Text>
             </View>
           </View>
@@ -198,7 +200,13 @@ const SolicitacaoDiariaPdf = ({ formData }: { formData: FormData }) => {
         </View>
 
         <View style={{ ...styles.section, flexDirection: "row" }}>
-          <View style={{...styles.content, flex: 1, borderRight: "1px solid #000",}}>
+          <View
+            style={{
+              ...styles.content,
+              flex: 1,
+              borderRight: "1px solid #000",
+            }}
+          >
             <Text style={{ fontFamily: "Helvetica-Bold", textAlign: "center" }}>
               DIÁRIAS
             </Text>
@@ -211,7 +219,13 @@ const SolicitacaoDiariaPdf = ({ formData }: { formData: FormData }) => {
             <Text style={{ fontFamily: "Helvetica-Bold", textAlign: "center" }}>
               SOLICITAÇÃO DE ANTECIPAÇÃO - ART. 3º, PARAGRAFO ÚNICO
             </Text>
-            <View style={{flexDirection: "row", justifyContent: "space-around", marginTop: 5,}}>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-around",
+                marginTop: 5,
+              }}
+            >
               <Text>
                 ({formData.solicitaAntecipacao === "sim" ? "X" : " "})SIM (
                 {formData.solicitaAntecipacao === "nao" ? "X" : " "})NÃO

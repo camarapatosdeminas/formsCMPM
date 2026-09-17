@@ -1,0 +1,1259 @@
+{
+  "now": "2026-09-02T15:00:00.000Z",
+  "timezone": "America/Sao_Paulo",
+  "renderer": "4.3.1",
+  "dpi": 96,
+  "documents": [
+    {
+      "id": "adiantamento-13-minimo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "de62313841a8a2d2f61dfbee43b12c917665cb780aeee47d417491fb2a5a2228",
+      "images": [
+        {
+          "file": "adiantamento-13-minimo-1.png",
+          "sha256": "b4df97743ed679fc57123f7320033ef313f6a5c2606dcf58b95b0629c08efa44"
+        }
+      ],
+      "ms": 123
+    },
+    {
+      "id": "adiantamento-13-completo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "0f5f7374ccf3244c8d0b451a93283a67371f351dfbfc82d39c473e320fec5e36",
+      "images": [
+        {
+          "file": "adiantamento-13-completo-1.png",
+          "sha256": "dd76551126fa0c84c90306abf755ffa420135542db86f1552bc7c68e88b8f4b3"
+        }
+      ],
+      "ms": 30
+    },
+    {
+      "id": "adiantamento-13-longo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "84a2a6d452fa95c7ff101fa79f985c486dab5e3ce6ab7981b606036b3777cbc7",
+      "images": [
+        {
+          "file": "adiantamento-13-longo-1.png",
+          "sha256": "244ccc8a399c06a4a2a2378b3ffd32dd3e61d233c9b8d7b0915469b2441cc58a"
+        },
+        {
+          "file": "adiantamento-13-longo-2.png",
+          "sha256": "c4518b636647e4c319cde0aed633de646dd8bba93d3d7b610b8a1937423af906"
+        }
+      ],
+      "ms": 50
+    },
+    {
+      "id": "adiantamento-13-variante",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "0f5f7374ccf3244c8d0b451a93283a67371f351dfbfc82d39c473e320fec5e36",
+      "images": [
+        {
+          "file": "adiantamento-13-variante-1.png",
+          "sha256": "dd76551126fa0c84c90306abf755ffa420135542db86f1552bc7c68e88b8f4b3"
+        }
+      ],
+      "ms": 29
+    },
+    {
+      "id": "declaracao-dependentes-minimo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "cee07b99f5915da78303bd17250f1cc35b371e595b59cedd6154674777975d40",
+      "images": [
+        {
+          "file": "declaracao-dependentes-minimo-1.png",
+          "sha256": "1f9e445a7bc68e1602276eff74a1733b58b5259364afc93d8f7fae3d9c6b761d"
+        }
+      ],
+      "ms": 88
+    },
+    {
+      "id": "declaracao-dependentes-completo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "8e83487d08f7dcd1fe7a94b589b7ed86eef7fec2fc9618f09ea530822238acab",
+      "images": [
+        {
+          "file": "declaracao-dependentes-completo-1.png",
+          "sha256": "0dec105f63d0dd4bfcee16dd8146b41f2681b4fb27f30235bc0c22019b4fc937"
+        }
+      ],
+      "ms": 98
+    },
+    {
+      "id": "declaracao-dependentes-longo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "cfb5eaa9909cf466ef5e291574f8444e1b55e48f434cc269312c066becf36fe0",
+      "images": [
+        {
+          "file": "declaracao-dependentes-longo-1.png",
+          "sha256": "a4d140ec607c91b1b97aba714a1fee06f8d74e567f00080bf6dc8b15fe76edd2"
+        }
+      ],
+      "ms": 91
+    },
+    {
+      "id": "declaracao-dependentes-variante",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "8e83487d08f7dcd1fe7a94b589b7ed86eef7fec2fc9618f09ea530822238acab",
+      "images": [
+        {
+          "file": "declaracao-dependentes-variante-1.png",
+          "sha256": "0dec105f63d0dd4bfcee16dd8146b41f2681b4fb27f30235bc0c22019b4fc937"
+        }
+      ],
+      "ms": 92
+    },
+    {
+      "id": "declaracao-dependentes-lista-dependentes",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "ed80a8524ab483b7ad921ce1c56984e98f057d8bc95d8825528a1adac73a06b5",
+      "images": [
+        {
+          "file": "declaracao-dependentes-lista-dependentes-1.png",
+          "sha256": "d6c2e8712ba6c5ac5a5dd42747306c42b4bce2889202cd9bcd69292cac04ed2f"
+        }
+      ],
+      "ms": 139
+    },
+    {
+      "id": "declaracao-ficha-limpa-minimo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "f2f8d4bc4ec301792c6b7c33849fdbfee954e993bca4fdbc5d528d7889a3d5ad",
+      "images": [
+        {
+          "file": "declaracao-ficha-limpa-minimo-1.png",
+          "sha256": "0bd2c91b989ab0cb67bece0d3a3c54285859a33187587393b19f2cd40fb476be"
+        }
+      ],
+      "ms": 10
+    },
+    {
+      "id": "declaracao-ficha-limpa-completo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "0ce788512e58ed408300d62be468208bc151910a40977469dc6fcca323751b5a",
+      "images": [
+        {
+          "file": "declaracao-ficha-limpa-completo-1.png",
+          "sha256": "203cadd1a4bf107f2d9cf0a64cdcf4f9978879af72202a8776e05d583a91feb4"
+        }
+      ],
+      "ms": 8
+    },
+    {
+      "id": "declaracao-ficha-limpa-longo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "93b290f374b8b5784f5b4c25d12647d52e36c35e2f3c3bfe48546bc5d59836ac",
+      "images": [
+        {
+          "file": "declaracao-ficha-limpa-longo-1.png",
+          "sha256": "8d5ad9f85fac27f17842020217d3976c674a90fa1ec1504494d49961c2f4574a"
+        }
+      ],
+      "ms": 14
+    },
+    {
+      "id": "declaracao-ficha-limpa-variante",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "0ce788512e58ed408300d62be468208bc151910a40977469dc6fcca323751b5a",
+      "images": [
+        {
+          "file": "declaracao-ficha-limpa-variante-1.png",
+          "sha256": "203cadd1a4bf107f2d9cf0a64cdcf4f9978879af72202a8776e05d583a91feb4"
+        }
+      ],
+      "ms": 9
+    },
+    {
+      "id": "declaracao-nepotismo-minimo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "2f613c8f2ffc8ce46a7cac5cef896a4e70ca063cedac076d2acdf5de890d36f5",
+      "images": [
+        {
+          "file": "declaracao-nepotismo-minimo-1.png",
+          "sha256": "4b7639581ba291fef7ebf4964819ca56fcd766edddc88e4a7aba6588002fbaa7"
+        }
+      ],
+      "ms": 20
+    },
+    {
+      "id": "declaracao-nepotismo-completo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "2760be97f3776a7b645acc4d8efe8ee1bf660d30b9872a161990b9a0fbb21aca",
+      "images": [
+        {
+          "file": "declaracao-nepotismo-completo-1.png",
+          "sha256": "da3a343f8945181aaf6eb3ad8ea55116dd5377853d5cf238e2e9ab3d38ac88f6"
+        }
+      ],
+      "ms": 13
+    },
+    {
+      "id": "declaracao-nepotismo-longo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "ddb053287f7081cfc6d20506d1d9e7cdfd3bfe1d37e56fc43860d576a6e87401",
+      "images": [
+        {
+          "file": "declaracao-nepotismo-longo-1.png",
+          "sha256": "be8a0f60c0232549649be8f5b02851c13951f1fccbfc674afd09ab719c211ce9"
+        }
+      ],
+      "ms": 18
+    },
+    {
+      "id": "declaracao-nepotismo-variante",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "2760be97f3776a7b645acc4d8efe8ee1bf660d30b9872a161990b9a0fbb21aca",
+      "images": [
+        {
+          "file": "declaracao-nepotismo-variante-1.png",
+          "sha256": "da3a343f8945181aaf6eb3ad8ea55116dd5377853d5cf238e2e9ab3d38ac88f6"
+        }
+      ],
+      "ms": 16
+    },
+    {
+      "id": "declaracao-nao-ocupacao-minimo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "bc5dcae116b0e420b8c0e3356fa5a045e1c8a9cd06795507b9d4a35f503bea8f",
+      "images": [
+        {
+          "file": "declaracao-nao-ocupacao-minimo-1.png",
+          "sha256": "d389ed9114460575ec1619e55f36f05df53ba6ee54e0c003e94da3c99211a5f2"
+        }
+      ],
+      "ms": 15
+    },
+    {
+      "id": "declaracao-nao-ocupacao-completo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "1462ffb24c4c1e152819e182be1103c1d7ec45540301c70f03d8b4e144324924",
+      "images": [
+        {
+          "file": "declaracao-nao-ocupacao-completo-1.png",
+          "sha256": "f2a8f4a85337ff1c223f97e097c0d4b3d60ea64b6fd506197dac3485e65512ff"
+        }
+      ],
+      "ms": 23
+    },
+    {
+      "id": "declaracao-nao-ocupacao-longo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "573d849991bf2d0b04df8216815c330cabc6d641deea69af1dbf1bff0e6ce33b",
+      "images": [
+        {
+          "file": "declaracao-nao-ocupacao-longo-1.png",
+          "sha256": "61963c660893ad821b25a622a998f3ce76c33254a4ac8b66fb6f2f3c47b7a69a"
+        }
+      ],
+      "ms": 24
+    },
+    {
+      "id": "declaracao-nao-ocupacao-variante",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "1462ffb24c4c1e152819e182be1103c1d7ec45540301c70f03d8b4e144324924",
+      "images": [
+        {
+          "file": "declaracao-nao-ocupacao-variante-1.png",
+          "sha256": "f2a8f4a85337ff1c223f97e097c0d4b3d60ea64b6fd506197dac3485e65512ff"
+        }
+      ],
+      "ms": 17
+    },
+    {
+      "id": "ocorrencia-ponto-minimo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "2453995c7bf3e83c0c04ab2d0c94ffdae75ff84d5f35fbc33771f3513d1fd282",
+      "images": [
+        {
+          "file": "ocorrencia-ponto-minimo-1.png",
+          "sha256": "fa9a6ed8e171a3512e12b0b00a1ef3b982e7e41d6e8e8a232c03246c04c71a2e"
+        }
+      ],
+      "ms": 77
+    },
+    {
+      "id": "ocorrencia-ponto-completo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "6f2aceeb0d5c679ad3ba2137607c91a873d5c1c73b8a7a0df90991152ccbc078",
+      "images": [
+        {
+          "file": "ocorrencia-ponto-completo-1.png",
+          "sha256": "c59f030326fd62e739098112ed5739ddc9183e6b4d40d9cbcb37b261df63f3b6"
+        }
+      ],
+      "ms": 58
+    },
+    {
+      "id": "ocorrencia-ponto-longo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "06ea434e00840bebcedce79828039bfe7f4b269500a8d02a76a7ff859ecdb907",
+      "images": [
+        {
+          "file": "ocorrencia-ponto-longo-1.png",
+          "sha256": "0c02871a6eb198cb5301f05e389d1f027a2b2e82c3740060ee95a3c48be3cddf"
+        }
+      ],
+      "ms": 50
+    },
+    {
+      "id": "ocorrencia-ponto-variante",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "6f2aceeb0d5c679ad3ba2137607c91a873d5c1c73b8a7a0df90991152ccbc078",
+      "images": [
+        {
+          "file": "ocorrencia-ponto-variante-1.png",
+          "sha256": "c59f030326fd62e739098112ed5739ddc9183e6b4d40d9cbcb37b261df63f3b6"
+        }
+      ],
+      "ms": 51
+    },
+    {
+      "id": "ocorrencia-ponto-lista-ocorrencias",
+      "pages": 3,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "6338664fb1d8faaeba417c2d50195df699ac8a0b07e0ba3494d288163acbcd03",
+      "images": [
+        {
+          "file": "ocorrencia-ponto-lista-ocorrencias-1.png",
+          "sha256": "4c4f1d76867ba82dc8937747155ae9c5779cb6b20749d309b014778aedd8342f"
+        },
+        {
+          "file": "ocorrencia-ponto-lista-ocorrencias-2.png",
+          "sha256": "51480b3c2332f80f28714496a9513c734f1fc43925e702f182930c740cf9d766"
+        },
+        {
+          "file": "ocorrencia-ponto-lista-ocorrencias-3.png",
+          "sha256": "fc8985b73a32ad9df57dec8947aaab98dcec773c96b3c89556ddabc50d099001"
+        }
+      ],
+      "ms": 86
+    },
+    {
+      "id": "relatorio-viagem-minimo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "3499dc77c26dfec9c83676fdbd60cb3dc6fc3b99543bb6b57c79501e557b24b1",
+      "images": [
+        {
+          "file": "relatorio-viagem-minimo-1.png",
+          "sha256": "25f525118854cd82073a55938ab703136b2e40c6de54c806bffba6047214ebbf"
+        }
+      ],
+      "ms": 120
+    },
+    {
+      "id": "relatorio-viagem-completo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "8a09b9440d1a5416a034b95bde949179a24a2e094ca3abb37b525cf3036975bf",
+      "images": [
+        {
+          "file": "relatorio-viagem-completo-1.png",
+          "sha256": "17bf48b053d0cd53e8aa7bf7e4f7932df55138853d206ffe3e3352eaa5a31b4c"
+        },
+        {
+          "file": "relatorio-viagem-completo-2.png",
+          "sha256": "afd19ef0d6602681b5cde4021c832fbc03a0915fe22350bc605aef6f0e2b9071"
+        }
+      ],
+      "ms": 110
+    },
+    {
+      "id": "relatorio-viagem-longo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "db657d5c77cfcd57ee3499f0a062f969d0af0833ba49ef35795c89bd1a00b044",
+      "images": [
+        {
+          "file": "relatorio-viagem-longo-1.png",
+          "sha256": "52a86e72c39198d25bc2a541f2bc03e751c9c74e2b7eca67cdda7994436dbbe6"
+        },
+        {
+          "file": "relatorio-viagem-longo-2.png",
+          "sha256": "8106af79b4761ca8289f38df9de64c15096b01974cf3d9670cda35e0088bfd49"
+        }
+      ],
+      "ms": 110
+    },
+    {
+      "id": "relatorio-viagem-variante",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "8a09b9440d1a5416a034b95bde949179a24a2e094ca3abb37b525cf3036975bf",
+      "images": [
+        {
+          "file": "relatorio-viagem-variante-1.png",
+          "sha256": "17bf48b053d0cd53e8aa7bf7e4f7932df55138853d206ffe3e3352eaa5a31b4c"
+        },
+        {
+          "file": "relatorio-viagem-variante-2.png",
+          "sha256": "afd19ef0d6602681b5cde4021c832fbc03a0915fe22350bc605aef6f0e2b9071"
+        }
+      ],
+      "ms": 101
+    },
+    {
+      "id": "formulario-ferias-minimo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "733ff13a3e5a52139fe8625b0d67b749299d26fccaf553f4161978272d10360f",
+      "images": [
+        {
+          "file": "formulario-ferias-minimo-1.png",
+          "sha256": "9322903d4064f8af589dfef335aa0e510929f1941c778cbc55b556f3364af340"
+        },
+        {
+          "file": "formulario-ferias-minimo-2.png",
+          "sha256": "17c49e055492bfc16a84d32b22cd65951a51736cfa83bbd8b8a7a940d328e577"
+        }
+      ],
+      "ms": 47
+    },
+    {
+      "id": "formulario-ferias-completo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "c049f086157f807bff53c016b50c0ef29a300c2219a03bfdbf76ccf35b604c18",
+      "images": [
+        {
+          "file": "formulario-ferias-completo-1.png",
+          "sha256": "cd25454e3746a7344392813cc288681b0606fcda14e8c4eb98124e059042ac9a"
+        },
+        {
+          "file": "formulario-ferias-completo-2.png",
+          "sha256": "17c49e055492bfc16a84d32b22cd65951a51736cfa83bbd8b8a7a940d328e577"
+        }
+      ],
+      "ms": 43
+    },
+    {
+      "id": "formulario-ferias-longo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "ed641e9673b5f6eca02a9d7d182c0985e4881473f9344e1dfc68b57fb493eb50",
+      "images": [
+        {
+          "file": "formulario-ferias-longo-1.png",
+          "sha256": "5edae843ca05266a88343f193b2708b7dd3288a862f47cd3687173c47b2b8fb3"
+        },
+        {
+          "file": "formulario-ferias-longo-2.png",
+          "sha256": "c3165857fa249c5eb31d63334fc6b04eeec086050767eadbc86f38087e3e388b"
+        }
+      ],
+      "ms": 89
+    },
+    {
+      "id": "formulario-ferias-variante",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "63d2a5ee498be53376e623fc6286df0a617c640ed136f2a6a49be5bbee6760b1",
+      "images": [
+        {
+          "file": "formulario-ferias-variante-1.png",
+          "sha256": "c21e6e0102e1ae0a8f076468268d157acad0e8b0491134b766edb3de997f72e0"
+        },
+        {
+          "file": "formulario-ferias-variante-2.png",
+          "sha256": "d74df8cef96951c168afdc49f874840cd8315e074e36b9cdfddf4c9a900853c1"
+        }
+      ],
+      "ms": 58
+    },
+    {
+      "id": "solicitacao-cursos-minimo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "5e1f4cea622cb6c2bc03f2f634889a213220aebf2010757476c70b836dfc51b3",
+      "images": [
+        {
+          "file": "solicitacao-cursos-minimo-1.png",
+          "sha256": "4ff37e80622a4bb26b43abeff30d83de3b8e3173d777a84bbe8098f22f553c03"
+        },
+        {
+          "file": "solicitacao-cursos-minimo-2.png",
+          "sha256": "b6203f6f5f36a74a9950e6d0fae41e79cc163bdd073b55bc23d1c4303c5d1aee"
+        }
+      ],
+      "ms": 119
+    },
+    {
+      "id": "solicitacao-cursos-completo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "6ddc48ba08561460842c896665d4c36f2cc4723dd105c5b0e8dd301bc0b14d13",
+      "images": [
+        {
+          "file": "solicitacao-cursos-completo-1.png",
+          "sha256": "aa4dca8d9031e5c599caff79a08a5070e73660b2c2044cf8b91292b6aad2dca5"
+        },
+        {
+          "file": "solicitacao-cursos-completo-2.png",
+          "sha256": "b6203f6f5f36a74a9950e6d0fae41e79cc163bdd073b55bc23d1c4303c5d1aee"
+        }
+      ],
+      "ms": 104
+    },
+    {
+      "id": "solicitacao-cursos-longo",
+      "pages": 3,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "f1de307a591c9fb8798d28e63ce1c577627d8966ab3770a8cc05311ec26150b3",
+      "images": [
+        {
+          "file": "solicitacao-cursos-longo-1.png",
+          "sha256": "2ced73d762f8a223f0b56790f8b8da3dee13b9554502170f9ed2000ba9a0f2b3"
+        },
+        {
+          "file": "solicitacao-cursos-longo-2.png",
+          "sha256": "13d13d557b0ed3772d5ac8671a0339ec4ce68f2748acc7d55bc2be4b74927f0d"
+        },
+        {
+          "file": "solicitacao-cursos-longo-3.png",
+          "sha256": "b6203f6f5f36a74a9950e6d0fae41e79cc163bdd073b55bc23d1c4303c5d1aee"
+        }
+      ],
+      "ms": 75
+    },
+    {
+      "id": "solicitacao-cursos-variante",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "6ddc48ba08561460842c896665d4c36f2cc4723dd105c5b0e8dd301bc0b14d13",
+      "images": [
+        {
+          "file": "solicitacao-cursos-variante-1.png",
+          "sha256": "aa4dca8d9031e5c599caff79a08a5070e73660b2c2044cf8b91292b6aad2dca5"
+        },
+        {
+          "file": "solicitacao-cursos-variante-2.png",
+          "sha256": "b6203f6f5f36a74a9950e6d0fae41e79cc163bdd073b55bc23d1c4303c5d1aee"
+        }
+      ],
+      "ms": 87
+    },
+    {
+      "id": "solicitacaodiaria-minimo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "8d475b46caed3cd6c4c915350871499bbbf1fe0b684d7e82fdb221fef185ee51",
+      "images": [
+        {
+          "file": "solicitacaodiaria-minimo-1.png",
+          "sha256": "72b59adb4742595ca251d8248d154022045ecc843b074254780599e1413b444f"
+        },
+        {
+          "file": "solicitacaodiaria-minimo-2.png",
+          "sha256": "ba6dfdcf3c1b145f071a95341d60f13c1d59b654176df96589fad9eecb0c6d54"
+        }
+      ],
+      "ms": 77
+    },
+    {
+      "id": "solicitacaodiaria-completo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "33124ab5765bdd4c5dd4c4eadb144168a0611d018142c154d14f7befe3724497",
+      "images": [
+        {
+          "file": "solicitacaodiaria-completo-1.png",
+          "sha256": "29c62cba03cd6bee0921dc3c68d95763ff7edb4ccbdbbe4b01394778c1d5336c"
+        },
+        {
+          "file": "solicitacaodiaria-completo-2.png",
+          "sha256": "ba6dfdcf3c1b145f071a95341d60f13c1d59b654176df96589fad9eecb0c6d54"
+        }
+      ],
+      "ms": 95
+    },
+    {
+      "id": "solicitacaodiaria-longo",
+      "pages": 3,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "f405d947eac10ade0c7372ee31853c23f809d86511c209cff9b5e25d47f6b0dc",
+      "images": [
+        {
+          "file": "solicitacaodiaria-longo-1.png",
+          "sha256": "5d1dd0362775e1df9bcace36d02b7ab094518e70aa997fc0c7aecac69aa2009f"
+        },
+        {
+          "file": "solicitacaodiaria-longo-2.png",
+          "sha256": "44a32cd749d56c2db16cdd8c0c3cb850911bff2bff8eb5a2e00e2bb044bb5c9d"
+        },
+        {
+          "file": "solicitacaodiaria-longo-3.png",
+          "sha256": "ba6dfdcf3c1b145f071a95341d60f13c1d59b654176df96589fad9eecb0c6d54"
+        }
+      ],
+      "ms": 87
+    },
+    {
+      "id": "solicitacaodiaria-variante",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "43294c12477dd88f0c1948913de2a85afd2108138054e919cd1186125a4e2291",
+      "images": [
+        {
+          "file": "solicitacaodiaria-variante-1.png",
+          "sha256": "1bf1f9eb1592727183b6a0d7c9cabb00747d2cbfa135a4c0a9883ec3095c1155"
+        },
+        {
+          "file": "solicitacaodiaria-variante-2.png",
+          "sha256": "ba6dfdcf3c1b145f071a95341d60f13c1d59b654176df96589fad9eecb0c6d54"
+        }
+      ],
+      "ms": 94
+    },
+    {
+      "id": "solicitacao-viagem-minimo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "2204f77da2e6158b7c94276fcd9ee850d8036647a96aac4bc194fb15cdda2040",
+      "images": [
+        {
+          "file": "solicitacao-viagem-minimo-1.png",
+          "sha256": "e14d383a245e2569a3eebf85f9b2035b706b361bdd90f51c9a9c6559731aea3f"
+        },
+        {
+          "file": "solicitacao-viagem-minimo-2.png",
+          "sha256": "f8b4140469f3f5b23eeed20e56de34f64a710d6e6a03e69c225e21bfafb85cd6"
+        }
+      ],
+      "ms": 70
+    },
+    {
+      "id": "solicitacao-viagem-completo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "a36dfe21efa389759bbd1ec474b15c49ae3717be4a1b3fec7309783e115641b7",
+      "images": [
+        {
+          "file": "solicitacao-viagem-completo-1.png",
+          "sha256": "4c5822787d9dc41618bef250e5da831100d892b3fd8a7eeeae2f55857804e292"
+        },
+        {
+          "file": "solicitacao-viagem-completo-2.png",
+          "sha256": "f8b4140469f3f5b23eeed20e56de34f64a710d6e6a03e69c225e21bfafb85cd6"
+        }
+      ],
+      "ms": 85
+    },
+    {
+      "id": "solicitacao-viagem-longo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "513672add4a6d91ce8e839ff4acaf07adb94c3677cc0ad7fb3b6e44bfd4536a2",
+      "images": [
+        {
+          "file": "solicitacao-viagem-longo-1.png",
+          "sha256": "a87ee249dcda08933a810bf1e791a5c4f7760e32c6d561c8c38cc5b500ca7a30"
+        },
+        {
+          "file": "solicitacao-viagem-longo-2.png",
+          "sha256": "8ff198834cb77c8ca4f1c174cdae109cacb1c1fb96c3a97a19a17bda121da600"
+        }
+      ],
+      "ms": 154
+    },
+    {
+      "id": "solicitacao-viagem-variante",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "c4b8b6c2f58b9dd986b827c72fbae3a12cbf2372eea6901615a48c935892d447",
+      "images": [
+        {
+          "file": "solicitacao-viagem-variante-1.png",
+          "sha256": "ee52475b2628493f2c3ae448a6da1160edb14f466fe9581bd42b19ebd72ebb6a"
+        },
+        {
+          "file": "solicitacao-viagem-variante-2.png",
+          "sha256": "f8b4140469f3f5b23eeed20e56de34f64a710d6e6a03e69c225e21bfafb85cd6"
+        }
+      ],
+      "ms": 132
+    },
+    {
+      "id": "solicitacao-viagem-lista-participantes",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "ae6651e57463ef19d97f80d16cda51b87707fd57077d3028f4e59051802c2be1",
+      "images": [
+        {
+          "file": "solicitacao-viagem-lista-participantes-1.png",
+          "sha256": "7fb7f7b146e0a3be7b7202e301146b7ddf49257ef6a516f78c46a8d0541cc48a"
+        },
+        {
+          "file": "solicitacao-viagem-lista-participantes-2.png",
+          "sha256": "5d260dc699f2b23b5a097439bdee10fed3c6e5446951dbb7e9ef317cdc7ce7bb"
+        }
+      ],
+      "ms": 147
+    },
+    {
+      "id": "requisicao-manual-almoxarifado-minimo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "38c27338b2ff3d47ab31233ce9d9623c57eb22b65e949c3ac1ada6cb2c9c40ce",
+      "images": [
+        {
+          "file": "requisicao-manual-almoxarifado-minimo-1.png",
+          "sha256": "85095f867c78acf28cb89c09a5eaf91be95d2c99c29b10370fb76d1609ea06ac"
+        }
+      ],
+      "ms": 65
+    },
+    {
+      "id": "requisicao-manual-almoxarifado-completo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "9cd767a11feffc45dabbc52061ef2581266e1b9c8ef81a2966b099e0d2a07e59",
+      "images": [
+        {
+          "file": "requisicao-manual-almoxarifado-completo-1.png",
+          "sha256": "00b3323d0bc4e69ff9f06f0fd3a1f43b0615c52cd9595c8bef88f7c396d3bbad"
+        }
+      ],
+      "ms": 83
+    },
+    {
+      "id": "requisicao-manual-almoxarifado-longo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "bd84f07b9c328cef6947bd14140323eb46dbb8ebe303c0a6f49257964aa5cb5d",
+      "images": [
+        {
+          "file": "requisicao-manual-almoxarifado-longo-1.png",
+          "sha256": "a462c16501be6fa8fd68861d3817020c90c921f535089c1079d57b56cf37b27b"
+        },
+        {
+          "file": "requisicao-manual-almoxarifado-longo-2.png",
+          "sha256": "dd57c0ca5588852d2dd1a353c4fb5d3253bb956ce0eef676ecbbfb79d4b976a5"
+        }
+      ],
+      "ms": 53
+    },
+    {
+      "id": "requisicao-manual-almoxarifado-variante",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "9cd767a11feffc45dabbc52061ef2581266e1b9c8ef81a2966b099e0d2a07e59",
+      "images": [
+        {
+          "file": "requisicao-manual-almoxarifado-variante-1.png",
+          "sha256": "00b3323d0bc4e69ff9f06f0fd3a1f43b0615c52cd9595c8bef88f7c396d3bbad"
+        }
+      ],
+      "ms": 72
+    },
+    {
+      "id": "requisicao-manual-almoxarifado-lista-itens",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "a8b215fbd442508aae8ea986b8cd6c9faa1eb7eb7bf138e91c7dce85307e9902",
+      "images": [
+        {
+          "file": "requisicao-manual-almoxarifado-lista-itens-1.png",
+          "sha256": "e91ea47016e34bff5c16be0866c4a333c01bdd8d1788feb041dbfd775da85b92"
+        },
+        {
+          "file": "requisicao-manual-almoxarifado-lista-itens-2.png",
+          "sha256": "dd57c0ca5588852d2dd1a353c4fb5d3253bb956ce0eef676ecbbfb79d4b976a5"
+        }
+      ],
+      "ms": 110
+    },
+    {
+      "id": "solicitacao-documentos-minimo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "38e5260adc08bfafe8a93cc7db7e974dc8af5b46b333a314a42bf1c1cf723059",
+      "images": [
+        {
+          "file": "solicitacao-documentos-minimo-1.png",
+          "sha256": "43e9f5e575402c5eda5f43a0de3f22f3dca57e0a8687f46c4da8e5368da20fb2"
+        }
+      ],
+      "ms": 44
+    },
+    {
+      "id": "solicitacao-documentos-completo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "f038c05c8e7def576253cc158327d2d8737f099eb4b997b8b439cf83ea4ec8d2",
+      "images": [
+        {
+          "file": "solicitacao-documentos-completo-1.png",
+          "sha256": "2392f6ac9f9e0b788dc510f2bc6d05f3d770b919a8a6dc3dd31cd83d82020701"
+        }
+      ],
+      "ms": 45
+    },
+    {
+      "id": "solicitacao-documentos-longo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "96433f1da3159363d2df8740e180a432bbecd98c7fb7592f2c72e2944f2435b5",
+      "images": [
+        {
+          "file": "solicitacao-documentos-longo-1.png",
+          "sha256": "2a9d5a119de3245ce4c466c6bf2a1856d6d031c37d90eb3267d153cd81a06571"
+        }
+      ],
+      "ms": 54
+    },
+    {
+      "id": "solicitacao-documentos-variante",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "317cdda8f1326aea6b9bb3d25eb0f069b4f8eef84aa2f8a78adf4a4b1be1daa6",
+      "images": [
+        {
+          "file": "solicitacao-documentos-variante-1.png",
+          "sha256": "9240a68d9f44a204971a97af1a7df68466655fa9f764c41cc04be58d71bbe948"
+        }
+      ],
+      "ms": 46
+    },
+    {
+      "id": "solicitacao-estagiario-minimo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "e5ec25da7071512e60eb333c21f9a69466f45d70c43266ab91aae714b5263aae",
+      "images": [
+        {
+          "file": "solicitacao-estagiario-minimo-1.png",
+          "sha256": "9c53f09b57f1b3d0f1046ffded4e41177dc5996ec8f7e6147bd553207f0d2923"
+        }
+      ],
+      "ms": 101
+    },
+    {
+      "id": "solicitacao-estagiario-completo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "d951778f38a599703cd71497fb9ac8e31d223afafb8e0e940cabc7dedd82c204",
+      "images": [
+        {
+          "file": "solicitacao-estagiario-completo-1.png",
+          "sha256": "1eeee4de6aee4bef7af324a3332d4040217ccb02b73b8ccc5edef5b5b314399f"
+        }
+      ],
+      "ms": 91
+    },
+    {
+      "id": "solicitacao-estagiario-longo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "a0bec6ec1448249e21a3e4863822bfb744b72055efd8659638b8e75b496e1590",
+      "images": [
+        {
+          "file": "solicitacao-estagiario-longo-1.png",
+          "sha256": "cc95660508023262b62e12b0c8ca801f855ce38e25bf656a98da64d0d205b40f"
+        },
+        {
+          "file": "solicitacao-estagiario-longo-2.png",
+          "sha256": "f6de5f22319c09d0ed50c8fe274abbb9d9704b59d5c54ac51a8688fc9296211e"
+        }
+      ],
+      "ms": 154
+    },
+    {
+      "id": "solicitacao-estagiario-variante",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "9aa704fe121ad3b5baa8d90972dae440f34be5c89da414132d8dc44034089cd8",
+      "images": [
+        {
+          "file": "solicitacao-estagiario-variante-1.png",
+          "sha256": "173d12d3388f615c77b7c1f8e5d307840991029dc69a13e5590089b9f3c87147"
+        }
+      ],
+      "ms": 134
+    },
+    {
+      "id": "inspecao-medica-minimo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "93ab6793b20e0ea88ea271d349d6713b91465c93e6a043163cd0a4744c34bbbd",
+      "images": [
+        {
+          "file": "inspecao-medica-minimo-1.png",
+          "sha256": "19eda091461b86783c02462b7684ed7de30acf0a45ed4a86d32658deaa54537a"
+        },
+        {
+          "file": "inspecao-medica-minimo-2.png",
+          "sha256": "4f79b28d8607a8c2c68a3318bc665e2c8c7d7a6671762655082650499b37660a"
+        }
+      ],
+      "ms": 135
+    },
+    {
+      "id": "inspecao-medica-completo",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "51c33bcdb26d1568dec34c5879ff71d332af28af9a869b720dfb2ae74ca6e5ba",
+      "images": [
+        {
+          "file": "inspecao-medica-completo-1.png",
+          "sha256": "135639cf5a1f801388cd3de3a0a6033bea77bc56709b4d7c85a44bc7d46b6d10"
+        },
+        {
+          "file": "inspecao-medica-completo-2.png",
+          "sha256": "5507bb1875565f0c2bee4e37aebbb915d0b2d6ecdc7ef145d2fe019fa76cb79f"
+        }
+      ],
+      "ms": 85
+    },
+    {
+      "id": "inspecao-medica-longo",
+      "pages": 3,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "55ba8a7289d49efc03c405aceba997d303b7abd245261c1374f5f437c879adf7",
+      "images": [
+        {
+          "file": "inspecao-medica-longo-1.png",
+          "sha256": "52558d20632ac12ec37f7804a88a2375b0879ffdccc0886954ae9936317c2cb2"
+        },
+        {
+          "file": "inspecao-medica-longo-2.png",
+          "sha256": "3e1184c8067f4e006eb437fbc4429e92bf95b4a23bce57594df7f57fed6deda0"
+        },
+        {
+          "file": "inspecao-medica-longo-3.png",
+          "sha256": "12207a03d838497e3e03a3f8ecf9de53551ea53d574d3c176cc41cf81b733aba"
+        }
+      ],
+      "ms": 79
+    },
+    {
+      "id": "inspecao-medica-variante",
+      "pages": 2,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "51c33bcdb26d1568dec34c5879ff71d332af28af9a869b720dfb2ae74ca6e5ba",
+      "images": [
+        {
+          "file": "inspecao-medica-variante-1.png",
+          "sha256": "135639cf5a1f801388cd3de3a0a6033bea77bc56709b4d7c85a44bc7d46b6d10"
+        },
+        {
+          "file": "inspecao-medica-variante-2.png",
+          "sha256": "5507bb1875565f0c2bee4e37aebbb915d0b2d6ecdc7ef145d2fe019fa76cb79f"
+        }
+      ],
+      "ms": 90
+    },
+    {
+      "id": "cartao-ponto-minimo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "5de12b3c16b9d80425d3b17136c983ae8ccdfa9816d58f7890adfefe9f33b2a7",
+      "images": [
+        {
+          "file": "cartao-ponto-minimo-1.png",
+          "sha256": "9fc2ce4261f3daa800dd9066696c77f9792cdfb8e1d436edef4f94568ecdf591"
+        }
+      ],
+      "ms": 232
+    },
+    {
+      "id": "cartao-ponto-completo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "323695e0db4921498837fa0bff81bc8236afb699327d0de136bf09e5f1070103",
+      "images": [
+        {
+          "file": "cartao-ponto-completo-1.png",
+          "sha256": "fba83a709dd9f4bc0c97fe1ec338dcd2509aa3fb1802463e0ada4793dec50b36"
+        }
+      ],
+      "ms": 224
+    },
+    {
+      "id": "cartao-ponto-longo",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "323695e0db4921498837fa0bff81bc8236afb699327d0de136bf09e5f1070103",
+      "images": [
+        {
+          "file": "cartao-ponto-longo-1.png",
+          "sha256": "fba83a709dd9f4bc0c97fe1ec338dcd2509aa3fb1802463e0ada4793dec50b36"
+        }
+      ],
+      "ms": 277
+    },
+    {
+      "id": "cartao-ponto-variante",
+      "pages": 1,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "467ef4d236e4066c3ef3a9574c1ee1ef39f5f7fcfae81d0cefbca6c473412c38",
+      "images": [
+        {
+          "file": "cartao-ponto-variante-1.png",
+          "sha256": "279b10439f0645b3999cebb3fe2c58b9714615c34f831cfe3aa6b63eae5994e5"
+        }
+      ],
+      "ms": 267
+    },
+    {
+      "id": "recadastramento-minimo",
+      "pages": 3,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "80f629c623a9633a35db672f545d3cce9971c2411aaa63cb15f1f0b57a3c0f64",
+      "images": [
+        {
+          "file": "recadastramento-minimo-1.png",
+          "sha256": "8566b548b1b29435447604767cc6265f41a769c4b7d89e126f0dd0f8e9fe8482"
+        },
+        {
+          "file": "recadastramento-minimo-2.png",
+          "sha256": "9b1395757dd2a06726c47f074a46f4e07de48c696da7557ff8caf78ebe487eed"
+        },
+        {
+          "file": "recadastramento-minimo-3.png",
+          "sha256": "a637f638c9e57c5f9486e3f289cdbbb61995abaddd0649162e73c7428c04da73"
+        }
+      ],
+      "ms": 29
+    },
+    {
+      "id": "recadastramento-completo",
+      "pages": 8,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "6a0a9c65059436d9070e1bab3c32fc013e277b9c149b0fd9230380248e20a5ec",
+      "images": [
+        {
+          "file": "recadastramento-completo-1.png",
+          "sha256": "8566b548b1b29435447604767cc6265f41a769c4b7d89e126f0dd0f8e9fe8482"
+        },
+        {
+          "file": "recadastramento-completo-2.png",
+          "sha256": "9b1395757dd2a06726c47f074a46f4e07de48c696da7557ff8caf78ebe487eed"
+        },
+        {
+          "file": "recadastramento-completo-3.png",
+          "sha256": "492eb58fb086b5d20c89474f61edeb49829a633256d04f511336488b0be13311"
+        },
+        {
+          "file": "recadastramento-completo-4.png",
+          "sha256": "1ee1927091e04306ba7b14e7b3a9189f6554401ab7fcf783313cc47ac4ecee5e"
+        },
+        {
+          "file": "recadastramento-completo-5.png",
+          "sha256": "f9fdada2ed9ae0dfab3d5fb658ad23b52fbceb47cec03215bf113a70c3fd73e0"
+        },
+        {
+          "file": "recadastramento-completo-6.png",
+          "sha256": "fd5354bb7e2cb64d408ecd874bf394d156402400e264ad133a3ab9642b12e03f"
+        },
+        {
+          "file": "recadastramento-completo-7.png",
+          "sha256": "13e26a27b7c66e85b3f8ec68cfba1e553a6b8f014d00b632e597185c5ecf7b98"
+        },
+        {
+          "file": "recadastramento-completo-8.png",
+          "sha256": "428ee7db7aa062727393c7a91201e680c85ed29dcb9d5258ba1fc6f2233c127f"
+        }
+      ],
+      "ms": 292
+    },
+    {
+      "id": "recadastramento-longo",
+      "pages": 3,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "80f629c623a9633a35db672f545d3cce9971c2411aaa63cb15f1f0b57a3c0f64",
+      "images": [
+        {
+          "file": "recadastramento-longo-1.png",
+          "sha256": "8566b548b1b29435447604767cc6265f41a769c4b7d89e126f0dd0f8e9fe8482"
+        },
+        {
+          "file": "recadastramento-longo-2.png",
+          "sha256": "9b1395757dd2a06726c47f074a46f4e07de48c696da7557ff8caf78ebe487eed"
+        },
+        {
+          "file": "recadastramento-longo-3.png",
+          "sha256": "a637f638c9e57c5f9486e3f289cdbbb61995abaddd0649162e73c7428c04da73"
+        }
+      ],
+      "ms": 30
+    },
+    {
+      "id": "recadastramento-variante",
+      "pages": 8,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "f2e45ff37a6457b47689b7425434c2e24795bce8ecd998346eb6260e3f08b9ef",
+      "images": [
+        {
+          "file": "recadastramento-variante-1.png",
+          "sha256": "8566b548b1b29435447604767cc6265f41a769c4b7d89e126f0dd0f8e9fe8482"
+        },
+        {
+          "file": "recadastramento-variante-2.png",
+          "sha256": "9b1395757dd2a06726c47f074a46f4e07de48c696da7557ff8caf78ebe487eed"
+        },
+        {
+          "file": "recadastramento-variante-3.png",
+          "sha256": "cecf8c68cb58bbb78602ff0f4c30b2a5f86d6aaafbc4c8a6a2a2f12d5c98b1e8"
+        },
+        {
+          "file": "recadastramento-variante-4.png",
+          "sha256": "7f6c8799017f4365436f683386100b7145096a4fb70d07d62c7c3365823d7875"
+        },
+        {
+          "file": "recadastramento-variante-5.png",
+          "sha256": "f9fdada2ed9ae0dfab3d5fb658ad23b52fbceb47cec03215bf113a70c3fd73e0"
+        },
+        {
+          "file": "recadastramento-variante-6.png",
+          "sha256": "70f6c95a4c104a43bbe70604b17b5384f59d5a3b53a8831acc5cac6ed31662c0"
+        },
+        {
+          "file": "recadastramento-variante-7.png",
+          "sha256": "f2361a52365dc72260ea19183bfef448ae8fbceb8e2d3d42771bd313c52da643"
+        },
+        {
+          "file": "recadastramento-variante-8.png",
+          "sha256": "428ee7db7aa062727393c7a91201e680c85ed29dcb9d5258ba1fc6f2233c127f"
+        }
+      ],
+      "ms": 188
+    },
+    {
+      "id": "recadastramento-listas",
+      "pages": 15,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "24d583c8ef1a6ee52170ef8597eac49c42d0dac41cff7f5bb497086cbda00c09",
+      "images": [
+        {
+          "file": "recadastramento-listas-01.png",
+          "sha256": "8566b548b1b29435447604767cc6265f41a769c4b7d89e126f0dd0f8e9fe8482"
+        },
+        {
+          "file": "recadastramento-listas-02.png",
+          "sha256": "9b1395757dd2a06726c47f074a46f4e07de48c696da7557ff8caf78ebe487eed"
+        },
+        {
+          "file": "recadastramento-listas-03.png",
+          "sha256": "492eb58fb086b5d20c89474f61edeb49829a633256d04f511336488b0be13311"
+        },
+        {
+          "file": "recadastramento-listas-04.png",
+          "sha256": "1ee1927091e04306ba7b14e7b3a9189f6554401ab7fcf783313cc47ac4ecee5e"
+        },
+        {
+          "file": "recadastramento-listas-05.png",
+          "sha256": "0de3f14f49b80d4648298dda425138023568ef594c3dc840b6dc8386615a2a03"
+        },
+        {
+          "file": "recadastramento-listas-06.png",
+          "sha256": "c908ef50f86a728aa00ba75d82b58d5dc9f1d4d500d3c43030f1d3d13fef05b1"
+        },
+        {
+          "file": "recadastramento-listas-07.png",
+          "sha256": "1d6acaf978b1129279d3f3c0bc0a8826aeffc3036fce374eb96ec0729bd35d1a"
+        },
+        {
+          "file": "recadastramento-listas-08.png",
+          "sha256": "876cebff221c677768fe6748ffd148d207b415bbbb94ac2fb73252a28c65c20e"
+        },
+        {
+          "file": "recadastramento-listas-09.png",
+          "sha256": "9a07bae418b0e1abc24b9aec8511e0eeb7b628cbb57cc476eb3cf32f80120833"
+        },
+        {
+          "file": "recadastramento-listas-10.png",
+          "sha256": "b4fccb0acc018876da5470cf93b456670b531862a465f9038e607c4b1dc710b1"
+        },
+        {
+          "file": "recadastramento-listas-11.png",
+          "sha256": "d8ca5df352d5f56d6c33fe61141b1233f1c3fc4c513578cace0a18750ecdc274"
+        },
+        {
+          "file": "recadastramento-listas-12.png",
+          "sha256": "fd5354bb7e2cb64d408ecd874bf394d156402400e264ad133a3ab9642b12e03f"
+        },
+        {
+          "file": "recadastramento-listas-13.png",
+          "sha256": "13e26a27b7c66e85b3f8ec68cfba1e553a6b8f014d00b632e597185c5ecf7b98"
+        },
+        {
+          "file": "recadastramento-listas-14.png",
+          "sha256": "f666edce4ea3a6dc63c3297b466116e9ae24503dee62314f283198ff4e18f4b7"
+        },
+        {
+          "file": "recadastramento-listas-15.png",
+          "sha256": "8f1a55de3d1a3bd9b78803d9aa0cfa74e29882fe86df727c7ebaf46283152f2d"
+        }
+      ],
+      "ms": 231
+    },
+    {
+      "id": "recadastramento-simplificado-servidor",
+      "pages": 3,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "80f629c623a9633a35db672f545d3cce9971c2411aaa63cb15f1f0b57a3c0f64",
+      "images": [
+        {
+          "file": "recadastramento-simplificado-servidor-1.png",
+          "sha256": "8566b548b1b29435447604767cc6265f41a769c4b7d89e126f0dd0f8e9fe8482"
+        },
+        {
+          "file": "recadastramento-simplificado-servidor-2.png",
+          "sha256": "9b1395757dd2a06726c47f074a46f4e07de48c696da7557ff8caf78ebe487eed"
+        },
+        {
+          "file": "recadastramento-simplificado-servidor-3.png",
+          "sha256": "a637f638c9e57c5f9486e3f289cdbbb61995abaddd0649162e73c7428c04da73"
+        }
+      ],
+      "ms": 40
+    },
+    {
+      "id": "recadastramento-simplificado-vereador",
+      "pages": 3,
+      "size": "595.28 x 841.89 pts (A4)\r",
+      "textSha256": "c6b21010086255e8153370f44f6b2de62d47424261a598fffb639de3bfb56442",
+      "images": [
+        {
+          "file": "recadastramento-simplificado-vereador-1.png",
+          "sha256": "8566b548b1b29435447604767cc6265f41a769c4b7d89e126f0dd0f8e9fe8482"
+        },
+        {
+          "file": "recadastramento-simplificado-vereador-2.png",
+          "sha256": "9b1395757dd2a06726c47f074a46f4e07de48c696da7557ff8caf78ebe487eed"
+        },
+        {
+          "file": "recadastramento-simplificado-vereador-3.png",
+          "sha256": "4c9e11a7a57a918b841d6bb4984467c61ae473203116343bb5bf5fc17e132bec"
+        }
+      ],
+      "ms": 31
+    }
+  ]
+}

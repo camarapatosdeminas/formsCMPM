@@ -1,19 +1,9 @@
+import type { FeriasData as FormData } from "../features/ferias/ferias.types";
 // src/pdf/FeriasPdfDocument.tsx
 import React from "react";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 
 // A interface permanece a mesma da última versão
-interface FormData {
-  nome: string;
-  matricula: string;
-  cpf: string;
-  lotacao: string;
-  periodoGozo: "30" | "20" | "15" | "10";
-  dataInicio: string;
-  justificativa: string;
-  outrosDias: string;
-  dataRequerimento: Date;
-}
 
 interface PdfProps {
   data: FormData;

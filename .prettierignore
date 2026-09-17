@@ -1,0 +1,17 @@
+# Dependências e arquivos gerados
+node_modules/
+dist/
+dist-ssr/
+coverage/
+.vercel/
+*.tsbuildinfo
+
+# Gerenciado pelo npm
+package-lock.json
+
+.npm-cache/
+tmp/
+tests/pdf-baseline/
+tests/pdf-current/
+test-results/
+playwright-report/

@@ -1,84 +1,118 @@
-import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage/HomePages";
-import FormularioFerias from "./pages/FormularioFerias/FormularioFerias";
-import OcorrenciaPonto from "./pages/OcorrenciaPonto/OcorrenciaPonto";
-import SolicitacaoEstagiario from "./pages/SolicitacaoEstagiario/SolicitacaoEstagiario";
-import SolicitacaoCursos from "./pages/SolicitacaoCursos/SolicitacaoCursos";
-import SolicitacaoViagem from "./pages/SolicitacaoViagem/SolicitacaoViagem";
-import Adiantamento13 from "./pages/Adiantamento13/Adiantamento13";
-import RelatorioViagem from "./pages/RelatorioViagem/RelatorioViagem";
-import SolicitacaoDocumentos from "./pages/SolicitacaoDocumentos/SolicitacaoDocumentos";
-import DeclaracaoDependentes from "./pages/DeclaracaoDependentes/DeclaracaoDependentes";
-import DeclaracaoNaoOcupacao from "./pages/DeclaracaoNaoOcupacao/DeclaracaoNaoOcupacao";
-import DeclaracaoNepotismo from "./pages/DeclaracaoNepotismo/DeclaracaoNepotismo";
-import DeclaracaoFichaLimpa from "./pages/DeclaracaoFichaLimpa/DeclaracaoFichaLimpa";
-import SolicitacaoDiaria from "./pages/SolicitacaoDiaria/SolicitacaoDiaria";
-import RelatorioInspecaoMedica from "./pages/GESAT-RelatorioInspecaoMedica/RelatorioInspecaoMedica";
-import RequisicaoManualAlmoxarifado from "./pages/RequisicaoManualAlmoxarifado/RequisicaoManualAlmoxarifado";
-import FormularioCartaoPonto from "./pages/CartaoPonto/FormularioCartaoPonto";
-
-function App() {
+import { lazy, Suspense } from "react";
+import { Route, Routes, Link, useLocation } from "react-router-dom";
+import { formCatalog } from "./app/formCatalog";
+import { RouteBoundary } from "./app/RouteBoundary";
+import { SiteLayout, FormPage } from "./components/layout/SiteLayout";
+import HomePage from "./features/home/HomePage";
+const adiantamento13 = lazy(
+  () => import("./features/adiantamento13/Adiantamento13Page"),
+);
+const declaracaoDependentes = lazy(
+  () => import("./features/declaracaoDependentes/DeclaracaoDependentesPage"),
+);
+const declaracaoFichaLimpa = lazy(
+  () => import("./features/declaracaoFichaLimpa/DeclaracaoFichaLimpaPage"),
+);
+const declaracaoNepotismo = lazy(
+  () => import("./features/declaracaoNepotismo/DeclaracaoNepotismoPage"),
+);
+const declaracaoNaoOcupacao = lazy(
+  () => import("./features/declaracaoNaoOcupacao/DeclaracaoNaoOcupacaoPage"),
+);
+const ocorrenciaPonto = lazy(
+  () => import("./features/ocorrenciaPonto/OcorrenciaPontoPage"),
+);
+const relatorioViagem = lazy(
+  () => import("./features/relatorioViagem/RelatorioViagemPage"),
+);
+const ferias = lazy(() => import("./features/ferias/FeriasPage"));
+const solicitacaoCursos = lazy(
+  () => import("./features/solicitacaoCursos/SolicitacaoCursosPage"),
+);
+const solicitacaoDiaria = lazy(
+  () => import("./features/solicitacaoDiaria/SolicitacaoDiariaPage"),
+);
+const solicitacaoViagem = lazy(
+  () => import("./features/solicitacaoViagem/SolicitacaoViagemPage"),
+);
+const almoxarifado = lazy(
+  () => import("./features/almoxarifado/AlmoxarifadoPage"),
+);
+const solicitacaoDocumentos = lazy(
+  () => import("./features/solicitacaoDocumentos/SolicitacaoDocumentosPage"),
+);
+const solicitacaoEstagiario = lazy(
+  () => import("./features/solicitacaoEstagiario/SolicitacaoEstagiarioPage"),
+);
+const inspecaoMedica = lazy(
+  () => import("./features/inspecaoMedica/InspecaoMedicaPage"),
+);
+const cartaoPonto = lazy(
+  () => import("./features/cartaoPonto/CartaoPontoPage"),
+);
+const recadastramento = lazy(
+  () => import("./features/recadastramento/RecadastramentoPage"),
+);
+const routes = [
+  { id: "adiantamento13", Page: adiantamento13 },
+  { id: "declaracaoDependentes", Page: declaracaoDependentes },
+  { id: "declaracaoFichaLimpa", Page: declaracaoFichaLimpa },
+  { id: "declaracaoNepotismo", Page: declaracaoNepotismo },
+  { id: "declaracaoNaoOcupacao", Page: declaracaoNaoOcupacao },
+  { id: "ocorrenciaPonto", Page: ocorrenciaPonto },
+  { id: "relatorioViagem", Page: relatorioViagem },
+  { id: "ferias", Page: ferias },
+  { id: "solicitacaoCursos", Page: solicitacaoCursos },
+  { id: "solicitacaoDiaria", Page: solicitacaoDiaria },
+  { id: "solicitacaoViagem", Page: solicitacaoViagem },
+  { id: "almoxarifado", Page: almoxarifado },
+  { id: "solicitacaoDocumentos", Page: solicitacaoDocumentos },
+  { id: "solicitacaoEstagiario", Page: solicitacaoEstagiario },
+  { id: "inspecaoMedica", Page: inspecaoMedica },
+  { id: "cartaoPonto", Page: cartaoPonto },
+  { id: "recadastramento", Page: recadastramento },
+];
+export default function App() {
+  const location = useLocation();
   return (
-    <div className="app-container">
-      {" "}
-      <header className="app-header">
-        {" "}
-        {/* SUBSTITUÍDO: Link foi removido e trocado por um DIV simples */}{" "}
-        <div
-          className="header-text" // Nova classe para estilização
-          // ⬅️ ADICIONADO: text-align: center para centralizar o texto H1
-          style={{ color: "#35679C", textAlign: "center" }}
+    <SiteLayout>
+      <RouteBoundary key={location.pathname}>
+        <Suspense
+          fallback={
+            <p role="status" style={{ padding: 32, textAlign: "center" }}>
+              Carregando formulário…
+            </p>
+          }
         >
-          <h1>Câmara Municipal de Patos de Minas</h1>{" "}
-        </div>{" "}
-      </header>
-      <main className="app-main-content">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/adiantamento-13" element={<Adiantamento13 />} />
-          <Route
-            path="/declaracao-dependentes"
-            element={<DeclaracaoDependentes />}
-          />
-          <Route
-            path="/declaracao-ficha-limpa"
-            element={<DeclaracaoFichaLimpa />}
-          />
-          <Route
-            path="/declaracao-nepotismo"
-            element={<DeclaracaoNepotismo />}
-          />
-          <Route
-            path="/declaracao-nao-ocupacao"
-            element={<DeclaracaoNaoOcupacao />}
-          />
-          <Route path="/ocorrencia-ponto" element={<OcorrenciaPonto />} />
-          <Route path="/relatorio-viagem" element={<RelatorioViagem />} />
-          <Route path="/formulario-ferias" element={<FormularioFerias />} />
-          <Route path="/solicitacao-cursos" element={<SolicitacaoCursos />} />
-          <Route path="/SolicitacaoDiaria" element={<SolicitacaoDiaria />} />
-          <Route path="/solicitacao-viagem" element={<SolicitacaoViagem />} />
-          <Route
-            path="/requisicao-manual-almoxarifado"
-            element={<RequisicaoManualAlmoxarifado />}
-          />
-          <Route
-            path="/solicitacao-documentos"
-            element={<SolicitacaoDocumentos />}
-          />
-          <Route
-            path="/solicitacao-estagiario"
-            element={<SolicitacaoEstagiario />}
-          />
-          <Route
-            path="/inspecao-medica"
-            element={<RelatorioInspecaoMedica />}
-          />
-          <Route path="/cartao-ponto" element={<FormularioCartaoPonto />} />
-        </Routes>
-      </main>
-    </div>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            {routes.map(({ id, Page }) => {
+              const form = formCatalog.find((f) => f.id === id)!;
+              return (
+                <Route
+                  key={id}
+                  path={form.path}
+                  element={
+                    <FormPage form={form}>
+                      <Page />
+                    </FormPage>
+                  }
+                />
+              );
+            })}
+            <Route
+              path="*"
+              element={
+                <div style={{ padding: 48, textAlign: "center" }}>
+                  <h1>Formulário não encontrado</h1>
+                  <p>Confira o endereço ou encontre o documento no catálogo.</p>
+                  <Link to="/">Voltar aos formulários</Link>
+                </div>
+              }
+            />
+          </Routes>
+        </Suspense>
+      </RouteBoundary>
+    </SiteLayout>
   );
 }
-
-export default App;

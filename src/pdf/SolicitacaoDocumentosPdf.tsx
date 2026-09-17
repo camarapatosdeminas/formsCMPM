@@ -1,15 +1,6 @@
+import type { FormData } from "../features/solicitacaoDocumentos/solicitacaoDocumentos.types";
 // src/pdf/SolicitacaoDocumentosPdf.tsx
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
-
-interface FormData {
-  nome: string;
-  cpf: string;
-  email: string;
-  contato: string;
-  documentosSolicitados: string;
-  justificativa: string;
-  cienteLgpd: boolean;
-}
 
 // Estilos revisados para um layout mais profissional
 const styles = StyleSheet.create({

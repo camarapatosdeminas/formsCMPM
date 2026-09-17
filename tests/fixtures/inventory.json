@@ -1,0 +1,3378 @@
+[
+  {
+    "file": "src/pages/Adiantamento13/Adiantamento13.tsx",
+    "route": "/adiantamento-13",
+    "pdf": "src/pdf/Adiantamento13Pdf.tsx",
+    "component": "Adiantamento13Pdf",
+    "states": {
+      "formData": "{\n    nome: \"\",\n    matricula: \"\",\n    cpf: \"\",\n    lotacao: \"\",\n    portaria: \"\",\n  }",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData"
+    },
+    "download": "adiantamento_13.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Matrícula",
+        "type": "text",
+        "name": "matricula",
+        "placeholder": "Matrícula",
+        "value": "formData.matricula",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "CPF",
+        "type": "text",
+        "name": "cpf",
+        "placeholder": "CPF",
+        "value": "formData.cpf",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Lotação",
+        "type": "text",
+        "name": "lotacao",
+        "placeholder": "Lotação",
+        "value": "formData.lotacao",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Número da Portaria",
+        "type": "text",
+        "name": "portaria",
+        "placeholder": "Número da Portaria",
+        "value": "formData.portaria",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [],
+    "operations": [
+      "handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = <Adiantamento13Pdf formData={formData} />;\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/DeclaracaoDependentes/DeclaracaoDependentes.tsx",
+    "route": "/declaracao-dependentes",
+    "pdf": "src/pdf/DeclaracaoDependentesPdf.tsx",
+    "component": "DeclaracaoDependentesPdf",
+    "states": {
+      "servidorInfo": "{\n    nome: \"\",\n    matricula: \"\",\n  }",
+      "dependentes": "[\n    {\n      id: 1,\n      nome: \"\",\n      dataNascimento: \"\",\n      parentesco: \"\",\n      cpf: \"\",\n      isDependenteIR: true,\n    },\n  ]",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "servidorInfo": "servidorInfo",
+      "dependentes": "dependentes"
+    },
+    "download": "declaracao_dependentes.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome do Servidor",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome do Servidor",
+        "value": "servidorInfo.nome",
+        "onChange": "handleServidorInfoChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Matrícula",
+        "type": "text",
+        "name": "matricula",
+        "placeholder": "Matrícula",
+        "value": "servidorInfo.matricula",
+        "onChange": "handleServidorInfoChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Nome do Dependente",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome do Dependente",
+        "value": "dependente.nome",
+        "onChange": "(e) => handleDependenteChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Data de Nascimento",
+        "type": "text",
+        "name": "dataNascimento",
+        "placeholder": "Data de Nascimento",
+        "value": "dependente.dataNascimento",
+        "onChange": "(e) => handleDependenteChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Parentesco",
+        "type": "text",
+        "name": "parentesco",
+        "placeholder": "Parentesco",
+        "value": "dependente.parentesco",
+        "onChange": "(e) => handleDependenteChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "CPF",
+        "type": "text",
+        "name": "cpf",
+        "placeholder": "CPF",
+        "value": "dependente.cpf",
+        "onChange": "(e) => handleDependenteChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "checkbox",
+        "name": "isDependenteIR",
+        "checked": "dependente.isDependenteIR",
+        "onChange": "(e) => handleDependenteChange(index, e)",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [
+      "name === \"nome\"",
+      "name === \"dataNascimento\"",
+      "name === \"parentesco\"",
+      "name === \"cpf\"",
+      "name === \"isDependenteIR\" && type === \"checkbox\"",
+      "dependentes.length <= 1"
+    ],
+    "operations": [
+      "handleServidorInfoChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    const { name, value } = e.target;\n    setServidorInfo((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleDependenteChange = (\n    index: number,\n    e: React.ChangeEvent<HTMLInputElement>,\n  ) => {\n    const { name, value, type, checked } = e.target;\n\n    // Criamos uma cópia da lista de dependentes para modificar\n    const novosDependentes = [...dependentes];\n    // Criamos uma cópia do dependente específico que estamos a alterar\n    const dependenteAtualizado = { ...novosDependentes[index] };\n\n    // Verificamos qual campo foi alterado e atualizamos a propriedade correta\n    if (name === \"nome\") {\n      dependenteAtualizado.nome = value;\n    } else if (name === \"dataNascimento\") {\n      dependenteAtualizado.dataNascimento = value;\n    } else if (name === \"parentesco\") {\n      dependenteAtualizado.parentesco = value;\n    } else if (name === \"cpf\") {\n      dependenteAtualizado.cpf = value;\n    } else if (name === \"isDependenteIR\" && type === \"checkbox\") {\n      dependenteAtualizado.isDependenteIR = checked;\n    }\n\n    // Substituímos o dependente antigo pelo atualizado na lista\n    novosDependentes[index] = dependenteAtualizado;\n\n    setDependentes(novosDependentes);\n    setDocumentoPronto(null);\n  }",
+      "adicionarDependente = () => {\n    setDependentes([\n      ...dependentes,\n      {\n        id: Date.now(),\n        nome: \"\",\n        dataNascimento: \"\",\n        parentesco: \"\",\n        cpf: \"\",\n        isDependenteIR: true,\n      },\n    ]);\n  }",
+      "removerDependente = (index: number) => {\n    if (dependentes.length <= 1) return;\n    setDependentes(dependentes.filter((_, i) => i !== index));\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = (\n      <DeclaracaoDependentesPdf\n        servidorInfo={servidorInfo}\n        dependentes={dependentes}\n      />\n    );\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/DeclaracaoFichaLimpa/DeclaracaoFichaLimpa.tsx",
+    "route": "/declaracao-ficha-limpa",
+    "pdf": "src/pdf/DeclaracaoFichaLimpaPdf.tsx",
+    "component": "DeclaracaoFichaLimpaPdf",
+    "states": {
+      "formData": "{\n    nome: \"\",\n    cpf: \"\",\n  }",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData"
+    },
+    "download": "declaracao_ficha_limpa.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome Completo",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome Completo",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "CPF",
+        "type": "text",
+        "name": "cpf",
+        "placeholder": "CPF",
+        "value": "formData.cpf",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [],
+    "operations": [
+      "handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = <DeclaracaoFichaLimpaPdf formData={formData} />;\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/DeclaracaoNepotismo/DeclaracaoNepotismo.tsx",
+    "route": "/declaracao-nepotismo",
+    "pdf": "src/pdf/DeclaracaoNepotismoPdf.tsx",
+    "component": "DeclaracaoNepotismoPdf",
+    "states": {
+      "formData": "{\n    nome: \"\",\n    cpf: \"\",\n  }",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData"
+    },
+    "download": "declaracao_nepotismo.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome Completo",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome Completo",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "CPF",
+        "type": "text",
+        "name": "cpf",
+        "placeholder": "CPF",
+        "value": "formData.cpf",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [],
+    "operations": [
+      "handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = <DeclaracaoNepotismoPdf formData={formData} />;\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/DeclaracaoNaoOcupacao/DeclaracaoNaoOcupacao.tsx",
+    "route": "/declaracao-nao-ocupacao",
+    "pdf": "src/pdf/DeclaracaoNaoOcupacaoPdf.tsx",
+    "component": "DeclaracaoNaoOcupacaoPdf",
+    "states": {
+      "formData": "{\n    nome: \"\",\n    cpf: \"\",\n    rua: \"\",\n    numero: \"\",\n    cargo: \"\",\n  }",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData"
+    },
+    "download": "declaracao_nao_ocupacao.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Seu Nome Completo",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Seu Nome Completo",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "CPF",
+        "type": "text",
+        "name": "cpf",
+        "placeholder": "CPF",
+        "value": "formData.cpf",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Nome da Rua / Av.",
+        "type": "text",
+        "name": "rua",
+        "placeholder": "Nome da Rua / Av.",
+        "value": "formData.rua",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Nº",
+        "type": "text",
+        "name": "numero",
+        "placeholder": "Nº",
+        "value": "formData.numero",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Cargo para o qual está a tomar posse",
+        "type": "text",
+        "name": "cargo",
+        "placeholder": "Cargo para o qual está a tomar posse",
+        "value": "formData.cargo",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [],
+    "operations": [
+      "handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = <DeclaracaoNaoOcupacaoPdf formData={formData} />;\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/OcorrenciaPonto/OcorrenciaPonto.tsx",
+    "route": "/ocorrencia-ponto",
+    "pdf": "src/pdf/OcorrenciaPontoPdf.tsx",
+    "component": "OcorrenciaPontoPdf",
+    "states": {
+      "servidorInfo": "{\n    servidor: \"\",\n    matricula: \"\",\n    cargo: \"\",\n    chefia: \"\",\n  }",
+      "ocorrencias": "[\n    { id: 1, data: \"\", horario: \"\", referente: \"entrada\", justificativa: \"\" },\n  ]",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "servidorInfo": "servidorInfo",
+      "ocorrencias": "ocorrencias"
+    },
+    "download": "ocorrencia_ponto.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome do Servidor",
+        "type": "text",
+        "name": "servidor",
+        "placeholder": "Nome do Servidor",
+        "value": "servidorInfo.servidor",
+        "onChange": "handleServidorInfoChange",
+        "className": "form-input-full",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Matrícula",
+        "type": "text",
+        "name": "matricula",
+        "placeholder": "Matrícula",
+        "value": "servidorInfo.matricula",
+        "onChange": "handleServidorInfoChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Cargo/Função",
+        "type": "text",
+        "name": "cargo",
+        "placeholder": "Cargo/Função",
+        "value": "servidorInfo.cargo",
+        "onChange": "handleServidorInfoChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "data",
+        "type": "date",
+        "name": "data",
+        "value": "ocorrencia.data",
+        "onChange": "(e) => handleOcorrenciaChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "horario",
+        "type": "time",
+        "name": "horario",
+        "value": "ocorrencia.horario",
+        "onChange": "(e) => handleOcorrenciaChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Dia todo",
+        "type": "radio",
+        "name": "`referente-${ocorrencia.id}`",
+        "value": "dia",
+        "checked": "ocorrencia.referente === \"dia\"",
+        "onChange": "(e) => handleOcorrenciaChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Entrada",
+        "type": "radio",
+        "name": "`referente-${ocorrencia.id}`",
+        "value": "entrada",
+        "checked": "ocorrencia.referente === \"entrada\"",
+        "onChange": "(e) => handleOcorrenciaChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Saída",
+        "type": "radio",
+        "name": "`referente-${ocorrencia.id}`",
+        "value": "saida",
+        "checked": "ocorrencia.referente === \"saida\"",
+        "onChange": "(e) => handleOcorrenciaChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "Justificativa para esta ocorrência...",
+        "name": "justificativa",
+        "placeholder": "Justificativa para esta ocorrência...",
+        "value": "ocorrencia.justificativa",
+        "onChange": "(e) => handleOcorrenciaChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Nome da Chefia Imediata para ciência",
+        "type": "text",
+        "name": "chefia",
+        "placeholder": "Nome da Chefia Imediata para ciência",
+        "value": "servidorInfo.chefia",
+        "onChange": "handleServidorInfoChange",
+        "className": "form-input-full",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": ["type === \"radio\"", "ocorrencias.length <= 1"],
+    "operations": [
+      "handleServidorInfoChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    const { name, value } = e.target;\n    setServidorInfo((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleOcorrenciaChange = (\n    index: number,\n    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,\n  ) => {\n    const { name, value, type } = e.target;\n    const novasOcorrencias = [...ocorrencias];\n\n    // Se o input for um radio, atualizamos a propriedade 'referente'\n    if (type === \"radio\") {\n      novasOcorrencias[index] = {\n        ...novasOcorrencias[index],\n        referente: value as \"dia\" | \"entrada\" | \"saida\",\n      };\n    } else {\n      // Caso contrário, atualizamos a propriedade com base no 'name' (para data, horario, justificativa)\n      novasOcorrencias[index] = { ...novasOcorrencias[index], [name]: value };\n    }\n\n    setOcorrencias(novasOcorrencias);\n    setDocumentoPronto(null);\n  }",
+      "adicionarOcorrencia = () => {\n    setOcorrencias([\n      ...ocorrencias,\n      {\n        id: Date.now(),\n        data: \"\",\n        horario: \"\",\n        referente: \"entrada\",\n        justificativa: \"\",\n      },\n    ]);\n    setDocumentoPronto(null);\n  }",
+      "removerOcorrencia = (index: number) => {\n    if (ocorrencias.length <= 1) return;\n    const novasOcorrencias = ocorrencias.filter((_, i) => i !== index);\n    setOcorrencias(novasOcorrencias);\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = (\n      <OcorrenciaPontoPdf\n        servidorInfo={servidorInfo}\n        ocorrencias={ocorrencias}\n      />\n    );\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/RelatorioViagem/RelatorioViagem.tsx",
+    "route": "/relatorio-viagem",
+    "pdf": "src/pdf/RelatorioViagemPdf.tsx",
+    "component": "RelatorioViagemPdf",
+    "states": {
+      "formData": "{\n    nome: \"\",\n    matricula: \"\",\n    cargo: \"\",\n    destino: \"\",\n    dataSaida: \"\",\n    dataRetorno: \"\",\n    meioTransporte: \"\",\n    descricaoAtividades: \"\",\n    despesasAntecipadas: {\n      passagem: { antecipado: \"\", utilizado: \"\", reembolsar: \"\", devolver: \"\" },\n    },\n    despesasRealizadas: {\n      combustivel: { utilizado: \"\", reembolsar: \"\", quilometragem: \"\" },\n      transporteUrbano: { utilizado: \"\", reembolsar: \"\" },\n      passagem: { utilizado: \"\", reembolsar: \"\" },\n      pedagio: { utilizado: \"\", reembolsar: \"\" },\n      estacionamento: { utilizado: \"\", reembolsar: \"\" },\n    },\n  }",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData"
+    },
+    "download": "relatorio_viagem.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Matrícula",
+        "type": "text",
+        "name": "matricula",
+        "placeholder": "Matrícula",
+        "value": "formData.matricula",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Cargo",
+        "type": "text",
+        "name": "cargo",
+        "placeholder": "Cargo",
+        "value": "formData.cargo",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Destino",
+        "type": "text",
+        "name": "destino",
+        "placeholder": "Destino",
+        "value": "formData.destino",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Data Saída",
+        "type": "date",
+        "name": "dataSaida",
+        "placeholder": "Data Saída",
+        "value": "formData.dataSaida",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Data Retorno",
+        "type": "date",
+        "name": "dataRetorno",
+        "placeholder": "Data Retorno",
+        "value": "formData.dataRetorno",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Meio de Transporte",
+        "type": "text",
+        "name": "meioTransporte",
+        "placeholder": "Meio de Transporte",
+        "value": "formData.meioTransporte",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "style": "{ marginTop: \"1rem\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "descricaoAtividades",
+        "name": "descricaoAtividades",
+        "value": "formData.descricaoAtividades",
+        "onChange": "handleInputChange",
+        "rows": "5",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Valor Antecipado",
+        "type": "text",
+        "placeholder": "Valor Antecipado",
+        "onChange": "(e) =>\n              handleDespesaChange(\n                \"despesasAntecipadas\",\n                \"passagem\",\n                \"antecipado\",\n                e.target.value,\n              )",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Valor Utilizado",
+        "type": "text",
+        "placeholder": "Valor Utilizado",
+        "onChange": "(e) =>\n              handleDespesaChange(\n                \"despesasAntecipadas\",\n                \"passagem\",\n                \"utilizado\",\n                e.target.value,\n              )",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Valor a Reembolsar",
+        "type": "text",
+        "placeholder": "Valor a Reembolsar",
+        "onChange": "(e) =>\n              handleDespesaChange(\n                \"despesasAntecipadas\",\n                \"passagem\",\n                \"reembolsar\",\n                e.target.value,\n              )",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Valor a Devolver",
+        "type": "text",
+        "placeholder": "Valor a Devolver",
+        "onChange": "(e) =>\n              handleDespesaChange(\n                \"despesasAntecipadas\",\n                \"passagem\",\n                \"devolver\",\n                e.target.value,\n              )",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Quilometragem",
+        "type": "text",
+        "placeholder": "Quilometragem",
+        "onChange": "(e) =>\n                  handleDespesaChange(\n                    \"despesasRealizadas\",\n                    \"combustivel\",\n                    \"quilometragem\",\n                    e.target.value,\n                  )",
+        "condition": "key === \"combustivel\""
+      },
+      {
+        "tag": "input",
+        "label": "Valor Utilizado",
+        "type": "text",
+        "placeholder": "Valor Utilizado",
+        "onChange": "(e) =>\n                handleDespesaChange(\n                  \"despesasRealizadas\",\n                  key,\n                  \"utilizado\",\n                  e.target.value,\n                )",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Valor a Reembolsar",
+        "type": "text",
+        "placeholder": "Valor a Reembolsar",
+        "onChange": "(e) =>\n                handleDespesaChange(\n                  \"despesasRealizadas\",\n                  key,\n                  \"reembolsar\",\n                  e.target.value,\n                )",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [],
+    "operations": [
+      "handleInputChange = (\n    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,\n  ) => {\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleDespesaChange = (\n    tabela: \"despesasAntecipadas\" | \"despesasRealizadas\",\n    despesa: string,\n    campo: string,\n    value: string,\n  ) => {\n    setFormData((prev) => {\n      const newFormData = { ...prev };\n      (newFormData[tabela] as any)[despesa][campo] = value;\n      return newFormData;\n    });\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = <RelatorioViagemPdf formData={formData} />;\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/FormularioFerias/FormularioFerias.tsx",
+    "route": "/formulario-ferias",
+    "pdf": "src/pdf/FeriasPdfDocument.tsx",
+    "component": "FeriasPdfDocument",
+    "states": {
+      "formData": "{\n    nome: \"\",\n    matricula: \"\",\n    cpf: \"\",\n    lotacao: \"\",\n    periodoGozo: \"30\",\n    dataInicio: \"\",\n    justificativa: \"\",\n    outrosDias: \"\",\n    dataRequerimento: new Date(),\n  }",
+      "pdfPronto": "false"
+    },
+    "props": {
+      "data": "formData as any"
+    },
+    "download": "requerimento_ferias.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Matrícula",
+        "type": "text",
+        "name": "matricula",
+        "placeholder": "Matrícula",
+        "value": "formData.matricula",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "CPF",
+        "type": "text",
+        "name": "cpf",
+        "placeholder": "CPF",
+        "value": "formData.cpf",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Lotação",
+        "type": "text",
+        "name": "lotacao",
+        "placeholder": "Lotação",
+        "value": "formData.lotacao",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " 30 dias",
+        "type": "radio",
+        "name": "periodoGozo",
+        "value": "30",
+        "checked": "formData.periodoGozo === \"30\"",
+        "onChange": "handlePeriodoChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " 20 dias",
+        "type": "radio",
+        "name": "periodoGozo",
+        "value": "20",
+        "checked": "formData.periodoGozo === \"20\"",
+        "onChange": "handlePeriodoChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " 15 dias",
+        "type": "radio",
+        "name": "periodoGozo",
+        "value": "15",
+        "checked": "formData.periodoGozo === \"15\"",
+        "onChange": "handlePeriodoChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " 10 dias",
+        "type": "radio",
+        "name": "periodoGozo",
+        "value": "10",
+        "checked": "formData.periodoGozo === \"10\"",
+        "onChange": "handlePeriodoChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "dataInicio",
+        "type": "date",
+        "name": "dataInicio",
+        "value": "formData.dataInicio",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "Obrigatório caso haja parcelamento ou solicitação inferior a 30 dias",
+        "name": "justificativa",
+        "placeholder": "Obrigatório caso haja parcelamento ou solicitação inferior a 30 dias",
+        "value": "formData.justificativa",
+        "onChange": "handleInputChange",
+        "disabled": "formData.periodoGozo === \"30\"",
+        "style": "{\n            backgroundColor: formData.periodoGozo === \"30\" ? \"#e9ecef\" : \"#fff\",\n            cursor: formData.periodoGozo === \"30\" ? \"not-allowed\" : \"text\",\n          }",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [],
+    "operations": [
+      "handleInputChange = (\n    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,\n  ) => {\n    setPdfPronto(false);\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n  }",
+      "handlePeriodoChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    setPdfPronto(false); // Esconde o botão de download se mudar os dias\n    const value = e.target.value as \"30\" | \"20\" | \"15\" | \"10\";\n    setFormData((prev) => ({\n      ...prev,\n      periodoGozo: value,\n      // Limpa a justificativa se voltar para 30 dias\n      justificativa: value === \"30\" ? \"\" : prev.justificativa,\n    }));\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/SolicitacaoCursos/SolicitacaoCursos.tsx",
+    "route": "/solicitacao-cursos",
+    "pdf": "src/pdf/SolicitacaoCursosPdf.tsx",
+    "component": "SolicitacaoCursosPdf",
+    "states": {
+      "formData": "{\n    nome: \"\",\n    endereco: \"\",\n    celular: \"\",\n    identidade: \"\",\n    matricula: \"\",\n    lotacao: \"\",\n    emailServidor: \"\",\n    cpf: \"\",\n    cargo: \"\",\n    ramal: \"\",\n    funcaoConfianca: \"nao\",\n    tipoFuncao: \"nenhum\",\n    qualFuncao: \"\",\n    descricaoCurso: \"\",\n    fornecedor: \"\",\n    cnpj: \"\",\n    contato: \"\",\n    whatsapp: \"\",\n    emailFornecedor: \"\",\n    periodoRealizacao: \"\",\n    inicioTermino: \"\",\n    cargaHorariaTotal: \"\",\n    cargaHorariaDiaria: \"\",\n    usoProgressao: \"nao\",\n    formaApresentacao: \"\",\n    solicitaInscricao: \"nao\",\n    valorInscricao: \"\",\n    solicitaMensalidade: \"nao\",\n    valorMensalidade: \"\",\n    valorTotal: \"\",\n  }",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData"
+    },
+    "download": "solicitacao_cursos.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Matrícula",
+        "type": "text",
+        "name": "matricula",
+        "placeholder": "Matrícula",
+        "value": "formData.matricula",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Endereço",
+        "type": "text",
+        "name": "endereco",
+        "placeholder": "Endereço",
+        "value": "formData.endereco",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Lotação",
+        "type": "text",
+        "name": "lotacao",
+        "placeholder": "Lotação",
+        "value": "formData.lotacao",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Celular",
+        "type": "text",
+        "name": "celular",
+        "placeholder": "Celular",
+        "value": "formData.celular",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "CPF",
+        "type": "text",
+        "name": "cpf",
+        "placeholder": "CPF",
+        "value": "formData.cpf",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Identidade",
+        "type": "text",
+        "name": "identidade",
+        "placeholder": "Identidade",
+        "value": "formData.identidade",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Cargo",
+        "type": "text",
+        "name": "cargo",
+        "placeholder": "Cargo",
+        "value": "formData.cargo",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Email",
+        "type": "email",
+        "name": "emailServidor",
+        "placeholder": "Email",
+        "value": "formData.emailServidor",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Ramal",
+        "type": "text",
+        "name": "ramal",
+        "placeholder": "Ramal",
+        "value": "formData.ramal",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Sim",
+        "type": "radio",
+        "name": "funcaoConfianca",
+        "value": "sim",
+        "checked": "formData.funcaoConfianca === \"sim\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Não",
+        "type": "radio",
+        "name": "funcaoConfianca",
+        "value": "nao",
+        "checked": "formData.funcaoConfianca === \"nao\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Cargo de Direção",
+        "type": "radio",
+        "name": "tipoFuncao",
+        "value": "direcao",
+        "checked": "formData.tipoFuncao === \"direcao\"",
+        "onChange": "handleInputChange as any",
+        "condition": "formData.funcaoConfianca === \"sim\""
+      },
+      {
+        "tag": "input",
+        "label": " Função Gratificada",
+        "type": "radio",
+        "name": "tipoFuncao",
+        "value": "gratificada",
+        "checked": "formData.tipoFuncao === \"gratificada\"",
+        "onChange": "handleInputChange as any",
+        "condition": "formData.funcaoConfianca === \"sim\""
+      },
+      {
+        "tag": "input",
+        "label": "Qual?",
+        "type": "text",
+        "name": "qualFuncao",
+        "placeholder": "Qual?",
+        "value": "formData.qualFuncao",
+        "onChange": "handleInputChange",
+        "style": "{ marginTop: \"0.5rem\" }",
+        "condition": "formData.funcaoConfianca === \"sim\""
+      },
+      {
+        "tag": "textarea",
+        "label": "Descreva brevemente o tema do curso",
+        "name": "descricaoCurso",
+        "placeholder": "Descreva brevemente o tema do curso",
+        "value": "formData.descricaoCurso",
+        "onChange": "handleInputChange",
+        "rows": "3",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Dados do Fornecedor",
+        "type": "text",
+        "name": "fornecedor",
+        "placeholder": "Dados do Fornecedor",
+        "value": "formData.fornecedor",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "style": "{ marginTop: \"1rem\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "CNPJ",
+        "type": "text",
+        "name": "cnpj",
+        "placeholder": "CNPJ",
+        "value": "formData.cnpj",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Contato (Telefone)",
+        "type": "text",
+        "name": "contato",
+        "placeholder": "Contato (Telefone)",
+        "value": "formData.contato",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "WhatsApp",
+        "type": "text",
+        "name": "whatsapp",
+        "placeholder": "WhatsApp",
+        "value": "formData.whatsapp",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Email do Fornecedor",
+        "type": "email",
+        "name": "emailFornecedor",
+        "placeholder": "Email do Fornecedor",
+        "value": "formData.emailFornecedor",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Início/Término Ex: 02/10/2025 a 15/12/2025",
+        "type": "text",
+        "name": "inicioTermino",
+        "placeholder": "Início/Término Ex: 02/10/2025 a 15/12/2025",
+        "value": "formData.inicioTermino",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Carga Horária Total",
+        "type": "text",
+        "name": "cargaHorariaTotal",
+        "placeholder": "Carga Horária Total",
+        "value": "formData.cargaHorariaTotal",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Carga Horária Diária",
+        "type": "text",
+        "name": "cargaHorariaDiaria",
+        "placeholder": "Carga Horária Diária",
+        "value": "formData.cargaHorariaDiaria",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Forma de Apresentação (presencial, online, etc.)",
+        "type": "text",
+        "name": "formaApresentacao",
+        "placeholder": "Forma de Apresentação (presencial, online, etc.)",
+        "value": "formData.formaApresentacao",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "style": "{ marginTop: \"1rem\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Sim",
+        "type": "radio",
+        "name": "usoProgressao",
+        "value": "sim",
+        "checked": "formData.usoProgressao === \"sim\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Não",
+        "type": "radio",
+        "name": "usoProgressao",
+        "value": "nao",
+        "checked": "formData.usoProgressao === \"nao\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Sim",
+        "type": "radio",
+        "name": "solicitaInscricao",
+        "value": "sim",
+        "checked": "formData.solicitaInscricao === \"sim\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Não",
+        "type": "radio",
+        "name": "solicitaInscricao",
+        "value": "nao",
+        "checked": "formData.solicitaInscricao === \"nao\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Valor da Inscrição",
+        "type": "text",
+        "name": "valorInscricao",
+        "placeholder": "Valor da Inscrição",
+        "value": "formData.valorInscricao",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Sim",
+        "type": "radio",
+        "name": "solicitaMensalidade",
+        "value": "sim",
+        "checked": "formData.solicitaMensalidade === \"sim\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Não",
+        "type": "radio",
+        "name": "solicitaMensalidade",
+        "value": "nao",
+        "checked": "formData.solicitaMensalidade === \"nao\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Valor por Mês",
+        "type": "text",
+        "name": "valorMensalidade",
+        "placeholder": "Valor por Mês",
+        "value": "formData.valorMensalidade",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Valor Total do Curso",
+        "type": "text",
+        "name": "valorTotal",
+        "placeholder": "Valor Total do Curso",
+        "value": "formData.valorTotal",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [],
+    "operations": [
+      "handleInputChange = (\n    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,\n  ) => {\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = <SolicitacaoCursosPdf formData={formData} />;\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/SolicitacaoDiaria/SolicitacaoDiaria.tsx",
+    "route": "/SolicitacaoDiaria",
+    "pdf": "src/pdf/SolicitacaoDiariaPdf.tsx",
+    "component": "SolicitacaoDiariaPdf",
+    "states": {
+      "formData": "{\n    nome: \"\",\n    matricula: \"\",\n    cargo: \"\",\n    banco: \"\",\n    tipoConta: \"corrente\",\n    agencia: \"\",\n    conta: \"\",\n    pix: \"\",\n    cidade: \"\",\n    estado: \"\",\n    periodoViagem: \"\",\n    meioTransporte: \"carro\",\n    placaCarro: \"\",\n    outroTransporte: \"\", // Adicionado este campo\n    diariasInteiras: \"\",\n    diariasReduzidas: \"\",\n    solicitaAntecipacao: \"nao\",\n    valorSolicitado: \"\",\n    objetivo: \"\",\n  }",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData"
+    },
+    "download": "solicitacao_diaria.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Matrícula",
+        "type": "text",
+        "name": "matricula",
+        "placeholder": "Matrícula",
+        "value": "formData.matricula",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Cargo",
+        "type": "text",
+        "name": "cargo",
+        "placeholder": "Cargo",
+        "value": "formData.cargo",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Banco",
+        "type": "text",
+        "name": "banco",
+        "placeholder": "Banco",
+        "value": "formData.banco",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Agência",
+        "type": "text",
+        "name": "agencia",
+        "placeholder": "Agência",
+        "value": "formData.agencia",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Conta",
+        "type": "text",
+        "name": "conta",
+        "placeholder": "Conta",
+        "value": "formData.conta",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Pix",
+        "type": "text",
+        "name": "pix",
+        "placeholder": "Pix",
+        "value": "formData.pix",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "style": "{ marginTop: \"1rem\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Corrente",
+        "type": "radio",
+        "name": "tipoConta",
+        "value": "corrente",
+        "checked": "formData.tipoConta === \"corrente\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Poupança",
+        "type": "radio",
+        "name": "tipoConta",
+        "value": "poupanca",
+        "checked": "formData.tipoConta === \"poupanca\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Cidade",
+        "type": "text",
+        "name": "cidade",
+        "placeholder": "Cidade",
+        "value": "formData.cidade",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Estado",
+        "type": "text",
+        "name": "estado",
+        "placeholder": "Estado",
+        "value": "formData.estado",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Período da Viagem (Ex: 01/01/2025 a 05/01/2025)",
+        "type": "text",
+        "name": "periodoViagem",
+        "placeholder": "Período da Viagem (Ex: 01/01/2025 a 05/01/2025)",
+        "value": "formData.periodoViagem",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "style": "{ marginTop: \"1rem\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Carro",
+        "type": "radio",
+        "name": "meioTransporte",
+        "value": "carro",
+        "checked": "formData.meioTransporte === \"carro\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Ônibus",
+        "type": "radio",
+        "name": "meioTransporte",
+        "value": "onibus",
+        "checked": "formData.meioTransporte === \"onibus\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Aéreo",
+        "type": "radio",
+        "name": "meioTransporte",
+        "value": "aereo",
+        "checked": "formData.meioTransporte === \"aereo\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Outro",
+        "type": "radio",
+        "name": "meioTransporte",
+        "value": "outro",
+        "checked": "formData.meioTransporte === \"outro\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Placa do Carro",
+        "type": "text",
+        "name": "placaCarro",
+        "placeholder": "Placa do Carro",
+        "value": "formData.placaCarro",
+        "onChange": "handleInputChange",
+        "condition": "formData.meioTransporte === \"carro\""
+      },
+      {
+        "tag": "input",
+        "label": "Especifique o transporte",
+        "type": "text",
+        "name": "outroTransporte",
+        "placeholder": "Especifique o transporte",
+        "value": "formData.outroTransporte",
+        "onChange": "handleInputChange",
+        "condition": "formData.meioTransporte === \"outro\""
+      },
+      {
+        "tag": "input",
+        "label": "Nº diárias inteiras",
+        "type": "number",
+        "name": "diariasInteiras",
+        "placeholder": "Nº diárias inteiras",
+        "value": "formData.diariasInteiras",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Nº diárias reduzidas",
+        "type": "number",
+        "name": "diariasReduzidas",
+        "placeholder": "Nº diárias reduzidas",
+        "value": "formData.diariasReduzidas",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Sim",
+        "type": "radio",
+        "name": "solicitaAntecipacao",
+        "value": "sim",
+        "checked": "formData.solicitaAntecipacao === \"sim\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Não",
+        "type": "radio",
+        "name": "solicitaAntecipacao",
+        "value": "nao",
+        "checked": "formData.solicitaAntecipacao === \"nao\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Valor Solicitado (preenchido pelo solicitante)",
+        "type": "text",
+        "name": "valorSolicitado",
+        "placeholder": "Valor Solicitado (preenchido pelo solicitante)",
+        "value": "formData.valorSolicitado",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "style": "{ marginTop: \"1rem\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "objetivo",
+        "name": "objetivo",
+        "value": "formData.objetivo",
+        "onChange": "handleInputChange",
+        "rows": "5",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [],
+    "operations": [
+      "handleInputChange = (\n    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,\n  ) => {\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = <SolicitacaoDiariaPdf formData={formData} />;\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/SolicitacaoViagem/SolicitacaoViagem.tsx",
+    "route": "/solicitacao-viagem",
+    "pdf": "src/pdf/SolicitacaoViagemPdf.tsx",
+    "component": "SolicitacaoViagemPdf",
+    "states": {
+      "formData": "{\n    // Novos campos\n    nome: \"\",\n    matricula: \"\",\n    cargo: \"\",\n    banco: \"\",\n    agencia: \"\",\n    conta: \"\",\n    pix: \"\",\n    // Campos que já existiam\n    numVereadores: \"\",\n    numServidores: \"\",\n    finalidade: \"encontro\",\n    finalidadeOutros: \"\",\n    periodo: \"\",\n    cidadeEstado: \"\",\n    local: \"\",\n    meioTransporte: \"\",\n    justificativa: \"\",\n  }",
+      "participantes": "[\n    { id: 1, nome: \"\" },\n  ]",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData",
+      "participantes": "participantes"
+    },
+    "download": "solicitacao_viagem.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome Completo",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome Completo",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Matrícula",
+        "type": "text",
+        "name": "matricula",
+        "placeholder": "Matrícula",
+        "value": "formData.matricula",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Cargo",
+        "type": "text",
+        "name": "cargo",
+        "placeholder": "Cargo",
+        "value": "formData.cargo",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Banco",
+        "type": "text",
+        "name": "banco",
+        "placeholder": "Banco",
+        "value": "formData.banco",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Agência",
+        "type": "text",
+        "name": "agencia",
+        "placeholder": "Agência",
+        "value": "formData.agencia",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Conta",
+        "type": "text",
+        "name": "conta",
+        "placeholder": "Conta",
+        "value": "formData.conta",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Chave PIX (opcional)",
+        "type": "text",
+        "name": "pix",
+        "placeholder": "Chave PIX (opcional)",
+        "value": "formData.pix",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "style": "{ marginTop: \"1rem\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "`Nome do Participante`",
+        "type": "text",
+        "value": "p.nome",
+        "onChange": "(e) => handleParticipanteChange(index, e)",
+        "placeholder": "`Nome do Participante`",
+        "className": "form-input-full",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  Encontro/Seminário/Congresso ",
+        "type": "radio",
+        "name": "finalidade",
+        "value": "encontro",
+        "checked": "formData.finalidade === \"encontro\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  Curso de aperfeiçoamento ",
+        "type": "radio",
+        "name": "finalidade",
+        "value": "curso",
+        "checked": "formData.finalidade === \"curso\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  Outros ",
+        "type": "radio",
+        "name": "finalidade",
+        "value": "outros",
+        "checked": "formData.finalidade === \"outros\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Especifique a finalidade",
+        "type": "text",
+        "name": "finalidadeOutros",
+        "placeholder": "Especifique a finalidade",
+        "value": "formData.finalidadeOutros",
+        "onChange": "handleInputChange",
+        "className": "form-input-full conditional-input",
+        "condition": "formData.finalidade === \"outros\""
+      },
+      {
+        "tag": "input",
+        "label": "Ex: 01/01/2025 a 05/01/2025",
+        "type": "text",
+        "name": "periodo",
+        "placeholder": "Ex: 01/01/2025 a 05/01/2025",
+        "value": "formData.periodo",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Cidade e Estado",
+        "type": "text",
+        "name": "cidadeEstado",
+        "placeholder": "Cidade e Estado",
+        "value": "formData.cidadeEstado",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Local (Hotel, Centro de Convenções, etc.)",
+        "type": "text",
+        "name": "local",
+        "placeholder": "Local (Hotel, Centro de Convenções, etc.)",
+        "value": "formData.local",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Meio de transporte",
+        "type": "text",
+        "name": "meioTransporte",
+        "placeholder": "Meio de transporte",
+        "value": "formData.meioTransporte",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "style": "{ marginTop: \"1rem\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "justificativa",
+        "name": "justificativa",
+        "value": "formData.justificativa",
+        "onChange": "handleInputChange",
+        "rows": "5",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": ["participantes.length <= 1"],
+    "operations": [
+      "handleInputChange = (\n    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,\n  ) => {\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleParticipanteChange = (\n    index: number,\n    e: React.ChangeEvent<HTMLInputElement>,\n  ) => {\n    const novosParticipantes = [...participantes];\n    novosParticipantes[index].nome = e.target.value;\n    setParticipantes(novosParticipantes);\n    setDocumentoPronto(null);\n  }",
+      "adicionarParticipante = () => {\n    setParticipantes([...participantes, { id: Date.now(), nome: \"\" }]);\n  }",
+      "removerParticipante = (index: number) => {\n    if (participantes.length <= 1) return;\n    setParticipantes(participantes.filter((_, i) => i !== index));\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = (\n      <SolicitacaoViagemPdf formData={formData} participantes={participantes} />\n    );\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/RequisicaoManualAlmoxarifado/RequisicaoManualAlmoxarifado.tsx",
+    "route": "/requisicao-manual-almoxarifado",
+    "pdf": "src/pdf/RequisicaoAlmoxarifadoPdf.tsx",
+    "component": "RequisicaoAlmoxarifadoPdf",
+    "states": {
+      "formData": "{\n    dataEmissao: new Date().toLocaleDateString(\"pt-BR\"),\n    requisicaoNum: \"\",\n    requisitante: \"\",\n    lotacao: \"\",\n    justificativa: \"\",\n  }",
+      "itens": "[\n    { id: 1, descricao: \"\", quantidadeSolicitada: \"\", quantidadeAtendida: \"\" },\n  ]",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData",
+      "itens": "itens"
+    },
+    "download": "`requisicao_almoxarifado_${formData.requisicaoNum || \"sem_numero\"}.pdf`",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "REQUISIÇÃO Nº",
+        "type": "text",
+        "name": "requisicaoNum",
+        "placeholder": "REQUISIÇÃO Nº",
+        "value": "formData.requisicaoNum",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "DATA (Ex: DD/MM/AAAA)",
+        "type": "text",
+        "name": "dataEmissao",
+        "placeholder": "DATA (Ex: DD/MM/AAAA)",
+        "value": "formData.dataEmissao",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "REQUISITANTE",
+        "type": "text",
+        "name": "requisitante",
+        "placeholder": "REQUISITANTE",
+        "value": "formData.requisitante",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "style": "{ marginTop: \"1rem\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "LOTAÇÃO",
+        "type": "text",
+        "name": "lotacao",
+        "placeholder": "LOTAÇÃO",
+        "value": "formData.lotacao",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "style": "{ marginTop: \"1rem\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "justificativa",
+        "name": "justificativa",
+        "value": "formData.justificativa",
+        "onChange": "handleInputChange",
+        "rows": "3",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Descrição do material",
+        "type": "text",
+        "name": "descricao",
+        "value": "item.descricao",
+        "onChange": "(e) =>\n                handleItemChange(\n                  index,\n                  e as React.ChangeEvent<HTMLInputElement>,\n                )",
+        "placeholder": "Descrição do material",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Solic.",
+        "type": "number",
+        "name": "quantidadeSolicitada",
+        "value": "item.quantidadeSolicitada",
+        "onChange": "(e) =>\n                handleItemChange(\n                  index,\n                  e as React.ChangeEvent<HTMLInputElement>,\n                )",
+        "placeholder": "Solic.",
+        "style": "{ textAlign: \"center\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Atend.",
+        "type": "number",
+        "name": "quantidadeAtendida",
+        "value": "item.quantidadeAtendida",
+        "onChange": "(e) =>\n                handleItemChange(\n                  index,\n                  e as React.ChangeEvent<HTMLInputElement>,\n                )",
+        "placeholder": "Atend.",
+        "style": "{ textAlign: \"center\" }",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [
+      "name === \"descricao\"",
+      "name === \"quantidadeSolicitada\"",
+      "name === \"quantidadeAtendida\"",
+      "itens.length <= 1"
+    ],
+    "operations": [
+      "handleInputChange = (\n    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,\n  ) => {\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null); // Corrigido!\n  }",
+      "handleItemChange = (\n    index: number,\n    e: React.ChangeEvent<HTMLInputElement>,\n  ) => {\n    const { name, value } = e.target;\n    const novosItens = [...itens];\n\n    // Simplificado\n    if (name === \"descricao\") {\n      novosItens[index].descricao = value;\n    } else if (name === \"quantidadeSolicitada\") {\n      novosItens[index].quantidadeSolicitada = value;\n    } else if (name === \"quantidadeAtendida\") {\n      novosItens[index].quantidadeAtendida = value;\n    }\n\n    setItens(novosItens);\n    setDocumentoPronto(null);\n  }",
+      "adicionarItem = () => {\n    setItens([\n      ...itens,\n      {\n        id: Date.now(),\n        descricao: \"\",\n        quantidadeSolicitada: \"\",\n        quantidadeAtendida: \"\",\n      },\n    ]);\n    setDocumentoPronto(null);\n  }",
+      "removerItem = (index: number) => {\n    if (itens.length <= 1) return;\n    setItens(itens.filter((_, i) => i !== index));\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = <RequisicaoAlmoxarifadoPdf formData={formData} itens={itens} />;\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/SolicitacaoDocumentos/SolicitacaoDocumentos.tsx",
+    "route": "/solicitacao-documentos",
+    "pdf": "src/pdf/SolicitacaoDocumentosPdf.tsx",
+    "component": "SolicitacaoDocumentosPdf",
+    "states": {
+      "formData": "{\n    nome: \"\",\n    cpf: \"\",\n    email: \"\",\n    contato: \"\",\n    documentosSolicitados: \"\",\n    justificativa: \"\",\n    cienteLgpd: false,\n  }",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData"
+    },
+    "download": "solicitacao_documentos.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "CPF",
+        "type": "text",
+        "name": "cpf",
+        "placeholder": "CPF",
+        "value": "formData.cpf",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "E-mail",
+        "type": "email",
+        "name": "email",
+        "placeholder": "E-mail",
+        "value": "formData.email",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Contato (Telefone)",
+        "type": "text",
+        "name": "contato",
+        "placeholder": "Contato (Telefone)",
+        "value": "formData.contato",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "documentosSolicitados",
+        "name": "documentosSolicitados",
+        "value": "formData.documentosSolicitados",
+        "onChange": "handleInputChange",
+        "rows": "4",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "justificativa",
+        "name": "justificativa",
+        "value": "formData.justificativa",
+        "onChange": "handleInputChange",
+        "rows": "4",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "checkbox",
+        "name": "cienteLgpd",
+        "checked": "formData.cienteLgpd",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": ["type === \"checkbox\""],
+    "operations": [
+      "handleInputChange = (\n    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,\n  ) => {\n    const { name, value, type } = e.target;\n\n    if (type === \"checkbox\") {\n      const { checked } = e.target as HTMLInputElement;\n      setFormData((prev) => ({ ...prev, [name]: checked }));\n    } else {\n      setFormData((prev) => ({ ...prev, [name]: value }));\n    }\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = <SolicitacaoDocumentosPdf formData={formData} />;\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/SolicitacaoEstagiario/SolicitacaoEstagiario.tsx",
+    "route": "/solicitacao-estagiario",
+    "pdf": "src/pdf/SolicitacaoEstagiarioPdf.tsx",
+    "component": "SolicitacaoEstagiarioPdf",
+    "states": {
+      "formData": "{\n    setor: \"\",\n    areaEstagio: \"\",\n    supervisor: \"\",\n    cargo: \"\",\n    horario: \"\",\n    duracao: \"\",\n    atividades: \"\",\n    habilidades: \"\",\n    justificativa: \"\",\n    remunerado: \"sim\",\n    vagas: \"\",\n    opcoesCurso: [\n      { id: 1, curso: \"\", periodo: \"\", nivel: \"graduacao\" },\n      { id: 2, curso: \"\", periodo: \"\", nivel: \"graduacao\" },\n      { id: 3, curso: \"\", periodo: \"\", nivel: \"graduacao\" },\n    ],\n  }",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData"
+    },
+    "download": "solicitacao_estagiario.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Setor Solicitante",
+        "type": "text",
+        "name": "setor",
+        "placeholder": "Setor Solicitante",
+        "value": "formData.setor",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Área de Estágio",
+        "type": "text",
+        "name": "areaEstagio",
+        "placeholder": "Área de Estágio",
+        "value": "formData.areaEstagio",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Supervisor do Estágio",
+        "type": "text",
+        "name": "supervisor",
+        "placeholder": "Supervisor do Estágio",
+        "value": "formData.supervisor",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Cargo do Supervisor",
+        "type": "text",
+        "name": "cargo",
+        "placeholder": "Cargo do Supervisor",
+        "value": "formData.cargo",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Horário de Estágio",
+        "type": "text",
+        "name": "horario",
+        "placeholder": "Horário de Estágio",
+        "value": "formData.horario",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Duração Prevista (meses)",
+        "type": "number",
+        "name": "duracao",
+        "placeholder": "Duração Prevista (meses)",
+        "value": "formData.duracao",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "vagas",
+        "type": "number",
+        "name": "vagas",
+        "value": "formData.vagas",
+        "onChange": "handleInputChange",
+        "className": "form-input-full",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Curso/Área",
+        "type": "text",
+        "name": "curso",
+        "placeholder": "Curso/Área",
+        "value": "opcao.curso",
+        "onChange": "(e) => handleOpcaoCursoTextChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Período",
+        "type": "text",
+        "name": "periodo",
+        "placeholder": "Período",
+        "value": "opcao.periodo",
+        "onChange": "(e) => handleOpcaoCursoTextChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Graduação/Técnico",
+        "type": "radio",
+        "name": "`nivel-${opcao.id}`",
+        "value": "graduacao",
+        "checked": "opcao.nivel === \"graduacao\"",
+        "onChange": "(e) => handleOpcaoCursoChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Pós-Graduação",
+        "type": "radio",
+        "name": "`nivel-${opcao.id}`",
+        "value": "pos",
+        "checked": "opcao.nivel === \"pos\"",
+        "onChange": "(e) => handleOpcaoCursoChange(index, e)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "atividades",
+        "name": "atividades",
+        "value": "formData.atividades",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "habilidades",
+        "name": "habilidades",
+        "value": "formData.habilidades",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "justificativa",
+        "name": "justificativa",
+        "value": "formData.justificativa",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Sim",
+        "type": "radio",
+        "name": "remunerado",
+        "value": "sim",
+        "checked": "formData.remunerado === \"sim\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Não",
+        "type": "radio",
+        "name": "remunerado",
+        "value": "nao",
+        "checked": "formData.remunerado === \"nao\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [],
+    "operations": [
+      "handleInputChange = (\n    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,\n  ) => {\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleOpcaoCursoChange = (\n    index: number,\n    e: React.ChangeEvent<HTMLInputElement>,\n  ) => {\n    const { value } = e.target;\n    const novasOpcoes = [...formData.opcoesCurso];\n    novasOpcoes[index] = {\n      ...novasOpcoes[index],\n      nivel: value as \"graduacao\" | \"pos\",\n    };\n    setFormData((prev) => ({ ...prev, opcoesCurso: novasOpcoes }));\n    setDocumentoPronto(null);\n  }",
+      "handleOpcaoCursoTextChange = (\n    index: number,\n    e: React.ChangeEvent<HTMLInputElement>,\n  ) => {\n    const { name, value } = e.target;\n    const novasOpcoes = [...formData.opcoesCurso];\n    novasOpcoes[index] = { ...novasOpcoes[index], [name]: value };\n    setFormData((prev) => ({ ...prev, opcoesCurso: novasOpcoes }));\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = <SolicitacaoEstagiarioPdf formData={formData} />;\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/GESAT-RelatorioInspecaoMedica/RelatorioInspecaoMedica.tsx",
+    "route": "/inspecao-medica",
+    "pdf": "src/pdf/RelatorioInspecaoMedicaPdf.tsx",
+    "component": "RelatorioInspecaoMedicaPdf",
+    "states": {
+      "formData": "{\n    nome: \"\",\n    endereco: \"\",\n    numeroCasa: \"\",\n    data: \"\",\n    funcao: \"\",\n    matricula: \"\",\n    lotacao: \"\",\n    emailServidor: \"\",\n    admissao: \"\",\n    sexo: \"\",\n    estadoCivil: \"\",\n    regime: \"\",\n    cpf: \"\",\n    cargo: \"\",\n    // localTrabalho: \"\",\n    ramal: \"\",\n    bairro: \"\",\n    complemento: \"\",\n    dataSaida: \"\",\n    dataRetorno: \"\",\n    dataAssinaturaServidor: \"\",\n    dataAssinaturaChefe: \"\",\n    descricaoFuncoes: \"\",\n    funcaoConfianca: \"nao\",\n    funcaoGESAT: \"Outros\",\n    funcaoAfastamento: \"Sim\",\n    afastadoReadaptado: \"Sim\",\n    nomePaciente: \"\",\n    dataAfastamentoReadaptado: \"\",\n    afastadoConsecutivamente: \"Não\",\n    dataAfastamento: \"\",\n    outrosFuncaoGESAT: \"\",\n    anamnese: \"\",\n    exames: \"\",\n    diagnostico: \"\",\n    cid: \"\",\n    contato: \"\",\n  }",
+      "documentoPronto": "null"
+    },
+    "props": {
+      "formData": "formData"
+    },
+    "download": "relatorio_inspecao_medica.pdf",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Matrícula",
+        "type": "text",
+        "name": "matricula",
+        "placeholder": "Matrícula",
+        "value": "formData.matricula",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "CPF",
+        "type": "text",
+        "name": "cpf",
+        "placeholder": "CPF",
+        "value": "formData.cpf",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Admissão",
+        "type": "date",
+        "name": "admissao",
+        "placeholder": "Admissão",
+        "value": "formData.admissao",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Regime",
+        "type": "text",
+        "name": "regime",
+        "placeholder": "Regime",
+        "value": "formData.regime",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Data Nascimento",
+        "type": "date",
+        "name": "data",
+        "placeholder": "Data Nascimento",
+        "value": "formData.data",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Sexo",
+        "type": "text",
+        "name": "sexo",
+        "placeholder": "Sexo",
+        "value": "formData.sexo",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Estado Civil",
+        "type": "text",
+        "name": "estadoCivil",
+        "placeholder": "Estado Civil",
+        "value": "formData.estadoCivil",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Cargo",
+        "type": "text",
+        "name": "cargo",
+        "placeholder": "Cargo",
+        "value": "formData.cargo",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Função",
+        "type": "text",
+        "name": "funcao",
+        "placeholder": "Função",
+        "value": "formData.funcao",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Lotação",
+        "type": "text",
+        "name": "lotacao",
+        "placeholder": "Lotação",
+        "value": "formData.lotacao",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Endereço",
+        "type": "text",
+        "name": "endereco",
+        "placeholder": "Endereço",
+        "value": "formData.endereco",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Nº",
+        "type": "text",
+        "name": "numeroCasa",
+        "placeholder": "Nº",
+        "value": "formData.numeroCasa",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Bairro",
+        "type": "text",
+        "name": "bairro",
+        "placeholder": "Bairro",
+        "value": "formData.bairro",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Complemento",
+        "type": "text",
+        "name": "complemento",
+        "placeholder": "Complemento",
+        "value": "formData.complemento",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Email",
+        "type": "text",
+        "name": "emailServidor",
+        "placeholder": "Email",
+        "value": "formData.emailServidor",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Contato (Telefone)",
+        "type": "text",
+        "name": "contato",
+        "placeholder": "Contato (Telefone)",
+        "value": "formData.contato",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Sim",
+        "type": "radio",
+        "name": "funcaoConfianca",
+        "value": "sim",
+        "checked": "formData.funcaoConfianca === \"sim\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Não",
+        "type": "radio",
+        "name": "funcaoConfianca",
+        "value": "nao",
+        "checked": "formData.funcaoConfianca === \"nao\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "    ",
+        "type": "date",
+        "name": "dataSaida",
+        "placeholder": "Data Saída",
+        "value": "formData.dataSaida",
+        "onChange": "handleInputChange",
+        "condition": "formData.funcaoConfianca === \"sim\""
+      },
+      {
+        "tag": "input",
+        "label": "    ",
+        "type": "date",
+        "name": "dataRetorno",
+        "placeholder": "Data Retorno",
+        "value": "formData.dataRetorno",
+        "onChange": "handleInputChange",
+        "condition": "formData.funcaoConfianca === \"sim\""
+      },
+      {
+        "tag": "input",
+        "label": "DD/MM/AAAA",
+        "className": "input-data",
+        "type": "date",
+        "name": "dataAssinaturaServidor",
+        "placeholder": "DD/MM/AAAA",
+        "value": "formData.dataAssinaturaServidor",
+        "onChange": "handleInputChange",
+        "style": "{ width: \"180px\", justifySelf: \"start\", height: \"40px\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "descricaoFuncao",
+        "id": "descricaoFuncao",
+        "value": "",
+        "readOnly": "true",
+        "className": "full-width-textarea",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "DD/MM/AAAA",
+        "type": "text",
+        "name": "dataAssinaturaChefe",
+        "placeholder": "DD/MM/AAAA",
+        "value": "",
+        "onChange": "handleInputChange",
+        "style": "{ width: \"180px\", justifySelf: \"start\", height: \"40px\" }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Admissional",
+        "type": "radio",
+        "name": "funcaoGESAT",
+        "value": "",
+        "checked": "formData.funcaoGESAT === \"Admissional\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Demissional",
+        "type": "radio",
+        "name": "funcaoGESAT",
+        "value": "",
+        "checked": "formData.funcaoGESAT === \"Demissional\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Periódico",
+        "type": "radio",
+        "name": "funcaoGESAT",
+        "value": "",
+        "checked": "formData.funcaoGESAT === \"Periódico\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Readaptacao / Restricao Médica",
+        "type": "radio",
+        "name": "funcaoGESAT",
+        "value": "",
+        "checked": "formData.funcaoGESAT === \"Readaptacao / Restricao Medica\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Licença por Acidente de Trabalho",
+        "type": "radio",
+        "name": "funcaoGESAT",
+        "value": "",
+        "checked": "formData.funcaoGESAT === \"Licenca por Acidente de Trabalho\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Licenca para Tratamento de Saude",
+        "type": "radio",
+        "name": "funcaoGESAT",
+        "value": "",
+        "checked": "formData.funcaoGESAT === \"Licenca para Tratamento de Saude\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Outros",
+        "type": "radio",
+        "name": "funcaoGESAT",
+        "value": "",
+        "checked": "formData.funcaoGESAT === \"Outros\"",
+        "onChange": "handleInputChange as any",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Descreva outro motivo",
+        "type": "text",
+        "name": "outrosFuncaoGESAT",
+        "placeholder": "Descreva outro motivo",
+        "value": "",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Sim",
+        "type": "radio",
+        "name": "afastadoConsecutivamente",
+        "value": "Sim",
+        "checked": "formData.afastadoConsecutivamente === \"Sim\"",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Não",
+        "type": "radio",
+        "name": "afastadoConsecutivamente",
+        "value": "Não",
+        "checked": "formData.afastadoConsecutivamente === \"Não\"",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "DD/MM/AAAA",
+        "type": "text",
+        "name": "dataAfastamento",
+        "placeholder": "DD/MM/AAAA",
+        "value": "",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Sim",
+        "type": "radio",
+        "name": "afastadoReadaptado",
+        "value": "Sim",
+        "checked": "formData.afastadoReadaptado === \"Sim\"",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": " Não",
+        "type": "radio",
+        "name": "afastadoReadaptado",
+        "value": "Não",
+        "checked": "formData.afastadoReadaptado === \"Não\"",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "DD/MM/AAAA",
+        "type": "text",
+        "name": "dataAfastamentoReadaptado",
+        "placeholder": "DD/MM/AAAA",
+        "value": "",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Nome",
+        "type": "text",
+        "name": "nomePaciente",
+        "placeholder": "Nome",
+        "value": "formData.nomePaciente",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "historicoAnamnese",
+        "id": "historicoAnamnese",
+        "value": "",
+        "readOnly": "true",
+        "className": "full-width-textarea",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "examesComplementar",
+        "id": "examesComplementar",
+        "value": "",
+        "readOnly": "true",
+        "className": "full-width-textarea",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "diagnosticoObservacoes",
+        "id": "diagnosticoObservacoes",
+        "value": "",
+        "readOnly": "true",
+        "className": "full-width-textarea",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "textarea",
+        "label": "diagnosticoObservacoes",
+        "id": "diagnosticoObservacoes",
+        "value": "",
+        "readOnly": "true",
+        "className": "full-width-textarea",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "periodoSolicitado",
+        "id": "periodoSolicitado",
+        "type": "text",
+        "className": "input-short",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "periodoInicio",
+        "id": "periodoInicio",
+        "type": "text",
+        "className": "input-date",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "",
+        "type": "text",
+        "className": "input-date",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "",
+        "type": "text",
+        "className": "input-date-year",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "obteveDias",
+        "id": "obteveDias",
+        "type": "text",
+        "className": "input-short",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "licencaDe",
+        "id": "licencaDe",
+        "type": "text",
+        "className": "input-date",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "",
+        "type": "text",
+        "className": "input-date",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "",
+        "type": "text",
+        "className": "input-date-year",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "licencaA",
+        "id": "licencaA",
+        "type": "text",
+        "className": "input-date",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "",
+        "type": "text",
+        "className": "input-date",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "",
+        "type": "text",
+        "className": "input-date-year",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "motivoLicenca",
+        "id": "motivoLicenca",
+        "type": "text",
+        "className": "input-long",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "encaminhar",
+        "type": "radio",
+        "id": "iprem",
+        "name": "encaminhar",
+        "value": "IPREM",
+        "disabled": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "encaminhar",
+        "type": "radio",
+        "id": "inss",
+        "name": "encaminhar",
+        "value": "INSS",
+        "disabled": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "encaminhar",
+        "type": "radio",
+        "id": "outro",
+        "name": "encaminhar",
+        "value": "Outro",
+        "disabled": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "encaminharOutro",
+        "id": "encaminharOutro",
+        "type": "text",
+        "className": "input-long",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "inaptoPara",
+        "id": "inaptoPara",
+        "type": "text",
+        "className": "input-long",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "aptoPara",
+        "id": "aptoPara",
+        "type": "text",
+        "className": "input-long",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "outrosGeral",
+        "id": "outrosGeral",
+        "type": "text",
+        "className": "input-long",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "",
+        "type": "text",
+        "className": "date-box",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "",
+        "type": "text",
+        "className": "date-box",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "",
+        "type": "text",
+        "className": "date-box",
+        "value": "",
+        "readOnly": "true",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [],
+    "operations": [
+      "handleInputChange = (\n    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,\n  ) => {\n    const { name, value } = e.target;\n    setFormData((prev) => ({ ...prev, [name]: value }));\n    setDocumentoPronto(null);\n  }",
+      "handleGerarPdfClick = () => {\n    const doc = <RelatorioInspecaoMedicaPdf formData={formData} />;\n    setDocumentoPronto(doc);\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/CartaoPonto/FormularioCartaoPonto.tsx",
+    "route": "/cartao-ponto",
+    "pdf": "src/pdf/CartaoPontoPdfDocument.tsx",
+    "component": "CartaoPontoPdfDocument",
+    "states": {
+      "formData": "{\n    nome: \"\",\n    matricula: \"\",\n    setor: \"\",\n    horario: \"\",\n    vereador: \"\",\n    mesReferencia: \"\",\n    inicioFerias: \"\",\n    fimFerias: \"\",\n    pontosFacultativos: [],\n    feriados: [],\n  }",
+      "pdfPronto": "false",
+      "pontoFacultativoSelecionado": "\"\"",
+      "feriadoSelecionado": "\"\"",
+      "erroDiaEspecial": "\"\""
+    },
+    "props": {
+      "data": "formData"
+    },
+    "download": "`cartao_ponto_${formData.nome.replace(/\\s+/g, \"_\")}.pdf`",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "Nome completo",
+        "type": "text",
+        "name": "nome",
+        "placeholder": "Nome completo",
+        "value": "formData.nome",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Matrícula",
+        "type": "text",
+        "name": "matricula",
+        "placeholder": "Matrícula",
+        "value": "formData.matricula",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Setor (Ex: GABINETE DO VEREADOR...)",
+        "type": "text",
+        "name": "setor",
+        "placeholder": "Setor (Ex: GABINETE DO VEREADOR...)",
+        "value": "formData.setor",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Horário (Ex: 09:30 às 11:30 e 14:00 às 18:00)",
+        "type": "text",
+        "name": "horario",
+        "placeholder": "Horário (Ex: 09:30 às 11:30 e 14:00 às 18:00)",
+        "value": "formData.horario",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "Vereador Responsável (Para assinatura)",
+        "type": "text",
+        "name": "vereador",
+        "placeholder": "Vereador Responsável (Para assinatura)",
+        "value": "formData.vereador",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "mesReferencia",
+        "type": "month",
+        "name": "mesReferencia",
+        "value": "formData.mesReferencia",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "inicioFerias",
+        "type": "date",
+        "name": "inicioFerias",
+        "value": "formData.inicioFerias",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "fimFerias",
+        "type": "date",
+        "name": "fimFerias",
+        "value": "formData.fimFerias",
+        "onChange": "handleInputChange",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "pontoFacultativo",
+        "id": "pontoFacultativo",
+        "type": "date",
+        "value": "pontoFacultativoSelecionado",
+        "min": "limiteInicial",
+        "max": "limiteFinal",
+        "disabled": "!formData.mesReferencia",
+        "onChange": "(e) => {\n                setPontoFacultativoSelecionado(e.target.value);\n                adicionarDiaEspecial(\"pontosFacultativos\", e.target.value);\n              }",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "feriado",
+        "id": "feriado",
+        "type": "date",
+        "value": "feriadoSelecionado",
+        "min": "limiteInicial",
+        "max": "limiteFinal",
+        "disabled": "!formData.mesReferencia",
+        "onChange": "(e) => {\n                setFeriadoSelecionado(e.target.value);\n                adicionarDiaEspecial(\"feriados\", e.target.value);\n              }",
+        "condition": "Sempre"
+      }
+    ],
+    "conditions": [
+      "name === \"mesReferencia\"",
+      "!dataSelecionada",
+      "!formData.mesReferencia ||\n      !dataSelecionada.startsWith(`${formData.mesReferencia}-`)",
+      "tipo === \"pontosFacultativos\" && isFimDeSemana(dataSelecionada)",
+      "tipo === \"pontosFacultativos\""
+    ],
+    "operations": [
+      "handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    setPdfPronto(false);\n    const { name, value } = e.target;\n    setErroDiaEspecial(\"\");\n\n    if (name === \"mesReferencia\") {\n      setPontoFacultativoSelecionado(\"\");\n      setFeriadoSelecionado(\"\");\n      setFormData((prev) => ({\n        ...prev,\n        mesReferencia: value,\n        pontosFacultativos: prev.pontosFacultativos.filter((data) =>\n          data.startsWith(`${value}-`),\n        ),\n        feriados: prev.feriados.filter((data) => data.startsWith(`${value}-`)),\n      }));\n      return;\n    }\n\n    setFormData((prev) => ({ ...prev, [name]: value }));\n  }",
+      "adicionarDiaEspecial = (\n    tipo: TipoDiaEspecial,\n    dataSelecionada: string,\n  ) => {\n    setPdfPronto(false);\n    setErroDiaEspecial(\"\");\n\n    if (!dataSelecionada) return;\n\n    if (\n      !formData.mesReferencia ||\n      !dataSelecionada.startsWith(`${formData.mesReferencia}-`)\n    ) {\n      setErroDiaEspecial(\"Selecione uma data dentro do mês de referência.\");\n      return;\n    }\n\n    if (tipo === \"pontosFacultativos\" && isFimDeSemana(dataSelecionada)) {\n      setPontoFacultativoSelecionado(\"\");\n      setErroDiaEspecial(\n        \"Pontos facultativos só podem ser selecionados em dias de semana.\",\n      );\n      return;\n    }\n\n    const outroTipo: TipoDiaEspecial =\n      tipo === \"pontosFacultativos\" ? \"feriados\" : \"pontosFacultativos\";\n\n    setFormData((prev) => ({\n      ...prev,\n      [tipo]: Array.from(new Set([...prev[tipo], dataSelecionada])).sort(),\n      [outroTipo]: prev[outroTipo].filter((data) => data !== dataSelecionada),\n    }));\n\n    if (tipo === \"pontosFacultativos\") {\n      setPontoFacultativoSelecionado(\"\");\n    } else {\n      setFeriadoSelecionado(\"\");\n    }\n  }",
+      "removerDiaEspecial = (tipo: TipoDiaEspecial, dataRemovida: string) => {\n    setPdfPronto(false);\n    setFormData((prev) => ({\n      ...prev,\n      [tipo]: prev[tipo].filter((data) => data !== dataRemovida),\n    }));\n  }"
+    ]
+  },
+  {
+    "file": "src/pages/Recadastramento/Recadastramento.tsx",
+    "route": "/recadastramento",
+    "pdf": "src/pdf/RecadastramentoPdf.tsx",
+    "component": "RecadastramentoPdf",
+    "states": {
+      "data": "createInitialRecadastramentoData",
+      "errors": "[]",
+      "ready": "false"
+    },
+    "props": {
+      "data": "data"
+    },
+    "download": "`recadastramento-${onlyDigits(data.cpf) || \"cmpm\"}.pdf`",
+    "controls": [
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "radio",
+        "name": "tipoRecadastramento",
+        "checked": "data.tipoRecadastramento === \"completo\"",
+        "onChange": "() => update(\"tipoRecadastramento\", \"completo\")",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "radio",
+        "name": "tipoRecadastramento",
+        "checked": "data.tipoRecadastramento === \"simplificado\"",
+        "onChange": "() => update(\"tipoRecadastramento\", \"simplificado\")",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "radio",
+        "name": "tipoPessoa",
+        "checked": "data.tipoPessoa === \"servidor\"",
+        "onChange": "() => update(\"tipoPessoa\", \"servidor\")",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "radio",
+        "name": "tipoPessoa",
+        "checked": "data.tipoPessoa === \"vereador\"",
+        "onChange": "() => update(\"tipoPessoa\", \"vereador\")",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"nome\")",
+        "value": "data.nome",
+        "onChange": "(e) => update(\"nome\", e.target.value)",
+        "autoComplete": "name",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"matricula\")",
+        "value": "data.matricula",
+        "onChange": "(e) => update(\"matricula\", e.target.value)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"cpf\")",
+        "value": "data.cpf",
+        "onChange": "(e) => update(\"cpf\", maskCpf(e.target.value))",
+        "inputMode": "numeric",
+        "placeholder": "000.000.000-00",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"rg\")",
+        "value": "data.rg",
+        "onChange": "(e) => update(\"rg\", e.target.value)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"cargoFuncao\")",
+        "value": "data.cargoFuncao",
+        "onChange": "(e) => update(\"cargoFuncao\", e.target.value)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "date",
+        "className": "inputClass(\"dataDeclaracao\")",
+        "value": "data.dataDeclaracao",
+        "onChange": "(e) => update(\"dataDeclaracao\", e.target.value)",
+        "condition": "Sempre"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "date",
+        "className": "inputClass(\"dataNascimento\")",
+        "value": "data.dataNascimento",
+        "onChange": "(e) => update(\"dataNascimento\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"naturalidade\")",
+        "value": "data.naturalidade",
+        "onChange": "(e) => update(\"naturalidade\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "maxLength": "2",
+        "className": "inputClass(\"ufNascimento\")",
+        "value": "data.ufNascimento",
+        "onChange": "(e) =>\n                      update(\"ufNascimento\", e.target.value.toUpperCase())",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.nacionalidade",
+        "onChange": "(e) => update(\"nacionalidade\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"estadoCivil\")",
+        "value": "data.estadoCivil",
+        "onChange": "(e) => update(\"estadoCivil\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.sexo",
+        "onChange": "(e) => update(\"sexo\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "checkbox",
+        "checked": "data.possuiDeficiencia",
+        "onChange": "(e) =>\n                      update(\"possuiDeficiencia\", e.target.checked)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"tipoDeficiencia\")",
+        "value": "data.tipoDeficiencia",
+        "onChange": "(e) =>\n                        update(\"tipoDeficiencia\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\" && data.possuiDeficiencia"
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.rgEmissor",
+        "onChange": "(e) => update(\"rgEmissor\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "maxLength": "2",
+        "value": "data.rgUf",
+        "onChange": "(e) =>\n                      update(\"rgUf\", e.target.value.toUpperCase())",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "date",
+        "value": "data.rgData",
+        "onChange": "(e) => update(\"rgData\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.pisPasep",
+        "onChange": "(e) => update(\"pisPasep\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.tituloEleitor",
+        "onChange": "(e) => update(\"tituloEleitor\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.zonaEleitoral",
+        "onChange": "(e) => update(\"zonaEleitoral\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.secaoEleitoral",
+        "onChange": "(e) => update(\"secaoEleitoral\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "maxLength": "2",
+        "value": "data.eleitorUf",
+        "onChange": "(e) =>\n                      update(\"eleitorUf\", e.target.value.toUpperCase())",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.ctps",
+        "onChange": "(e) => update(\"ctps\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.ctpsSerie",
+        "onChange": "(e) => update(\"ctpsSerie\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "maxLength": "2",
+        "value": "data.ctpsUf",
+        "onChange": "(e) =>\n                      update(\"ctpsUf\", e.target.value.toUpperCase())",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "date",
+        "value": "data.ctpsEmissao",
+        "onChange": "(e) => update(\"ctpsEmissao\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.conselhoNumero",
+        "onChange": "(e) => update(\"conselhoNumero\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.conselhoOrgao",
+        "onChange": "(e) => update(\"conselhoOrgao\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.reservista",
+        "onChange": "(e) => update(\"reservista\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.orgaoReservista",
+        "onChange": "(e) => update(\"orgaoReservista\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.cnh",
+        "onChange": "(e) => update(\"cnh\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.cnhCategoria",
+        "onChange": "(e) => update(\"cnhCategoria\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"logradouro\")",
+        "value": "data.logradouro",
+        "onChange": "(e) => update(\"logradouro\", e.target.value)",
+        "autoComplete": "street-address",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"numero\")",
+        "value": "data.numero",
+        "onChange": "(e) => update(\"numero\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.complemento",
+        "onChange": "(e) => update(\"complemento\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"bairro\")",
+        "value": "data.bairro",
+        "onChange": "(e) => update(\"bairro\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.cep",
+        "onChange": "(e) => update(\"cep\", maskCep(e.target.value))",
+        "inputMode": "numeric",
+        "placeholder": "00000-000",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"cidade\")",
+        "value": "data.cidade",
+        "onChange": "(e) => update(\"cidade\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "maxLength": "2",
+        "className": "inputClass(\"enderecoUf\")",
+        "value": "data.enderecoUf",
+        "onChange": "(e) =>\n                      update(\"enderecoUf\", e.target.value.toUpperCase())",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.telefone",
+        "onChange": "(e) =>\n                      update(\"telefone\", maskPhone(e.target.value))",
+        "inputMode": "tel",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"celular\")",
+        "value": "data.celular",
+        "onChange": "(e) =>\n                      update(\"celular\", maskPhone(e.target.value))",
+        "inputMode": "tel",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "email",
+        "className": "inputClass(\"email\")",
+        "value": "data.email",
+        "onChange": "(e) => update(\"email\", e.target.value)",
+        "autoComplete": "email",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "date",
+        "className": "inputClass(\"admissao\")",
+        "value": "data.admissao",
+        "onChange": "(e) => update(\"admissao\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "select",
+        "label": "  ",
+        "className": "inputClass(\"vinculo\")",
+        "value": "data.vinculo",
+        "onChange": "(e) =>\n                      update(\n                        \"vinculo\",\n                        e.target.value as RecadastramentoData[\"vinculo\"],\n                      )",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.orgaoCessao",
+        "onChange": "(e) => update(\"orgaoCessao\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.cargoConcurso",
+        "onChange": "(e) => update(\"cargoConcurso\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"cargoFuncao\")",
+        "value": "data.cargoFuncao",
+        "onChange": "(e) => update(\"cargoFuncao\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "className": "inputClass(\"lotacao\")",
+        "value": "data.lotacao",
+        "onChange": "(e) => update(\"lotacao\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.grauInstrucao",
+        "onChange": "(e) => update(\"grauInstrucao\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.formacao",
+        "onChange": "(e) => update(\"formacao\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.agencia",
+        "onChange": "(e) => update(\"agencia\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.operacao",
+        "onChange": "(e) => update(\"operacao\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "data.conta",
+        "onChange": "(e) => update(\"conta\", e.target.value)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "checkbox",
+        "checked": "data.exerceAtividadeRemunerada",
+        "onChange": "(e) =>\n                    update(\"exerceAtividadeRemunerada\", e.target.checked)",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "textarea",
+        "label": "  ",
+        "className": "inputClass(\"atividadeRemuneradaDetalhes\")",
+        "value": "data.atividadeRemuneradaDetalhes",
+        "onChange": "(e) =>\n                      update(\"atividadeRemuneradaDetalhes\", e.target.value)",
+        "rows": "4",
+        "condition": "data.tipoRecadastramento === \"completo\" && data.exerceAtividadeRemunerada"
+      },
+      {
+        "tag": "textarea",
+        "label": "  ",
+        "value": "bem.descricao",
+        "onChange": "(e) =>\n                            updateBem(bem.id, \"descricao\", e.target.value)",
+        "rows": "4",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "bem.valor",
+        "onChange": "(e) =>\n                            updateBem(bem.id, \"valor\", e.target.value)",
+        "inputMode": "decimal",
+        "placeholder": "0,00",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "radio",
+        "name": "situacaoVereador",
+        "checked": "data.situacaoVereador === \"naoServidor\"",
+        "onChange": "() => update(\"situacaoVereador\", \"naoServidor\")",
+        "condition": "data.tipoRecadastramento === \"completo\" && data.tipoPessoa === \"vereador\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "radio",
+        "name": "situacaoVereador",
+        "checked": "data.situacaoVereador === \"servidorCompativel\"",
+        "onChange": "() =>\n                        update(\"situacaoVereador\", \"servidorCompativel\")",
+        "condition": "data.tipoRecadastramento === \"completo\" && data.tipoPessoa === \"vereador\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "radio",
+        "name": "situacaoVereador",
+        "checked": "data.situacaoVereador === \"servidorIncompativel\"",
+        "onChange": "() =>\n                        update(\"situacaoVereador\", \"servidorIncompativel\")",
+        "condition": "data.tipoRecadastramento === \"completo\" && data.tipoPessoa === \"vereador\""
+      },
+      {
+        "tag": "input",
+        "label": " Opto pela remuneração do cargo efetivo",
+        "type": "radio",
+        "name": "opcaoRemuneracao",
+        "checked": "data.opcaoRemuneracao === \"opta\"",
+        "onChange": "() => update(\"opcaoRemuneracao\", \"opta\")",
+        "condition": "data.tipoRecadastramento === \"completo\" && data.tipoPessoa === \"vereador\" && data.situacaoVereador === \"servidorIncompativel\""
+      },
+      {
+        "tag": "input",
+        "label": " Não opto pela remuneração do cargo efetivo",
+        "type": "radio",
+        "name": "opcaoRemuneracao",
+        "checked": "data.opcaoRemuneracao === \"naoOpta\"",
+        "onChange": "() => update(\"opcaoRemuneracao\", \"naoOpta\")",
+        "condition": "data.tipoRecadastramento === \"completo\" && data.tipoPessoa === \"vereador\" && data.situacaoVereador === \"servidorIncompativel\""
+      },
+      {
+        "tag": "input",
+        "label": " Subsídio de vereador",
+        "type": "radio",
+        "name": "baseContribuicao",
+        "checked": "data.baseContribuicao === \"subsidioVereador\"",
+        "onChange": "() =>\n                              update(\"baseContribuicao\", \"subsidioVereador\")",
+        "condition": "data.tipoRecadastramento === \"completo\" && data.tipoPessoa === \"vereador\" && data.situacaoVereador === \"servidorIncompativel\" && data.opcaoRemuneracao === \"naoOpta\""
+      },
+      {
+        "tag": "input",
+        "label": " Remuneração do cargo efetivo",
+        "type": "radio",
+        "name": "baseContribuicao",
+        "checked": "data.baseContribuicao ===\n                              \"remuneracaoCargoEfetivo\"",
+        "onChange": "() =>\n                              update(\n                                \"baseContribuicao\",\n                                \"remuneracaoCargoEfetivo\",\n                              )",
+        "condition": "data.tipoRecadastramento === \"completo\" && data.tipoPessoa === \"vereador\" && data.situacaoVereador === \"servidorIncompativel\" && data.opcaoRemuneracao === \"naoOpta\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "dependente.nome",
+        "onChange": "(e) =>\n                            updateDependente(\n                              dependente.id,\n                              \"nome\",\n                              e.target.value,\n                            )",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "value": "dependente.parentesco",
+        "onChange": "(e) =>\n                            updateDependente(\n                              dependente.id,\n                              \"parentesco\",\n                              e.target.value,\n                            )",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": "  ",
+        "type": "date",
+        "value": "dependente.dataNascimento",
+        "onChange": "(e) =>\n                            updateDependente(\n                              dependente.id,\n                              \"dataNascimento\",\n                              e.target.value,\n                            )",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": " IR",
+        "type": "checkbox",
+        "checked": "dependente.ir",
+        "onChange": "(e) =>\n                            updateDependente(\n                              dependente.id,\n                              \"ir\",\n                              e.target.checked,\n                            )",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": " AF",
+        "type": "checkbox",
+        "checked": "dependente.af",
+        "onChange": "(e) =>\n                            updateDependente(\n                              dependente.id,\n                              \"af\",\n                              e.target.checked,\n                            )",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      },
+      {
+        "tag": "input",
+        "label": " AM",
+        "type": "checkbox",
+        "checked": "dependente.am",
+        "onChange": "(e) =>\n                            updateDependente(\n                              dependente.id,\n                              \"am\",\n                              e.target.checked,\n                            )",
+        "condition": "data.tipoRecadastramento === \"completo\""
+      }
+    ],
+    "conditions": [
+      "digits.length <= 10",
+      "digits.length !== 11 || /^(\\d)\\1{10}$/.test(digits)",
+      "!String(data[field] ?? \"\").trim()",
+      "data.cpf && !isValidCpf(data.cpf)",
+      "data.tipoRecadastramento === \"simplificado\"",
+      "data.email && !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(data.email)",
+      "!onlyDigits(data.telefone) && !onlyDigits(data.celular)",
+      "data.possuiDeficiencia && !data.tipoDeficiencia.trim()",
+      "data.exerceAtividadeRemunerada &&\n    !data.atividadeRemuneradaDetalhes.trim()",
+      "!data.bens.length",
+      "!bem.descricao.trim() || !bem.valor.trim()",
+      "!dependente.nome.trim() ||\n      !dependente.parentesco.trim() ||\n      !dependente.dataNascimento",
+      "!dependente.ir && !dependente.af && !dependente.am",
+      "nextErrors.length"
+    ],
+    "operations": [
+      "validate = (data: RecadastramentoData): ValidationError[] => {\n  const errors: ValidationError[] = [];\n  const required = (field: keyof RecadastramentoData, message: string) => {\n    if (!String(data[field] ?? \"\").trim()) errors.push({ field, message });\n  };\n\n  required(\"nome\", \"Informe o nome completo.\");\n  required(\"rg\", \"Informe o RG.\");\n  required(\"cpf\", \"Informe o CPF.\");\n  required(\"cargoFuncao\", \"Informe o cargo ou função.\");\n  required(\"dataDeclaracao\", \"Informe a data da declaração.\");\n\n  if (data.cpf && !isValidCpf(data.cpf)) {\n    errors.push({\n      field: \"cpf\",\n      message: \"Informe um CPF válido, com 11 dígitos.\",\n    });\n  }\n\n  if (data.tipoRecadastramento === \"simplificado\") return errors;\n\n  required(\"matricula\", \"Informe a matrícula.\");\n  required(\"dataNascimento\", \"Informe a data de nascimento.\");\n  required(\"naturalidade\", \"Informe a naturalidade.\");\n  required(\"ufNascimento\", \"Informe a UF de nascimento.\");\n  required(\"estadoCivil\", \"Informe o estado civil.\");\n  required(\"logradouro\", \"Informe o logradouro.\");\n  required(\"numero\", \"Informe o número do endereço.\");\n  required(\"bairro\", \"Informe o bairro.\");\n  required(\"cidade\", \"Informe a cidade.\");\n  required(\"enderecoUf\", \"Informe a UF do endereço.\");\n  required(\"email\", \"Informe o e-mail.\");\n  required(\"admissao\", \"Informe a data de admissão.\");\n  required(\"vinculo\", \"Selecione o vínculo funcional.\");\n  required(\"lotacao\", \"Informe a lotação atual.\");\n\n  if (data.email && !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(data.email)) {\n    errors.push({ field: \"email\", message: \"Informe um e-mail válido.\" });\n  }\n  if (!onlyDigits(data.telefone) && !onlyDigits(data.celular)) {\n    errors.push({\n      field: \"celular\",\n      message: \"Informe ao menos um telefone ou celular.\",\n    });\n  }\n  if (data.possuiDeficiencia && !data.tipoDeficiencia.trim()) {\n    errors.push({\n      field: \"tipoDeficiencia\",\n      message: \"Descreva o tipo de deficiência.\",\n    });\n  }\n  if (\n    data.exerceAtividadeRemunerada &&\n    !data.atividadeRemuneradaDetalhes.trim()\n  ) {\n    errors.push({\n      field: \"atividadeRemuneradaDetalhes\",\n      message: \"Descreva a outra atividade remunerada e os horários.\",\n    });\n  }\n\n  if (!data.bens.length) {\n    errors.push({\n      field: \"bens\",\n      message: \"Inclua ao menos uma linha na declaração de bens.\",\n    });\n  }\n  data.bens.forEach((bem, index) => {\n    if (!bem.descricao.trim() || !bem.valor.trim()) {\n      errors.push({\n        field: `bem-${bem.id}`,\n        message: `Complete a descrição e o valor do ${index + 1}º bem. Se não houver bens, declare “Não possuo bens” e valor “0,00”.`,\n      });\n    }\n  });\n\n  data.dependentes.forEach((dependente, index) => {\n    if (\n      !dependente.nome.trim() ||\n      !dependente.parentesco.trim() ||\n      !dependente.dataNascimento\n    ) {\n      errors.push({\n        field: `dependente-${dependente.id}`,\n        message: `Complete nome, parentesco e nascimento do dependente ${index + 1}.`,\n      });\n    }\n    if (!dependente.ir && !dependente.af && !dependente.am) {\n      errors.push({\n        field: `dependente-${dependente.id}`,\n        message: `Marque ao menos um tipo de dependência para o dependente ${index + 1}.`,\n      });\n    }\n  });\n\n  return errors;\n}",
+      "update = <K extends keyof RecadastramentoData>(\n    field: K,\n    value: RecadastramentoData[K],\n  ) => {\n    setData((current) => ({ ...current, [field]: value }));\n    setReady(false);\n    setErrors([]);\n  }",
+      "updateBem = (\n    id: number,\n    field: keyof Omit<Bem, \"id\">,\n    value: string,\n  ) => {\n    update(\n      \"bens\",\n      data.bens.map((bem) =>\n        bem.id === id ? { ...bem, [field]: value } : bem,\n      ),\n    );\n  }",
+      "updateDependente = <K extends keyof Omit<Dependente, \"id\">>(\n    id: number,\n    field: K,\n    value: Dependente[K],\n  ) => {\n    update(\n      \"dependentes\",\n      data.dependentes.map((dependente) =>\n        dependente.id === id ? { ...dependente, [field]: value } : dependente,\n      ),\n    );\n  }",
+      "addBem = () => {\n    update(\"bens\", [\n      ...data.bens,\n      { id: Date.now(), descricao: \"\", valor: \"\" },\n    ]);\n  }",
+      "addDependente = () => {\n    update(\"dependentes\", [\n      ...data.dependentes,\n      {\n        id: Date.now(),\n        nome: \"\",\n        parentesco: \"\",\n        dataNascimento: \"\",\n        ir: false,\n        af: false,\n        am: false,\n      },\n    ]);\n  }",
+      "preparePdf = () => {\n    const nextErrors = validate(data);\n    setErrors(nextErrors);\n    setReady(nextErrors.length === 0);\n    if (nextErrors.length) {\n      window.requestAnimationFrame(() => {\n        document\n          .getElementById(\"validation-summary\")\n          ?.scrollIntoView({ behavior: \"smooth\", block: \"center\" });\n      });\n    }\n  }"
+    ]
+  }
+]

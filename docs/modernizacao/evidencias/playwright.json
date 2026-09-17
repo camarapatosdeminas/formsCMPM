@@ -1,0 +1,1078 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\caio\\Documents\\Projetos\\formsCMPM\\playwright.config.ts",
+    "rootDir": "C:/Users/caio/Documents/Projetos/formsCMPM/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      ["list", null],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/caio/Documents/Projetos/formsCMPM/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/caio/Documents/Projetos/formsCMPM/tests/e2e",
+        "testIgnore": [],
+        "testMatch": ["**/*.@(spec|test).?(c|m)[jt]s?(x)"],
+        "timeout": 45000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --host 127.0.0.1 --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "forms.spec.ts",
+      "file": "forms.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Home: 17 rotas, busca, filtros, resultado vazio e histórico",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1413,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:29:53.959Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-b4e51bea682eee29c564",
+          "file": "forms.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "Mínimo e responsividade: /adiantamento-13",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6850,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:29:55.662Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-39ec4dd97ee424f861ed",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /declaracao-dependentes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6699,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:30:02.539Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-e3bdff2066fcf7178bf6",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /declaracao-ficha-limpa",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6665,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:30:09.264Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-678529dfed365804a014",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /declaracao-nepotismo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6727,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:30:15.943Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-bed19848b14e666e6cca",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /declaracao-nao-ocupacao",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6797,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:30:22.692Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-45dd756d938c34a5dad0",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /ocorrencia-ponto",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6719,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:30:29.519Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-372917ebbd19175978d5",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /relatorio-viagem",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6804,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:30:36.260Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-d4d361fc1f3d23431677",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /formulario-ferias",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6791,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:30:43.095Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-f1e847b6568b02a99aa7",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /solicitacao-cursos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6837,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:30:49.910Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-376e9ce1b3effea78e52",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /SolicitacaoDiaria",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6825,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:30:56.770Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-a2b524c1457af3447a24",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /solicitacao-viagem",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6857,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:31:03.621Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-c78cd0d0a1eba9c43d72",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /requisicao-manual-almoxarifado",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6772,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:31:10.502Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-e380b84eca2090ba532f",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /solicitacao-documentos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6774,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:31:17.299Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-b187be52136a5c583765",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /solicitacao-estagiario",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6795,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:31:24.100Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-c7181b1db80705e5b7d7",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /inspecao-medica",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6926,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:31:30.913Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-f8288f8da04186403cd1",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /cartao-ponto",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6795,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:31:37.864Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-7b0689d3fe02998efb24",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Mínimo e responsividade: /recadastramento",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6916,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:31:44.691Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-ae75d5217c2cd6a55579",
+          "file": "forms.spec.ts",
+          "line": 72,
+          "column": 17
+        },
+        {
+          "title": "Férias: erros, máscara, cursor, limpeza e cancelamento de resultado",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1583,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:31:51.640Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-00ff67a196470f78f848",
+          "file": "forms.spec.ts",
+          "line": 152,
+          "column": 1
+        },
+        {
+          "title": "Recadastramento: completo, alternativas, listas e ramos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2183,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:31:53.246Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-b32871bf4c2c255594a1",
+          "file": "forms.spec.ts",
+          "line": 204,
+          "column": 1
+        },
+        {
+          "title": "Listas: mínimo, adicionar invalida e identificadores únicos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4397,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:31:55.439Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-f0b28576e77c07d3669d",
+          "file": "forms.spec.ts",
+          "line": 274,
+          "column": 1
+        },
+        {
+          "title": "CNPJ alfanumérico e campos ocultos preservados",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1391,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:31:59.851Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-141e2cf5c8b2b7be79eb",
+          "file": "forms.spec.ts",
+          "line": 302,
+          "column": 1
+        },
+        {
+          "title": "Acessibilidade automatizada e ausência de armazenamento/tráfego de dados",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3666,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:32:01.253Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d495e9d89fc3701f213-62ddee012408cdd19dcd",
+          "file": "forms.spec.ts",
+          "line": 317,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "resilience.spec.ts",
+      "file": "resilience.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Calendário: mês, fins de semana, exclusividade e filtros",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 835,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:32:04.945Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-267de97aea1c231cacd0",
+          "file": "resilience.spec.ts",
+          "line": 2,
+          "column": 1
+        },
+        {
+          "title": "Falha de geração permite tentar novamente com os mesmos dados",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1321,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:32:05.796Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-07e19b0d466ec5cceaad",
+          "file": "resilience.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "Chunk de rota indisponível: recuperação pelo catálogo e recarga",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1296,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:32:07.131Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-c3a1ab5b0d27c583bc27",
+          "file": "resilience.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "Home: teclado, retrato/paisagem e área de reflow equivalente a 200%/400%",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 881,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:32:08.436Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-4ac5a743013fc7e0d89e",
+          "file": "resilience.spec.ts",
+          "line": 77,
+          "column": 1
+        },
+        {
+          "title": "Toque emulado: máscara, seleção, geração e download",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6335,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:32:09.326Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-8ce37bb2565731671acf",
+          "file": "resilience.spec.ts",
+          "line": 111,
+          "column": 1
+        },
+        {
+          "title": "Geração sob demanda: rede local, tempos e digitação em formulário extenso",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4654,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-02T18:32:15.676Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "medicao-local",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogIjE1Mi4wLjQxOTEuNTMiLAogICJpbml0aWFsIjogWwogICAgewogICAgICAibmFtZSI6ICJodHRwOi8vMTI3LjAuMC4xOjQxNzMvYXNzZXRzL2luZGV4LWZsY0JOZ05BLmpzIiwKICAgICAgInR5cGUiOiAic2NyaXB0IiwKICAgICAgInRyYW5zZmVyU2l6ZSI6IDI1NTk2MCwKICAgICAgImRlY29kZWRCb2R5U2l6ZSI6IDI1NTY2MAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2Fzc2V0cy9pbmRleC0tZHlFSTJsNS5jc3MiLAogICAgICAidHlwZSI6ICJsaW5rIiwKICAgICAgInRyYW5zZmVyU2l6ZSI6IDEwMzI5LAogICAgICAiZGVjb2RlZEJvZHlTaXplIjogMTAwMjkKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9pbWFnZXMvYnJhc2FvLnBuZyIsCiAgICAgICJ0eXBlIjogImltZyIsCiAgICAgICJ0cmFuc2ZlclNpemUiOiA5MzIwLAogICAgICAiZGVjb2RlZEJvZHlTaXplIjogOTAyMAogICAgfSwKICAgIHsKICAgICAgIm5hbWUiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczL2ltYWdlcy9icmFzYW8ucG5nIiwKICAgICAgInR5cGUiOiAib3RoZXIiLAogICAgICAidHJhbnNmZXJTaXplIjogMzAwLAogICAgICAiZGVjb2RlZEJvZHlTaXplIjogOTAyMAogICAgfQogIF0sCiAgInRpbWluZ3MiOiB7CiAgICAiL2Zvcm11bGFyaW8tZmVyaWFzIjogODYwLAogICAgIi9yZWNhZGFzdHJhbWVudG8iOiA0OTQsCiAgICAiL3JlbGF0b3Jpby12aWFnZW0iOiA3NDAsCiAgICAidHlwaW5nNTBDaGFyYWN0ZXJzIjogNjQ0LAogICAgImFkZDEwQXNzZXRzIjogNTcwCiAgfSwKICAic3RvcmFnZSI6IHsKICAgICJsb2NhbCI6IDAsCiAgICAic2Vzc2lvbiI6IDAsCiAgICAiZGF0YWJhc2VzIjogMCwKICAgICJzZXJ2aWNlV29ya2VycyI6IDAKICB9Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-5f6f71b7161bb5f1bbbc",
+          "file": "resilience.spec.ts",
+          "line": 143,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-02T18:29:53.107Z",
+    "duration": 147660.16400000002,
+    "expected": 29,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

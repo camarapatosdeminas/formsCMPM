@@ -1,0 +1,77 @@
+                            Cartão de Ponto – Câmara Municipal de Patos de Minas
+
+
+Nome:    PESSOA SINTÉTICA                                                              Matrícula:   0001
+
+Setor:  TESTE SETOR                                                                    Horário:   Teste horario
+
+
+  Dia Semana       Dia Mês     Entrada Manhã      Saída Manhã       Entrada Tarde       Saída Tarde                Observação
+
+    TERÇA          01/09/26
+
+   QUARTA          02/09/26
+
+    QUINTA         03/09/26
+
+    SEXTA          04/09/26
+
+   SÁBADO          05/09/26       SÁBADO            SÁBADO             SÁBADO            SÁBADO
+
+  DOMINGO          06/09/26      DOMINGO            DOMINGO           DOMINGO           DOMINGO
+
+  SEGUNDA          07/09/26       FERIADO           FERIADO           FERIADO            FERIADO
+
+    TERÇA          08/09/26      P. FACULT.         P. FACULT.        P. FACULT.        P. FACULT.
+
+   QUARTA          09/09/26
+
+    QUINTA         10/09/26        FÉRIAS            FÉRIAS            FÉRIAS             FÉRIAS
+
+    SEXTA          11/09/26        FÉRIAS            FÉRIAS            FÉRIAS             FÉRIAS
+
+   SÁBADO          12/09/26        FÉRIAS            FÉRIAS            FÉRIAS             FÉRIAS
+
+  DOMINGO          13/09/26        FÉRIAS            FÉRIAS            FÉRIAS             FÉRIAS
+
+  SEGUNDA          14/09/26        FÉRIAS            FÉRIAS            FÉRIAS             FÉRIAS
+
+    TERÇA          15/09/26        FÉRIAS            FÉRIAS            FÉRIAS             FÉRIAS
+
+   QUARTA          16/09/26        FÉRIAS            FÉRIAS            FÉRIAS             FÉRIAS
+
+    QUINTA         17/09/26        FÉRIAS            FÉRIAS            FÉRIAS             FÉRIAS
+
+    SEXTA          18/09/26        FÉRIAS            FÉRIAS            FÉRIAS             FÉRIAS
+
+   SÁBADO          19/09/26        FÉRIAS            FÉRIAS            FÉRIAS             FÉRIAS
+
+  DOMINGO          20/09/26        FÉRIAS            FÉRIAS            FÉRIAS             FÉRIAS
+
+  SEGUNDA          21/09/26
+
+    TERÇA          22/09/26
+
+   QUARTA          23/09/26
+
+    QUINTA         24/09/26
+
+    SEXTA          25/09/26
+
+   SÁBADO          26/09/26       SÁBADO            SÁBADO             SÁBADO            SÁBADO
+
+  DOMINGO          27/09/26      DOMINGO            DOMINGO           DOMINGO           DOMINGO
+
+  SEGUNDA          28/09/26
+
+    TERÇA          29/09/26
+
+   QUARTA          30/09/26
+
+
+
+
+
+
+           Controle e Apuração                                  Servidor                               TESTE VEREADOR
+               de Frequência
