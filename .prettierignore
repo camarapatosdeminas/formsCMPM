@@ -8,3 +8,10 @@ coverage/
 
 # Gerenciado pelo npm
 package-lock.json
+
+.npm-cache/
+tmp/
+tests/pdf-baseline/
+tests/pdf-current/
+test-results/
+playwright-report/

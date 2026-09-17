@@ -1,0 +1,2851 @@
+{
+  "now": "2026-09-02T15:00:00.000Z",
+  "timezone": "America/Sao_Paulo",
+  "cases": [
+    {
+      "id": "adiantamento-13-minimo",
+      "route": "/adiantamento-13",
+      "pdf": "src/pdf/Adiantamento13Pdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "",
+          "matricula": "",
+          "cpf": "",
+          "lotacao": "",
+          "portaria": ""
+        }
+      }
+    },
+    {
+      "id": "adiantamento-13-completo",
+      "route": "/adiantamento-13",
+      "pdf": "src/pdf/Adiantamento13Pdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula",
+          "cpf": "529.982.247-25",
+          "lotacao": "Teste lotacao",
+          "portaria": "Teste portaria"
+        }
+      }
+    },
+    {
+      "id": "adiantamento-13-longo",
+      "route": "/adiantamento-13",
+      "pdf": "src/pdf/Adiantamento13Pdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "matricula": "Teste matricula",
+          "cpf": "529.982.247-25",
+          "lotacao": "Teste lotacao",
+          "portaria": "Teste portaria"
+        }
+      }
+    },
+    {
+      "id": "adiantamento-13-variante",
+      "route": "/adiantamento-13",
+      "pdf": "src/pdf/Adiantamento13Pdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula",
+          "cpf": "529.982.247-25",
+          "lotacao": "Teste lotacao",
+          "portaria": "Teste portaria"
+        }
+      }
+    },
+    {
+      "id": "declaracao-dependentes-minimo",
+      "route": "/declaracao-dependentes",
+      "pdf": "src/pdf/DeclaracaoDependentesPdf.tsx",
+      "props": {
+        "servidorInfo": {
+          "nome": "",
+          "matricula": ""
+        },
+        "dependentes": [
+          {
+            "id": 1,
+            "nome": "",
+            "dataNascimento": "",
+            "parentesco": "",
+            "cpf": "",
+            "isDependenteIR": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "declaracao-dependentes-completo",
+      "route": "/declaracao-dependentes",
+      "pdf": "src/pdf/DeclaracaoDependentesPdf.tsx",
+      "props": {
+        "servidorInfo": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula"
+        },
+        "dependentes": [
+          {
+            "id": 1,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "declaracao-dependentes-longo",
+      "route": "/declaracao-dependentes",
+      "pdf": "src/pdf/DeclaracaoDependentesPdf.tsx",
+      "props": {
+        "servidorInfo": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "matricula": "Teste matricula"
+        },
+        "dependentes": [
+          {
+            "id": 1,
+            "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "declaracao-dependentes-variante",
+      "route": "/declaracao-dependentes",
+      "pdf": "src/pdf/DeclaracaoDependentesPdf.tsx",
+      "props": {
+        "servidorInfo": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula"
+        },
+        "dependentes": [
+          {
+            "id": 1,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "declaracao-dependentes-lista-dependentes",
+      "route": "/declaracao-dependentes",
+      "pdf": "src/pdf/DeclaracaoDependentesPdf.tsx",
+      "props": {
+        "servidorInfo": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula"
+        },
+        "dependentes": [
+          {
+            "id": 1,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 2,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 3,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 4,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 5,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 6,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 7,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 8,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 9,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 10,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 11,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 12,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 13,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 14,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 15,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          },
+          {
+            "id": 16,
+            "nome": "Teste nome",
+            "dataNascimento": "2026-09-02",
+            "parentesco": "Teste parentesco",
+            "cpf": "529.982.247-25",
+            "isDependenteIR": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "declaracao-ficha-limpa-minimo",
+      "route": "/declaracao-ficha-limpa",
+      "pdf": "src/pdf/DeclaracaoFichaLimpaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "",
+          "cpf": ""
+        }
+      }
+    },
+    {
+      "id": "declaracao-ficha-limpa-completo",
+      "route": "/declaracao-ficha-limpa",
+      "pdf": "src/pdf/DeclaracaoFichaLimpaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "cpf": "529.982.247-25"
+        }
+      }
+    },
+    {
+      "id": "declaracao-ficha-limpa-longo",
+      "route": "/declaracao-ficha-limpa",
+      "pdf": "src/pdf/DeclaracaoFichaLimpaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "cpf": "529.982.247-25"
+        }
+      }
+    },
+    {
+      "id": "declaracao-ficha-limpa-variante",
+      "route": "/declaracao-ficha-limpa",
+      "pdf": "src/pdf/DeclaracaoFichaLimpaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "cpf": "529.982.247-25"
+        }
+      }
+    },
+    {
+      "id": "declaracao-nepotismo-minimo",
+      "route": "/declaracao-nepotismo",
+      "pdf": "src/pdf/DeclaracaoNepotismoPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "",
+          "cpf": ""
+        }
+      }
+    },
+    {
+      "id": "declaracao-nepotismo-completo",
+      "route": "/declaracao-nepotismo",
+      "pdf": "src/pdf/DeclaracaoNepotismoPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "cpf": "529.982.247-25"
+        }
+      }
+    },
+    {
+      "id": "declaracao-nepotismo-longo",
+      "route": "/declaracao-nepotismo",
+      "pdf": "src/pdf/DeclaracaoNepotismoPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "cpf": "529.982.247-25"
+        }
+      }
+    },
+    {
+      "id": "declaracao-nepotismo-variante",
+      "route": "/declaracao-nepotismo",
+      "pdf": "src/pdf/DeclaracaoNepotismoPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "cpf": "529.982.247-25"
+        }
+      }
+    },
+    {
+      "id": "declaracao-nao-ocupacao-minimo",
+      "route": "/declaracao-nao-ocupacao",
+      "pdf": "src/pdf/DeclaracaoNaoOcupacaoPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "",
+          "cpf": "",
+          "rua": "",
+          "numero": "",
+          "cargo": ""
+        }
+      }
+    },
+    {
+      "id": "declaracao-nao-ocupacao-completo",
+      "route": "/declaracao-nao-ocupacao",
+      "pdf": "src/pdf/DeclaracaoNaoOcupacaoPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "cpf": "529.982.247-25",
+          "rua": "Teste rua",
+          "numero": "Teste numero",
+          "cargo": "Teste cargo"
+        }
+      }
+    },
+    {
+      "id": "declaracao-nao-ocupacao-longo",
+      "route": "/declaracao-nao-ocupacao",
+      "pdf": "src/pdf/DeclaracaoNaoOcupacaoPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "cpf": "529.982.247-25",
+          "rua": "Teste rua",
+          "numero": "Teste numero",
+          "cargo": "Teste cargo"
+        }
+      }
+    },
+    {
+      "id": "declaracao-nao-ocupacao-variante",
+      "route": "/declaracao-nao-ocupacao",
+      "pdf": "src/pdf/DeclaracaoNaoOcupacaoPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "cpf": "529.982.247-25",
+          "rua": "Teste rua",
+          "numero": "Teste numero",
+          "cargo": "Teste cargo"
+        }
+      }
+    },
+    {
+      "id": "ocorrencia-ponto-minimo",
+      "route": "/ocorrencia-ponto",
+      "pdf": "src/pdf/OcorrenciaPontoPdf.tsx",
+      "props": {
+        "servidorInfo": {
+          "servidor": "",
+          "matricula": "",
+          "cargo": "",
+          "chefia": ""
+        },
+        "ocorrencias": [
+          {
+            "id": 1,
+            "data": "",
+            "horario": "",
+            "referente": "entrada",
+            "justificativa": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "ocorrencia-ponto-completo",
+      "route": "/ocorrencia-ponto",
+      "pdf": "src/pdf/OcorrenciaPontoPdf.tsx",
+      "props": {
+        "servidorInfo": {
+          "servidor": "Teste servidor",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "chefia": "Teste chefia"
+        },
+        "ocorrencias": [
+          {
+            "id": 1,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ocorrencia-ponto-longo",
+      "route": "/ocorrencia-ponto",
+      "pdf": "src/pdf/OcorrenciaPontoPdf.tsx",
+      "props": {
+        "servidorInfo": {
+          "servidor": "Teste servidor",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "chefia": "Teste chefia"
+        },
+        "ocorrencias": [
+          {
+            "id": 1,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. "
+          }
+        ]
+      }
+    },
+    {
+      "id": "ocorrencia-ponto-variante",
+      "route": "/ocorrencia-ponto",
+      "pdf": "src/pdf/OcorrenciaPontoPdf.tsx",
+      "props": {
+        "servidorInfo": {
+          "servidor": "Teste servidor",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "chefia": "Teste chefia"
+        },
+        "ocorrencias": [
+          {
+            "id": 1,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ocorrencia-ponto-lista-ocorrencias",
+      "route": "/ocorrencia-ponto",
+      "pdf": "src/pdf/OcorrenciaPontoPdf.tsx",
+      "props": {
+        "servidorInfo": {
+          "servidor": "Teste servidor",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "chefia": "Teste chefia"
+        },
+        "ocorrencias": [
+          {
+            "id": 1,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 2,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 3,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 4,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 5,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 6,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 7,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 8,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 9,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 10,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 11,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 12,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 13,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 14,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 15,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          },
+          {
+            "id": 16,
+            "data": "2026-09-02",
+            "horario": "Teste horario",
+            "referente": "entrada",
+            "justificativa": "Teste justificativa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "relatorio-viagem-minimo",
+      "route": "/relatorio-viagem",
+      "pdf": "src/pdf/RelatorioViagemPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "",
+          "matricula": "",
+          "cargo": "",
+          "destino": "",
+          "dataSaida": "",
+          "dataRetorno": "",
+          "meioTransporte": "",
+          "descricaoAtividades": "",
+          "despesasAntecipadas": {
+            "passagem": {
+              "antecipado": "",
+              "utilizado": "",
+              "reembolsar": "",
+              "devolver": ""
+            }
+          },
+          "despesasRealizadas": {
+            "combustivel": {
+              "utilizado": "",
+              "reembolsar": "",
+              "quilometragem": ""
+            },
+            "transporteUrbano": {
+              "utilizado": "",
+              "reembolsar": ""
+            },
+            "passagem": {
+              "utilizado": "",
+              "reembolsar": ""
+            },
+            "pedagio": {
+              "utilizado": "",
+              "reembolsar": ""
+            },
+            "estacionamento": {
+              "utilizado": "",
+              "reembolsar": ""
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "relatorio-viagem-completo",
+      "route": "/relatorio-viagem",
+      "pdf": "src/pdf/RelatorioViagemPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "destino": "Teste destino",
+          "dataSaida": "2026-09-02",
+          "dataRetorno": "2026-09-02",
+          "meioTransporte": "Teste meioTransporte",
+          "descricaoAtividades": "Teste descricaoAtividades",
+          "despesasAntecipadas": {
+            "passagem": {
+              "antecipado": "1234,50",
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50",
+              "devolver": "1234,50"
+            }
+          },
+          "despesasRealizadas": {
+            "combustivel": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50",
+              "quilometragem": "Teste quilometragem"
+            },
+            "transporteUrbano": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            },
+            "passagem": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            },
+            "pedagio": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            },
+            "estacionamento": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "relatorio-viagem-longo",
+      "route": "/relatorio-viagem",
+      "pdf": "src/pdf/RelatorioViagemPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "destino": "Teste destino",
+          "dataSaida": "2026-09-02",
+          "dataRetorno": "2026-09-02",
+          "meioTransporte": "Teste meioTransporte",
+          "descricaoAtividades": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "despesasAntecipadas": {
+            "passagem": {
+              "antecipado": "1234,50",
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50",
+              "devolver": "1234,50"
+            }
+          },
+          "despesasRealizadas": {
+            "combustivel": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50",
+              "quilometragem": "Teste quilometragem"
+            },
+            "transporteUrbano": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            },
+            "passagem": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            },
+            "pedagio": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            },
+            "estacionamento": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "relatorio-viagem-variante",
+      "route": "/relatorio-viagem",
+      "pdf": "src/pdf/RelatorioViagemPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "destino": "Teste destino",
+          "dataSaida": "2026-09-02",
+          "dataRetorno": "2026-09-02",
+          "meioTransporte": "Teste meioTransporte",
+          "descricaoAtividades": "Teste descricaoAtividades",
+          "despesasAntecipadas": {
+            "passagem": {
+              "antecipado": "1234,50",
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50",
+              "devolver": "1234,50"
+            }
+          },
+          "despesasRealizadas": {
+            "combustivel": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50",
+              "quilometragem": "Teste quilometragem"
+            },
+            "transporteUrbano": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            },
+            "passagem": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            },
+            "pedagio": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            },
+            "estacionamento": {
+              "utilizado": "1234,50",
+              "reembolsar": "1234,50"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "formulario-ferias-minimo",
+      "route": "/formulario-ferias",
+      "pdf": "src/pdf/FeriasPdfDocument.tsx",
+      "props": {
+        "data": {
+          "nome": "",
+          "matricula": "",
+          "cpf": "",
+          "lotacao": "",
+          "periodoGozo": "30",
+          "dataInicio": "",
+          "justificativa": "",
+          "outrosDias": "",
+          "dataRequerimento": "2026-09-02T15:00:00.000Z"
+        }
+      }
+    },
+    {
+      "id": "formulario-ferias-completo",
+      "route": "/formulario-ferias",
+      "pdf": "src/pdf/FeriasPdfDocument.tsx",
+      "props": {
+        "data": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula",
+          "cpf": "529.982.247-25",
+          "lotacao": "Teste lotacao",
+          "periodoGozo": "30",
+          "dataInicio": "2026-09-02",
+          "justificativa": "Teste justificativa",
+          "outrosDias": "Teste outrosDias",
+          "dataRequerimento": "2026-09-02T15:00:00.000Z"
+        }
+      }
+    },
+    {
+      "id": "formulario-ferias-longo",
+      "route": "/formulario-ferias",
+      "pdf": "src/pdf/FeriasPdfDocument.tsx",
+      "props": {
+        "data": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "matricula": "Teste matricula",
+          "cpf": "529.982.247-25",
+          "lotacao": "Teste lotacao",
+          "periodoGozo": "30",
+          "dataInicio": "2026-09-02",
+          "justificativa": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "outrosDias": "Teste outrosDias",
+          "dataRequerimento": "2026-09-02T15:00:00.000Z"
+        }
+      }
+    },
+    {
+      "id": "formulario-ferias-variante",
+      "route": "/formulario-ferias",
+      "pdf": "src/pdf/FeriasPdfDocument.tsx",
+      "props": {
+        "data": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula",
+          "cpf": "529.982.247-25",
+          "lotacao": "Teste lotacao",
+          "periodoGozo": "15",
+          "dataInicio": "2026-09-02",
+          "justificativa": "Solicitação sintética de parcelamento.",
+          "outrosDias": "Teste outrosDias",
+          "dataRequerimento": "2026-09-02T15:00:00.000Z"
+        }
+      }
+    },
+    {
+      "id": "solicitacao-cursos-minimo",
+      "route": "/solicitacao-cursos",
+      "pdf": "src/pdf/SolicitacaoCursosPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "",
+          "endereco": "",
+          "celular": "",
+          "identidade": "",
+          "matricula": "",
+          "lotacao": "",
+          "emailServidor": "",
+          "cpf": "",
+          "cargo": "",
+          "ramal": "",
+          "funcaoConfianca": "nao",
+          "tipoFuncao": "nenhum",
+          "qualFuncao": "",
+          "descricaoCurso": "",
+          "fornecedor": "",
+          "cnpj": "",
+          "contato": "",
+          "whatsapp": "",
+          "emailFornecedor": "",
+          "periodoRealizacao": "",
+          "inicioTermino": "",
+          "cargaHorariaTotal": "",
+          "cargaHorariaDiaria": "",
+          "usoProgressao": "nao",
+          "formaApresentacao": "",
+          "solicitaInscricao": "nao",
+          "valorInscricao": "",
+          "solicitaMensalidade": "nao",
+          "valorMensalidade": "",
+          "valorTotal": ""
+        }
+      }
+    },
+    {
+      "id": "solicitacao-cursos-completo",
+      "route": "/solicitacao-cursos",
+      "pdf": "src/pdf/SolicitacaoCursosPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "endereco": "Teste endereco",
+          "celular": "(34) 99999-0000",
+          "identidade": "Teste identidade",
+          "matricula": "Teste matricula",
+          "lotacao": "Teste lotacao",
+          "emailServidor": "teste@example.invalid",
+          "cpf": "529.982.247-25",
+          "cargo": "Teste cargo",
+          "ramal": "Teste ramal",
+          "funcaoConfianca": "nao",
+          "tipoFuncao": "nenhum",
+          "qualFuncao": "Teste qualFuncao",
+          "descricaoCurso": "Teste descricaoCurso",
+          "fornecedor": "Teste fornecedor",
+          "cnpj": "12.ABC.345/01DE-35",
+          "contato": "(34) 99999-0000",
+          "whatsapp": "(34) 99999-0000",
+          "emailFornecedor": "teste@example.invalid",
+          "periodoRealizacao": "Teste periodoRealizacao",
+          "inicioTermino": "Teste inicioTermino",
+          "cargaHorariaTotal": "Teste cargaHorariaTotal",
+          "cargaHorariaDiaria": "Teste cargaHorariaDiaria",
+          "usoProgressao": "nao",
+          "formaApresentacao": "Teste formaApresentacao",
+          "solicitaInscricao": "nao",
+          "valorInscricao": "1234,50",
+          "solicitaMensalidade": "nao",
+          "valorMensalidade": "1234,50",
+          "valorTotal": "1234,50"
+        }
+      }
+    },
+    {
+      "id": "solicitacao-cursos-longo",
+      "route": "/solicitacao-cursos",
+      "pdf": "src/pdf/SolicitacaoCursosPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "endereco": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "celular": "(34) 99999-0000",
+          "identidade": "Teste identidade",
+          "matricula": "Teste matricula",
+          "lotacao": "Teste lotacao",
+          "emailServidor": "teste@example.invalid",
+          "cpf": "529.982.247-25",
+          "cargo": "Teste cargo",
+          "ramal": "Teste ramal",
+          "funcaoConfianca": "nao",
+          "tipoFuncao": "nenhum",
+          "qualFuncao": "Teste qualFuncao",
+          "descricaoCurso": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "fornecedor": "Teste fornecedor",
+          "cnpj": "12.ABC.345/01DE-35",
+          "contato": "(34) 99999-0000",
+          "whatsapp": "(34) 99999-0000",
+          "emailFornecedor": "teste@example.invalid",
+          "periodoRealizacao": "Teste periodoRealizacao",
+          "inicioTermino": "Teste inicioTermino",
+          "cargaHorariaTotal": "Teste cargaHorariaTotal",
+          "cargaHorariaDiaria": "Teste cargaHorariaDiaria",
+          "usoProgressao": "nao",
+          "formaApresentacao": "Teste formaApresentacao",
+          "solicitaInscricao": "nao",
+          "valorInscricao": "1234,50",
+          "solicitaMensalidade": "nao",
+          "valorMensalidade": "1234,50",
+          "valorTotal": "1234,50"
+        }
+      }
+    },
+    {
+      "id": "solicitacao-cursos-variante",
+      "route": "/solicitacao-cursos",
+      "pdf": "src/pdf/SolicitacaoCursosPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "endereco": "Teste endereco",
+          "celular": "(34) 99999-0000",
+          "identidade": "Teste identidade",
+          "matricula": "Teste matricula",
+          "lotacao": "Teste lotacao",
+          "emailServidor": "teste@example.invalid",
+          "cpf": "529.982.247-25",
+          "cargo": "Teste cargo",
+          "ramal": "Teste ramal",
+          "funcaoConfianca": "nao",
+          "tipoFuncao": "gratificada",
+          "qualFuncao": "Teste qualFuncao",
+          "descricaoCurso": "Teste descricaoCurso",
+          "fornecedor": "Teste fornecedor",
+          "cnpj": "12.ABC.345/01DE-35",
+          "contato": "(34) 99999-0000",
+          "whatsapp": "(34) 99999-0000",
+          "emailFornecedor": "teste@example.invalid",
+          "periodoRealizacao": "Teste periodoRealizacao",
+          "inicioTermino": "Teste inicioTermino",
+          "cargaHorariaTotal": "Teste cargaHorariaTotal",
+          "cargaHorariaDiaria": "Teste cargaHorariaDiaria",
+          "usoProgressao": "nao",
+          "formaApresentacao": "Teste formaApresentacao",
+          "solicitaInscricao": "nao",
+          "valorInscricao": "1234,50",
+          "solicitaMensalidade": "nao",
+          "valorMensalidade": "1234,50",
+          "valorTotal": "1234,50"
+        }
+      }
+    },
+    {
+      "id": "solicitacaodiaria-minimo",
+      "route": "/SolicitacaoDiaria",
+      "pdf": "src/pdf/SolicitacaoDiariaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "",
+          "matricula": "",
+          "cargo": "",
+          "banco": "",
+          "tipoConta": "corrente",
+          "agencia": "",
+          "conta": "",
+          "pix": "",
+          "cidade": "",
+          "estado": "",
+          "periodoViagem": "",
+          "meioTransporte": "carro",
+          "placaCarro": "",
+          "outroTransporte": "",
+          "diariasInteiras": "",
+          "diariasReduzidas": "",
+          "solicitaAntecipacao": "nao",
+          "valorSolicitado": "",
+          "objetivo": ""
+        }
+      }
+    },
+    {
+      "id": "solicitacaodiaria-completo",
+      "route": "/SolicitacaoDiaria",
+      "pdf": "src/pdf/SolicitacaoDiariaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "banco": "Teste banco",
+          "tipoConta": "corrente",
+          "agencia": "Teste agencia",
+          "conta": "Teste conta",
+          "pix": "Teste pix",
+          "cidade": "Teste cidade",
+          "estado": "MG",
+          "periodoViagem": "Teste periodoViagem",
+          "meioTransporte": "carro",
+          "placaCarro": "Teste placaCarro",
+          "outroTransporte": "Teste outroTransporte",
+          "diariasInteiras": "2",
+          "diariasReduzidas": "2",
+          "solicitaAntecipacao": "nao",
+          "valorSolicitado": "1234,50",
+          "objetivo": "Teste objetivo"
+        }
+      }
+    },
+    {
+      "id": "solicitacaodiaria-longo",
+      "route": "/SolicitacaoDiaria",
+      "pdf": "src/pdf/SolicitacaoDiariaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "banco": "Teste banco",
+          "tipoConta": "corrente",
+          "agencia": "Teste agencia",
+          "conta": "Teste conta",
+          "pix": "Teste pix",
+          "cidade": "Teste cidade",
+          "estado": "MG",
+          "periodoViagem": "Teste periodoViagem",
+          "meioTransporte": "carro",
+          "placaCarro": "Teste placaCarro",
+          "outroTransporte": "Teste outroTransporte",
+          "diariasInteiras": "2",
+          "diariasReduzidas": "2",
+          "solicitaAntecipacao": "nao",
+          "valorSolicitado": "1234,50",
+          "objetivo": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. "
+        }
+      }
+    },
+    {
+      "id": "solicitacaodiaria-variante",
+      "route": "/SolicitacaoDiaria",
+      "pdf": "src/pdf/SolicitacaoDiariaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "banco": "Teste banco",
+          "tipoConta": "poupanca",
+          "agencia": "Teste agencia",
+          "conta": "Teste conta",
+          "pix": "Teste pix",
+          "cidade": "Teste cidade",
+          "estado": "MG",
+          "periodoViagem": "Teste periodoViagem",
+          "meioTransporte": "outro",
+          "placaCarro": "Teste placaCarro",
+          "outroTransporte": "Teste outroTransporte",
+          "diariasInteiras": "2",
+          "diariasReduzidas": "2",
+          "solicitaAntecipacao": "nao",
+          "valorSolicitado": "1234,50",
+          "objetivo": "Teste objetivo"
+        }
+      }
+    },
+    {
+      "id": "solicitacao-viagem-minimo",
+      "route": "/solicitacao-viagem",
+      "pdf": "src/pdf/SolicitacaoViagemPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "",
+          "matricula": "",
+          "cargo": "",
+          "banco": "",
+          "agencia": "",
+          "conta": "",
+          "pix": "",
+          "numVereadores": "",
+          "numServidores": "",
+          "finalidade": "encontro",
+          "finalidadeOutros": "",
+          "periodo": "",
+          "cidadeEstado": "",
+          "local": "",
+          "meioTransporte": "",
+          "justificativa": ""
+        },
+        "participantes": [
+          {
+            "id": 1,
+            "nome": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "solicitacao-viagem-completo",
+      "route": "/solicitacao-viagem",
+      "pdf": "src/pdf/SolicitacaoViagemPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "banco": "Teste banco",
+          "agencia": "Teste agencia",
+          "conta": "Teste conta",
+          "pix": "Teste pix",
+          "numVereadores": "2",
+          "numServidores": "2",
+          "finalidade": "encontro",
+          "finalidadeOutros": "Teste finalidadeOutros",
+          "periodo": "Teste periodo",
+          "cidadeEstado": "Teste cidadeEstado",
+          "local": "Teste local",
+          "meioTransporte": "Teste meioTransporte",
+          "justificativa": "Teste justificativa"
+        },
+        "participantes": [
+          {
+            "id": 1,
+            "nome": "Teste nome"
+          }
+        ]
+      }
+    },
+    {
+      "id": "solicitacao-viagem-longo",
+      "route": "/solicitacao-viagem",
+      "pdf": "src/pdf/SolicitacaoViagemPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "banco": "Teste banco",
+          "agencia": "Teste agencia",
+          "conta": "Teste conta",
+          "pix": "Teste pix",
+          "numVereadores": "2",
+          "numServidores": "2",
+          "finalidade": "encontro",
+          "finalidadeOutros": "Teste finalidadeOutros",
+          "periodo": "Teste periodo",
+          "cidadeEstado": "Teste cidadeEstado",
+          "local": "Teste local",
+          "meioTransporte": "Teste meioTransporte",
+          "justificativa": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. "
+        },
+        "participantes": [
+          {
+            "id": 1,
+            "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. "
+          }
+        ]
+      }
+    },
+    {
+      "id": "solicitacao-viagem-variante",
+      "route": "/solicitacao-viagem",
+      "pdf": "src/pdf/SolicitacaoViagemPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "banco": "Teste banco",
+          "agencia": "Teste agencia",
+          "conta": "Teste conta",
+          "pix": "Teste pix",
+          "numVereadores": "2",
+          "numServidores": "2",
+          "finalidade": "outros",
+          "finalidadeOutros": "Teste finalidadeOutros",
+          "periodo": "Teste periodo",
+          "cidadeEstado": "Teste cidadeEstado",
+          "local": "Teste local",
+          "meioTransporte": "Teste meioTransporte",
+          "justificativa": "Teste justificativa"
+        },
+        "participantes": [
+          {
+            "id": 1,
+            "nome": "Teste nome"
+          }
+        ]
+      }
+    },
+    {
+      "id": "solicitacao-viagem-lista-participantes",
+      "route": "/solicitacao-viagem",
+      "pdf": "src/pdf/SolicitacaoViagemPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "matricula": "Teste matricula",
+          "cargo": "Teste cargo",
+          "banco": "Teste banco",
+          "agencia": "Teste agencia",
+          "conta": "Teste conta",
+          "pix": "Teste pix",
+          "numVereadores": "2",
+          "numServidores": "2",
+          "finalidade": "encontro",
+          "finalidadeOutros": "Teste finalidadeOutros",
+          "periodo": "Teste periodo",
+          "cidadeEstado": "Teste cidadeEstado",
+          "local": "Teste local",
+          "meioTransporte": "Teste meioTransporte",
+          "justificativa": "Teste justificativa"
+        },
+        "participantes": [
+          {
+            "id": 1,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 2,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 3,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 4,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 5,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 6,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 7,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 8,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 9,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 10,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 11,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 12,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 13,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 14,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 15,
+            "nome": "Teste nome"
+          },
+          {
+            "id": 16,
+            "nome": "Teste nome"
+          }
+        ]
+      }
+    },
+    {
+      "id": "requisicao-manual-almoxarifado-minimo",
+      "route": "/requisicao-manual-almoxarifado",
+      "pdf": "src/pdf/RequisicaoAlmoxarifadoPdf.tsx",
+      "props": {
+        "formData": {
+          "dataEmissao": "02/09/2026",
+          "requisicaoNum": "",
+          "requisitante": "",
+          "lotacao": "",
+          "justificativa": ""
+        },
+        "itens": [
+          {
+            "id": 1,
+            "descricao": "",
+            "quantidadeSolicitada": "",
+            "quantidadeAtendida": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "requisicao-manual-almoxarifado-completo",
+      "route": "/requisicao-manual-almoxarifado",
+      "pdf": "src/pdf/RequisicaoAlmoxarifadoPdf.tsx",
+      "props": {
+        "formData": {
+          "dataEmissao": "02/09/2026",
+          "requisicaoNum": "Teste requisicaoNum",
+          "requisitante": "Teste requisitante",
+          "lotacao": "Teste lotacao",
+          "justificativa": "Teste justificativa"
+        },
+        "itens": [
+          {
+            "id": 1,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "requisicao-manual-almoxarifado-longo",
+      "route": "/requisicao-manual-almoxarifado",
+      "pdf": "src/pdf/RequisicaoAlmoxarifadoPdf.tsx",
+      "props": {
+        "formData": {
+          "dataEmissao": "02/09/2026",
+          "requisicaoNum": "Teste requisicaoNum",
+          "requisitante": "Teste requisitante",
+          "lotacao": "Teste lotacao",
+          "justificativa": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. "
+        },
+        "itens": [
+          {
+            "id": 1,
+            "descricao": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "requisicao-manual-almoxarifado-variante",
+      "route": "/requisicao-manual-almoxarifado",
+      "pdf": "src/pdf/RequisicaoAlmoxarifadoPdf.tsx",
+      "props": {
+        "formData": {
+          "dataEmissao": "02/09/2026",
+          "requisicaoNum": "Teste requisicaoNum",
+          "requisitante": "Teste requisitante",
+          "lotacao": "Teste lotacao",
+          "justificativa": "Teste justificativa"
+        },
+        "itens": [
+          {
+            "id": 1,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "requisicao-manual-almoxarifado-lista-itens",
+      "route": "/requisicao-manual-almoxarifado",
+      "pdf": "src/pdf/RequisicaoAlmoxarifadoPdf.tsx",
+      "props": {
+        "formData": {
+          "dataEmissao": "02/09/2026",
+          "requisicaoNum": "Teste requisicaoNum",
+          "requisitante": "Teste requisitante",
+          "lotacao": "Teste lotacao",
+          "justificativa": "Teste justificativa"
+        },
+        "itens": [
+          {
+            "id": 1,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 2,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 3,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 4,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 5,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 6,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 7,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 8,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 9,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 10,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 11,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 12,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 13,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 14,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 15,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          },
+          {
+            "id": 16,
+            "descricao": "Teste descricao",
+            "quantidadeSolicitada": "2",
+            "quantidadeAtendida": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "solicitacao-documentos-minimo",
+      "route": "/solicitacao-documentos",
+      "pdf": "src/pdf/SolicitacaoDocumentosPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "",
+          "cpf": "",
+          "email": "",
+          "contato": "",
+          "documentosSolicitados": "",
+          "justificativa": "",
+          "cienteLgpd": false
+        }
+      }
+    },
+    {
+      "id": "solicitacao-documentos-completo",
+      "route": "/solicitacao-documentos",
+      "pdf": "src/pdf/SolicitacaoDocumentosPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "cpf": "529.982.247-25",
+          "email": "teste@example.invalid",
+          "contato": "(34) 99999-0000",
+          "documentosSolicitados": "Teste documentosSolicitados",
+          "justificativa": "Teste justificativa",
+          "cienteLgpd": false
+        }
+      }
+    },
+    {
+      "id": "solicitacao-documentos-longo",
+      "route": "/solicitacao-documentos",
+      "pdf": "src/pdf/SolicitacaoDocumentosPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "cpf": "529.982.247-25",
+          "email": "teste@example.invalid",
+          "contato": "(34) 99999-0000",
+          "documentosSolicitados": "Teste documentosSolicitados",
+          "justificativa": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "cienteLgpd": false
+        }
+      }
+    },
+    {
+      "id": "solicitacao-documentos-variante",
+      "route": "/solicitacao-documentos",
+      "pdf": "src/pdf/SolicitacaoDocumentosPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "cpf": "529.982.247-25",
+          "email": "teste@example.invalid",
+          "contato": "(34) 99999-0000",
+          "documentosSolicitados": "Teste documentosSolicitados",
+          "justificativa": "Teste justificativa",
+          "cienteLgpd": true
+        }
+      }
+    },
+    {
+      "id": "solicitacao-estagiario-minimo",
+      "route": "/solicitacao-estagiario",
+      "pdf": "src/pdf/SolicitacaoEstagiarioPdf.tsx",
+      "props": {
+        "formData": {
+          "setor": "",
+          "areaEstagio": "",
+          "supervisor": "",
+          "cargo": "",
+          "horario": "",
+          "duracao": "",
+          "atividades": "",
+          "habilidades": "",
+          "justificativa": "",
+          "remunerado": "sim",
+          "vagas": "",
+          "opcoesCurso": [
+            {
+              "id": 1,
+              "curso": "",
+              "periodo": "",
+              "nivel": "graduacao"
+            },
+            {
+              "id": 2,
+              "curso": "",
+              "periodo": "",
+              "nivel": "graduacao"
+            },
+            {
+              "id": 3,
+              "curso": "",
+              "periodo": "",
+              "nivel": "graduacao"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "solicitacao-estagiario-completo",
+      "route": "/solicitacao-estagiario",
+      "pdf": "src/pdf/SolicitacaoEstagiarioPdf.tsx",
+      "props": {
+        "formData": {
+          "setor": "Teste setor",
+          "areaEstagio": "Teste areaEstagio",
+          "supervisor": "Teste supervisor",
+          "cargo": "Teste cargo",
+          "horario": "Teste horario",
+          "duracao": "Teste duracao",
+          "atividades": "Teste atividades",
+          "habilidades": "Teste habilidades",
+          "justificativa": "Teste justificativa",
+          "remunerado": "sim",
+          "vagas": "2",
+          "opcoesCurso": [
+            {
+              "id": 1,
+              "curso": "Teste curso",
+              "periodo": "Teste periodo",
+              "nivel": "graduacao"
+            },
+            {
+              "id": 2,
+              "curso": "Teste curso",
+              "periodo": "Teste periodo",
+              "nivel": "graduacao"
+            },
+            {
+              "id": 3,
+              "curso": "Teste curso",
+              "periodo": "Teste periodo",
+              "nivel": "graduacao"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "solicitacao-estagiario-longo",
+      "route": "/solicitacao-estagiario",
+      "pdf": "src/pdf/SolicitacaoEstagiarioPdf.tsx",
+      "props": {
+        "formData": {
+          "setor": "Teste setor",
+          "areaEstagio": "Teste areaEstagio",
+          "supervisor": "Teste supervisor",
+          "cargo": "Teste cargo",
+          "horario": "Teste horario",
+          "duracao": "Teste duracao",
+          "atividades": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "habilidades": "Teste habilidades",
+          "justificativa": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "remunerado": "sim",
+          "vagas": "2",
+          "opcoesCurso": [
+            {
+              "id": 1,
+              "curso": "Teste curso",
+              "periodo": "Teste periodo",
+              "nivel": "graduacao"
+            },
+            {
+              "id": 2,
+              "curso": "Teste curso",
+              "periodo": "Teste periodo",
+              "nivel": "graduacao"
+            },
+            {
+              "id": 3,
+              "curso": "Teste curso",
+              "periodo": "Teste periodo",
+              "nivel": "graduacao"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "solicitacao-estagiario-variante",
+      "route": "/solicitacao-estagiario",
+      "pdf": "src/pdf/SolicitacaoEstagiarioPdf.tsx",
+      "props": {
+        "formData": {
+          "setor": "Teste setor",
+          "areaEstagio": "Teste areaEstagio",
+          "supervisor": "Teste supervisor",
+          "cargo": "Teste cargo",
+          "horario": "Teste horario",
+          "duracao": "Teste duracao",
+          "atividades": "Teste atividades",
+          "habilidades": "Teste habilidades",
+          "justificativa": "Teste justificativa",
+          "remunerado": "nao",
+          "vagas": "2",
+          "opcoesCurso": [
+            {
+              "id": 1,
+              "curso": "Teste curso",
+              "periodo": "Teste periodo",
+              "nivel": "graduacao"
+            },
+            {
+              "id": 2,
+              "curso": "Teste curso",
+              "periodo": "Teste periodo",
+              "nivel": "graduacao"
+            },
+            {
+              "id": 3,
+              "curso": "Teste curso",
+              "periodo": "Teste periodo",
+              "nivel": "graduacao"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "inspecao-medica-minimo",
+      "route": "/inspecao-medica",
+      "pdf": "src/pdf/RelatorioInspecaoMedicaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "",
+          "endereco": "",
+          "numeroCasa": "",
+          "data": "",
+          "funcao": "",
+          "matricula": "",
+          "lotacao": "",
+          "emailServidor": "",
+          "admissao": "",
+          "sexo": "",
+          "estadoCivil": "",
+          "regime": "",
+          "cpf": "",
+          "cargo": "",
+          "ramal": "",
+          "bairro": "",
+          "complemento": "",
+          "dataSaida": "",
+          "dataRetorno": "",
+          "dataAssinaturaServidor": "",
+          "dataAssinaturaChefe": "",
+          "descricaoFuncoes": "",
+          "funcaoConfianca": "nao",
+          "funcaoGESAT": "Outros",
+          "funcaoAfastamento": "Sim",
+          "afastadoReadaptado": "Sim",
+          "nomePaciente": "",
+          "dataAfastamentoReadaptado": "",
+          "afastadoConsecutivamente": "Não",
+          "dataAfastamento": "",
+          "outrosFuncaoGESAT": "",
+          "anamnese": "",
+          "exames": "",
+          "diagnostico": "",
+          "cid": "",
+          "contato": ""
+        }
+      }
+    },
+    {
+      "id": "inspecao-medica-completo",
+      "route": "/inspecao-medica",
+      "pdf": "src/pdf/RelatorioInspecaoMedicaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "endereco": "Teste endereco",
+          "numeroCasa": "Teste numeroCasa",
+          "data": "2026-09-02",
+          "funcao": "Teste funcao",
+          "matricula": "Teste matricula",
+          "lotacao": "Teste lotacao",
+          "emailServidor": "teste@example.invalid",
+          "admissao": "2026-09-02",
+          "sexo": "Teste sexo",
+          "estadoCivil": "Teste estadoCivil",
+          "regime": "Teste regime",
+          "cpf": "529.982.247-25",
+          "cargo": "Teste cargo",
+          "ramal": "Teste ramal",
+          "bairro": "Teste bairro",
+          "complemento": "Teste complemento",
+          "dataSaida": "2026-09-02",
+          "dataRetorno": "2026-09-02",
+          "dataAssinaturaServidor": "2026-09-02",
+          "dataAssinaturaChefe": "2026-09-02",
+          "descricaoFuncoes": "Teste descricaoFuncoes",
+          "funcaoConfianca": "nao",
+          "funcaoGESAT": "Outros",
+          "funcaoAfastamento": "Sim",
+          "afastadoReadaptado": "Sim",
+          "nomePaciente": "Teste nomePaciente",
+          "dataAfastamentoReadaptado": "2026-09-02",
+          "afastadoConsecutivamente": "Não",
+          "dataAfastamento": "2026-09-02",
+          "outrosFuncaoGESAT": "Teste outrosFuncaoGESAT",
+          "anamnese": "Teste anamnese",
+          "exames": "Teste exames",
+          "diagnostico": "Teste diagnostico",
+          "cid": "Teste cid",
+          "contato": "(34) 99999-0000"
+        }
+      }
+    },
+    {
+      "id": "inspecao-medica-longo",
+      "route": "/inspecao-medica",
+      "pdf": "src/pdf/RelatorioInspecaoMedicaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "endereco": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "numeroCasa": "Teste numeroCasa",
+          "data": "2026-09-02",
+          "funcao": "Teste funcao",
+          "matricula": "Teste matricula",
+          "lotacao": "Teste lotacao",
+          "emailServidor": "teste@example.invalid",
+          "admissao": "2026-09-02",
+          "sexo": "Teste sexo",
+          "estadoCivil": "Teste estadoCivil",
+          "regime": "Teste regime",
+          "cpf": "529.982.247-25",
+          "cargo": "Teste cargo",
+          "ramal": "Teste ramal",
+          "bairro": "Teste bairro",
+          "complemento": "Teste complemento",
+          "dataSaida": "2026-09-02",
+          "dataRetorno": "2026-09-02",
+          "dataAssinaturaServidor": "2026-09-02",
+          "dataAssinaturaChefe": "2026-09-02",
+          "descricaoFuncoes": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "funcaoConfianca": "nao",
+          "funcaoGESAT": "Outros",
+          "funcaoAfastamento": "Sim",
+          "afastadoReadaptado": "Sim",
+          "nomePaciente": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+          "dataAfastamentoReadaptado": "2026-09-02",
+          "afastadoConsecutivamente": "Não",
+          "dataAfastamento": "2026-09-02",
+          "outrosFuncaoGESAT": "Teste outrosFuncaoGESAT",
+          "anamnese": "Teste anamnese",
+          "exames": "Teste exames",
+          "diagnostico": "Teste diagnostico",
+          "cid": "Teste cid",
+          "contato": "(34) 99999-0000"
+        }
+      }
+    },
+    {
+      "id": "inspecao-medica-variante",
+      "route": "/inspecao-medica",
+      "pdf": "src/pdf/RelatorioInspecaoMedicaPdf.tsx",
+      "props": {
+        "formData": {
+          "nome": "Teste nome",
+          "endereco": "Teste endereco",
+          "numeroCasa": "Teste numeroCasa",
+          "data": "2026-09-02",
+          "funcao": "Teste funcao",
+          "matricula": "Teste matricula",
+          "lotacao": "Teste lotacao",
+          "emailServidor": "teste@example.invalid",
+          "admissao": "2026-09-02",
+          "sexo": "Teste sexo",
+          "estadoCivil": "Teste estadoCivil",
+          "regime": "Teste regime",
+          "cpf": "529.982.247-25",
+          "cargo": "Teste cargo",
+          "ramal": "Teste ramal",
+          "bairro": "Teste bairro",
+          "complemento": "Teste complemento",
+          "dataSaida": "2026-09-02",
+          "dataRetorno": "2026-09-02",
+          "dataAssinaturaServidor": "2026-09-02",
+          "dataAssinaturaChefe": "2026-09-02",
+          "descricaoFuncoes": "Teste descricaoFuncoes",
+          "funcaoConfianca": "nao",
+          "funcaoGESAT": "Outros",
+          "funcaoAfastamento": "Sim",
+          "afastadoReadaptado": "Não",
+          "nomePaciente": "Teste nomePaciente",
+          "dataAfastamentoReadaptado": "2026-09-02",
+          "afastadoConsecutivamente": "Não",
+          "dataAfastamento": "2026-09-02",
+          "outrosFuncaoGESAT": "Teste outrosFuncaoGESAT",
+          "anamnese": "Teste anamnese",
+          "exames": "Teste exames",
+          "diagnostico": "Teste diagnostico",
+          "cid": "Teste cid",
+          "contato": "(34) 99999-0000"
+        }
+      }
+    },
+    {
+      "id": "cartao-ponto-minimo",
+      "route": "/cartao-ponto",
+      "pdf": "src/pdf/CartaoPontoPdfDocument.tsx",
+      "props": {
+        "data": {
+          "nome": "Pessoa Sintética",
+          "matricula": "0001",
+          "setor": "",
+          "horario": "",
+          "vereador": "",
+          "mesReferencia": "2026-09",
+          "inicioFerias": "",
+          "fimFerias": "",
+          "pontosFacultativos": [],
+          "feriados": []
+        }
+      }
+    },
+    {
+      "id": "cartao-ponto-completo",
+      "route": "/cartao-ponto",
+      "pdf": "src/pdf/CartaoPontoPdfDocument.tsx",
+      "props": {
+        "data": {
+          "nome": "Pessoa Sintética",
+          "matricula": "0001",
+          "setor": "Teste setor",
+          "horario": "Teste horario",
+          "vereador": "Teste vereador",
+          "mesReferencia": "2026-09",
+          "inicioFerias": "2026-09-02",
+          "fimFerias": "2026-09-02",
+          "pontosFacultativos": [],
+          "feriados": []
+        }
+      }
+    },
+    {
+      "id": "cartao-ponto-longo",
+      "route": "/cartao-ponto",
+      "pdf": "src/pdf/CartaoPontoPdfDocument.tsx",
+      "props": {
+        "data": {
+          "nome": "Pessoa Sintética",
+          "matricula": "0001",
+          "setor": "Teste setor",
+          "horario": "Teste horario",
+          "vereador": "Teste vereador",
+          "mesReferencia": "2026-09",
+          "inicioFerias": "2026-09-02",
+          "fimFerias": "2026-09-02",
+          "pontosFacultativos": [],
+          "feriados": []
+        }
+      }
+    },
+    {
+      "id": "cartao-ponto-variante",
+      "route": "/cartao-ponto",
+      "pdf": "src/pdf/CartaoPontoPdfDocument.tsx",
+      "props": {
+        "data": {
+          "nome": "Pessoa Sintética",
+          "matricula": "0001",
+          "setor": "Teste setor",
+          "horario": "Teste horario",
+          "vereador": "Teste vereador",
+          "mesReferencia": "2026-09",
+          "inicioFerias": "2026-09-10",
+          "fimFerias": "2026-09-20",
+          "pontosFacultativos": ["2026-09-08"],
+          "feriados": ["2026-09-07"]
+        }
+      }
+    },
+    {
+      "id": "recadastramento-minimo",
+      "route": "/recadastramento",
+      "pdf": "src/pdf/RecadastramentoPdf.tsx",
+      "props": {
+        "data": {
+          "tipoPessoa": "servidor",
+          "tipoRecadastramento": "simplificado",
+          "dataDeclaracao": "2026-09-02",
+          "matricula": "",
+          "nome": "Pessoa Sintética",
+          "dataNascimento": "",
+          "naturalidade": "",
+          "ufNascimento": "",
+          "nacionalidade": "Brasileira",
+          "estadoCivil": "",
+          "sexo": "",
+          "possuiDeficiencia": false,
+          "tipoDeficiencia": "",
+          "cpf": "529.982.247-25",
+          "rg": "RG-001",
+          "rgEmissor": "",
+          "rgUf": "",
+          "rgData": "",
+          "tituloEleitor": "",
+          "zonaEleitoral": "",
+          "secaoEleitoral": "",
+          "eleitorUf": "",
+          "pisPasep": "",
+          "ctps": "",
+          "ctpsSerie": "",
+          "ctpsUf": "",
+          "ctpsEmissao": "",
+          "conselhoNumero": "",
+          "conselhoOrgao": "",
+          "reservista": "",
+          "orgaoReservista": "",
+          "cnh": "",
+          "cnhCategoria": "",
+          "logradouro": "",
+          "numero": "",
+          "complemento": "",
+          "bairro": "",
+          "cep": "",
+          "cidade": "Patos de Minas",
+          "enderecoUf": "MG",
+          "email": "",
+          "telefone": "",
+          "celular": "",
+          "admissao": "",
+          "vinculo": "",
+          "orgaoCessao": "",
+          "cargoConcurso": "",
+          "cargoFuncao": "Teste",
+          "lotacao": "",
+          "grauInstrucao": "",
+          "formacao": "",
+          "agencia": "",
+          "operacao": "",
+          "conta": "",
+          "exerceAtividadeRemunerada": false,
+          "atividadeRemuneradaDetalhes": "",
+          "bens": [
+            {
+              "id": 1,
+              "descricao": "",
+              "valor": ""
+            }
+          ],
+          "dependentes": [],
+          "situacaoVereador": "naoServidor",
+          "opcaoRemuneracao": "opta",
+          "baseContribuicao": "subsidioVereador"
+        }
+      }
+    },
+    {
+      "id": "recadastramento-completo",
+      "route": "/recadastramento",
+      "pdf": "src/pdf/RecadastramentoPdf.tsx",
+      "props": {
+        "data": {
+          "tipoPessoa": "servidor",
+          "tipoRecadastramento": "completo",
+          "dataDeclaracao": "2026-09-02",
+          "matricula": "Teste matricula",
+          "nome": "Pessoa Sintética",
+          "dataNascimento": "2026-09-02",
+          "naturalidade": "Teste naturalidade",
+          "ufNascimento": "MG",
+          "nacionalidade": "Brasileira",
+          "estadoCivil": "Teste estadoCivil",
+          "sexo": "Teste sexo",
+          "possuiDeficiencia": true,
+          "tipoDeficiencia": "Teste tipoDeficiencia",
+          "cpf": "529.982.247-25",
+          "rg": "RG-001",
+          "rgEmissor": "Teste rgEmissor",
+          "rgUf": "Teste rgUf",
+          "rgData": "2026-09-02",
+          "tituloEleitor": "Teste tituloEleitor",
+          "zonaEleitoral": "Teste zonaEleitoral",
+          "secaoEleitoral": "Teste secaoEleitoral",
+          "eleitorUf": "Teste eleitorUf",
+          "pisPasep": "Teste pisPasep",
+          "ctps": "Teste ctps",
+          "ctpsSerie": "Teste ctpsSerie",
+          "ctpsUf": "Teste ctpsUf",
+          "ctpsEmissao": "Teste ctpsEmissao",
+          "conselhoNumero": "Teste conselhoNumero",
+          "conselhoOrgao": "Teste conselhoOrgao",
+          "reservista": "Teste reservista",
+          "orgaoReservista": "Teste orgaoReservista",
+          "cnh": "Teste cnh",
+          "cnhCategoria": "Teste cnhCategoria",
+          "logradouro": "Teste logradouro",
+          "numero": "Teste numero",
+          "complemento": "Teste complemento",
+          "bairro": "Teste bairro",
+          "cep": "38700-000",
+          "cidade": "Patos de Minas",
+          "enderecoUf": "MG",
+          "email": "teste@example.invalid",
+          "telefone": "(34) 99999-0000",
+          "celular": "(34) 99999-0000",
+          "admissao": "2026-09-02",
+          "vinculo": "efetivo",
+          "orgaoCessao": "Teste orgaoCessao",
+          "cargoConcurso": "Teste cargoConcurso",
+          "cargoFuncao": "Teste",
+          "lotacao": "Teste lotacao",
+          "grauInstrucao": "Teste grauInstrucao",
+          "formacao": "Teste formacao",
+          "agencia": "Teste agencia",
+          "operacao": "Teste operacao",
+          "conta": "Teste conta",
+          "exerceAtividadeRemunerada": true,
+          "atividadeRemuneradaDetalhes": "Teste atividadeRemuneradaDetalhes",
+          "bens": [
+            {
+              "id": 1,
+              "descricao": "Teste descricao",
+              "valor": "1234,50"
+            }
+          ],
+          "dependentes": [
+            {
+              "id": 1,
+              "nome": "Dependente Sintético",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            }
+          ],
+          "situacaoVereador": "naoServidor",
+          "opcaoRemuneracao": "opta",
+          "baseContribuicao": "subsidioVereador"
+        }
+      }
+    },
+    {
+      "id": "recadastramento-longo",
+      "route": "/recadastramento",
+      "pdf": "src/pdf/RecadastramentoPdf.tsx",
+      "props": {
+        "data": {
+          "tipoPessoa": "servidor",
+          "tipoRecadastramento": "simplificado",
+          "dataDeclaracao": "2026-09-02",
+          "matricula": "Teste matricula",
+          "nome": "Pessoa Sintética",
+          "dataNascimento": "2026-09-02",
+          "naturalidade": "Teste naturalidade",
+          "ufNascimento": "MG",
+          "nacionalidade": "Brasileira",
+          "estadoCivil": "Teste estadoCivil",
+          "sexo": "Teste sexo",
+          "possuiDeficiencia": false,
+          "tipoDeficiencia": "Teste tipoDeficiencia",
+          "cpf": "529.982.247-25",
+          "rg": "RG-001",
+          "rgEmissor": "Teste rgEmissor",
+          "rgUf": "Teste rgUf",
+          "rgData": "2026-09-02",
+          "tituloEleitor": "Teste tituloEleitor",
+          "zonaEleitoral": "Teste zonaEleitoral",
+          "secaoEleitoral": "Teste secaoEleitoral",
+          "eleitorUf": "Teste eleitorUf",
+          "pisPasep": "Teste pisPasep",
+          "ctps": "Teste ctps",
+          "ctpsSerie": "Teste ctpsSerie",
+          "ctpsUf": "Teste ctpsUf",
+          "ctpsEmissao": "Teste ctpsEmissao",
+          "conselhoNumero": "Teste conselhoNumero",
+          "conselhoOrgao": "Teste conselhoOrgao",
+          "reservista": "Teste reservista",
+          "orgaoReservista": "Teste orgaoReservista",
+          "cnh": "Teste cnh",
+          "cnhCategoria": "Teste cnhCategoria",
+          "logradouro": "Teste logradouro",
+          "numero": "Teste numero",
+          "complemento": "Teste complemento",
+          "bairro": "Teste bairro",
+          "cep": "38700-000",
+          "cidade": "Patos de Minas",
+          "enderecoUf": "MG",
+          "email": "teste@example.invalid",
+          "telefone": "(34) 99999-0000",
+          "celular": "(34) 99999-0000",
+          "admissao": "2026-09-02",
+          "vinculo": "Teste vinculo",
+          "orgaoCessao": "Teste orgaoCessao",
+          "cargoConcurso": "Teste cargoConcurso",
+          "cargoFuncao": "Teste",
+          "lotacao": "Teste lotacao",
+          "grauInstrucao": "Teste grauInstrucao",
+          "formacao": "Teste formacao",
+          "agencia": "Teste agencia",
+          "operacao": "Teste operacao",
+          "conta": "Teste conta",
+          "exerceAtividadeRemunerada": false,
+          "atividadeRemuneradaDetalhes": "Teste atividadeRemuneradaDetalhes",
+          "bens": [
+            {
+              "id": 1,
+              "descricao": "Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. ",
+              "valor": "1234,50"
+            }
+          ],
+          "dependentes": [],
+          "situacaoVereador": "naoServidor",
+          "opcaoRemuneracao": "opta",
+          "baseContribuicao": "subsidioVereador"
+        }
+      }
+    },
+    {
+      "id": "recadastramento-variante",
+      "route": "/recadastramento",
+      "pdf": "src/pdf/RecadastramentoPdf.tsx",
+      "props": {
+        "data": {
+          "tipoPessoa": "vereador",
+          "tipoRecadastramento": "completo",
+          "dataDeclaracao": "2026-09-02",
+          "matricula": "Teste matricula",
+          "nome": "Pessoa Sintética",
+          "dataNascimento": "2026-09-02",
+          "naturalidade": "Teste naturalidade",
+          "ufNascimento": "MG",
+          "nacionalidade": "Brasileira",
+          "estadoCivil": "Teste estadoCivil",
+          "sexo": "Teste sexo",
+          "possuiDeficiencia": false,
+          "tipoDeficiencia": "Teste tipoDeficiencia",
+          "cpf": "529.982.247-25",
+          "rg": "RG-001",
+          "rgEmissor": "Teste rgEmissor",
+          "rgUf": "Teste rgUf",
+          "rgData": "2026-09-02",
+          "tituloEleitor": "Teste tituloEleitor",
+          "zonaEleitoral": "Teste zonaEleitoral",
+          "secaoEleitoral": "Teste secaoEleitoral",
+          "eleitorUf": "Teste eleitorUf",
+          "pisPasep": "Teste pisPasep",
+          "ctps": "Teste ctps",
+          "ctpsSerie": "Teste ctpsSerie",
+          "ctpsUf": "Teste ctpsUf",
+          "ctpsEmissao": "Teste ctpsEmissao",
+          "conselhoNumero": "Teste conselhoNumero",
+          "conselhoOrgao": "Teste conselhoOrgao",
+          "reservista": "Teste reservista",
+          "orgaoReservista": "Teste orgaoReservista",
+          "cnh": "Teste cnh",
+          "cnhCategoria": "Teste cnhCategoria",
+          "logradouro": "Teste logradouro",
+          "numero": "Teste numero",
+          "complemento": "Teste complemento",
+          "bairro": "Teste bairro",
+          "cep": "38700-000",
+          "cidade": "Patos de Minas",
+          "enderecoUf": "MG",
+          "email": "teste@example.invalid",
+          "telefone": "(34) 99999-0000",
+          "celular": "(34) 99999-0000",
+          "admissao": "2026-09-02",
+          "vinculo": "efetivo",
+          "orgaoCessao": "Teste orgaoCessao",
+          "cargoConcurso": "Teste cargoConcurso",
+          "cargoFuncao": "Teste",
+          "lotacao": "Teste lotacao",
+          "grauInstrucao": "Teste grauInstrucao",
+          "formacao": "Teste formacao",
+          "agencia": "Teste agencia",
+          "operacao": "Teste operacao",
+          "conta": "Teste conta",
+          "exerceAtividadeRemunerada": false,
+          "atividadeRemuneradaDetalhes": "Teste atividadeRemuneradaDetalhes",
+          "bens": [
+            {
+              "id": 1,
+              "descricao": "Teste descricao",
+              "valor": "1234,50"
+            }
+          ],
+          "dependentes": [
+            {
+              "id": 1,
+              "nome": "Dependente Sintético",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            }
+          ],
+          "situacaoVereador": "servidorIncompativel",
+          "opcaoRemuneracao": "naoOpta",
+          "baseContribuicao": "remuneracaoCargoEfetivo"
+        }
+      }
+    },
+    {
+      "id": "recadastramento-listas",
+      "route": "/recadastramento",
+      "pdf": "src/pdf/RecadastramentoPdf.tsx",
+      "props": {
+        "data": {
+          "tipoPessoa": "servidor",
+          "tipoRecadastramento": "completo",
+          "dataDeclaracao": "2026-09-02",
+          "matricula": "Teste matricula",
+          "nome": "Pessoa Sintética",
+          "dataNascimento": "2026-09-02",
+          "naturalidade": "Teste naturalidade",
+          "ufNascimento": "MG",
+          "nacionalidade": "Brasileira",
+          "estadoCivil": "Teste estadoCivil",
+          "sexo": "Teste sexo",
+          "possuiDeficiencia": true,
+          "tipoDeficiencia": "Teste tipoDeficiencia",
+          "cpf": "529.982.247-25",
+          "rg": "RG-001",
+          "rgEmissor": "Teste rgEmissor",
+          "rgUf": "Teste rgUf",
+          "rgData": "2026-09-02",
+          "tituloEleitor": "Teste tituloEleitor",
+          "zonaEleitoral": "Teste zonaEleitoral",
+          "secaoEleitoral": "Teste secaoEleitoral",
+          "eleitorUf": "Teste eleitorUf",
+          "pisPasep": "Teste pisPasep",
+          "ctps": "Teste ctps",
+          "ctpsSerie": "Teste ctpsSerie",
+          "ctpsUf": "Teste ctpsUf",
+          "ctpsEmissao": "Teste ctpsEmissao",
+          "conselhoNumero": "Teste conselhoNumero",
+          "conselhoOrgao": "Teste conselhoOrgao",
+          "reservista": "Teste reservista",
+          "orgaoReservista": "Teste orgaoReservista",
+          "cnh": "Teste cnh",
+          "cnhCategoria": "Teste cnhCategoria",
+          "logradouro": "Teste logradouro",
+          "numero": "Teste numero",
+          "complemento": "Teste complemento",
+          "bairro": "Teste bairro",
+          "cep": "38700-000",
+          "cidade": "Patos de Minas",
+          "enderecoUf": "MG",
+          "email": "teste@example.invalid",
+          "telefone": "(34) 99999-0000",
+          "celular": "(34) 99999-0000",
+          "admissao": "2026-09-02",
+          "vinculo": "efetivo",
+          "orgaoCessao": "Teste orgaoCessao",
+          "cargoConcurso": "Teste cargoConcurso",
+          "cargoFuncao": "Teste",
+          "lotacao": "Teste lotacao",
+          "grauInstrucao": "Teste grauInstrucao",
+          "formacao": "Teste formacao",
+          "agencia": "Teste agencia",
+          "operacao": "Teste operacao",
+          "conta": "Teste conta",
+          "exerceAtividadeRemunerada": true,
+          "atividadeRemuneradaDetalhes": "Teste atividadeRemuneradaDetalhes",
+          "bens": [
+            {
+              "id": 1,
+              "descricao": "Bem sintético 1",
+              "valor": "0,00"
+            },
+            {
+              "id": 2,
+              "descricao": "Bem sintético 2",
+              "valor": "0,00"
+            },
+            {
+              "id": 3,
+              "descricao": "Bem sintético 3",
+              "valor": "0,00"
+            },
+            {
+              "id": 4,
+              "descricao": "Bem sintético 4",
+              "valor": "0,00"
+            },
+            {
+              "id": 5,
+              "descricao": "Bem sintético 5",
+              "valor": "0,00"
+            },
+            {
+              "id": 6,
+              "descricao": "Bem sintético 6",
+              "valor": "0,00"
+            },
+            {
+              "id": 7,
+              "descricao": "Bem sintético 7",
+              "valor": "0,00"
+            },
+            {
+              "id": 8,
+              "descricao": "Bem sintético 8",
+              "valor": "0,00"
+            },
+            {
+              "id": 9,
+              "descricao": "Bem sintético 9",
+              "valor": "0,00"
+            },
+            {
+              "id": 10,
+              "descricao": "Bem sintético 10",
+              "valor": "0,00"
+            },
+            {
+              "id": 11,
+              "descricao": "Bem sintético 11",
+              "valor": "0,00"
+            },
+            {
+              "id": 12,
+              "descricao": "Bem sintético 12",
+              "valor": "0,00"
+            },
+            {
+              "id": 13,
+              "descricao": "Bem sintético 13",
+              "valor": "0,00"
+            },
+            {
+              "id": 14,
+              "descricao": "Bem sintético 14",
+              "valor": "0,00"
+            },
+            {
+              "id": 15,
+              "descricao": "Bem sintético 15",
+              "valor": "0,00"
+            },
+            {
+              "id": 16,
+              "descricao": "Bem sintético 16",
+              "valor": "0,00"
+            },
+            {
+              "id": 17,
+              "descricao": "Bem sintético 17",
+              "valor": "0,00"
+            },
+            {
+              "id": 18,
+              "descricao": "Bem sintético 18",
+              "valor": "0,00"
+            },
+            {
+              "id": 19,
+              "descricao": "Bem sintético 19",
+              "valor": "0,00"
+            },
+            {
+              "id": 20,
+              "descricao": "Bem sintético 20",
+              "valor": "0,00"
+            },
+            {
+              "id": 21,
+              "descricao": "Bem sintético 21",
+              "valor": "0,00"
+            },
+            {
+              "id": 22,
+              "descricao": "Bem sintético 22",
+              "valor": "0,00"
+            },
+            {
+              "id": 23,
+              "descricao": "Bem sintético 23",
+              "valor": "0,00"
+            },
+            {
+              "id": 24,
+              "descricao": "Bem sintético 24",
+              "valor": "0,00"
+            }
+          ],
+          "dependentes": [
+            {
+              "id": 1,
+              "nome": "Dependente sintético 1",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            },
+            {
+              "id": 2,
+              "nome": "Dependente sintético 2",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            },
+            {
+              "id": 3,
+              "nome": "Dependente sintético 3",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            },
+            {
+              "id": 4,
+              "nome": "Dependente sintético 4",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            },
+            {
+              "id": 5,
+              "nome": "Dependente sintético 5",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            },
+            {
+              "id": 6,
+              "nome": "Dependente sintético 6",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            },
+            {
+              "id": 7,
+              "nome": "Dependente sintético 7",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            },
+            {
+              "id": 8,
+              "nome": "Dependente sintético 8",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            },
+            {
+              "id": 9,
+              "nome": "Dependente sintético 9",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            },
+            {
+              "id": 10,
+              "nome": "Dependente sintético 10",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            }
+          ],
+          "situacaoVereador": "naoServidor",
+          "opcaoRemuneracao": "opta",
+          "baseContribuicao": "subsidioVereador"
+        }
+      }
+    },
+    {
+      "id": "recadastramento-simplificado-servidor",
+      "route": "/recadastramento",
+      "pdf": "src/pdf/RecadastramentoPdf.tsx",
+      "props": {
+        "data": {
+          "tipoPessoa": "servidor",
+          "tipoRecadastramento": "simplificado",
+          "dataDeclaracao": "2026-09-02",
+          "matricula": "Teste matricula",
+          "nome": "Pessoa Sintética",
+          "dataNascimento": "2026-09-02",
+          "naturalidade": "Teste naturalidade",
+          "ufNascimento": "MG",
+          "nacionalidade": "Brasileira",
+          "estadoCivil": "Teste estadoCivil",
+          "sexo": "Teste sexo",
+          "possuiDeficiencia": true,
+          "tipoDeficiencia": "Teste tipoDeficiencia",
+          "cpf": "529.982.247-25",
+          "rg": "RG-001",
+          "rgEmissor": "Teste rgEmissor",
+          "rgUf": "Teste rgUf",
+          "rgData": "2026-09-02",
+          "tituloEleitor": "Teste tituloEleitor",
+          "zonaEleitoral": "Teste zonaEleitoral",
+          "secaoEleitoral": "Teste secaoEleitoral",
+          "eleitorUf": "Teste eleitorUf",
+          "pisPasep": "Teste pisPasep",
+          "ctps": "Teste ctps",
+          "ctpsSerie": "Teste ctpsSerie",
+          "ctpsUf": "Teste ctpsUf",
+          "ctpsEmissao": "Teste ctpsEmissao",
+          "conselhoNumero": "Teste conselhoNumero",
+          "conselhoOrgao": "Teste conselhoOrgao",
+          "reservista": "Teste reservista",
+          "orgaoReservista": "Teste orgaoReservista",
+          "cnh": "Teste cnh",
+          "cnhCategoria": "Teste cnhCategoria",
+          "logradouro": "Teste logradouro",
+          "numero": "Teste numero",
+          "complemento": "Teste complemento",
+          "bairro": "Teste bairro",
+          "cep": "38700-000",
+          "cidade": "Patos de Minas",
+          "enderecoUf": "MG",
+          "email": "teste@example.invalid",
+          "telefone": "(34) 99999-0000",
+          "celular": "(34) 99999-0000",
+          "admissao": "2026-09-02",
+          "vinculo": "efetivo",
+          "orgaoCessao": "Teste orgaoCessao",
+          "cargoConcurso": "Teste cargoConcurso",
+          "cargoFuncao": "Teste",
+          "lotacao": "Teste lotacao",
+          "grauInstrucao": "Teste grauInstrucao",
+          "formacao": "Teste formacao",
+          "agencia": "Teste agencia",
+          "operacao": "Teste operacao",
+          "conta": "Teste conta",
+          "exerceAtividadeRemunerada": true,
+          "atividadeRemuneradaDetalhes": "Teste atividadeRemuneradaDetalhes",
+          "bens": [
+            {
+              "id": 1,
+              "descricao": "Teste descricao",
+              "valor": "1234,50"
+            }
+          ],
+          "dependentes": [
+            {
+              "id": 1,
+              "nome": "Dependente Sintético",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            }
+          ],
+          "situacaoVereador": "naoServidor",
+          "opcaoRemuneracao": "opta",
+          "baseContribuicao": "subsidioVereador"
+        }
+      }
+    },
+    {
+      "id": "recadastramento-simplificado-vereador",
+      "route": "/recadastramento",
+      "pdf": "src/pdf/RecadastramentoPdf.tsx",
+      "props": {
+        "data": {
+          "tipoPessoa": "vereador",
+          "tipoRecadastramento": "simplificado",
+          "dataDeclaracao": "2026-09-02",
+          "matricula": "Teste matricula",
+          "nome": "Pessoa Sintética",
+          "dataNascimento": "2026-09-02",
+          "naturalidade": "Teste naturalidade",
+          "ufNascimento": "MG",
+          "nacionalidade": "Brasileira",
+          "estadoCivil": "Teste estadoCivil",
+          "sexo": "Teste sexo",
+          "possuiDeficiencia": true,
+          "tipoDeficiencia": "Teste tipoDeficiencia",
+          "cpf": "529.982.247-25",
+          "rg": "RG-001",
+          "rgEmissor": "Teste rgEmissor",
+          "rgUf": "Teste rgUf",
+          "rgData": "2026-09-02",
+          "tituloEleitor": "Teste tituloEleitor",
+          "zonaEleitoral": "Teste zonaEleitoral",
+          "secaoEleitoral": "Teste secaoEleitoral",
+          "eleitorUf": "Teste eleitorUf",
+          "pisPasep": "Teste pisPasep",
+          "ctps": "Teste ctps",
+          "ctpsSerie": "Teste ctpsSerie",
+          "ctpsUf": "Teste ctpsUf",
+          "ctpsEmissao": "Teste ctpsEmissao",
+          "conselhoNumero": "Teste conselhoNumero",
+          "conselhoOrgao": "Teste conselhoOrgao",
+          "reservista": "Teste reservista",
+          "orgaoReservista": "Teste orgaoReservista",
+          "cnh": "Teste cnh",
+          "cnhCategoria": "Teste cnhCategoria",
+          "logradouro": "Teste logradouro",
+          "numero": "Teste numero",
+          "complemento": "Teste complemento",
+          "bairro": "Teste bairro",
+          "cep": "38700-000",
+          "cidade": "Patos de Minas",
+          "enderecoUf": "MG",
+          "email": "teste@example.invalid",
+          "telefone": "(34) 99999-0000",
+          "celular": "(34) 99999-0000",
+          "admissao": "2026-09-02",
+          "vinculo": "efetivo",
+          "orgaoCessao": "Teste orgaoCessao",
+          "cargoConcurso": "Teste cargoConcurso",
+          "cargoFuncao": "Teste",
+          "lotacao": "Teste lotacao",
+          "grauInstrucao": "Teste grauInstrucao",
+          "formacao": "Teste formacao",
+          "agencia": "Teste agencia",
+          "operacao": "Teste operacao",
+          "conta": "Teste conta",
+          "exerceAtividadeRemunerada": true,
+          "atividadeRemuneradaDetalhes": "Teste atividadeRemuneradaDetalhes",
+          "bens": [
+            {
+              "id": 1,
+              "descricao": "Teste descricao",
+              "valor": "1234,50"
+            }
+          ],
+          "dependentes": [
+            {
+              "id": 1,
+              "nome": "Dependente Sintético",
+              "parentesco": "Filho",
+              "dataNascimento": "2010-01-15",
+              "ir": true,
+              "af": false,
+              "am": false
+            }
+          ],
+          "situacaoVereador": "naoServidor",
+          "opcaoRemuneracao": "opta",
+          "baseContribuicao": "subsidioVereador"
+        }
+      }
+    }
+  ]
+}

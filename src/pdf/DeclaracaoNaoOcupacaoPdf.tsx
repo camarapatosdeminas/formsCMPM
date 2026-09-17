@@ -1,13 +1,8 @@
+import type { FormData } from "../features/declaracaoNaoOcupacao/declaracaoNaoOcupacao.types";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+import { getApplicationDate } from "../lib/pdf/applicationDate";
 
-interface FormData {
-  nome: string;
-  cpf: string;
-  rua: string;
-  numero: string;
-  cargo: string;
-}
-const currentDate = new Date();
+const currentDate = getApplicationDate();
 const formattedDate = currentDate.toLocaleDateString("pt-BR");
 
 const styles = StyleSheet.create({

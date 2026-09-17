@@ -1,26 +1,5 @@
+import type { FormData } from "../features/solicitacaoEstagiario/solicitacaoEstagiario.types";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
-
-interface OpcaoCurso {
-  id: number;
-  curso: string;
-  periodo: string;
-  nivel: "graduacao" | "pos";
-}
-
-interface FormData {
-  setor: string;
-  areaEstagio: string;
-  supervisor: string;
-  cargo: string;
-  horario: string;
-  duracao: string;
-  atividades: string;
-  habilidades: string;
-  justificativa: string;
-  remunerado: "sim" | "nao";
-  vagas: string;
-  opcoesCurso: OpcaoCurso[];
-}
 
 const styles = StyleSheet.create({
   page: { fontFamily: "Helvetica", fontSize: 10, padding: 40, color: "#000" },

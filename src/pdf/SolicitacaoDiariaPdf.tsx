@@ -1,27 +1,7 @@
+import type { FormData } from "../features/solicitacaoDiaria/solicitacaoDiaria.types";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 
 // Interface dos dados
-interface FormData {
-  nome: string;
-  matricula: string;
-  cargo: string;
-  banco: string;
-  tipoConta: "corrente" | "poupanca";
-  agencia: string;
-  conta: string;
-  pix: string;
-  cidade: string;
-  estado: string;
-  periodoViagem: string;
-  meioTransporte: "carro" | "onibus" | "aereo" | "outro";
-  placaCarro: string;
-  outroTransporte: string;
-  diariasInteiras: string;
-  diariasReduzidas: string;
-  solicitaAntecipacao: "sim" | "nao";
-  valorSolicitado: string;
-  objetivo: string;
-}
 
 const styles = StyleSheet.create({
   page: { fontFamily: "Helvetica", fontSize: 9, padding: 40 },

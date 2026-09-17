@@ -1,0 +1,84 @@
+                                    RELATÓRIO DE VIAGEM - PRESTAÇÃO DE CONTAS
+
+ NOME                                          MATRÍCULA                                     CARGO
+ Exemplo sintético para conferir               Teste matricula                               Teste cargo
+ texto extenso e paginação. Exemplo
+ sintético para conferir texto extenso
+ e paginação. Exemplo sintético
+ para conferir texto extenso e
+ paginação. Exemplo sintético para
+ conferir texto extenso e paginação.
+ Exemplo sintético para conferir
+ texto extenso e paginação. Exemplo
+ sintético para conferir texto extenso
+ e paginação. Exemplo sintético
+ para conferir texto extenso e
+ paginação. Exemplo sintético para
+ conferir texto extenso e paginação.
+ Exemplo sintético para conferir
+ texto extenso e paginação. Exemplo
+ sintético para conferir texto extenso
+ e paginação.
+
+ DESTINO                            DATA SAÍDA                        DATA RETORNO                       MEIO DE TRANSPORTE
+ Teste destino                      02/09/2026                        02/09/2026                         Teste meioTransporte
+
+
+
+              DESCRIÇÃO DAS ATIVIDADES REALIZADAS (ANEXAR COMPROVANTES CONFORME ART. 8)
+
+ Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo
+ sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético
+ para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para
+ conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir
+ texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação.
+
+
+                  DESPESAS REALIZADAS - EM CASO DE ANTECIPAÇÃO - ART. 3º, PARÁGRAFO ÚNICO
+DESPESA                VALOR ANTECIPADO              VALOR UTILIZADO               VALOR A                       VALOR A DEVOLVER
+                                                                                   REEMBOLSAR
+
+Passagem               1234,50                       1234,50                       1234,50                       1234,50
+
+
+
+                                                       DESPESAS REALIZADAS
+DESPESA                                                     VALOR UTILIZADO                           VALOR A REEMBOLSAR
+
+Combustível Quilometragem: Teste quilometragem              1234,50                                   1234,50
+Km
+
+Transporte Urbano                                           1234,50                                   1234,50
+
+Passagem (caso não tenha ocorrido antecipação)              1234,50                                   1234,50
+
+Pedágio                                                     1234,50                                   1234,50
+
+Estacionamento                                              1234,50                                   1234,50
+
+TOTAL                                                       R$ 6170.00                                R$ 6170.00
+
+
+
+                                          DECLARAÇÃO DE RESIDENCIA E VERACIDADE
+
+ Declaro que não resido na(s) localidade(s) de destino e que as informações prestadas são verdadeiras, correspondendo
+ exclusivamente aos gastos efetuados para o cumprimento dos objetivos informados no momento da solicitação. Estou ciente
+ de que a prestação de informações inveridicas pode acarretar as sanções cabíveis.
+
+ Patos de Minas, 02 de setembro de 2026.                                                                Assinatura do Solicitante
+
+
+                                                          PARECER DO DIRETOR-GERAL
+
+Há valor a ser reembolsado pela Câmara Municipal ao Solicitante? ( ) NÃO ( ) SIM - VALOR: R$ _________
+Há valor a ser devolvido pelo Solicitante à Câmara Municipal? ( ) NÃO ( ) SIM - VALOR: R$ _________
+
+( ) Aprovo a prestação de contas, tendo em vista que se encontra em conformidade com a regulamentação vigente.
+( ) Desaprovo a prestação de contas.
+
+Patos de Minas, 02 de setembro de 2026.
+
+
+
+                                                              Assinatura do Diretor-Geral

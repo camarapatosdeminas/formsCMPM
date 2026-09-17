@@ -1,0 +1,46 @@
+                 DECLARAÇÃO DE DEPENDENTES Para fins de Imposto de Renda
+
+Nome do Servidor: Teste nome                                                                                 Matrícula: Teste matricula
+Relação dos dependentes:
+
+
+             DEPENDENTE                     DATA DE NASCIMENTO                PARENTESCO                         CPF               DEPENDÊNCIA
+                                                                                                                                         IR
+
+ Teste nome                                 2026-09-02                   Teste parentesco             529.982.247-25                    Sim
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Observação: Deverá ser apresentada junto a esta ficha, cópia da certidão de casamento quando o parentesco for “esposa (o)”.
+Cópia da certidão de nascimento se o parentesco for: companheiro (a); filho (a); enteado (a); menor sob guarda ou tutela.
+Para dependente maior de 21 anos se estudante, deverá ser apresentada declaração expedida pela instituição, com data de emissão recente,
+indicando o ano/semestre que está cursando.
+Toda a vez em que ocorrer alteração na relação dos seus dependentes (inclusão de novo dependente ou exclusão), deverá ser assinada
+nova declaração, com a alteração necessária.
+
+
+Declaro, na forma da Lei, que as informações prestadas são verdadeiras, tendo conhecimento da legislação e
+das conseqüências decorrentes de falsa declaração.
+
+
+
+
+              Patos de Minas, 02/09/2026
+                      LOCAL E DATA                                                           ASSINATURA DO SERVIDOR

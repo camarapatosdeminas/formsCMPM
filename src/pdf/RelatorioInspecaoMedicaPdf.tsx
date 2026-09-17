@@ -1,30 +1,7 @@
+import type { FormData } from "../features/inspecaoMedica/inspecaoMedica.types";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 
 // Você pode exportar a interface do seu arquivo principal para evitar duplicá-la
-interface FormData {
-  nome: string;
-  endereco: string;
-  data: string;
-  numeroCasa: string;
-  funcao: string;
-  matricula: string;
-  lotacao: string;
-  emailServidor: string;
-  admissao: string;
-  sexo: string;
-  estadoCivil: string;
-  regime: string;
-  cpf: string;
-  cargo: string;
-
-  bairro: string;
-  complemento: string;
-  dataSaida: string;
-  dataRetorno: string;
-  dataAssinaturaServidor: string;
-  funcaoConfianca: "sim" | "nao";
-  contato: string;
-}
 
 const styles = StyleSheet.create({
   page: { fontFamily: "Helvetica", fontSize: 10, padding: 20, lineHeight: 1.4 },

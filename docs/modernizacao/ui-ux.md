@@ -1,0 +1,13 @@
+# Direção visual e fundamentos
+
+Aplicação institucional clara: fundo cinza suave, superfícies brancas, azul profundo para navegação e ações, verde para download. Tipografia Segoe UI / Arial local, base 16 px, títulos 24–48 px, entrelinha 1,5–1,6. Conteúdo central até 1180 px; formulários até 960 px. Escala de espaço 4/8/12/16/20/24/32/48; bordas 1 px, raios 7/12/20 px e foco ocre 3 px com afastamento de 4 px. PDFs mantêm suas próprias fontes e estilos.
+
+Home: título e orientação curta, três passos de uso, busca sem distinção de acento, categorias e catálogo completo. Estados: resultados, busca vazia, limpeza. Formulários curtos em página única, extensos em seções. Sem etapas que escondam dados. Conteúdo legal de férias fica disponível em details. Rótulos persistem quando há preenchimento.
+
+Controles principais com altura mínima 46 px. Erros após blur ou tentativa de geração, resumo focável com links, mensagens por campo e região de status para PDF. A geração parte de cópia estável. Alterações invalidam o resultado e novas tentativas não perdem dados. Link de download só aparece quando o blob existe. Aviso visível: dados em memória, sair ou recarregar descarta preenchimento. Não introduzir confirmação modal de saída; navegação normal e aviso explícito.
+
+Arquitetura: catálogo sem PDFs em app; funcionalidades em features; controles e seções compartilhados com CSS Modules; máscaras puras em lib/formatters; geração assíncrona central em lib/pdf. Componentes recebem props nativas e refs. React Hook Form 7, Zod 4 e resolver 5 no piloto; não espalhar schemas que alterem contratos das demais páginas. Recadastramento extrai sua validação original sem acrescentar comprimento mínimo a telefone/celular.
+
+Referências consultadas em 02/09/2026: [React lazy](https://react.dev/reference/react/lazy), [Vite CSS Modules](https://vite.dev/guide/features#css-modules), [W3C notificações de formulários](https://www.w3.org/WAI/tutorials/forms/notifications/), [resolvers RHF](https://github.com/react-hook-form/resolvers), [Zod](https://zod.dev/api), [CNPJ — Receita Federal](https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/programas-e-atividades/cnpj-alfanumerico).
+
+Máscaras CPF/CEP/telefone/CNPJ aceitam vazio e edição parcial. CPF não ganha verificação de dígitos fora de recadastramento. CNPJ aceita 12 caracteres alfanuméricos e dois dígitos. Matrícula, RG, Pix, conta, agência, ramal e períodos livres mantêm texto. Valores monetários mantêm precisão e sinal; não usar coerção numérica sobre vazio. Datas e representações dos PDFs ficam sob comparação com a referência.

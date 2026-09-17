@@ -1,21 +1,11 @@
+import type {
+  ItemRequisicao,
+  FormData,
+} from "../features/almoxarifado/almoxarifado.types";
 import React from "react";
 import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 
 // --- INTERFACES ---
-interface ItemRequisicao {
-  id: number;
-  descricao: string;
-  quantidadeSolicitada: string;
-  quantidadeAtendida: string;
-}
-
-interface FormData {
-  dataEmissao: string;
-  requisicaoNum: string;
-  requisitante: string;
-  lotacao: string;
-  justificativa: string;
-}
 
 interface Props {
   formData: FormData;
@@ -197,15 +187,15 @@ const RequisicaoAlmoxarifadoPdf: React.FC<Props> = ({ formData, itens }) => {
       <Text style={styles.tableCol}>{index + 1}</Text>
       <Text style={styles.tableColDesc} wrap={true}>
         {item.descricao}
-      </Text>{" "}
+      </Text>
       {/* WRAP para a descrição */}
       <Text style={styles.tableColQtde} wrap={true}>
         {item.quantidadeSolicitada}
-      </Text>{" "}
+      </Text>
       {/* WRAP para quantidade solicitada */}
       <Text style={styles.tableColQtdeAtend} wrap={true}>
         {item.quantidadeAtendida}
-      </Text>{" "}
+      </Text>
       {/* WRAP para quantidade atendida */}
     </View>
   ));

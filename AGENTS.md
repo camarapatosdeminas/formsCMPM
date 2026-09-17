@@ -150,65 +150,65 @@ Ordem principal: **P0 → P1 → P2 → P3 → P4 → P5 → P7**. P6 começa de
 
 ### P0 — Inventário e referências de regressão
 
-- [ ] P0.1 Registrar commit de referência, alterações locais, comandos de execução e limitações do ambiente em `docs/modernizacao/baseline.md`.
-- [ ] P0.2 Inventariar todos os campos dos 17 formulários em `docs/modernizacao/contrato-campos.md`, usando o modelo descrito neste arquivo. Distinguir campo obrigatório de linha mínima de uma lista.
-- [ ] P0.3 Registrar as regras condicionais, valores iniciais, limites atuais, rotas, nomes de arquivo, anexos e comportamento de dados ocultos.
-- [ ] P0.4 Criar fixtures exclusivamente sintéticas: preenchimento mínimo permitido, preenchimento completo, textos longos, listas e variantes condicionais relevantes.
-- [ ] P0.5 Gerar PDFs de referência antes de mudar renderer, imports, estilos ou estrutura. Fixar relógio e fuso no ambiente de teste quando necessário; registrar versões, fontes e parâmetros de renderização.
-- [ ] P0.6 Renderizar todas as páginas dos PDFs de referência e registrar quantidade de páginas, dimensões, textos e imagens para comparação futura. Preferir geração local no ambiente do projeto, sem enviar documentos a serviços externos.
+- [x] P0.1 Registrar commit de referência, alterações locais, comandos de execução e limitações do ambiente em `docs/modernizacao/baseline.md`.
+- [x] P0.2 Inventariar todos os campos dos 17 formulários em `docs/modernizacao/contrato-campos.md`, usando o modelo descrito neste arquivo. Distinguir campo obrigatório de linha mínima de uma lista.
+- [x] P0.3 Registrar as regras condicionais, valores iniciais, limites atuais, rotas, nomes de arquivo, anexos e comportamento de dados ocultos.
+- [x] P0.4 Criar fixtures exclusivamente sintéticas: preenchimento mínimo permitido, preenchimento completo, textos longos, listas e variantes condicionais relevantes.
+- [x] P0.5 Gerar PDFs de referência antes de mudar renderer, imports, estilos ou estrutura. Fixar relógio e fuso no ambiente de teste quando necessário; registrar versões, fontes e parâmetros de renderização.
+- [x] P0.6 Renderizar todas as páginas dos PDFs de referência e registrar quantidade de páginas, dimensões, textos e imagens para comparação futura. Preferir geração local no ambiente do projeto, sem enviar documentos a serviços externos.
 - [ ] P0.7 Capturar home e telas representativas em celular e desktop; registrar tarefas de uso: localizar formulário, preencher, corrigir, gerar e baixar.
 - [ ] P0.8 Medir a versão de produção local ou prévia: tamanho transferido inicialmente, scripts carregados, Lighthouse e tempo de geração de PDFs representativos. Registrar dispositivo/simulação, navegador e condições.
-- [ ] P0.9 Reexecutar lint, TypeScript e build; separar erros de aplicação de bloqueios ambientais. Não mascarar a falha de um comando.
+- [x] P0.9 Reexecutar lint, TypeScript e build; separar erros de aplicação de bloqueios ambientais. Não mascarar a falha de um comando.
 
 Saída de P0: contrato de campos e referências suficientes para comparar comportamento e aparência. A migração de uma página não começa sem a referência correspondente.
 
 ### P1 — Direção visual e experiência
 
-- [ ] P1.1 Definir tokens e registrar decisões em `docs/modernizacao/ui-ux.md`: paleta institucional, contraste, escala tipográfica, espaçamento, superfícies, largura de conteúdo, bordas e foco.
+- [x] P1.1 Definir tokens e registrar decisões em `docs/modernizacao/ui-ux.md`: paleta institucional, contraste, escala tipográfica, espaçamento, superfícies, largura de conteúdo, bordas e foco.
 - [ ] P1.2 Preparar a proposta visual da home e de férias em celular e desktop, com estados normal, erro, carregamento e download disponível. Usar o resultado como referência das próximas páginas.
-- [ ] P1.3 Organizar o catálogo com busca por título/termos úteis e categorias claras; incluir os 17 formulários, estado sem resultados e ação de limpar busca.
-- [ ] P1.4 Definir hierarquia de títulos, instruções curtas, indicação fiel de opcionais/obrigatórios e texto das ações. Manter textos legais completos acessíveis quando sua apresentação na tela for reorganizada.
-- [ ] P1.5 Definir padrão de formulário curto em página única e de formulário extenso por seções; usar etapas apenas se melhorarem o fluxo sem perda de dados ou novos requisitos.
-- [ ] P1.6 Definir navegação entre formulários e tratamento de saída com alterações não utilizadas. Se houver confirmação, deve permitir continuar preenchendo e manter o foco acessível.
+- [x] P1.3 Organizar o catálogo com busca por título/termos úteis e categorias claras; incluir os 17 formulários, estado sem resultados e ação de limpar busca.
+- [x] P1.4 Definir hierarquia de títulos, instruções curtas, indicação fiel de opcionais/obrigatórios e texto das ações. Manter textos legais completos acessíveis quando sua apresentação na tela for reorganizada.
+- [x] P1.5 Definir padrão de formulário curto em página única e de formulário extenso por seções; usar etapas apenas se melhorarem o fluxo sem perda de dados ou novos requisitos.
+- [x] P1.6 Definir navegação entre formulários e tratamento de saída com alterações não utilizadas. Se houver confirmação, deve permitir continuar preenchendo e manter o foco acessível.
 
 Saída de P1: referência visual documentada e estados definidos. A estética dos PDFs não participa desta etapa.
 
 ### P2 — Base técnica e componentes
 
-- [ ] P2.1 Implantar a estrutura de pastas gradualmente e configurar imports previsíveis. Manter rotas antigas operantes durante a transição.
-- [ ] P2.2 Criar tokens e CSS Modules; limitar CSS global a reset e fundamentos. Não modernizar o CSS legado compartilhado de uma vez e afetar páginas ainda não migradas.
-- [ ] P2.3 Criar `Button`, `Input`, `Select`, `Textarea`, `Checkbox` e `RadioGroup` conforme necessidades reais. Garantir props nativas, refs, nomes acessíveis, foco e estados.
-- [ ] P2.4 Criar `FormField`, `FormSection`, `FormGrid`, `ErrorSummary` e ações de geração/download. Usar `label`, `fieldset` e `legend` corretamente; conectar ajuda e erros por `aria-describedby`.
-- [ ] P2.5 Extrair máscaras, normalizadores e validadores puros. Implementar testes de casos observáveis, especialmente campos opcionais vazios e edição das máscaras.
-- [ ] P2.6 Integrar React Hook Form e Zod no piloto com política de erro consistente: permitir digitação parcial, validar ao sair/tentar gerar e revalidar correções. Não exibir todos os campos como inválidos ao abrir a página.
-- [ ] P2.7 Criar um catálogo central e rotas com carregamento adiado, tela de rota inexistente, fallback de carregamento e tratamento de falha de importação. Evitar imports de runtime dos PDFs na home.
-- [ ] P2.8 Criar fluxo comum de PDF com estados de edição, validação, geração, pronto e erro. Gerar a partir de uma cópia estável dos dados; qualquer alteração relevante invalida o download anterior.
-- [ ] P2.9 Impedir cliques duplicados e publicação de resultado obsoleto: se o usuário editar enquanto o PDF é gerado, o resultado antigo não pode aparecer como atual. Permitir nova tentativa após falha.
-- [ ] P2.10 Liberar URLs de objeto e recursos ao substituí-los/desmontar, quando gerenciados pela aplicação; evitar revogação antes do download terminar.
-- [ ] P2.11 Corrigir espaços irregulares, tipos e configurações inconsistentes de forma revisável; auditar dependências de tipos antigas como `@types/react-router-dom` antes de removê-las. Não atualizar versões major em massa.
-- [ ] P2.12 Configurar testes de regras e de fluxos relevantes, além de comandos documentados de TypeScript, lint e build. Escolher versões das ferramentas compatíveis e registrar a decisão.
+- [x] P2.1 Implantar a estrutura de pastas gradualmente e configurar imports previsíveis. Manter rotas antigas operantes durante a transição.
+- [x] P2.2 Criar tokens e CSS Modules; limitar CSS global a reset e fundamentos. Não modernizar o CSS legado compartilhado de uma vez e afetar páginas ainda não migradas.
+- [x] P2.3 Criar `Button`, `Input`, `Select`, `Textarea`, `Checkbox` e `RadioGroup` conforme necessidades reais. Garantir props nativas, refs, nomes acessíveis, foco e estados.
+- [x] P2.4 Criar `FormField`, `FormSection`, `FormGrid`, `ErrorSummary` e ações de geração/download. Usar `label`, `fieldset` e `legend` corretamente; conectar ajuda e erros por `aria-describedby`.
+- [x] P2.5 Extrair máscaras, normalizadores e validadores puros. Implementar testes de casos observáveis, especialmente campos opcionais vazios e edição das máscaras.
+- [x] P2.6 Integrar React Hook Form e Zod no piloto com política de erro consistente: permitir digitação parcial, validar ao sair/tentar gerar e revalidar correções. Não exibir todos os campos como inválidos ao abrir a página.
+- [x] P2.7 Criar um catálogo central e rotas com carregamento adiado, tela de rota inexistente, fallback de carregamento e tratamento de falha de importação. Evitar imports de runtime dos PDFs na home.
+- [x] P2.8 Criar fluxo comum de PDF com estados de edição, validação, geração, pronto e erro. Gerar a partir de uma cópia estável dos dados; qualquer alteração relevante invalida o download anterior.
+- [x] P2.9 Impedir cliques duplicados e publicação de resultado obsoleto: se o usuário editar enquanto o PDF é gerado, o resultado antigo não pode aparecer como atual. Permitir nova tentativa após falha.
+- [x] P2.10 Liberar URLs de objeto e recursos ao substituí-los/desmontar, quando gerenciados pela aplicação; evitar revogação antes do download terminar.
+- [x] P2.11 Corrigir espaços irregulares, tipos e configurações inconsistentes de forma revisável; auditar dependências de tipos antigas como `@types/react-router-dom` antes de removê-las. Não atualizar versões major em massa.
+- [x] P2.12 Configurar testes de regras e de fluxos relevantes, além de comandos documentados de TypeScript, lint e build. Escolher versões das ferramentas compatíveis e registrar a decisão.
 
 Saída de P2: componentes funcionais demonstrados no piloto, contratos estáveis e base que convive com as páginas legadas.
 
 ### P3 — Home e formulário piloto: férias
 
-- [ ] P3.1 Implementar home e cabeçalho novos com busca, categorias e todos os formulários. Preservar caminhos, título da página, navegação por teclado e indicação da página atual.
-- [ ] P3.2 Migrar férias para componentes, tipos, defaults e schema próprios. Não exigir nome, CPF, matrícula, lotação ou data inicial só porque parecem importantes.
-- [ ] P3.3 Preservar a exigência condicional da justificativa e sua limpeza/desabilitação no retorno a 30 dias. Aplicar máscara de CPF sem exigir preenchimento.
-- [ ] P3.4 Refatorar o contrato e os imports do PDF somente depois de comparar a referência. Eliminar o cast `as any` mantendo apresentação e conteúdo.
-- [ ] P3.5 Verificar o fluxo mínimo permitido, parcelamento com/sem justificativa, máscara, correção de erro, falha de geração e edição após geração.
+- [x] P3.1 Implementar home e cabeçalho novos com busca, categorias e todos os formulários. Preservar caminhos, título da página, navegação por teclado e indicação da página atual.
+- [x] P3.2 Migrar férias para componentes, tipos, defaults e schema próprios. Não exigir nome, CPF, matrícula, lotação ou data inicial só porque parecem importantes.
+- [x] P3.3 Preservar a exigência condicional da justificativa e sua limpeza/desabilitação no retorno a 30 dias. Aplicar máscara de CPF sem exigir preenchimento.
+- [x] P3.4 Refatorar o contrato e os imports do PDF somente depois de comparar a referência. Eliminar o cast `as any` mantendo apresentação e conteúdo.
+- [x] P3.5 Verificar o fluxo mínimo permitido, parcelamento com/sem justificativa, máscara, correção de erro, falha de geração e edição após geração.
 - [ ] P3.6 Conferir responsividade, teclado, leitor de tela, estados e PDF de férias. Registrar evidências e ajustes dos componentes em `docs/modernizacao/progresso.md`.
 
 Saída de P3: primeira entrega completa utilizável, servindo de exemplo concreto para os demais agentes.
 
 ### P4 — Validar a arquitetura em recadastramento
 
-- [ ] P4.1 Extrair schemas, defaults, máscaras e seções da página extensa, preservando todos os ramos de validação descritos neste arquivo.
-- [ ] P4.2 Migrar listas de bens e dependentes com identificadores estáveis, foco previsível ao adicionar/remover e atualização imutável. Preservar as regras de linhas e opções.
-- [ ] P4.3 Exercitar completo/simplificado e servidor/vereador; preservar dados ao navegar pelas seções e a política existente ao alternar condições.
-- [ ] P4.4 Manter obrigatoriedade somente nas condições atuais, incluindo alternativa telefone/celular e dependentes opcionais.
-- [ ] P4.5 Preservar portaria, anexos, ordem, texto e aparência em todas as variantes. Conferir documento extenso e textos longos com referências de P0.
-- [ ] P4.6 Ajustar componentes comuns apenas quando houver necessidade reutilizável, sem introduzir regras de recadastramento nos demais formulários.
+- [x] P4.1 Extrair schemas, defaults, máscaras e seções da página extensa, preservando todos os ramos de validação descritos neste arquivo.
+- [x] P4.2 Migrar listas de bens e dependentes com identificadores estáveis, foco previsível ao adicionar/remover e atualização imutável. Preservar as regras de linhas e opções.
+- [x] P4.3 Exercitar completo/simplificado e servidor/vereador; preservar dados ao navegar pelas seções e a política existente ao alternar condições.
+- [x] P4.4 Manter obrigatoriedade somente nas condições atuais, incluindo alternativa telefone/celular e dependentes opcionais.
+- [x] P4.5 Preservar portaria, anexos, ordem, texto e aparência em todas as variantes. Conferir documento extenso e textos longos com referências de P0.
+- [x] P4.6 Ajustar componentes comuns apenas quando houver necessidade reutilizável, sem introduzir regras de recadastramento nos demais formulários.
 
 Saída de P4: padrão validado tanto em formulário simples quanto em listas e documentos extensos. Após esta etapa, estabilizar a API compartilhada para dividir P5.
 
@@ -218,21 +218,21 @@ Cada linha só pode ser marcada após cumprir integralmente a definição de con
 
 | Status / ID | Rota preservada                   | Página inicial                                                  | PDF inicial                      |
 | ----------- | --------------------------------- | --------------------------------------------------------------- | -------------------------------- |
-| [ ] P5.A1   | `/adiantamento-13`                | `Adiantamento13/Adiantamento13.tsx`                             | `Adiantamento13Pdf.tsx`          |
-| [ ] P5.A2   | `/declaracao-ficha-limpa`         | `DeclaracaoFichaLimpa/DeclaracaoFichaLimpa.tsx`                 | `DeclaracaoFichaLimpaPdf.tsx`    |
-| [ ] P5.A3   | `/declaracao-nepotismo`           | `DeclaracaoNepotismo/DeclaracaoNepotismo.tsx`                   | `DeclaracaoNepotismoPdf.tsx`     |
-| [ ] P5.A4   | `/declaracao-nao-ocupacao`        | `DeclaracaoNaoOcupacao/DeclaracaoNaoOcupacao.tsx`               | `DeclaracaoNaoOcupacaoPdf.tsx`   |
-| [ ] P5.A5   | `/solicitacao-documentos`         | `SolicitacaoDocumentos/SolicitacaoDocumentos.tsx`               | `SolicitacaoDocumentosPdf.tsx`   |
-| [ ] P5.B1   | `/declaracao-dependentes`         | `DeclaracaoDependentes/DeclaracaoDependentes.tsx`               | `DeclaracaoDependentesPdf.tsx`   |
-| [ ] P5.B2   | `/ocorrencia-ponto`               | `OcorrenciaPonto/OcorrenciaPonto.tsx`                           | `OcorrenciaPontoPdf.tsx`         |
-| [ ] P5.B3   | `/requisicao-manual-almoxarifado` | `RequisicaoManualAlmoxarifado/RequisicaoManualAlmoxarifado.tsx` | `RequisicaoAlmoxarifadoPdf.tsx`  |
-| [ ] P5.C1   | `/solicitacao-viagem`             | `SolicitacaoViagem/SolicitacaoViagem.tsx`                       | `SolicitacaoViagemPdf.tsx`       |
-| [ ] P5.C2   | `/SolicitacaoDiaria`              | `SolicitacaoDiaria/SolicitacaoDiaria.tsx`                       | `SolicitacaoDiariaPdf.tsx`       |
-| [ ] P5.C3   | `/relatorio-viagem`               | `RelatorioViagem/RelatorioViagem.tsx`                           | `RelatorioViagemPdf.tsx`         |
-| [ ] P5.C4   | `/solicitacao-cursos`             | `SolicitacaoCursos/SolicitacaoCursos.tsx`                       | `SolicitacaoCursosPdf.tsx`       |
-| [ ] P5.D1   | `/solicitacao-estagiario`         | `SolicitacaoEstagiario/SolicitacaoEstagiario.tsx`               | `SolicitacaoEstagiarioPdf.tsx`   |
-| [ ] P5.D2   | `/inspecao-medica`                | `GESAT-RelatorioInspecaoMedica/RelatorioInspecaoMedica.tsx`     | `RelatorioInspecaoMedicaPdf.tsx` |
-| [ ] P5.D3   | `/cartao-ponto`                   | `CartaoPonto/FormularioCartaoPonto.tsx`                         | `CartaoPontoPdfDocument.tsx`     |
+| [x] P5.A1   | `/adiantamento-13`                | `Adiantamento13/Adiantamento13.tsx`                             | `Adiantamento13Pdf.tsx`          |
+| [x] P5.A2   | `/declaracao-ficha-limpa`         | `DeclaracaoFichaLimpa/DeclaracaoFichaLimpa.tsx`                 | `DeclaracaoFichaLimpaPdf.tsx`    |
+| [x] P5.A3   | `/declaracao-nepotismo`           | `DeclaracaoNepotismo/DeclaracaoNepotismo.tsx`                   | `DeclaracaoNepotismoPdf.tsx`     |
+| [x] P5.A4   | `/declaracao-nao-ocupacao`        | `DeclaracaoNaoOcupacao/DeclaracaoNaoOcupacao.tsx`               | `DeclaracaoNaoOcupacaoPdf.tsx`   |
+| [x] P5.A5   | `/solicitacao-documentos`         | `SolicitacaoDocumentos/SolicitacaoDocumentos.tsx`               | `SolicitacaoDocumentosPdf.tsx`   |
+| [x] P5.B1   | `/declaracao-dependentes`         | `DeclaracaoDependentes/DeclaracaoDependentes.tsx`               | `DeclaracaoDependentesPdf.tsx`   |
+| [x] P5.B2   | `/ocorrencia-ponto`               | `OcorrenciaPonto/OcorrenciaPonto.tsx`                           | `OcorrenciaPontoPdf.tsx`         |
+| [x] P5.B3   | `/requisicao-manual-almoxarifado` | `RequisicaoManualAlmoxarifado/RequisicaoManualAlmoxarifado.tsx` | `RequisicaoAlmoxarifadoPdf.tsx`  |
+| [x] P5.C1   | `/solicitacao-viagem`             | `SolicitacaoViagem/SolicitacaoViagem.tsx`                       | `SolicitacaoViagemPdf.tsx`       |
+| [x] P5.C2   | `/SolicitacaoDiaria`              | `SolicitacaoDiaria/SolicitacaoDiaria.tsx`                       | `SolicitacaoDiariaPdf.tsx`       |
+| [x] P5.C3   | `/relatorio-viagem`               | `RelatorioViagem/RelatorioViagem.tsx`                           | `RelatorioViagemPdf.tsx`         |
+| [x] P5.C4   | `/solicitacao-cursos`             | `SolicitacaoCursos/SolicitacaoCursos.tsx`                       | `SolicitacaoCursosPdf.tsx`       |
+| [x] P5.D1   | `/solicitacao-estagiario`         | `SolicitacaoEstagiario/SolicitacaoEstagiario.tsx`               | `SolicitacaoEstagiarioPdf.tsx`   |
+| [x] P5.D2   | `/inspecao-medica`                | `GESAT-RelatorioInspecaoMedica/RelatorioInspecaoMedica.tsx`     | `RelatorioInspecaoMedicaPdf.tsx` |
+| [x] P5.D3   | `/cartao-ponto`                   | `CartaoPonto/FormularioCartaoPonto.tsx`                         | `CartaoPontoPdfDocument.tsx`     |
 
 Formulários já cobertos pelos pilotos: `/formulario-ferias` em `FormularioFerias/FormularioFerias.tsx`, PDF `FeriasPdfDocument.tsx`; `/recadastramento` em `Recadastramento/Recadastramento.tsx`, PDF `RecadastramentoPdf.tsx`.
 
@@ -240,33 +240,63 @@ Cuidados por lote: A contém formulários mais simples; B contém listas e míni
 
 ### P6 — Segurança e performance durante a migração
 
-- [ ] P6.1 Conferir tráfego e armazenamento no navegador usando somente dados sintéticos. Garantir que valores de campos não sejam enviados a analytics, logs, URLs ou serviços externos pela aplicação.
-- [ ] P6.2 Manter os dados em memória; não adicionar rascunho em `localStorage`, `sessionStorage`, IndexedDB ou service worker. Explicar o comportamento de perda de dados na interface conforme o fluxo implementado.
-- [ ] P6.3 Revisar uso de HTML dinâmico, links e scripts; tratar texto informado como texto. Não introduzir `dangerouslySetInnerHTML` ou sanitizadores sem necessidade concreta.
-- [ ] P6.4 Revisar dependências e resultado de auditoria, distinguindo vulnerabilidades aplicáveis, ferramentas de desenvolvimento e runtime. Corrigir com alterações controladas e verificar PDFs após qualquer mudança no renderer/fontes.
-- [ ] P6.5 Conferir que nenhuma credencial esteja em código, assets ou variáveis `VITE_*` usadas no cliente. Não exibir valores de segredos em saídas de auditoria.
-- [ ] P6.6 Hospedar favicon e assets institucionais localmente quando adequado. Otimizar imagens web e declarar suas dimensões sem substituir assets usados em PDFs por versões visualmente diferentes.
+- [x] P6.1 Conferir tráfego e armazenamento no navegador usando somente dados sintéticos. Garantir que valores de campos não sejam enviados a analytics, logs, URLs ou serviços externos pela aplicação.
+- [x] P6.2 Manter os dados em memória; não adicionar rascunho em `localStorage`, `sessionStorage`, IndexedDB ou service worker. Explicar o comportamento de perda de dados na interface conforme o fluxo implementado.
+- [x] P6.3 Revisar uso de HTML dinâmico, links e scripts; tratar texto informado como texto. Não introduzir `dangerouslySetInnerHTML` ou sanitizadores sem necessidade concreta.
+- [x] P6.4 Revisar dependências e resultado de auditoria, distinguindo vulnerabilidades aplicáveis, ferramentas de desenvolvimento e runtime. Corrigir com alterações controladas e verificar PDFs após qualquer mudança no renderer/fontes.
+- [x] P6.5 Conferir que nenhuma credencial esteja em código, assets ou variáveis `VITE_*` usadas no cliente. Não exibir valores de segredos em saídas de auditoria.
+- [x] P6.6 Hospedar favicon e assets institucionais localmente quando adequado. Otimizar imagens web e declarar suas dimensões sem substituir assets usados em PDFs por versões visualmente diferentes.
 - [ ] P6.7 Inspecionar os cabeçalhos efetivos e definir no `vercel.json` CSP, política de referência, prevenção de MIME sniffing e restrição de incorporação conforme o uso real. Se houver incorporação institucional, permitir apenas as origens necessárias; não quebrá-la com bloqueio indiscriminado.
 - [ ] P6.8 Introduzir CSP primeiro em `Content-Security-Policy-Report-Only`, observar violações e ajustar antes de aplicar bloqueio. Conferir estilos, fontes, imagens e URLs `blob:`/`data:` somente onde efetivamente necessários. Não copiar política genérica nem liberar todas as origens para fazer o PDF funcionar.
-- [ ] P6.9 Medir o bundle de produção: a home não deve carregar renderer e documentos PDF por imports transitivos. Carregar gerador/documento sob demanda e conferir loading/erro de rede.
-- [ ] P6.10 Medir digitação, listas e geração nos formulários maiores. Não gerar novamente a cada tecla. Adotar worker ou otimizações adicionais somente se a medição demonstrar bloqueio relevante e se a compatibilidade visual for verificada.
+- [x] P6.9 Medir o bundle de produção: a home não deve carregar renderer e documentos PDF por imports transitivos. Carregar gerador/documento sob demanda e conferir loading/erro de rede.
+- [x] P6.10 Medir digitação, listas e geração nos formulários maiores. Não gerar novamente a cada tecla. Adotar worker ou otimizações adicionais somente se a medição demonstrar bloqueio relevante e se a compatibilidade visual for verificada.
 - [ ] P6.11 Conferir cache de assets e atualização de HTML/chunks em novas versões; evitar cache indiscriminado que mantenha referências a arquivos removidos. Tratar falha de chunk com recuperação compreensível, sem descarte silencioso de dados.
-- [ ] P6.12 Registrar resultados em `docs/modernizacao/seguranca-performance.md`, com condições, comparação antes/depois e limitações. Não declarar ausência de vulnerabilidades apenas porque uma auditoria automática passou.
+- [x] P6.12 Registrar resultados em `docs/modernizacao/seguranca-performance.md`, com condições, comparação antes/depois e limitações. Não declarar ausência de vulnerabilidades apenas porque uma auditoria automática passou.
 
 Meta de performance em uso real: LCP ≤ 2,5 s, INP ≤ 200 ms e CLS ≤ 0,1 no percentil 75, separando celular/desktop. Usar Lighthouse como diagnóstico laboratorial. Se não houver dados reais suficientes, registrar essa ausência; não declarar a meta atingida com base em uma única execução. Fixar orçamento de bundle e de geração depois de medir P0, sem inventar um tempo universal para todos os PDFs.
 
 ### P7 — Integração, documentação e liberação
 
-- [ ] P7.1 Confirmar os 17 formulários migrados, acessíveis no catálogo e nas URLs antigas. Testar acesso direto, atualização de página, voltar/avançar e rota inexistente.
-- [ ] P7.2 Remover CSS, imports, tipos e componentes legados somente após não terem consumidores. Conferir navegação em ordens diferentes para detectar interferência residual de estilos.
-- [ ] P7.3 Executar lint, TypeScript, testes relevantes e build limpos. Configurar uma verificação automática desses comandos no mecanismo de CI disponível, sem presumir integração externa já existente.
+- [x] P7.1 Confirmar os 17 formulários migrados, acessíveis no catálogo e nas URLs antigas. Testar acesso direto, atualização de página, voltar/avançar e rota inexistente.
+- [x] P7.2 Remover CSS, imports, tipos e componentes legados somente após não terem consumidores. Conferir navegação em ordens diferentes para detectar interferência residual de estilos.
+- [x] P7.3 Executar `npm run format`, `npm run format:check`, lint, TypeScript, testes relevantes e build limpos, conforme o protocolo de validação final abaixo. Configurar uma verificação automática desses comandos no mecanismo de CI disponível, sem presumir integração externa já existente.
 - [ ] P7.4 Validar interface em 320, 375/390, 768, 1024 e 1440 px, retrato/paisagem e zoom de 200%/400%. Não aceitar rolagem horizontal da página; tabelas que exijam duas dimensões precisam de tratamento local acessível.
 - [ ] P7.5 Testar teclado e leitor de tela em fluxos representativos, contraste e foco. Fazer pelo menos uma verificação móvel real quando houver dispositivo disponível; documentar quando só houver emulação.
-- [ ] P7.6 Comparar todos os PDFs e suas variantes com P0, incluindo textos longos, campos vazios permitidos e listas. Verificar download em navegadores desktop e móveis disponíveis.
-- [ ] P7.7 Atualizar README com setup, scripts, estrutura, adição de formulário, contratos de campos, geração de PDF, testes e execução na Vercel. Documentar pendências reais, se houver.
+- [x] P7.6 Comparar todos os PDFs e suas variantes com P0, incluindo textos longos, campos vazios permitidos e listas. Verificar download em navegadores desktop e móveis disponíveis.
+- [x] P7.7 Atualizar README com setup, scripts, estrutura, adição de formulário, contratos de campos, geração de PDF, testes e execução na Vercel. Documentar pendências reais, se houver.
 - [ ] P7.8 Preparar e verificar uma implantação de prévia na Vercel quando houver acesso e autorização de publicação. Conferir cabeçalhos, rotas, assets, PDFs e console na versão publicada.
-- [ ] P7.9 Registrar versão anterior recuperável e procedimento de rollback; fazer mudanças pequenas e identificáveis. Publicar em produção somente conforme a autorização da tarefa de implementação; este plano não é uma ordem isolada de deploy.
-- [ ] P7.10 Entregar relatório com tarefas concluídas, evidências, resultado dos comandos, diferenças conhecidas e eventuais bloqueios. Não marcar como concluída uma etapa que depende de verificação ainda indisponível.
+- [x] P7.9 Registrar versão anterior recuperável e procedimento de rollback; fazer mudanças pequenas e identificáveis. Publicar em produção somente conforme a autorização da tarefa de implementação; este plano não é uma ordem isolada de deploy.
+- [x] P7.10 Iniciar o projeto localmente, abrir a home em navegador visível ao usuário e verificar a interface renderizada. Ao terminar, deixar o servidor ativo e a home aberta, informando a URL real e a sessão/processo responsável. Seguir o protocolo de validação final abaixo.
+- [x] P7.11 Entregar relatório com tarefas concluídas, evidências, resultado dos comandos, diferenças conhecidas e eventuais bloqueios. Não marcar como concluída uma etapa que depende de verificação ainda indisponível.
+
+## Protocolo de execução e validação final
+
+Executar o roadmap em blocos de trabalho: inventário (P0); direção visual e fundamentos (P1/P2); pilotos (P3/P4); demais formulários por lotes (P5); consolidação de segurança/performance (P6); integração e validação final (P7). Segurança e performance acompanham os blocos anteriores, conforme suas dependências.
+
+O agente pode subdividir tarefas, escolher a ordem interna dos lotes independentes e ajustar a implementação com seu julgamento técnico, mantendo as restrições e os critérios de conclusão. Avançar entre blocos sem exigir confirmação de cada decisão rotineira. Registrar decisões e progresso para permitir que outro agente retome o trabalho.
+
+Durante cada bloco, formatar os arquivos alterados e executar as verificações pertinentes. Ao finalizar a implementação integrada:
+
+1. Conferir os scripts reais do `package.json` e as alterações locais. Preservar trabalho de terceiros e as referências de PDFs produzidas em P0.
+2. Executar os comandos abaixo na raiz, verificando individualmente seus códigos de saída:
+
+   ```bash
+   npm run format
+   npm run format:check
+   npm run lint
+   npm run build
+   ```
+
+3. O script de build atual executa `tsc -b` antes do Vite. Se esse contrato mudar, incluir uma checagem TypeScript explícita. Executar também os testes de regras, integração, fluxos e regressão de PDF implantados em P2 e nos lotes seguintes, usando os scripts efetivamente disponíveis, em modo de execução única.
+4. Corrigir falhas e repetir as verificações afetadas até que a versão final esteja validada. Não substituir comandos que falharam por sucesso artificial, desabilitar regras ou atualizar referências de PDF para encobrir uma regressão. Distinguir bloqueios ambientais de defeitos no código.
+5. Iniciar o servidor local pelo script `dev` existente (`npm run dev`) ou pelo `preview` após um build aprovado (`npm run preview`). Preferir a prévia do build para a validação final. Usar uma sessão persistente e a URL/porta realmente informadas pelo servidor; não encerrar o processo ao devolver a resposta.
+6. Abrir a URL em um navegador visível ao usuário, preferencialmente no painel de navegador do aplicativo quando disponível. Verificar a home renderizada pelo navegador: cabeçalho, catálogo, carregamento dos assets, ausência de tela vazia/overlay de erro e funcionamento de busca e navegação. Resposta HTTP 200 ou mensagem de servidor iniciado, isoladamente, não comprovam a interface funcionando.
+7. Realizar as verificações de responsividade e dos fluxos previstas em P7, usando dados sintéticos. Observar erros relevantes de console/rede com as ferramentas disponíveis e corrigir os encontrados. Ao terminar a navegação de teste, voltar para a home.
+8. Registrar uma captura da home renderizada quando a ferramenta permitir, junto da URL, navegador, viewport, horário e evidências das verificações. Captura de tela complementa a aplicação aberta; não substitui deixar a home visível.
+9. Conferir novamente que o servidor responde e que a home continua aberta antes da entrega. Informar a URL clicável e a sessão/processo que mantém o servidor ativo, para permitir sua utilização e posterior encerramento.
+10. Se o ambiente impedir iniciar o servidor, abrir um navegador visível ou manter o processo ativo, explicar a limitação concreta, registrar a etapa como pendente/bloqueada e fornecer os comandos de reprodução. Não declarar a validação visual concluída sem realizá-la.
+
+A exigência mínima de entrega visual é **o projeto rodando com a home visível**. Ela se soma às checagens dos formulários e PDFs e não as substitui. Atualizar `docs/modernizacao/progresso.md` e os checkboxes apenas conforme as evidências obtidas.
 
 ## Critérios de acessibilidade e comportamento
 

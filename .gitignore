@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Dados locais de ferramentas; referências PDF ficam versionadas
+.npm-cache/
+tmp/
+tests/pdf-current/
+test-results/
+playwright-report/

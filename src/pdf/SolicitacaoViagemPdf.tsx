@@ -1,30 +1,11 @@
+import type {
+  Participante,
+  FormData,
+} from "../features/solicitacaoViagem/solicitacaoViagem.types";
 // src/pdf/SolicitacaoViagemPdf.tsx
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 
-interface Participante {
-  id: number;
-  nome: string;
-}
-
 // Interface idêntica à do formulário para garantir consistência
-interface FormData {
-  nome: string;
-  matricula: string;
-  cargo: string;
-  banco: string;
-  agencia: string;
-  conta: string;
-  pix: string;
-  numVereadores: string;
-  numServidores: string;
-  finalidade: "encontro" | "curso" | "outros";
-  finalidadeOutros: string;
-  periodo: string;
-  cidadeEstado: string;
-  local: string;
-  meioTransporte: string;
-  justificativa: string;
-}
 
 const styles = StyleSheet.create({
   page: { fontFamily: "Helvetica", fontSize: 10, padding: 40, color: "#333" },

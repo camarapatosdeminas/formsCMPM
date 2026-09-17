@@ -1,0 +1,137 @@
+FORMULÁRIO DE SOLICITAÇÃO DE APOIO A INICIATIVAS DE CAPACITAÇÃO CURSOS DE CURTA
+                                                        E MÉDIA DURAÇÃO
+
+I - IDENTIFICAÇÃO DO SERVIDOR
+
+  Nome:                                                                       Matrícula:       Cargo:
+  Exemplo sintético para conferir texto extenso e paginação.                  Teste            Teste cargo
+  Exemplo sintético para conferir texto extenso e paginação.                  matricula
+  Exemplo sintético para conferir texto extenso e paginação.
+  Exemplo sintético para conferir texto extenso e paginação.
+  Exemplo sintético para conferir texto extenso e paginação.
+  Exemplo sintético para conferir texto extenso e paginação.
+  Exemplo sintético para conferir texto extenso e paginação.
+  Exemplo sintético para conferir texto extenso e paginação.
+  Exemplo sintético para conferir texto extenso e paginação.
+  Exemplo sintético para conferir texto extenso e paginação.
+
+  Lotação:                                                              Endereço:
+  Teste lotacao                                                         Exemplo sintético para conferir texto extenso e
+                                                                        paginação. Exemplo sintético para conferir texto
+                                                                        extenso e paginação. Exemplo sintético para conferir
+                                                                        texto extenso e paginação. Exemplo sintético para
+                                                                        conferir texto extenso e paginação. Exemplo sintético
+                                                                        para conferir texto extenso e paginação. Exemplo
+                                                                        sintético para conferir texto extenso e paginação.
+                                                                        Exemplo sintético para conferir texto extenso e
+                                                                        paginação. Exemplo sintético para conferir texto
+                                                                        extenso e paginação. Exemplo sintético para conferir
+                                                                        texto extenso e paginação. Exemplo sintético para
+                                                                        conferir texto extenso e paginação.
+
+  CPF:                                 Identidade:                          Celular:                             Ramal:
+  529.982.247-25                       Teste identidade                     (34) 99999-0000                      Teste ramal
+
+  Email:
+  teste@example.invalid
+
+
+
+II - IDENTIFICAÇÃO DO CURSO
+
+  Descrição do Curso:
+  Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e
+  paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir texto
+  extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para conferir
+  texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético para
+  conferir texto extenso e paginação. Exemplo sintético para conferir texto extenso e paginação. Exemplo sintético
+  para conferir texto extenso e paginação.
+
+  Dados do Fornecedor:                                                CNPJ:
+  Teste fornecedor                                                    12.ABC.345/01DE-35
+
+  Contato:                                                            WHATSAPP:
+  (34) 99999-0000                                                     (34) 99999-0000
+
+  E-mail:                                                             Início/Término:
+  teste@example.invalid                                               Teste inicioTermino
+
+  Carga horária total:                                                Carga horária diária:
+  Teste cargaHorariaTotal                                             Teste cargaHorariaDiaria
+
+  Forma de apresentação (presencial, gravada ou on line):
+  Teste formaApresentacao
+
+  Utilização da capacitação para fins de progressão na carreira profissional? [ ] sim  [X] nãoIII - APOIO FINANCEIRO SOLICITADO
+
+ Inscrição: [ ] Sim  [X] Não                 Valor: R$ 1234,50
+                                                                                  Valor Total do Curso: R$ 1234,50
+ Mensalidade: [ ] Sim  [X] Não               Valor por mês: R$ 1234,50
+
+
+
+
+
+
+
+                                              Assinatura do Servidor Participante
+
+                                                   Patos de Minas, 02/09/2026FORMULÁRIO DE SOLICITAÇÃO DE APOIO A INICIATIVAS DE CAPACITAÇÃO CURSOS DE CURTA
+                                       E MÉDIA DURAÇÃO
+
+
+
+PARECER FUNDAMENTADO DO(A) SUPERIOR(A) IMEDIATO (A)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DATA: ____/____/______
+
+( ) DEFERIDO ( ) INDEFERIDO                                    ASSINATURA
+
+
+
+
+PARECER FUNDAMENTADO DO(A) DIRETOR(A) GERAL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DATA: ____/____/______
+
+( ) DEFERIDO ( ) INDEFERIDO                                    ASSINATURA

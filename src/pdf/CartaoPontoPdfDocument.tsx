@@ -1,19 +1,7 @@
+import type { FormData } from "../features/cartaoPonto/cartaoPonto.types";
 // src/pdf/CartaoPontoPdfDocument.tsx
 import React from "react";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
-
-interface FormData {
-  nome: string;
-  matricula: string;
-  setor: string;
-  horario: string;
-  vereador: string;
-  mesReferencia: string;
-  inicioFerias: string;
-  fimFerias: string;
-  pontosFacultativos: string[];
-  feriados: string[];
-}
 
 interface PdfProps {
   data: FormData;

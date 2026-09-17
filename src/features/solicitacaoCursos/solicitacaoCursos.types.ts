@@ -1,0 +1,32 @@
+export interface FormData {
+  nome: string;
+  endereco: string;
+  celular: string;
+  identidade: string;
+  matricula: string;
+  lotacao: string;
+  emailServidor: string;
+  cpf: string;
+  cargo: string;
+  ramal: string;
+  funcaoConfianca: "sim" | "nao";
+  tipoFuncao: "direcao" | "gratificada" | "nenhum";
+  qualFuncao: string;
+  descricaoCurso: string;
+  fornecedor: string;
+  cnpj: string;
+  contato: string;
+  whatsapp: string;
+  emailFornecedor: string;
+  periodoRealizacao: string;
+  inicioTermino: string;
+  cargaHorariaTotal: string;
+  cargaHorariaDiaria: string;
+  usoProgressao: "sim" | "nao";
+  formaApresentacao: string;
+  solicitaInscricao: "sim" | "nao";
+  valorInscricao: string;
+  solicitaMensalidade: "sim" | "nao";
+  valorMensalidade: string;
+  valorTotal: string;
+}

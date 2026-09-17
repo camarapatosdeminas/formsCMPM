@@ -1,0 +1,42 @@
+{
+  "browser": "152.0.4191.53",
+  "initial": [
+    {
+      "name": "http://127.0.0.1:4173/assets/index-flcBNgNA.js",
+      "type": "script",
+      "transferSize": 255960,
+      "decodedBodySize": 255660
+    },
+    {
+      "name": "http://127.0.0.1:4173/assets/index--dyEI2l5.css",
+      "type": "link",
+      "transferSize": 10329,
+      "decodedBodySize": 10029
+    },
+    {
+      "name": "http://127.0.0.1:4173/images/brasao.png",
+      "type": "img",
+      "transferSize": 9320,
+      "decodedBodySize": 9020
+    },
+    {
+      "name": "http://127.0.0.1:4173/images/brasao.png",
+      "type": "other",
+      "transferSize": 300,
+      "decodedBodySize": 9020
+    }
+  ],
+  "timings": {
+    "/formulario-ferias": 860,
+    "/recadastramento": 494,
+    "/relatorio-viagem": 740,
+    "typing50Characters": 644,
+    "add10Assets": 570
+  },
+  "storage": {
+    "local": 0,
+    "session": 0,
+    "databases": 0,
+    "serviceWorkers": 0
+  }
+}
