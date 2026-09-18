@@ -53,7 +53,9 @@ const cartaoPonto = lazy(
 const recadastramento = lazy(
   () => import("./features/recadastramento/RecadastramentoPage"),
 );
+const dfd = lazy(() => import("./features/dfd/DfdPage"));
 const routes = [
+  { id: "dfd", Page: dfd },
   { id: "adiantamento13", Page: adiantamento13 },
   { id: "declaracaoDependentes", Page: declaracaoDependentes },
   { id: "declaracaoFichaLimpa", Page: declaracaoFichaLimpa },

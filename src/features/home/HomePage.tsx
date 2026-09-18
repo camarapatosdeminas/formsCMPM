@@ -76,7 +76,7 @@ export default function HomePage() {
         <div className={styles.catalogHead}>
           <h2 id="catalog-title">Qual formulário você precisa?</h2>
           <span className={styles.count} role="status">
-            {forms.length} de 17 formulários
+            {forms.length} de {formCatalog.length} formulários
           </span>
         </div>
         <div className={styles.search}>

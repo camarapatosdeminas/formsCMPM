@@ -17,6 +17,7 @@ import {
   FiAward,
   FiHeart,
   FiBox,
+  FiClipboard,
 } from "react-icons/fi";
 export interface FormDefinition {
   id: string;
@@ -28,6 +29,16 @@ export interface FormDefinition {
   terms: string;
 }
 export const formCatalog: FormDefinition[] = [
+  {
+    id: "dfd",
+    path: "/documento-formalizacao-demanda",
+    name: "Formalização de demanda DFD",
+    description:
+      "Formalize a necessidade, os itens, a prioridade e os responsáveis pela contratação.",
+    category: "Solicitações",
+    icon: FiClipboard,
+    terms: "dfd contratação compra prioridade demanda tecnologia informática",
+  },
   {
     id: "ferias",
     path: "/formulario-ferias",
