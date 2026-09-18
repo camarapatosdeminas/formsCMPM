@@ -1,6 +1,6 @@
 # FormsCMPM
 
-Portal de 17 formulários administrativos da Câmara Municipal de Patos de Minas. Aplicação React + TypeScript + Vite, com geração local de PDF por `@react-pdf/renderer`.
+Portal de 18 formulários administrativos da Câmara Municipal de Patos de Minas. Aplicação React + TypeScript + Vite, com geração local de PDF por `@react-pdf/renderer`.
 
 ## Executar
 
@@ -41,7 +41,7 @@ A configuração em `.github/workflows/verify.yml` executa formato, lint, regras
 
 ## Organização
 
-- `src/app`: catálogo dos 17 formulários e recuperação de falha de rota. `src/App.tsx` compõe rotas com imports adiados, mantendo todos os caminhos anteriores, inclusive `/SolicitacaoDiaria`.
+- `src/app`: catálogo dos 18 formulários e recuperação de falha de rota. `src/App.tsx` compõe rotas com imports adiados, mantendo todos os caminhos anteriores, inclusive `/SolicitacaoDiaria`.
 - `src/features`: páginas, tipos, defaults e regras por funcionalidade. Férias usa React Hook Form/Zod. Recadastramento separa estado/validação e oito seções; seu contrato de dados já compartilhado continua em `src/types/recadastramento.ts`.
 - `src/components/ui`, `forms`, `layout`: controles nativos, rótulos, grupos, erros, seções, navegação e ações, com CSS Modules.
 - `src/lib/formatters`: máscaras e apresentação monetária sem coerção; `src/lib/pdf`: geração a partir de cópia estável, descarte de resultados obsoletos e liberação de URLs.

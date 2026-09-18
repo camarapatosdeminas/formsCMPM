@@ -70,7 +70,7 @@ test("Chunk de rota indisponível: recuperação pelo catálogo e recarga", asyn
     page.getByRole("heading", { name: "Não foi possível abrir o formulário" }),
   ).toBeVisible();
   await page.getByRole("link", { name: "Voltar aos formulários" }).click();
-  await expect(page.locator("main h3")).toHaveCount(17);
+  await expect(page.locator("main h3")).toHaveCount(18);
   await page.unroute("**/Adiantamento13Page-*.js");
   await page.goto("/adiantamento-13");
   await expect(page.locator("#nome")).toBeVisible();

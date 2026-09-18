@@ -35,13 +35,13 @@ test.beforeEach(async ({ page }) => {
   });
 });
 
-test("Home: 17 rotas, busca, filtros, resultado vazio e histórico", async ({
+test("Home: 18 rotas, busca, filtros, resultado vazio e histórico", async ({
   page,
 }) => {
   const requests: string[] = [];
   page.on("request", (r) => requests.push(r.url()));
   await page.goto("/");
-  await expect(page.locator("main h3")).toHaveCount(17);
+  await expect(page.locator("main h3")).toHaveCount(18);
   await expect(page.locator("h1")).toContainText("Seus formulários");
   expect(
     requests.some((r) => r.includes("react-pdf") || /Pdf[A-Z]/.test(r)),
@@ -51,20 +51,66 @@ test("Home: 17 rotas, busca, filtros, resultado vazio e histórico", async ({
   await page.getByRole("searchbox").fill("inexistente-xyz");
   await expect(page.getByText("Nenhum formulário encontrado")).toBeVisible();
   await page.getByRole("button", { name: "Limpar busca e filtros" }).click();
-  await expect(page.locator("main h3")).toHaveCount(17);
+  await expect(page.locator("main h3")).toHaveCount(18);
   await page.getByRole("button", { name: "Declarações", exact: true }).click();
   await expect(page.locator("main h3")).toHaveCount(4);
   await page.getByRole("button", { name: "Todos", exact: true }).click();
   await page.locator('main a[href="/solicitacao-viagem"]').click();
   await expect(page.locator("h1")).toContainText("Solicitação de viagem");
   await page.goBack();
-  await expect(page.locator("main h3")).toHaveCount(17);
+  await expect(page.locator("main h3")).toHaveCount(18);
   await page.goForward();
   await expect(page.locator("h1")).toContainText("Solicitação de viagem");
   await page.goto("/nao-existe");
   await expect(
     page.getByRole("heading", { name: "Formulário não encontrado" }),
   ).toBeVisible();
+});
+
+test("DFD: validação obrigatória, item adicional e geração condicional", async ({
+  page,
+}) => {
+  await page.goto("/documento-formalizacao-demanda");
+  await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
+  await expect(page.locator("[data-error-summary]")).toBeVisible();
+
+  const fields: Record<string, string> = {
+    objeto: "Equipamentos audiovisuais",
+    setorRequisitante: "Diretoria-Geral",
+    responsavelDemanda: "Pessoa Sintética",
+    matricula: "1000",
+    email: "pessoa@example.com",
+    telefone: "3000-0000",
+    justificativa: "Justificativa sintética da contratação.",
+    providenciasVinculacao: "Não se aplica.",
+    dataInicio: "2026-12-15",
+    valorEstimado: "10000,00",
+    motivoPrioridade: "Atendimento ao cronograma institucional.",
+    fiscalTitular: "Fiscal titular",
+    fiscalSubstituto: "Fiscal substituto",
+    gestorTitular: "Gestor titular",
+    gestorSubstituto: "Gestor substituto",
+    dataFormalizacao: "2026-09-17",
+    responsavelFormalizacao: "Pessoa formalizadora",
+    matriculaFormalizacao: "1001",
+  };
+  for (const [id, value] of Object.entries(fields))
+    await page.locator(`#${id}`).fill(value);
+
+  await page.locator('input[name="prioridade"][value="alto"]').check();
+  await page
+    .locator('input[name="relacionadoTecnologia"][value="sim"]')
+    .check();
+  await page.getByLabel("Descrição").fill("Equipamento de teste");
+  await page.getByLabel("Quantidade").fill("1");
+  await page.getByLabel("Valor unitário").fill("10000,00");
+  await page.getByLabel("Valor total").fill("10000,00");
+  await page.getByRole("button", { name: "+ Adicionar item" }).click();
+  await expect(page.getByRole("heading", { name: "Item 2" })).toBeVisible();
+  await page.getByRole("button", { name: "Remover item 2" }).click();
+
+  await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
+  await expect(page.getByRole("link", { name: "Baixar PDF" })).toBeVisible();
 });
 
 for (const { route, download } of inventory)
