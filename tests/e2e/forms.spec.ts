@@ -69,7 +69,7 @@ test("Home: 18 rotas, busca, filtros, resultado vazio e histórico", async ({
 
 test("DFD: validação obrigatória, item adicional e geração condicional", async ({
   page,
-}) => {
+}, info) => {
   await page.goto("/documento-formalizacao-demanda");
   await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
   await expect(page.locator("[data-error-summary]")).toBeVisible();
@@ -111,6 +111,43 @@ test("DFD: validação obrigatória, item adicional e geração condicional", as
 
   await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
   await expect(page.getByRole("link", { name: "Baixar PDF" })).toBeVisible();
+  const download = page.waitForEvent("download");
+  await page.getByRole("link", { name: "Baixar PDF" }).click();
+  const file = await download;
+  expect(file.suggestedFilename()).toBe(
+    "documento_formalizacao_demanda_dfd.pdf",
+  );
+  await file.saveAs(info.outputPath("dfd.pdf"));
+});
+
+test("Checklist processual: validação, download e invalidação após edição", async ({
+  page,
+}, info) => {
+  await page.goto("/checklist-introducao-processual");
+  await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
+  await expect(page.locator("[data-error-summary] li")).toHaveCount(5);
+
+  const fields = {
+    orgaoRequisitante: "Órgão sintético",
+    objetoReduzido: "Aquisição sintética",
+    modalidadeCriterio: "Pregão / menor preço",
+    valorGlobalEstimado: "R$ 10.000,00",
+    garantiaSuporte: "24 meses",
+  };
+  for (const [id, value] of Object.entries(fields))
+    await page.locator(`#${id}`).fill(value);
+
+  await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
+  const link = page.getByRole("link", { name: "Baixar PDF" });
+  await expect(link).toBeVisible();
+  const download = page.waitForEvent("download");
+  await link.click();
+  const file = await download;
+  expect(file.suggestedFilename()).toBe("checklist_introducao_processual.pdf");
+  await file.saveAs(info.outputPath("checklist.pdf"));
+
+  await page.locator("#orgaoRequisitante").fill("Órgão alterado");
+  await expect(link).toHaveCount(0);
 });
 
 for (const { route, download } of inventory)

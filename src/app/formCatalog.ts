@@ -18,6 +18,7 @@ import {
   FiHeart,
   FiBox,
   FiClipboard,
+  FiCheckSquare,
 } from "react-icons/fi";
 export interface FormDefinition {
   id: string;
@@ -29,6 +30,15 @@ export interface FormDefinition {
   terms: string;
 }
 export const formCatalog: FormDefinition[] = [
+  {
+    id: "checklistIntroducaoProcessual",
+    path: "/checklist-introducao-processual",
+    name: "Checklist de Fase Interna",
+    description: "Crie o checklist processos internos.",
+    category: "Solicitações",
+    icon: FiCheckSquare,
+    terms: "processo checklist compra prioridade demanda validar interno",
+  },
   {
     id: "dfd",
     path: "/documento-formalizacao-demanda",

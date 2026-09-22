@@ -99,7 +99,13 @@ export function FormPage({
         Os dados ficam nesta página. Ao sair ou recarregar, o preenchimento será
         perdido. Gere e baixe seu PDF antes de sair.
       </p>
-      {!["ferias", "recadastramento", "cartaoPonto"].includes(form.id) && (
+      {![
+        "ferias",
+        "recadastramento",
+        "cartaoPonto",
+        "dfd",
+        "checklistIntroducaoProcessual",
+      ].includes(form.id) && (
         <p>
           Os campos são opcionais para gerar o PDF. Preencha as informações que
           se aplicam à sua solicitação.
