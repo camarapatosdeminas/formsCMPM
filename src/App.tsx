@@ -54,7 +54,11 @@ const recadastramento = lazy(
   () => import("./features/recadastramento/RecadastramentoPage"),
 );
 const dfd = lazy(() => import("./features/dfd/DfdPage"));
+const checklistIntroducaoProcessual = lazy(
+  () => import("./features/checklistFaseInterna/ChecklistFaseInterna"),
+);
 const routes = [
+  { id: "checklistIntroducaoProcessual", Page: checklistIntroducaoProcessual },
   { id: "dfd", Page: dfd },
   { id: "adiantamento13", Page: adiantamento13 },
   { id: "declaracaoDependentes", Page: declaracaoDependentes },

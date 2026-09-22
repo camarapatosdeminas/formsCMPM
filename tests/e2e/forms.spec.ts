@@ -1,6 +1,8 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import fs from "node:fs";
+import { formCatalog } from "../../src/app/formCatalog";
+const TOTAL_FORMS = formCatalog.length;
 const inventory: { route: string; download: string }[] = JSON.parse(
   fs.readFileSync("tests/fixtures/inventory.json", "utf8"),
 );
@@ -35,13 +37,13 @@ test.beforeEach(async ({ page }) => {
   });
 });
 
-test("Home: 18 rotas, busca, filtros, resultado vazio e histórico", async ({
+test("Home: 19 rotas, busca, filtros, resultado vazio e histórico", async ({
   page,
 }) => {
   const requests: string[] = [];
   page.on("request", (r) => requests.push(r.url()));
   await page.goto("/");
-  await expect(page.locator("main h3")).toHaveCount(18);
+  await expect(page.locator("main h3")).toHaveCount(TOTAL_FORMS);
   await expect(page.locator("h1")).toContainText("Seus formulários");
   expect(
     requests.some((r) => r.includes("react-pdf") || /Pdf[A-Z]/.test(r)),
@@ -51,14 +53,14 @@ test("Home: 18 rotas, busca, filtros, resultado vazio e histórico", async ({
   await page.getByRole("searchbox").fill("inexistente-xyz");
   await expect(page.getByText("Nenhum formulário encontrado")).toBeVisible();
   await page.getByRole("button", { name: "Limpar busca e filtros" }).click();
-  await expect(page.locator("main h3")).toHaveCount(18);
+  await expect(page.locator("main h3")).toHaveCount(TOTAL_FORMS);
   await page.getByRole("button", { name: "Declarações", exact: true }).click();
   await expect(page.locator("main h3")).toHaveCount(4);
   await page.getByRole("button", { name: "Todos", exact: true }).click();
   await page.locator('main a[href="/solicitacao-viagem"]').click();
   await expect(page.locator("h1")).toContainText("Solicitação de viagem");
   await page.goBack();
-  await expect(page.locator("main h3")).toHaveCount(18);
+  await expect(page.locator("main h3")).toHaveCount(TOTAL_FORMS);
   await page.goForward();
   await expect(page.locator("h1")).toContainText("Solicitação de viagem");
   await page.goto("/nao-existe");
@@ -69,7 +71,7 @@ test("Home: 18 rotas, busca, filtros, resultado vazio e histórico", async ({
 
 test("DFD: validação obrigatória, item adicional e geração condicional", async ({
   page,
-}) => {
+}, info) => {
   await page.goto("/documento-formalizacao-demanda");
   await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
   await expect(page.locator("[data-error-summary]")).toBeVisible();
@@ -111,6 +113,43 @@ test("DFD: validação obrigatória, item adicional e geração condicional", as
 
   await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
   await expect(page.getByRole("link", { name: "Baixar PDF" })).toBeVisible();
+  const download = page.waitForEvent("download");
+  await page.getByRole("link", { name: "Baixar PDF" }).click();
+  const file = await download;
+  expect(file.suggestedFilename()).toBe(
+    "documento_formalizacao_demanda_dfd.pdf",
+  );
+  await file.saveAs(info.outputPath("dfd.pdf"));
+});
+
+test("Checklist processual: validação, download e invalidação após edição", async ({
+  page,
+}, info) => {
+  await page.goto("/checklist-introducao-processual");
+  await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
+  await expect(page.locator("[data-error-summary] li")).toHaveCount(5);
+
+  const fields = {
+    orgaoRequisitante: "Órgão sintético",
+    objetoReduzido: "Aquisição sintética",
+    modalidadeCriterio: "Pregão / menor preço",
+    valorGlobalEstimado: "R$ 10.000,00",
+    garantiaSuporte: "24 meses",
+  };
+  for (const [id, value] of Object.entries(fields))
+    await page.locator(`#${id}`).fill(value);
+
+  await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
+  const link = page.getByRole("link", { name: "Baixar PDF" });
+  await expect(link).toBeVisible();
+  const download = page.waitForEvent("download");
+  await link.click();
+  const file = await download;
+  expect(file.suggestedFilename()).toBe("checklist_introducao_processual.pdf");
+  await file.saveAs(info.outputPath("checklist.pdf"));
+
+  await page.locator("#orgaoRequisitante").fill("Órgão alterado");
+  await expect(link).toHaveCount(0);
 });
 
 for (const { route, download } of inventory)

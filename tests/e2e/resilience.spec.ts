@@ -1,5 +1,7 @@
 import { test, expect, devices } from "@playwright/test";
+import { formCatalog } from "../../src/app/formCatalog";
 
+const TOTAL_FORMS = formCatalog.length;
 test("Calendário: mês, fins de semana, exclusividade e filtros", async ({
   page,
 }) => {
@@ -70,7 +72,7 @@ test("Chunk de rota indisponível: recuperação pelo catálogo e recarga", asyn
     page.getByRole("heading", { name: "Não foi possível abrir o formulário" }),
   ).toBeVisible();
   await page.getByRole("link", { name: "Voltar aos formulários" }).click();
-  await expect(page.locator("main h3")).toHaveCount(18);
+  await expect(page.locator("main h3")).toHaveCount(TOTAL_FORMS);
   await page.unroute("**/Adiantamento13Page-*.js");
   await page.goto("/adiantamento-13");
   await expect(page.locator("#nome")).toBeVisible();

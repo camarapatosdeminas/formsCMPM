@@ -29,6 +29,7 @@
     "@axe-core/playwright": "^4.10.2",
     "@eslint/js": "^9.36.0",
     "@playwright/test": "^1.55.1",
+    "@types/node": "^26.6.2",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.3",
