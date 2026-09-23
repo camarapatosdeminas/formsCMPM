@@ -126,8 +126,13 @@ test("Checklist processual: validação, download e invalidação após edição
   page,
 }, info) => {
   await page.goto("/checklist-introducao-processual");
+  await expect(
+    page.getByRole("heading", {
+      name: "1. Documento de Formalização da Demanda (DFD)",
+    }),
+  ).toBeVisible();
   await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
-  await expect(page.locator("[data-error-summary] li")).toHaveCount(5);
+  await expect(page.locator("[data-error-summary] li")).toHaveCount(47);
 
   const fields = {
     orgaoRequisitante: "Órgão sintético",
@@ -138,6 +143,34 @@ test("Checklist processual: validação, download e invalidação após edição
   };
   for (const [id, value] of Object.entries(fields))
     await page.locator(`#${id}`).fill(value);
+
+  const sectionItemCounts = [3, 4, 7, 2, 3, 2];
+  for (const [sectionIndex, count] of sectionItemCounts.entries()) {
+    for (let itemIndex = 1; itemIndex <= count; itemIndex += 1) {
+      const id = `section-${sectionIndex + 1}-item-${itemIndex}`;
+      await page
+        .locator(`#${id}-itemDescription`)
+        .fill(
+          sectionIndex === 0 && itemIndex === 1
+            ? "Descrição extensa informada pelo usuário para verificar a quebra de linha dentro da tabela sem cortar o conteúdo do item. ".repeat(
+                2,
+              )
+            : `Descrição sintética ${sectionIndex + 1}.${itemIndex}`,
+        );
+      await page
+        .locator(`#${id}-legalBasis`)
+        .fill(`Base legal ${sectionIndex + 1}.${itemIndex}`);
+    }
+  }
+  await page.locator("#section-1-item-1-status").selectOption("valid");
+  await page.locator("#section-1-item-2-status").selectOption("invalid");
+  await page
+    .locator("#section-1-item-1-observation")
+    .fill(
+      "Observação extensa do item válido, preservada integralmente no PDF e ajustada à largura da coluna. ".repeat(
+        2,
+      ),
+    );
 
   await page.getByRole("button", { name: "Gerar PDF", exact: true }).click();
   const link = page.getByRole("link", { name: "Baixar PDF" });
