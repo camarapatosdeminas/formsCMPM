@@ -6,11 +6,14 @@ import {
   PdfActions,
 } from "../../components/forms/FormParts";
 import { FormSurface } from "../../components/forms/FormSurface";
-import { Input } from "../../components/ui/Controls";
+import { Input, Select, Textarea } from "../../components/ui/Controls";
 import { usePdf } from "../../lib/pdf/usePdf";
 import { focusErrors } from "../../lib/validation/focusErrors";
 import { createChecklistFaseInternaData } from "./checklistFaseInterna.defaults";
-import type { ChecklistFaseInternaData } from "./checklistFaseInterna.types";
+import type {
+  ChecklistFaseInternaData,
+  ChecklistItem,
+} from "./checklistFaseInterna.types";
 import { validateChecklistFaseInterna } from "./checklistFaseInterna.validation";
 import styles from "./ChecklistFaseInterna.module.css";
 
@@ -35,7 +38,10 @@ export default function ChecklistFaseInternaPage() {
     errors.find((error) => error.field === field)?.message;
   const clear = (field: string) =>
     setErrors((current) => current.filter((error) => error.field !== field));
-  const setField = (field: keyof ChecklistFaseInternaData, value: string) => {
+  const setField = (
+    field: Exclude<keyof ChecklistFaseInternaData, "sections">,
+    value: string,
+  ) => {
     clear(field);
     setData((current) => ({ ...current, [field]: value }));
   };
@@ -45,9 +51,32 @@ export default function ChecklistFaseInternaPage() {
     >,
   ) =>
     setField(
-      event.target.name as keyof ChecklistFaseInternaData,
+      event.target.name as Exclude<keyof ChecklistFaseInternaData, "sections">,
       event.target.value,
     );
+  const setItemField = <
+    Field extends keyof Omit<ChecklistItem, "id" | "itemName">,
+  >(
+    sectionId: string,
+    itemId: string,
+    field: Field,
+    value: ChecklistItem[Field],
+  ) => {
+    clear(`${itemId}-${field}`);
+    setData((current) => ({
+      ...current,
+      sections: current.sections.map((section) =>
+        section.id === sectionId
+          ? {
+              ...section,
+              items: section.items.map((item) =>
+                item.id === itemId ? { ...item, [field]: value } : item,
+              ),
+            }
+          : section,
+      ),
+    }));
+  };
   const generate = () => {
     const nextErrors = validateChecklistFaseInterna(data);
     setErrors(nextErrors);
@@ -65,9 +94,9 @@ export default function ChecklistFaseInternaPage() {
   return (
     <FormSurface>
       <p className={styles.intro}>
-        Todos os campos são obrigatórios. O PDF mantém o cabeçalho institucional
-        em todas as páginas e reserva as assinaturas para preenchimento após a
-        impressão.
+        Preencha os dados do processo e todos os itens de verificação. Em cada
+        item, selecione válido (V), inválido (X) ou ausente (sem marcação). As
+        observações são opcionais; os demais campos são obrigatórios.
       </p>
       <ErrorSummary errors={errors} />
       <FormSection title="Informações do Processo">
@@ -114,6 +143,86 @@ export default function ChecklistFaseInternaPage() {
           />
         </FormGrid>
       </FormSection>
+
+      {data.sections.map((section) => (
+        <FormSection key={section.id} title={section.title}>
+          <div className={styles.sectionIntro}>
+            O status ausente será representado por um campo sem marcação no PDF.
+          </div>
+          {section.items.map((item, index) => (
+            <article className={styles.item} key={item.id}>
+              <h3>
+                {index + 1}. {item.itemName}
+              </h3>
+              <div className={styles.itemGrid}>
+                <Textarea
+                  id={`${item.id}-itemDescription`}
+                  label={requiredLabel("Texto relacionado ao item")}
+                  value={item.itemDescription}
+                  rows={4}
+                  placeholder={`Informe o texto relacionado a “${item.itemName}”.`}
+                  onChange={(event) =>
+                    setItemField(
+                      section.id,
+                      item.id,
+                      "itemDescription",
+                      event.target.value,
+                    )
+                  }
+                  error={message(`${item.id}-itemDescription`)}
+                />
+                <Select
+                  id={`${item.id}-status`}
+                  label="Status"
+                  value={item.status}
+                  onChange={(event) =>
+                    setItemField(
+                      section.id,
+                      item.id,
+                      "status",
+                      event.target.value as ChecklistItem["status"],
+                    )
+                  }
+                >
+                  <option value="">Ausente (sem marcação)</option>
+                  <option value="valid">Válido (V)</option>
+                  <option value="invalid">Inválido (X)</option>
+                </Select>
+                <Input
+                  id={`${item.id}-legalBasis`}
+                  label={requiredLabel("Base legal")}
+                  value={item.legalBasis}
+                  placeholder="Informe a base legal."
+                  onChange={(event) =>
+                    setItemField(
+                      section.id,
+                      item.id,
+                      "legalBasis",
+                      event.target.value,
+                    )
+                  }
+                  error={message(`${item.id}-legalBasis`)}
+                />
+                <Textarea
+                  id={`${item.id}-observation`}
+                  label="Observação (opcional)"
+                  value={item.observation}
+                  rows={3}
+                  placeholder="Acrescente uma observação, se necessário."
+                  onChange={(event) =>
+                    setItemField(
+                      section.id,
+                      item.id,
+                      "observation",
+                      event.target.value,
+                    )
+                  }
+                />
+              </div>
+            </article>
+          ))}
+        </FormSection>
+      ))}
 
       <PdfActions
         {...pdf}
