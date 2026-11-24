@@ -2,7 +2,9 @@ name: Verificar aplicação
 on: [push, pull_request]
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    # Playwright 1.55.1 supports Ubuntu up to 24.04. Pin the runner so a
+    # future change to ubuntu-latest does not silently break browser installs.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
