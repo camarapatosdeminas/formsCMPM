@@ -28,8 +28,9 @@ export interface FormDefinition {
   path: string;
   icon: IconType;
   terms: string;
+  enabled?: boolean;
 }
-export const formCatalog: FormDefinition[] = [
+export const allForms: FormDefinition[] = [
   {
     id: "checklistIntroducaoProcessual",
     path: "/checklist-introducao-processual",
@@ -140,6 +141,7 @@ export const formCatalog: FormDefinition[] = [
     category: "Viagens e capacitação",
     icon: FiMap,
     terms: "destino participantes transporte",
+    enabled: false,
   },
   {
     id: "solicitacaoDiaria",
@@ -205,6 +207,7 @@ export const formCatalog: FormDefinition[] = [
     terms: "material materiais requisição manual",
   },
 ];
+export const formCatalog = allForms.filter((form) => form.enabled !== false);
 export const categories = [
   ...new Set(formCatalog.map((form) => form.category)),
 ];

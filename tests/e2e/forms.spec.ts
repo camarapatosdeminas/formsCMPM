@@ -5,6 +5,8 @@ import { formCatalog } from "../../src/app/formCatalog";
 const TOTAL_FORMS = formCatalog.length;
 const inventory: { route: string; download: string }[] = JSON.parse(
   fs.readFileSync("tests/fixtures/inventory.json", "utf8"),
+).filter(({ route }: { route: string }) =>
+  formCatalog.some((form) => form.path === route),
 );
 const reportPolicy: string = JSON.parse(
   fs.readFileSync("vercel.json", "utf8"),
@@ -37,7 +39,7 @@ test.beforeEach(async ({ page }) => {
   });
 });
 
-test("Home: 19 rotas, busca, filtros, resultado vazio e histórico", async ({
+test("Home: catálogo ativo, busca, filtros, resultado vazio e histórico", async ({
   page,
 }) => {
   const requests: string[] = [];
@@ -57,13 +59,30 @@ test("Home: 19 rotas, busca, filtros, resultado vazio e histórico", async ({
   await page.getByRole("button", { name: "Declarações", exact: true }).click();
   await expect(page.locator("main h3")).toHaveCount(4);
   await page.getByRole("button", { name: "Todos", exact: true }).click();
-  await page.locator('main a[href="/solicitacao-viagem"]').click();
-  await expect(page.locator("h1")).toContainText("Solicitação de viagem");
+  await page.locator('main a[href="/relatorio-viagem"]').click();
+  await expect(page.locator("h1")).toContainText("Relatório de viagem");
   await page.goBack();
   await expect(page.locator("main h3")).toHaveCount(TOTAL_FORMS);
   await page.goForward();
-  await expect(page.locator("h1")).toContainText("Solicitação de viagem");
+  await expect(page.locator("h1")).toContainText("Relatório de viagem");
   await page.goto("/nao-existe");
+  await expect(
+    page.getByRole("heading", { name: "Formulário não encontrado" }),
+  ).toBeVisible();
+});
+
+test("Formulário de solicitação de viagem permanece indisponível", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await expect(page.locator('main a[href="/solicitacao-viagem"]')).toHaveCount(
+    0,
+  );
+  await page.goto("/relatorio-viagem");
+  await expect(
+    page.getByRole("option", { name: "Solicitação de viagem" }),
+  ).toHaveCount(0);
+  await page.goto("/solicitacao-viagem");
   await expect(
     page.getByRole("heading", { name: "Formulário não encontrado" }),
   ).toBeVisible();
@@ -379,7 +398,6 @@ test("Listas: mínimo, adicionar invalida e identificadores únicos", async ({
 }) => {
   for (const route of [
     "/declaracao-dependentes",
-    "/solicitacao-viagem",
     "/ocorrencia-ponto",
     "/requisicao-manual-almoxarifado",
   ]) {

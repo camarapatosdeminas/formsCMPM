@@ -93,7 +93,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             {routes.map(({ id, Page }) => {
-              const form = formCatalog.find((f) => f.id === id)!;
+              const form = formCatalog.find((f) => f.id === id);
+              if (!form) return null;
               return (
                 <Route
                   key={id}
